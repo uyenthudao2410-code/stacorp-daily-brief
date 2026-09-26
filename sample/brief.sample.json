@@ -1,0 +1,84 @@
+{
+  "date": "26.09.2026",
+  "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
+  "subtitle": "Thị trường • Dự án • Chi phí • Con người",
+  "metrics": [
+    {"label": "CƠ HỘI", "value": "2"},
+    {"label": "THỊ TRƯỜNG", "value": "1"},
+    {"label": "CHI PHÍ", "value": "1"},
+    {"label": "CÔNG TRƯỜNG", "value": "1"}
+  ],
+  "action_today": "Ưu tiên rà soát các cơ hội có lịch triển khai gần và cập nhật biến động đầu vào vào báo giá đang mở.",
+  "items": [
+    {
+      "category": "CƠ HỘI & KHÁCH HÀNG",
+      "impact": "CAO",
+      "headline": "Mẫu bố cục: cơ hội dự án công nghiệp mới cần được đưa vào pipeline sớm",
+      "facts": [
+        "Đây là dữ liệu mẫu để kiểm tra bố cục và chất lượng ảnh, không phải tin phát hành.",
+        "Hệ thống production chỉ dùng thông tin có nguồn và ngày xuất bản rõ ràng."
+      ],
+      "note": "Khối Kinh doanh cần có đầu mối theo dõi và cập nhật xác suất cơ hội.",
+      "departments": ["Kinh doanh", "Đấu thầu", "Ban Giám đốc"],
+      "source": "Dữ liệu mẫu",
+      "source_date": "26.09.2026",
+      "url": "https://example.com/1"
+    },
+    {
+      "category": "CƠ HỘI & KHÁCH HÀNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Mẫu bố cục: một dự án hạ tầng tạo thêm nhu cầu cho chuỗi nhà thầu phụ trợ",
+      "facts": [
+        "Card được giới hạn chiều cao để giữ khả năng đọc tốt trên màn hình điện thoại.",
+        "Headline dài được co cỡ chữ có kiểm soát thay vì để Teams tự dàn trang."
+      ],
+      "note": "Theo dõi thời điểm mời thầu và tiêu chuẩn kỹ thuật của gói việc liên quan.",
+      "departments": ["Kinh doanh", "Đấu thầu"],
+      "source": "Dữ liệu mẫu",
+      "source_date": "26.09.2026",
+      "url": "https://example.com/2"
+    },
+    {
+      "category": "THỊ TRƯỜNG & KINH DOANH",
+      "impact": "TRUNG BÌNH",
+      "headline": "Mẫu bố cục: dòng vốn sản xuất tiếp tục tạo nhu cầu nhà xưởng và hạ tầng phụ trợ",
+      "facts": [
+        "Trang 2 dành cho ba tin còn lại để tránh mật độ chữ quá cao.",
+        "Mỗi tin giữ hai dữ kiện chính và một dòng STACORP cần lưu ý."
+      ],
+      "note": "Dùng xu hướng thị trường để ưu tiên ngành khách hàng và địa bàn tiếp cận.",
+      "departments": ["Kinh doanh", "Chiến lược"],
+      "source": "Dữ liệu mẫu",
+      "source_date": "26.09.2026",
+      "url": "https://example.com/3"
+    },
+    {
+      "category": "CHI PHÍ & CHUỖI CUNG ỨNG",
+      "impact": "CAO",
+      "headline": "Mẫu bố cục: biến động vật liệu cần được phản ánh sớm vào các báo giá đang mở",
+      "facts": [
+        "Các chỉ báo chi phí được tách thành nhóm riêng để lãnh đạo nhận diện nhanh.",
+        "Production sẽ loại tin lặp và chỉ giữ diễn biến mới có tác động."
+      ],
+      "note": "Đối chiếu báo giá nhà cung cấp và điều khoản trượt giá của hồ sơ đang đàm phán.",
+      "departments": ["Mua hàng", "Đấu thầu", "Tài chính"],
+      "source": "Dữ liệu mẫu",
+      "source_date": "26.09.2026",
+      "url": "https://example.com/4"
+    },
+    {
+      "category": "CÔNG TRƯỜNG & CON NGƯỜI",
+      "impact": "THEO DÕI",
+      "headline": "Mẫu bố cục: an toàn và năng suất hiện trường được theo dõi như một nhóm tin độc lập",
+      "facts": [
+        "Tin công trường chỉ vào bản tin khi có liên hệ thực tế với vận hành hoặc con người.",
+        "Không mặc định gắn Toàn công ty; chỉ nêu 2-5 bộ phận thật sự liên quan."
+      ],
+      "note": "Chuyển các cảnh báo có tính thực hành thành checklist ngắn cho quản lý hiện trường.",
+      "departments": ["Ban Điều hành", "HSE", "Nhân sự"],
+      "source": "Dữ liệu mẫu",
+      "source_date": "26.09.2026",
+      "url": "https://example.com/5"
+    }
+  ]
+}
