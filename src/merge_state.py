@@ -48,9 +48,19 @@ def main() -> int:
     known = {x["id"] for x in kept}
     for item in brief.get("items", []):
         iid = _item_id(item)
-        if iid not in known:
-            kept.append({"id": iid, "date": today.isoformat()})
-            known.add(iid)
+        if iid in known:
+            continue
+
+        kept.append(
+            {
+                "id": iid,
+                "date": today.isoformat(),
+                "headline": str(item.get("headline", ""))[:300],
+                "source": str(item.get("source", ""))[:120],
+                "url": str(item.get("url", ""))[:1000],
+            }
+        )
+        known.add(iid)
 
     STATE_PATH.write_text(
         json.dumps({"items": kept}, ensure_ascii=False, indent=2) + "\n",
