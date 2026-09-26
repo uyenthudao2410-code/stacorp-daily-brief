@@ -20,7 +20,7 @@ Scheduled publishing is OFF until repository variable `AUTOMATION_ENABLED` is se
 
 News selection:
 - Secret `OPENAI_API_KEY`
-- Optional variable `OPENAI_MODEL` (default: `gpt-5-mini`)
+- Optional variable `OPENAI_MODEL` (default: `gpt-5.6-terra`)
 
 Microsoft Graph delegated publishing:
 - Secret `MS_TENANT_ID`
