@@ -1,0 +1,257 @@
+:root {
+  --ink: #10213d;
+  --muted: #66758f;
+  --line: #dce5f2;
+  --blue: #175cd3;
+  --blue2: #0b3d91;
+  --soft: #f4f7fb;
+  --high: #c63d32;
+  --medium: #c77b10;
+  --watch: #297a55;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  width: 1120px;
+  height: 1400px;
+  margin: 0;
+  overflow: hidden;
+  background: #eef3f8;
+  color: var(--ink);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.page {
+  width: 1120px;
+  height: 1400px;
+  padding: 54px 60px;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(23, 92, 211, .10), transparent 28%),
+    #f8fafc;
+  overflow: hidden;
+}
+
+.hero {
+  border-radius: 30px;
+  background: linear-gradient(135deg, #0c2e68 0%, #175cd3 62%, #2b7de9 100%);
+  padding: 34px 38px;
+  color: white;
+  box-shadow: 0 18px 50px rgba(20, 56, 110, .18);
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  opacity: .94;
+}
+
+.hero h1 {
+  margin: 17px 0 8px;
+  max-width: 920px;
+  font-size: 42px;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+
+.subtitle {
+  font-size: 20px;
+  opacity: .9;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.metric {
+  padding: 18px 18px 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.18);
+}
+
+.metric .value {
+  font-size: 34px;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.metric .label {
+  margin-top: 7px;
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: .07em;
+  opacity: .86;
+}
+
+.section-label {
+  margin: 26px 2px 12px;
+  color: #536783;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.cards {
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  min-height: 296px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: white;
+  padding: 24px 27px 22px;
+  box-shadow: 0 8px 28px rgba(30, 57, 96, .07);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.category {
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 850;
+  letter-spacing: .06em;
+}
+
+.impact {
+  flex: none;
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .05em;
+}
+
+.impact.high {
+  color: var(--high);
+  background: #fff0ee;
+}
+
+.impact.medium {
+  color: var(--medium);
+  background: #fff6e8;
+}
+
+.impact.watch {
+  color: var(--watch);
+  background: #edf8f2;
+}
+
+.headline {
+  margin: 12px 0 13px;
+  font-size: 25px;
+  line-height: 1.17;
+  letter-spacing: -.025em;
+}
+
+.facts {
+  margin: 0 0 13px 20px;
+  padding: 0;
+  color: #344560;
+  font-size: 17px;
+  line-height: 1.36;
+}
+
+.facts li { margin: 6px 0; }
+
+.note {
+  border-left: 4px solid var(--blue);
+  background: #f2f6ff;
+  padding: 10px 13px;
+  border-radius: 9px;
+  color: #263a58;
+  font-size: 16px;
+  line-height: 1.32;
+}
+
+.meta {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.action {
+  margin-top: 17px;
+  border-radius: 20px;
+  border: 1px solid #cfe0ff;
+  background: linear-gradient(90deg, #eef5ff, #f7faff);
+  padding: 17px 21px;
+  display: flex;
+  gap: 17px;
+  align-items: flex-start;
+}
+
+.action strong {
+  flex: none;
+  color: var(--blue);
+  font-size: 13px;
+  letter-spacing: .08em;
+}
+
+.action span {
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.page2-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 2px 4px 18px;
+  border-bottom: 2px solid #d8e2ef;
+}
+
+.page2-head .brand2 {
+  color: var(--blue2);
+  font-size: 18px;
+  font-weight: 850;
+  letter-spacing: .14em;
+}
+
+.page2-head h1 {
+  margin: 9px 0 0;
+  font-size: 31px;
+  line-height: 1.08;
+}
+
+.date {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.page2 .cards {
+  gap: 17px;
+  margin-top: 22px;
+}
+
+.page2 .card {
+  min-height: 346px;
+  padding: 25px 28px;
+}
+
+.page2 .headline {
+  font-size: 27px;
+}
+
+.footer {
+  margin-top: 18px;
+  text-align: center;
+  color: #7a879a;
+  font-size: 13px;
+  letter-spacing: .02em;
+}
