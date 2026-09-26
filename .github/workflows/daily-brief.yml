@@ -1,9 +1,6 @@
-name: STACORP Daily Brief
+name: Legacy API Preview
 
 on:
-  schedule:
-    # 01:30 UTC = 08:30 Asia/Ho_Chi_Minh
-    - cron: "30 1 * * *"
   workflow_dispatch:
     inputs:
       demo:
@@ -12,7 +9,7 @@ on:
         required: false
         default: true
       visuals:
-        description: "Generate editorial story visuals with OpenAI Image API"
+        description: "Legacy: generate visuals through OpenAI API"
         type: boolean
         required: false
         default: false
@@ -32,7 +29,6 @@ permissions:
 
 jobs:
   brief:
-    if: github.event_name == 'workflow_dispatch' || vars.AUTOMATION_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
@@ -63,31 +59,24 @@ jobs:
       - name: Install Chromium
         run: python -m playwright install --with-deps chromium
 
-      - name: Build brief
+      - name: Build manual legacy preview
         shell: bash
         run: |
           set -euo pipefail
           ARGS=""
-
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.demo }}" == "true" ]]; then
+          if [[ "${{ inputs.demo }}" == "true" ]]; then
             ARGS="$ARGS --demo"
           fi
-
-          if [[ "${{ github.event_name }}" == "schedule" ]]; then
-            ARGS="$ARGS --visuals --publish"
-          else
-            if [[ "${{ inputs.visuals }}" == "true" ]]; then
-              ARGS="$ARGS --visuals"
-            fi
-            if [[ "${{ inputs.publish }}" == "true" ]]; then
-              ARGS="$ARGS --publish"
-            fi
+          if [[ "${{ inputs.visuals }}" == "true" ]]; then
+            ARGS="$ARGS --visuals"
           fi
-
+          if [[ "${{ inputs.publish }}" == "true" ]]; then
+            ARGS="$ARGS --publish"
+          fi
           python -m src.main $ARGS
 
       - name: Upload temporary preview
-        if: github.event_name == 'workflow_dispatch' && inputs.preview_artifact && !inputs.publish
+        if: inputs.preview_artifact && !inputs.publish
         uses: actions/upload-artifact@v4
         with:
           name: stacorp-daily-brief-preview
@@ -96,18 +85,3 @@ jobs:
             /tmp/stacorp-daily-brief/STACORP_DAILY_BRIEF_PAGE_2.png
           retention-days: 1
           if-no-files-found: error
-
-      - name: Persist only deduplication state after successful publish
-        if: (github.event_name == 'schedule') || (github.event_name == 'workflow_dispatch' && inputs.publish)
-        shell: bash
-        run: |
-          set -euo pipefail
-          if git diff --quiet -- state/published_hashes.json; then
-            echo "No state change."
-            exit 0
-          fi
-          git config user.name "stacorp-daily-brief-bot"
-          git config user.email "stacorp-daily-brief-bot@users.noreply.github.com"
-          git add state/published_hashes.json
-          git commit -m "chore: update published-news dedupe state"
-          git push
