@@ -7,59 +7,130 @@
   <title>STACORP Daily Brief - Page 1</title>
 </head>
 <body>
-  <main class="page">
-    <section class="hero">
-      <div class="brand">STACORP • DAILY BRIEF</div>
-      <h1>{{ brief.date }} | {{ brief.title }}</h1>
-      <div class="subtitle">{{ brief.subtitle }}</div>
-
-      <div class="metrics">
-        {% for m in brief.metrics %}
-        <div class="metric">
-          <div class="value">{{ m.value }}</div>
-          <div class="label">{{ m.label }}</div>
+  <main class="page v3">
+    <header class="topbar">
+      <div class="brand-lockup">
+        <img class="brand-logo" src="stacorp-logo.png" alt="STACORP">
+        <div class="brand-copy">
+          <div class="brand-name">STACORP</div>
+          <div class="brand-tagline">KIẾN TẠO GIÁ TRỊ BỀN VỮNG</div>
         </div>
-        {% endfor %}
+      </div>
+      <div class="date-lockup">
+        <div class="daily-label">DAILY BRIEF</div>
+        <div class="date-value">{{ brief.date }}</div>
+      </div>
+    </header>
+
+    <section class="intro">
+      <div class="intro-copy">
+        <div class="eyebrow">ĐIỂM TIN</div>
+        <h1>CHO DOANH NGHIỆP STACORP</h1>
+        <p>{{ brief.subtitle }}</p>
+        <div class="intro-rule"></div>
+        <div class="intro-note">Cập nhật nhanh các diễn biến đáng chú ý để chủ động cơ hội, chi phí và vận hành.</div>
+      </div>
+      <div class="intro-art" aria-hidden="true">
+        <span class="arc arc-one"></span>
+        <span class="arc arc-two"></span>
+        <span class="arc arc-three"></span>
       </div>
     </section>
 
-    <div class="section-label">2 TIN NỔI BẬT</div>
+    <section class="metrics">
+      {% for m in brief.metrics %}
+      <div class="metric metric-{{ m.tone }}">
+        <div class="metric-badge"></div>
+        <div class="metric-value">{{ m.value }}</div>
+        <div class="metric-label">{{ m.label }}</div>
+        <div class="metric-hint">{{ m.hint }}</div>
+      </div>
+      {% endfor %}
+    </section>
 
-    <section class="cards">
-      {% for item in items %}
-      <article class="card">
-        <div class="card-top">
-          <div class="category">{{ item.category|upper }}</div>
-          {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
-          <div class="impact {{ impact_class }}">{{ "🔴" if item.impact == "CAO" else ("🟠" if item.impact == "TRUNG BÌNH" else "🟢") }} {{ item.impact }}</div>
+    <div class="section-heading">
+      <span>TIN NỔI BẬT</span>
+      <i></i>
+    </div>
+
+    {% set lead = items[0] %}
+    {% set impact_class = "high" if lead.impact == "CAO" else ("medium" if lead.impact == "TRUNG BÌNH" else "watch") %}
+    <article class="lead-story">
+      <div class="lead-content">
+        <div class="story-row">
+          <span class="category-pill">{{ lead.category|upper }}</span>
+          <span class="impact {{ impact_class }}">{{ lead.impact }}</span>
         </div>
-
-        <h2 class="headline">{{ item.headline }}</h2>
-
-        <ul class="facts">
-          {% for fact in item.facts %}
-          <li>{{ fact }}</li>
-          {% endfor %}
+        <h2>{{ lead.headline }}</h2>
+        <ul class="facts lead-facts">
+          {% for fact in lead.facts %}<li>{{ fact }}</li>{% endfor %}
         </ul>
-
-        <div class="note">
-          <strong>STACORP cần lưu ý:</strong> {{ item.note }}
+        <div class="insight-box">
+          <div class="insight-label">HÀM Ý CHO STACORP</div>
+          <div>{{ lead.note }}</div>
         </div>
+        <div class="story-meta">
+          <span>{{ lead.departments|join(" • ") }}</span>
+          <span>{{ lead.source }}{% if lead.source_date %} • {{ lead.source_date|source_date }}{% endif %}</span>
+        </div>
+      </div>
+      <div class="lead-visual">
+        {% if lead.visual_src %}
+          <img src="{{ lead.visual_src }}" alt="">
+        {% else %}
+          <div class="visual-fallback visual-{{ lead.category|lower|replace(' ', '-') }}"></div>
+        {% endif %}
+      </div>
+    </article>
 
-        <div class="meta">
-          <span>{{ item.departments|join(" • ") }}</span>
-          <span>{{ item.source }}{% if item.source_date %} • {{ item.source_date }}{% endif %}</span>
+    <div class="section-heading secondary-heading">
+      <span>CÁC TIN ĐÁNG CHÚ Ý KHÁC</span>
+      <i></i>
+    </div>
+
+    <section class="compact-grid">
+      {% for item in items[1:] %}
+      {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
+      <article class="compact-card">
+        <div class="compact-visual">
+          {% if item.visual_src %}
+            <img src="{{ item.visual_src }}" alt="">
+          {% else %}
+            <div class="visual-fallback"></div>
+          {% endif %}
+        </div>
+        <div class="compact-body">
+          <div class="story-row compact-row">
+            <span class="category-pill">{{ item.category|upper }}</span>
+            <span class="impact {{ impact_class }}">{{ item.impact }}</span>
+          </div>
+          <h3>{{ item.headline }}</h3>
+          <ul class="facts compact-facts">
+            {% for fact in item.facts %}<li>{{ fact }}</li>{% endfor %}
+          </ul>
+          <div class="compact-insight"><strong>STACORP:</strong> {{ item.note }}</div>
+          <div class="story-meta compact-meta">
+            <span>{{ item.departments|join(" • ") }}</span>
+            <span>{{ item.source }}</span>
+          </div>
         </div>
       </article>
       {% endfor %}
     </section>
 
     {% if brief.action_today %}
-    <section class="action">
-      <strong>VIỆC CẦN LÀM</strong>
-      <span>{{ brief.action_today }}</span>
+    <section class="action-bar">
+      <div class="action-icon">✓</div>
+      <div class="action-title">VIỆC CẦN LÀM HÔM NAY</div>
+      <div class="action-text">{{ brief.action_today }}</div>
     </section>
     {% endif %}
+
+    <footer class="page-footer">
+      <span>STACORP • DAILY BRIEF</span>
+      <i></i>
+      <span>Kiến tạo giá trị bền vững</span>
+    </footer>
   </main>
 </body>
 </html>
