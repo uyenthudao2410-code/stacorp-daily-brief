@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates"
 ASSETS = ROOT / "assets"
 APPROVED_LOGO = ASSETS / "stacorp-logo.png"
-APPROVED_LOGO_SHA256 = "7e7902fe01f8d9b3395815ce6bee102c683698341e1a5acc0b96cbd4dd468a5e"
+APPROVED_LOGO_GIT_BLOB_SHA = "c650caf3be5b8e927a269602b5d66c1f366aea20"
 
 OUT_DIR = Path("/tmp/stacorp-daily-brief")
 PAGE1 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_1.png"
@@ -23,8 +23,10 @@ def _verify_brand_asset() -> None:
     if not APPROVED_LOGO.exists():
         raise RuntimeError("Approved STACORP logo asset is missing.")
 
-    digest = hashlib.sha256(APPROVED_LOGO.read_bytes()).hexdigest()
-    if digest != APPROVED_LOGO_SHA256:
+    data = APPROVED_LOGO.read_bytes()
+    git_blob = b"blob " + str(len(data)).encode("ascii") + b"\\x00" + data
+    digest = hashlib.sha1(git_blob).hexdigest()
+    if digest != APPROVED_LOGO_GIT_BLOB_SHA:
         raise RuntimeError(
             "STACORP logo integrity check failed. "
             "Refusing to render with an unapproved or modified logo."
