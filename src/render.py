@@ -24,7 +24,7 @@ def _verify_brand_asset() -> None:
         raise RuntimeError("Approved STACORP logo asset is missing.")
 
     data = APPROVED_LOGO.read_bytes()
-    git_blob = b"blob " + str(len(data)).encode("ascii") + b"\\x00" + data
+    git_blob = b"blob " + str(len(data)).encode("ascii") + bytes([0]) + data
     digest = hashlib.sha1(git_blob).hexdigest()
     if digest != APPROVED_LOGO_GIT_BLOB_SHA:
         raise RuntimeError(
