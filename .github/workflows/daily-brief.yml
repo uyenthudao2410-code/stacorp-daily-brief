@@ -11,6 +11,11 @@ on:
         type: boolean
         required: false
         default: true
+      visuals:
+        description: "Generate editorial story visuals with OpenAI Image API"
+        type: boolean
+        required: false
+        default: false
       publish:
         description: "Post the generated pages to Teams"
         type: boolean
@@ -29,11 +34,12 @@ jobs:
   brief:
     if: github.event_name == 'workflow_dispatch' || vars.AUTOMATION_ENABLED == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     env:
       TZ: Asia/Ho_Chi_Minh
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.6-terra' }}
+      OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL || 'gpt-image-2.5-flare' }}
       MS_TENANT_ID: ${{ secrets.MS_TENANT_ID }}
       MS_CLIENT_ID: ${{ secrets.MS_CLIENT_ID }}
       MS_CLIENT_SECRET: ${{ secrets.MS_CLIENT_SECRET }}
@@ -62,14 +68,20 @@ jobs:
         run: |
           set -euo pipefail
           ARGS=""
+
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.demo }}" == "true" ]]; then
             ARGS="$ARGS --demo"
           fi
 
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
-            ARGS="$ARGS --publish"
-          elif [[ "${{ inputs.publish }}" == "true" ]]; then
-            ARGS="$ARGS --publish"
+            ARGS="$ARGS --visuals --publish"
+          else
+            if [[ "${{ inputs.visuals }}" == "true" ]]; then
+              ARGS="$ARGS --visuals"
+            fi
+            if [[ "${{ inputs.publish }}" == "true" ]]; then
+              ARGS="$ARGS --publish"
+            fi
           fi
 
           python -m src.main $ARGS
