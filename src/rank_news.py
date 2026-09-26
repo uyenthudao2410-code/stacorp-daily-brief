@@ -87,7 +87,7 @@ def select_brief(candidates: list[Candidate]) -> dict:
         raise RuntimeError("OPENAI_API_KEY is required for live-news selection.")
 
     client = OpenAI(api_key=api_key)
-    model = os.getenv("OPENAI_MODEL", "gpt-5-mini").strip() or "gpt-5-mini"
+    model = os.getenv("OPENAI_MODEL", "gpt-5.6-terra").strip() or "gpt-5.6-terra"
 
     payload = {
         "previous_ids": _load_previous_ids(),
