@@ -1,0 +1,25 @@
+{
+  "target_candidates": 80,
+  "max_age_hours": 72,
+  "queries": [
+    {"category": "Cơ hội & Khách hàng", "q": "Việt Nam dự án xây dựng đầu tư khu công nghiệp logistics hạ tầng"},
+    {"category": "Cơ hội & Khách hàng", "q": "Việt Nam khởi công dự án nhà máy khu công nghiệp tổng thầu xây dựng"},
+    {"category": "Thị trường & Kinh doanh", "q": "Việt Nam thị trường xây dựng công nghiệp bất động sản công nghiệp đầu tư"},
+    {"category": "Thị trường & Kinh doanh", "q": "FDI Việt Nam sản xuất công nghiệp dự án mới"},
+    {"category": "Chi phí & Chuỗi cung ứng", "q": "giá thép xi măng vật liệu xây dựng Việt Nam"},
+    {"category": "Chi phí & Chuỗi cung ứng", "q": "logistics vận tải nhiên liệu chuỗi cung ứng Việt Nam doanh nghiệp"},
+    {"category": "Tài chính & Dòng tiền", "q": "lãi suất tín dụng doanh nghiệp xây dựng Việt Nam ngân hàng"},
+    {"category": "Công trường & Con người", "q": "an toàn lao động công trường xây dựng Việt Nam"},
+    {"category": "Công nghệ & Năng suất", "q": "BIM AI xây dựng công nghệ thi công Việt Nam"},
+    {"category": "Pháp lý & Rủi ro", "q": "site:chinhphu.vn xây dựng doanh nghiệp nghị định thông tư hiệu lực"},
+    {"category": "Pháp lý & Rủi ro", "q": "site:moj.gov.vn xây dựng doanh nghiệp quy định hiệu lực"},
+    {"category": "Pháp lý & Rủi ro", "q": "site:xaydungchinhsach.chinhphu.vn xây dựng đầu tư doanh nghiệp"}
+  ],
+  "official_source_markers": [
+    "Chính phủ",
+    "Cổng Thông tin điện tử Chính phủ",
+    "Bộ Tư pháp",
+    "Bộ Xây dựng",
+    "Xây dựng chính sách"
+  ]
+}
