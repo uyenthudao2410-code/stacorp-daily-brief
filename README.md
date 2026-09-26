@@ -28,16 +28,12 @@ Microsoft Graph delegated publishing:
 - Secret `MS_REFRESH_TOKEN`
 - Optional secret `MS_CLIENT_SECRET` if the Entra app is confidential
 
-Current test group chat:
-- Variable `TEAMS_TARGET_TYPE=chat`
-- Secret `TEAMS_CHAT_ID=19:0e02d613cded448892f27d74cff19d63@thread.v2`
+Teams target:
+- Variable `TEAMS_TARGET_TYPE=chat` or `channel`
+- Secret `TEAMS_CHAT_ID` for group-chat testing
+- Secrets `TEAMS_TEAM_ID` and `TEAMS_CHANNEL_ID` for channel publishing
 
-Official channel later:
-- Variable `TEAMS_TARGET_TYPE=channel`
-- Secret `TEAMS_TEAM_ID=85f93dd1-97df-43b4-88c2-a156e57b5223`
-- Secret `TEAMS_CHANNEL_ID=19:ae875099856a42569438d9c056e1294f@thread.tacv2`
-
-Never put tokens, secrets, or credentials in this public repository.
+Keep all tenant-specific identifiers and credentials in GitHub Secrets/Variables, not in this public repository.
 
 ## First run
 
