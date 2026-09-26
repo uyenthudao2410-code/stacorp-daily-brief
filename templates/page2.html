@@ -7,47 +7,83 @@
   <title>STACORP Daily Brief - Page 2</title>
 </head>
 <body>
-  <main class="page page2">
-    <header class="page2-head">
-      <div>
-        <div class="brand2">STACORP • DAILY BRIEF</div>
-        <h1>Diễn biến cần theo dõi</h1>
+  <main class="page v3 page-two">
+    <header class="topbar">
+      <div class="brand-lockup">
+        <img class="brand-logo" src="stacorp-logo.png" alt="STACORP">
+        <div class="brand-copy">
+          <div class="brand-name">STACORP</div>
+          <div class="brand-tagline">KIẾN TẠO GIÁ TRỊ BỀN VỮNG</div>
+        </div>
       </div>
-      <div class="date">{{ brief.date }}</div>
+      <div class="date-lockup">
+        <div class="daily-label">DAILY BRIEF</div>
+        <div class="date-value">{{ brief.date }}</div>
+      </div>
     </header>
 
-    <section class="cards">
+    <div class="page-two-heading">
+      <div>
+        <div class="eyebrow">DIỄN BIẾN CẦN THEO DÕI</div>
+        <h1>CÁC TIN CÒN LẠI</h1>
+      </div>
+      <div class="page-count">TRANG 2/2</div>
+    </div>
+
+    <section class="follow-grid">
       {% for item in items %}
-      <article class="card">
-        <div class="card-top">
-          <div class="category">{{ item.category|upper }}</div>
-          {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
-          <div class="impact {{ impact_class }}">{{ "🔴" if item.impact == "CAO" else ("🟠" if item.impact == "TRUNG BÌNH" else "🟢") }} {{ item.impact }}</div>
+      {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
+      <article class="follow-card">
+        <div class="follow-copy">
+          <div class="story-row">
+            <span class="story-number">0{{ loop.index + 3 }}</span>
+            <span class="category-pill">{{ item.category|upper }}</span>
+            <span class="impact {{ impact_class }}">{{ item.impact }}</span>
+          </div>
+          <h2>{{ item.headline }}</h2>
+          <ul class="facts follow-facts">
+            {% for fact in item.facts %}<li>{{ fact }}</li>{% endfor %}
+          </ul>
+          <div class="insight-box follow-insight">
+            <div class="insight-label">HÀM Ý CHO STACORP</div>
+            <div>{{ item.note }}</div>
+          </div>
+          <div class="story-meta">
+            <span>{{ item.departments|join(" • ") }}</span>
+            <span>{{ item.source }}{% if item.source_date %} • {{ item.source_date|source_date }}{% endif %}</span>
+          </div>
         </div>
-
-        <h2 class="headline">{{ item.headline }}</h2>
-
-        <ul class="facts">
-          {% for fact in item.facts %}
-          <li>{{ fact }}</li>
-          {% endfor %}
-        </ul>
-
-        <div class="note">
-          <strong>STACORP cần lưu ý:</strong> {{ item.note }}
-        </div>
-
-        <div class="meta">
-          <span>{{ item.departments|join(" • ") }}</span>
-          <span>{{ item.source }}{% if item.source_date %} • {{ item.source_date }}{% endif %}</span>
+        <div class="follow-visual">
+          {% if item.visual_src %}
+            <img src="{{ item.visual_src }}" alt="">
+          {% else %}
+            <div class="visual-fallback"></div>
+          {% endif %}
         </div>
       </article>
       {% endfor %}
     </section>
 
-    <div class="footer">
-      Nguồn được ghi tại từng tin • Bản tin tự động chỉ phát hành khi vượt qua kiểm tra chất lượng.
-    </div>
+    <section class="summary-panel">
+      <div class="summary-title">TÁC ĐỘNG CHÍNH HÔM NAY</div>
+      <div class="summary-grid">
+        {% for item in brief.impact_summary %}
+        <div class="summary-item">
+          <div class="summary-dot {{ 'high' if item.impact == 'CAO' else ('medium' if item.impact == 'TRUNG BÌNH' else 'watch') }}"></div>
+          <div class="summary-category">{{ item.category }}</div>
+          <div class="summary-note">{{ item.note }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <div class="closing-line">Nắm thông tin sớm để chủ động hơn cho cơ hội và vận hành ngày mai.</div>
+
+    <footer class="page-footer">
+      <span>STACORP • DAILY BRIEF</span>
+      <i></i>
+      <span>Kiến tạo giá trị bền vững</span>
+    </footer>
   </main>
 </body>
 </html>
