@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1120">
+  <link rel="stylesheet" href="style.css">
+  <title>STACORP Daily Brief - Page 2</title>
+</head>
+<body>
+  <main class="page page2">
+    <header class="page2-head">
+      <div>
+        <div class="brand2">STACORP • DAILY BRIEF</div>
+        <h1>Diễn biến cần theo dõi</h1>
+      </div>
+      <div class="date">{{ brief.date }}</div>
+    </header>
+
+    <section class="cards">
+      {% for item in items %}
+      <article class="card">
+        <div class="card-top">
+          <div class="category">{{ item.category|upper }}</div>
+          {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
+          <div class="impact {{ impact_class }}">{{ "🔴" if item.impact == "CAO" else ("🟠" if item.impact == "TRUNG BÌNH" else "🟢") }} {{ item.impact }}</div>
+        </div>
+
+        <h2 class="headline">{{ item.headline }}</h2>
+
+        <ul class="facts">
+          {% for fact in item.facts %}
+          <li>{{ fact }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="note">
+          <strong>STACORP cần lưu ý:</strong> {{ item.note }}
+        </div>
+
+        <div class="meta">
+          <span>{{ item.departments|join(" • ") }}</span>
+          <span>{{ item.source }}{% if item.source_date %} • {{ item.source_date }}{% endif %}</span>
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+
+    <div class="footer">
+      Nguồn được ghi tại từng tin • Bản tin tự động chỉ phát hành khi vượt qua kiểm tra chất lượng.
+    </div>
+  </main>
+</body>
+</html>
