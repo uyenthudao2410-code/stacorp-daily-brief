@@ -6,6 +6,7 @@ from datetime import datetime
 from pathlib import Path
 
 from .collect_news import collect_candidates
+from .generate_visuals import generate_visuals
 from .publish_teams import publish_inline_images
 from .rank_news import select_brief
 from .render import render_brief
@@ -63,11 +64,19 @@ def main() -> int:
         action="store_true",
         help="Post both pages to Teams.",
     )
+    parser.add_argument(
+        "--visuals",
+        action="store_true",
+        help="Generate brand-safe editorial story images with the OpenAI Image API.",
+    )
     args = parser.parse_args()
 
     brief = _load_demo() if args.demo else _live_brief()
     if brief.get("publish") is False:
         return 0
+
+    if args.visuals:
+        brief = generate_visuals(brief)
 
     page1, page2 = render_brief(brief)
     validate_png(page1)
