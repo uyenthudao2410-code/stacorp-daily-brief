@@ -85,6 +85,15 @@ def _clip(value: str, limit: int) -> str:
     return clipped + "…"
 
 
+def _clean_note(value: str) -> str:
+    return re.sub(
+        r"^STACORP\\s+cần\\s+lưu\\s+ý\\s*:\\s*",
+        "",
+        str(value or "").strip(),
+        flags=re.IGNORECASE,
+    )
+
+
 def _summary_html(brief: dict) -> str:
     date = html.escape(str(brief.get("date", "")))
     title = html.escape(
@@ -110,7 +119,7 @@ def _summary_html(brief: dict) -> str:
         impact = html.escape(str(item.get("impact", "THEO DÕI")))
         facts = item.get("facts", [])
         fact = html.escape(_clip(facts[0] if facts else "", 260))
-        note = html.escape(_clip(item.get("note", ""), 220))
+        note = html.escape(_clip(_clean_note(item.get("note", "")), 220))
         source = html.escape(str(item.get("source", "")).strip())
         source_date = html.escape(str(item.get("source_date", "")).strip())
         url = _safe_url(item.get("url", ""))
