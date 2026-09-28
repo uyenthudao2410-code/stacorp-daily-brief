@@ -1,27 +1,31 @@
 {
-  "version": "STACORP_MAGAZINE_2PAGE_V1",
+  "version": "STACORP_EDITORIAL_3PAGE_V1",
   "status": "approved-production",
   "locked": true,
   "canvas": {
-    "width": 1600,
-    "height": 900,
-    "pages": 2
+    "width": 1080,
+    "height": 1620,
+    "pages": 3
   },
   "templates": {
-    "page1": "templates/approved_page1.html",
-    "page2": "templates/approved_page2.html",
-    "style": "templates/approved-style.css"
+    "page1": "templates/editorial_page1.html",
+    "page2": "templates/editorial_page2.html",
+    "page3": "templates/editorial_page3.html",
+    "style": "templates/approved-editorial-style.css"
   },
   "template_git_blob_sha": {
-    "page1": "32e648ba4affc34884e1ab1c5f78e50fbbd2e5a4",
-    "page2": "62c1dbbc9abf030cdd1ee0659e4b8ccd99f8ad6c",
-    "style": "3d32e9a6d87ab7ec9a55c2cbf4e8425fc5c6da0b"
+    "page1": "3b47b676b3ab3d5b2ae42ed3dcb65878cd099d39",
+    "page2": "bc1c8ae987680afd64a221dda6a758d41478e868",
+    "page3": "1c8107f045d9c433b49f1d7bbd966bf910397a90",
+    "style": "7ef2b9f4a402880c168f829d79f139c30df12b6d"
   },
   "production_rules": [
-    "Production must render exactly two 1600x900 pages.",
-    "Page 1 must contain items 1-3.",
-    "Page 2 must contain items 4-5 plus action_today.",
-    "Experimental templates must never be used by production.",
+    "Production must render exactly three 1080x1620 portrait pages.",
+    "Page 1: item 1 hero + item 2 and item 3 secondary cards.",
+    "Page 2: item 4 and item 5 full-width editorial stories with STACORP notes.",
+    "Page 3: executive summary, exactly three executive actions, five highlights, source list and closing visual.",
+    "Final pages are rendered deterministically from HTML/CSS; ChatGPT Images creates story illustrations only.",
+    "Experimental layouts must never be used by production.",
     "Layout changes require explicit user approval."
   ]
 }
