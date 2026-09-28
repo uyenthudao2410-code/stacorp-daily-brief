@@ -9,6 +9,9 @@ from urllib.parse import urlparse
 import httpx
 
 GRAPH = "https://graph.microsoft.com/v1.0"
+STACORP_TEAMS_TARGET_TYPE = "channel"
+STACORP_TEAMS_TEAM_ID = "c5bfff4c-a940-464e-a199-db0a169d230b"
+STACORP_TEAMS_CHANNEL_ID = "19:YNeQ_V26FnwoIYtdH_W6imrVXAxwRWXpUfPi2W76CnQ1@thread.tacv2"
 
 
 def _required(name: str) -> str:
@@ -50,18 +53,14 @@ def refresh_access_token() -> str:
 
 
 def _target_endpoint() -> str:
-    target_type = os.getenv("TEAMS_TARGET_TYPE", "chat").strip().lower()
+    if STACORP_TEAMS_TARGET_TYPE == "channel":
+        return (
+            f"{GRAPH}/teams/{STACORP_TEAMS_TEAM_ID}/channels/"
+            f"{STACORP_TEAMS_CHANNEL_ID}/messages"
+        )
 
-    if target_type == "chat":
-        chat_id = _required("TEAMS_CHAT_ID")
-        return f"{GRAPH}/chats/{chat_id}/messages"
-
-    if target_type == "channel":
-        team_id = _required("TEAMS_TEAM_ID")
-        channel_id = _required("TEAMS_CHANNEL_ID")
-        return f"{GRAPH}/teams/{team_id}/channels/{channel_id}/messages"
-
-    raise RuntimeError("TEAMS_TARGET_TYPE must be 'chat' or 'channel'.")
+    chat_id = _required("TEAMS_CHAT_ID")
+    return f"{GRAPH}/chats/{chat_id}/messages"
 
 
 def _b64(path: Path) -> str:
