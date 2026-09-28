@@ -9,7 +9,6 @@ from urllib.parse import urlparse
 import httpx
 
 GRAPH = "https://graph.microsoft.com/v1.0"
-STACORP_TEAMS_TARGET_TYPE = "channel"
 STACORP_TEAMS_TEAM_ID = "c5bfff4c-a940-464e-a199-db0a169d230b"
 STACORP_TEAMS_CHANNEL_ID = "19:YNeQ_V26FnwoIYtdH_W6imrVXAxwRWXpUfPi2W76CnQ1@thread.tacv2"
 
@@ -25,7 +24,6 @@ def refresh_access_token() -> str:
     tenant = _required("MS_TENANT_ID")
     client_id = _required("MS_CLIENT_ID")
     refresh_token = _required("MS_REFRESH_TOKEN")
-
     data = {
         "client_id": client_id,
         "grant_type": "refresh_token",
@@ -36,7 +34,6 @@ def refresh_access_token() -> str:
             "https://graph.microsoft.com/ChannelMessage.Send"
         ),
     }
-
     secret = os.getenv("MS_CLIENT_SECRET", "").strip()
     if secret:
         data["client_secret"] = secret
@@ -48,21 +45,15 @@ def refresh_access_token() -> str:
         token = response.json().get("access_token")
 
     if not token:
-        raise RuntimeError(
-            "Microsoft token response did not contain access_token."
-        )
+        raise RuntimeError("Microsoft token response did not contain access_token.")
     return token
 
 
-def _target_endpoint() -> str:
-    if STACORP_TEAMS_TARGET_TYPE == "channel":
-        return (
-            f"{GRAPH}/teams/{STACORP_TEAMS_TEAM_ID}/channels/"
-            f"{STACORP_TEAMS_CHANNEL_ID}/messages"
-        )
-
-    chat_id = _required("TEAMS_CHAT_ID")
-    return f"{GRAPH}/chats/{chat_id}/messages"
+def _endpoint() -> str:
+    return (
+        f"{GRAPH}/teams/{STACORP_TEAMS_TEAM_ID}/channels/"
+        f"{STACORP_TEAMS_CHANNEL_ID}/messages"
+    )
 
 
 def _b64(path: Path) -> str:
@@ -77,66 +68,42 @@ def _safe_url(value: str) -> str:
     return html.escape(value, quote=True)
 
 
-def _clip(value: str, limit: int) -> str:
-    text = " ".join(str(value or "").split())
-    if len(text) <= limit:
-        return text
-
-    clipped = text[: limit - 1].rsplit(" ", 1)[0].rstrip(" ,;:-")
-    return clipped + "…"
-
-
 def _sources_html(brief: dict) -> str:
-    parts = ["<b>Nguồn đọc thêm:</b>"]
-
+    parts = ["<b>Nguồn:</b>"]
     for index, item in enumerate(brief.get("items", []), start=1):
         source = html.escape(str(item.get("source", "")).strip())
         url = _safe_url(item.get("url", ""))
-
         if not source:
             continue
-
         if url:
-            parts.append(f'<br>{index:02d}. <a href="{url}">{source}</a>')
+            parts.append(f' &nbsp; {index:02d}. <a href="{url}">{source}</a>')
         else:
-            parts.append(f"<br>{index:02d}. {source}")
-
-    action = _clip(brief.get("action_today", ""), 190)
-    if action:
-        parts.extend(
-            [
-                "<br><br><b>Ưu tiên hôm nay:</b> ",
-                html.escape(action),
-            ]
-        )
-
+            parts.append(f" &nbsp; {index:02d}. {source}")
     return "".join(parts)
 
 
-def _single_post_payload(
+def publish_inline_images(
     page1: Path,
     page2: Path,
+    page3: Path,
     brief: dict,
-) -> dict:
+) -> str:
     date = html.escape(str(brief.get("date", "")).strip())
     body = (
-        f"<b>ĐIỂM TIN CHO DOANH NGHIỆP STACORP | {date}</b>"
+        f"<b>ĐIỂM TIN STACORP | {date}</b>"
         "<br>5 diễn biến cần lưu ý hôm nay"
         "<br><br>"
-        '<img src="../hostedContents/1/$value" '
-        'width="900" alt="STACORP Daily Brief - Page 1">'
+        '<img src="../hostedContents/1/$value" width="900" alt="STACORP page 1">'
         "<br><br>"
-        '<img src="../hostedContents/2/$value" '
-        'width="900" alt="STACORP Daily Brief - Page 2">'
+        '<img src="../hostedContents/2/$value" width="900" alt="STACORP page 2">'
+        "<br><br>"
+        '<img src="../hostedContents/3/$value" width="900" alt="STACORP page 3">'
         "<br><br>"
         + _sources_html(brief)
     )
 
-    return {
-        "body": {
-            "contentType": "html",
-            "content": body,
-        },
+    payload = {
+        "body": {"contentType": "html", "content": body},
         "hostedContents": [
             {
                 "@microsoft.graph.temporaryId": "1",
@@ -148,40 +115,27 @@ def _single_post_payload(
                 "contentBytes": _b64(page2),
                 "contentType": "image/png",
             },
+            {
+                "@microsoft.graph.temporaryId": "3",
+                "contentBytes": _b64(page3),
+                "contentType": "image/png",
+            },
         ],
     }
 
-
-def publish_inline_images(
-    page1: Path,
-    page2: Path,
-    brief: dict,
-) -> str:
-    """
-    Publish the V6 mobile-first brief as one Teams post.
-
-    The images carry the editorial content; the text below them is intentionally
-    short and limited to source links plus action_today.
-    """
-    token = refresh_access_token()
-    endpoint = _target_endpoint()
-
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Bearer {refresh_access_token()}",
         "Content-Type": "application/json",
     }
-    payload = _single_post_payload(page1, page2, brief)
 
     with httpx.Client(timeout=90) as client:
-        response = client.post(endpoint, headers=headers, json=payload)
+        response = client.post(_endpoint(), headers=headers, json=payload)
         response.raise_for_status()
         data = response.json()
 
     message_id = str(data.get("id", "")).strip()
     if not message_id:
-        raise RuntimeError(
-            "Teams post succeeded without returning a message id."
-        )
+        raise RuntimeError("Teams post succeeded without returning a message id.")
 
     print(f"TEAMS_MESSAGE_ID={message_id}")
     return message_id
