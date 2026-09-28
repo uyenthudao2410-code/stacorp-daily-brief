@@ -13,15 +13,15 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates"
 ASSETS = ROOT / "assets"
 
-APPROVED_LAYOUT_VERSION = "STACORP_EDITORIAL_3PAGE_V1"
+APPROVED_LAYOUT_VERSION = "STACORP_EDITORIAL_3PAGE_FINAL_V1"
 APPROVED_PAGE1 = TEMPLATES / "editorial_page1.html"
 APPROVED_PAGE2 = TEMPLATES / "editorial_page2.html"
 APPROVED_PAGE3 = TEMPLATES / "editorial_page3.html"
 APPROVED_STYLE = TEMPLATES / "approved-editorial-style.css"
-APPROVED_PAGE1_BLOB_SHA = "3b47b676b3ab3d5b2ae42ed3dcb65878cd099d39"
-APPROVED_PAGE2_BLOB_SHA = "bc1c8ae987680afd64a221dda6a758d41478e868"
-APPROVED_PAGE3_BLOB_SHA = "1c8107f045d9c433b49f1d7bbd966bf910397a90"
-APPROVED_STYLE_BLOB_SHA = "7ef2b9f4a402880c168f829d79f139c30df12b6d"
+APPROVED_PAGE1_BLOB_SHA = "dd6566c3ed0e18dedc2f119ae32652847bf448b7"
+APPROVED_PAGE2_BLOB_SHA = "0311bbedd3cf7db8b9c322547ebd9e4b5ec662a8"
+APPROVED_PAGE3_BLOB_SHA = "60bcf18c06a68983cd678f7560aecbc15576cff8"
+APPROVED_STYLE_BLOB_SHA = "c0cf73dd6664c9694749c9a165d133af489b44e1"
 
 APPROVED_LOGO = ASSETS / "stacorp-logo.png"
 APPROVED_LOGO_GIT_BLOB_SHA = "2ffd30fd4c8774bdebb461f157ed6b41c04172be"
@@ -33,6 +33,33 @@ PAGE2 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_2.png"
 PAGE3 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_3.png"
 CSS_SIZE = (1080, 1620)
 RENDER_SCALE = 2
+
+LOCKED_GEOMETRY = {
+    "editorial_page1.html": {
+        ".page": {"width": 1080, "height": 1620},
+        ".masthead": {"height": 164},
+        ".logo": {"width": 92, "height": 92},
+        ".hero-image-wrap": {"height": 540},
+        ".mini-card": {"height": 425},
+        ".footer": {"height": 98},
+    },
+    "editorial_page2.html": {
+        ".page": {"width": 1080, "height": 1620},
+        ".masthead": {"height": 164},
+        ".logo": {"width": 92, "height": 92},
+        ".wide-image-wrap": {"height": 430},
+        ".split-main": {"height": 353},
+        ".footer": {"height": 98},
+    },
+    "editorial_page3.html": {
+        ".page": {"width": 1080, "height": 1620},
+        ".masthead": {"height": 164},
+        ".logo": {"width": 92, "height": 92},
+        ".summary-title-row": {"height": 88},
+        ".highlight-card": {"height": 240},
+        ".footer": {"height": 98},
+    },
+}
 
 
 def _git_blob_sha(path: Path) -> str:
@@ -110,7 +137,9 @@ def _validate_copy(brief: dict) -> None:
 
     executive_actions = brief.get("executive_actions", [])
     if executive_actions and len(executive_actions) != 3:
-        raise RuntimeError("executive_actions must contain exactly three items when provided.")
+        raise RuntimeError(
+            "executive_actions must contain exactly three items when provided."
+        )
 
 
 def _ensure_demo_visuals(items: list[dict]) -> None:
@@ -190,8 +219,43 @@ def _derive_summary_lede(brief: dict) -> str:
 
     return (
         f"Từ 5 diễn biến nổi bật ngày {brief.get('date', '')}, STACORP cập nhật "
-        "những thông tin chính, giúp doanh nghiệp nắm bắt cơ hội và chủ động ứng phó rủi ro."
+        "những thông tin chính, giúp doanh nghiệp nắm bắt cơ hội và chủ động "
+        "ứng phó rủi ro."
     )
+
+
+def _assert_locked_geometry(page, html_name: str) -> None:
+    rules = LOCKED_GEOMETRY[html_name]
+    for selector, expected in rules.items():
+        boxes = page.locator(selector).all()
+        if not boxes:
+            raise RuntimeError(
+                f"Locked geometry selector missing in {html_name}: {selector}"
+            )
+
+        box = boxes[0].bounding_box()
+        if not box:
+            raise RuntimeError(
+                f"Unable to read locked geometry in {html_name}: {selector}"
+            )
+
+        for key, value in expected.items():
+            actual = round(box[key])
+            if abs(actual - value) > 1:
+                raise RuntimeError(
+                    f"Locked geometry drift in {html_name} {selector} "
+                    f"{key}: {actual} != {value}"
+                )
+
+    footer_box = page.locator(".footer").bounding_box()
+    if footer_box is None:
+        raise RuntimeError(f"Footer missing in {html_name}")
+    footer_bottom = round(footer_box["y"] + footer_box["height"])
+    if footer_bottom != CSS_SIZE[1]:
+        raise RuntimeError(
+            f"Footer bottom drift in {html_name}: "
+            f"{footer_bottom} != {CSS_SIZE[1]}"
+        )
 
 
 def _downsample(src: Path, dst: Path) -> None:
@@ -248,7 +312,7 @@ def render_brief(brief: dict) -> tuple[Path, Path, Path]:
             device_scale_factor=RENDER_SCALE,
         )
 
-        for _, html_path, png_path, _ in pages:
+        for template_name, html_path, png_path, _ in pages:
             page.goto(html_path.as_uri(), wait_until="networkidle")
 
             broken = page.evaluate(
@@ -274,6 +338,8 @@ def render_brief(brief: dict) -> tuple[Path, Path, Path]:
                     f"Layout overflow in {html_path.name}: {overflow}"
                 )
 
+            _assert_locked_geometry(page, template_name)
+
             hi_res = png_path.with_name(png_path.stem + "_2X.png")
             page.screenshot(path=str(hi_res), full_page=False)
             _downsample(hi_res, png_path)
@@ -282,4 +348,5 @@ def render_brief(brief: dict) -> tuple[Path, Path, Path]:
         browser.close()
 
     print(f"APPROVED_LAYOUT_VERSION={APPROVED_LAYOUT_VERSION}")
+    print("LAYOUT_GEOMETRY_LOCK=PASS")
     return PAGE1, PAGE2, PAGE3
