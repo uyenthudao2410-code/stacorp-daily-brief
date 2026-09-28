@@ -48,7 +48,9 @@ def refresh_access_token() -> str:
         token = response.json().get("access_token")
 
     if not token:
-        raise RuntimeError("Microsoft token response did not contain access_token.")
+        raise RuntimeError(
+            "Microsoft token response did not contain access_token."
+        )
     return token
 
 
@@ -89,19 +91,17 @@ def _sources_html(brief: dict) -> str:
 
     for index, item in enumerate(brief.get("items", []), start=1):
         source = html.escape(str(item.get("source", "")).strip())
-        headline = html.escape(_clip(item.get("headline", ""), 72))
         url = _safe_url(item.get("url", ""))
 
-        label = " — ".join(part for part in (source, headline) if part)
-        if not label:
+        if not source:
             continue
 
         if url:
-            parts.append(f'<br>{index:02d}. <a href="{url}">{label}</a>')
+            parts.append(f'<br>{index:02d}. <a href="{url}">{source}</a>')
         else:
-            parts.append(f"<br>{index:02d}. {label}")
+            parts.append(f"<br>{index:02d}. {source}")
 
-    action = _clip(brief.get("action_today", ""), 220)
+    action = _clip(brief.get("action_today", ""), 190)
     if action:
         parts.extend(
             [
@@ -113,10 +113,15 @@ def _sources_html(brief: dict) -> str:
     return "".join(parts)
 
 
-def _single_post_payload(page1: Path, page2: Path, brief: dict) -> dict:
+def _single_post_payload(
+    page1: Path,
+    page2: Path,
+    brief: dict,
+) -> dict:
     date = html.escape(str(brief.get("date", "")).strip())
     body = (
-        f"<b>{date} • ĐIỂM TIN CHO DOANH NGHIỆP STACORP</b>"
+        f"<b>ĐIỂM TIN CHO DOANH NGHIỆP STACORP | {date}</b>"
+        "<br>5 diễn biến cần lưu ý hôm nay"
         "<br><br>"
         '<img src="../hostedContents/1/$value" '
         'width="900" alt="STACORP Daily Brief - Page 1">'
@@ -147,12 +152,16 @@ def _single_post_payload(page1: Path, page2: Path, brief: dict) -> dict:
     }
 
 
-def publish_inline_images(page1: Path, page2: Path, brief: dict) -> str:
+def publish_inline_images(
+    page1: Path,
+    page2: Path,
+    brief: dict,
+) -> str:
     """
-    Publish the whole daily brief as one Teams post.
+    Publish the V6 mobile-first brief as one Teams post.
 
-    Both rendered pages and the compact source/action footer are contained in
-    the same root message, avoiding fragmented multi-message delivery.
+    The images carry the editorial content; the text below them is intentionally
+    short and limited to source links plus action_today.
     """
     token = refresh_access_token()
     endpoint = _target_endpoint()
@@ -170,7 +179,9 @@ def publish_inline_images(page1: Path, page2: Path, brief: dict) -> str:
 
     message_id = str(data.get("id", "")).strip()
     if not message_id:
-        raise RuntimeError("Teams post succeeded without returning a message id.")
+        raise RuntimeError(
+            "Teams post succeeded without returning a message id."
+        )
 
     print(f"TEAMS_MESSAGE_ID={message_id}")
     return message_id
