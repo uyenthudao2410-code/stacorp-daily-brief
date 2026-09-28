@@ -3,8 +3,8 @@ from __future__ import annotations
 from pathlib import Path
 from PIL import Image
 
-MAX_BYTES = 4_000_000
-EXPECTED_SIZE = (1600, 900)
+MAX_BYTES = 5_500_000
+EXPECTED_SIZE = (1080, 1620)
 
 
 def validate_png(path: Path) -> None:
@@ -12,7 +12,7 @@ def validate_png(path: Path) -> None:
         raise RuntimeError(f"Missing rendered page: {path}")
 
     size = path.stat().st_size
-    if size <= 80_000:
+    if size <= 90_000:
         raise RuntimeError(
             f"Rendered page is suspiciously small: {path} ({size} bytes)"
         )
