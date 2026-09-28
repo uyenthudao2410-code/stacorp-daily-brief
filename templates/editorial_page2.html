@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080">
+  <link rel="stylesheet" href="approved-editorial-style.css">
+  <title>STACORP Daily Brief — Page 2</title>
+</head>
+<body>
+<main class="page">
+  <header class="masthead">
+    <div class="brand">
+      <img class="logo" src="stacorp-logo.png" alt="STACORP">
+      <div class="brand-rule"></div>
+      <div class="brand-copy">
+        <div class="brand-title">ĐIỂM TIN CHO DOANH NGHIỆP<br><span>STACORP</span></div>
+        <div class="brand-subtitle">5 DIỄN BIẾN CẦN LƯU Ý HÔM NAY</div>
+      </div>
+    </div>
+    <div class="date-block">
+      <div class="date">{{ brief.date }}</div>
+      <div class="date-rule"></div>
+      <div class="edition">BẢN TIN HÀNG NGÀY</div>
+      <div class="edition-sub">KINH TẾ • ĐẦU TƯ • DOANH NGHIỆP</div>
+    </div>
+  </header>
+
+  {% set top = items[0] %}
+  {% set top_impact = "high" if top.impact == "CAO" else ("medium" if top.impact == "TRUNG BÌNH" else "watch") %}
+  <article class="story-wide story-top">
+    <div class="wide-image-wrap">
+      <img class="wide-image" src="{{ top.visual_src }}" alt="">
+      <div class="story-tag">04 <span></span> {{ top.category|upper }}</div>
+      <div class="impact-tag {{ top_impact }}">TÁC ĐỘNG: {{ top.impact }}</div>
+    </div>
+    <div class="wide-copy">
+      <h1>{{ top.headline }}</h1>
+      <p>{{ top.facts[0]|clip_text(205) }}</p>
+    </div>
+    <div class="note-box">
+      <div class="note-icon">✦</div>
+      <div class="note-label">STACORP CẦN LƯU Ý</div>
+      <div class="note-divider"></div>
+      <div class="note-text">{{ top.note|clean_note|clip_text(185) }}</div>
+    </div>
+  </article>
+
+  {% set bottom = items[1] %}
+  {% set bottom_impact = "high" if bottom.impact == "CAO" else ("medium" if bottom.impact == "TRUNG BÌNH" else "watch") %}
+  <article class="story-wide story-bottom">
+    <div class="wide-image-wrap lower">
+      <img class="wide-image" src="{{ bottom.visual_src }}" alt="">
+      <div class="story-tag">05 <span></span> {{ bottom.category|upper }}</div>
+      <div class="impact-tag {{ bottom_impact }}">TÁC ĐỘNG: {{ bottom.impact }}</div>
+    </div>
+    <div class="wide-copy">
+      <h1>{{ bottom.headline }}</h1>
+      <p>{{ bottom.facts[0]|clip_text(205) }}</p>
+    </div>
+    <div class="note-box">
+      <div class="note-icon">✦</div>
+      <div class="note-label">STACORP CẦN LƯU Ý</div>
+      <div class="note-divider"></div>
+      <div class="note-text">{{ bottom.note|clean_note|clip_text(185) }}</div>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <b>STACORP</b>
+      <span>KIẾN TẠO GIÁ TRỊ BỀN VỮNG<br>CÙNG DOANH NGHIỆP VIỆT</span>
+    </div>
+    <div class="footer-motto">CẬP NHẬT HÔM NAY<br>KIẾN TẠO CƠ HỘI NGÀY MAI</div>
+    <div class="page-no">2/3</div>
+  </footer>
+</main>
+</body>
+</html>
