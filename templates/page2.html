@@ -4,79 +4,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=1080">
   <link rel="stylesheet" href="style.css">
-  <title>STACORP Daily Brief V6 - Page 2</title>
+  <title>STACORP Daily Brief V7 - Page 2</title>
 </head>
 <body>
-  <main class="page page-two v6">
-    <header class="masthead compact-head">
-      <div class="brand">
-        <img class="logo" src="stacorp-logo.png" alt="STACORP">
-        <div>
-          <div class="brand-title">ĐIỂM TIN CHO DOANH NGHIỆP STACORP</div>
-          <div class="brand-subtitle">Góc nhìn điều hành</div>
+<main class="page">
+  <header class="topbar compact-topbar">
+    <div class="brand">
+      <img src="stacorp-logo.png" class="logo compact-logo" alt="STACORP">
+      <div>
+        <div class="eyebrow">CƠ HỘI • THỊ TRƯỜNG • DÒNG VỐN</div>
+        <div class="brand-title compact-title">DIỄN BIẾN ĐÁNG CHÚ Ý</div>
+      </div>
+    </div>
+    <div class="date">{{ brief.date }}</div>
+  </header>
+
+  <section class="story-stack">
+  {% for item in items %}
+    {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
+    <article class="story-panel">
+      <div class="story-image"><img src="{{ item.visual_src }}" alt=""></div>
+      <div class="story-copy">
+        <div class="meta">
+          <span class="index">0{{ loop.index + 1 }} / 05</span>
+          <span class="category">{{ item.category|upper }}</span>
+          <span class="impact {{ impact_class }}">{{ item.impact }}</span>
+        </div>
+        <h2>{{ item.headline }}</h2>
+        <p class="story-summary">{{ item.facts[0]|clip_text(150) }}</p>
+        <div class="story-note"><b>STACORP:</b> {{ item.note|clean_note|clip_text(155) }}</div>
+        <div class="source">
+          <span>Nguồn: <b>{{ item.source }}</b></span>
+          {% if item.source_date %}<span>{{ item.source_date|source_date }}</span>{% endif %}
         </div>
       </div>
-      <div class="date-chip">{{ brief.date }}</div>
-    </header>
+    </article>
+  {% endfor %}
+  </section>
 
-    <section class="page2-title">
-      <span>CHI PHÍ • CÔNG TRƯỜNG • RỦI RO</span>
-      <h1>NHỮNG DIỄN BIẾN CẦN THEO DÕI</h1>
-    </section>
-
-    <section class="feature-list">
-      {% for item in items %}
-      {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
-      <article class="feature-card">
-        <div class="feature-image"><img src="{{ item.visual_src }}" alt=""></div>
-        <div class="feature-body">
-          <div class="meta-row">
-            <span class="story-no">0{{ loop.index + 3 }} / 05</span>
-            <span class="category">{{ item.category|upper }}</span>
-            <span class="impact {{ impact_class }}">{{ item.impact }}</span>
-          </div>
-          <h2>{{ item.headline }}</h2>
-          <p class="summary">{{ item.facts[0]|clip_text(140) }}</p>
-          <div class="insight small">
-            <b>STACORP CẦN LƯU Ý</b>
-            <span>{{ item.note|clean_note|clip_text(145) }}</span>
-          </div>
-          <div class="source-row compact-source">
-            <span>Nguồn: <b>{{ item.source }}</b></span>
-            {% if item.source_date %}<span>{{ item.source_date|source_date }}</span>{% endif %}
-          </div>
-        </div>
-      </article>
-      {% endfor %}
-    </section>
-
-    {% if brief.action_today %}
-    <section class="action-box">
-      <div class="action-kicker">ƯU TIÊN ĐIỀU HÀNH</div>
-      <h3>VIỆC CẦN LÀM HÔM NAY</h3>
-      <p>{{ brief.action_today|clip_text(240) }}</p>
-    </section>
-    {% else %}
-    <section class="action-box quiet">
-      <div class="action-kicker">ƯU TIÊN ĐIỀU HÀNH</div>
-      <h3>CHƯA PHÁT SINH HÀNH ĐỘNG ƯU TIÊN CẤP NGÀY</h3>
-    </section>
-    {% endif %}
-
-    <section class="source-strip">
-      <b>NGUỒN ĐỌC THÊM</b>
-      <span>
-        {% for item in brief["items"] %}
-          {{ item.source }}{% if not loop.last %} · {% endif %}
-        {% endfor %}
-      </span>
-    </section>
-
-    <footer class="footer">
-      <span>STACORP DAILY BRIEF</span>
-      <span class="footer-line"></span>
-      <span>TRANG 2 / 2</span>
-    </footer>
-  </main>
+  <footer class="footer">
+    <span>STACORP DAILY BRIEF</span><i></i><span>TRANG 2 / 3</span>
+  </footer>
+</main>
 </body>
 </html>
