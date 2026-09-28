@@ -85,79 +85,44 @@ def _clip(value: str, limit: int) -> str:
     return clipped + "…"
 
 
-def _clean_note(value: str) -> str:
-    return re.sub(
-        r"^STACORP\\s+cần\\s+lưu\\s+ý\\s*:\\s*",
-        "",
-        str(value or "").strip(),
-        flags=re.IGNORECASE,
-    )
+def _source_footer_html(brief: dict) -> str:
+    """
+    Keep Teams text intentionally compact.
 
-
-def _summary_html(brief: dict) -> str:
-    date = html.escape(str(brief.get("date", "")))
-    title = html.escape(
-        str(brief.get("title", "ĐIỂM TIN CHO DOANH NGHIỆP STACORP"))
-    )
-    subtitle = html.escape(
-        str(
-            brief.get(
-                "subtitle",
-                "Thị trường • Dự án • Chi phí • Con người",
-            )
-        )
-    )
-
+    The two rendered pages carry the editorial content. This footer exists only
+    to make the original reporting easy to open and to surface an action_today
+    line when the brief explicitly contains one.
+    """
+    date = html.escape(str(brief.get("date", "")).strip())
     parts = [
-        f"<b>{date} | {title}</b>",
-        f"<br>{subtitle}",
-        "<br><br><b>5 ĐIỂM CẦN BIẾT</b>",
+        f"<b>{date} • ĐIỂM TIN STACORP</b>",
+        "<br><b>Nguồn đọc thêm:</b>",
     ]
 
     for index, item in enumerate(brief.get("items", []), start=1):
-        headline = html.escape(_clip(item.get("headline", ""), 115))
-        impact = html.escape(str(item.get("impact", "THEO DÕI")))
-        facts = item.get("facts", [])
-        fact = html.escape(_clip(facts[0] if facts else "", 260))
-        note = html.escape(_clip(_clean_note(item.get("note", "")), 220))
         source = html.escape(str(item.get("source", "")).strip())
-        source_date = html.escape(str(item.get("source_date", "")).strip())
+        headline = html.escape(_clip(item.get("headline", ""), 78))
         url = _safe_url(item.get("url", ""))
 
-        parts.append(
-            f"<br><br><b>{index:02d}. {headline}</b> "
-            f"<b>[{impact}]</b>"
-        )
-        if fact:
-            parts.append(f"<br>{fact}")
-        if note:
-            parts.append(f"<br><b>STACORP:</b> {note}")
+        label = " — ".join(part for part in (source, headline) if part)
+        if not label:
+            continue
 
-        if source:
-            source_label = source
-            if source_date:
-                source_label += f" • {source_date}"
-            if url:
-                parts.append(
-                    f'<br>Nguồn: <a href="{url}">{source_label}</a>'
-                )
-            else:
-                parts.append(f"<br>Nguồn: {source_label}")
+        if url:
+            parts.append(
+                f'<br>{index:02d}. <a href="{url}">{label}</a>'
+            )
+        else:
+            parts.append(f"<br>{index:02d}. {label}")
 
-    action = html.escape(_clip(brief.get("action_today", ""), 480))
+    action = _clip(brief.get("action_today", ""), 220)
     if action:
         parts.extend(
             [
-                "<br><br><b>ƯU TIÊN ĐIỀU HÀNH HÔM NAY</b>",
-                f"<br>{action}",
+                "<br><br><b>Ưu tiên hôm nay:</b> ",
+                html.escape(action),
             ]
         )
-
-    parts.extend(
-        [
-            "<br><br><i>Chi tiết xem trong 2 trang bản tin bên dưới.</i>",
-        ]
-    )
 
     return "".join(parts)
 
@@ -200,11 +165,10 @@ def _image_payload(path: Path, caption: str, temporary_id: str) -> dict:
 
 def publish_inline_images(page1: Path, page2: Path, brief: dict) -> str:
     """
-    Publish one editorial summary message followed by two full-width image posts.
+    Publish the visual brief first, then a short source/link footer.
 
-    The function only returns after all three Graph requests succeed. The returned
-    TEAMS_MESSAGE_ID is the summary/article message id; the page ids are printed
-    separately for auditability.
+    This keeps the daily Teams post magazine-led: the images carry the news,
+    while the final text message is intentionally short and clickable.
     """
     token = refresh_access_token()
     endpoint = _target_endpoint()
@@ -214,30 +178,30 @@ def publish_inline_images(page1: Path, page2: Path, brief: dict) -> str:
         "Content-Type": "application/json",
     }
 
-    summary_payload = {
-        "body": {
-            "contentType": "html",
-            "content": _summary_html(brief),
-        }
-    }
-
+    date = str(brief.get("date", "")).strip()
     page1_payload = _image_payload(
         page1,
-        "TRANG 1/2 • Cơ hội & diễn biến đáng chú ý",
+        f"{date} • ĐIỂM TIN STACORP • 1/2",
         "1",
     )
     page2_payload = _image_payload(
         page2,
-        "TRANG 2/2 • Góc nhìn điều hành",
+        f"{date} • ĐIỂM TIN STACORP • 2/2",
         "1",
     )
+    source_payload = {
+        "body": {
+            "contentType": "html",
+            "content": _source_footer_html(brief),
+        }
+    }
 
     with httpx.Client(timeout=60) as client:
-        summary_id = _post(client, endpoint, headers, summary_payload)
         page1_id = _post(client, endpoint, headers, page1_payload)
         page2_id = _post(client, endpoint, headers, page2_payload)
+        source_id = _post(client, endpoint, headers, source_payload)
 
-    print(f"TEAMS_SUMMARY_MESSAGE_ID={summary_id}")
     print(f"TEAMS_PAGE_1_MESSAGE_ID={page1_id}")
     print(f"TEAMS_PAGE_2_MESSAGE_ID={page2_id}")
-    return summary_id
+    print(f"TEAMS_SOURCE_MESSAGE_ID={source_id}")
+    return page1_id
