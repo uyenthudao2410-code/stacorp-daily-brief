@@ -87,3 +87,13 @@ html,body{
 
 .footer{height:20px;margin-top:10px;display:flex;align-items:center;gap:10px;color:#778394;font-size:9.5px;font-weight:850;letter-spacing:.07em}
 .footer i{height:1px;flex:1;background:#cfd4da}
+
+/* V8 supporting stories are typography-led for mobile readability. */
+.thumb{display:none!important}
+.card{position:relative;background:linear-gradient(180deg,#ffffff 0%,#fbfaf7 100%)}
+.card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#c7a16a,#2b63a3)}
+.card-copy{height:290px;padding:18px 18px 15px 20px}
+.card h2{font-size:27px;line-height:1.08;-webkit-line-clamp:3;margin:10px 0 10px}
+.card p{font-size:14px;line-height:1.34;-webkit-line-clamp:3}
+.category{font-size:10px}
+.source{font-size:10px;padding-top:9px}
