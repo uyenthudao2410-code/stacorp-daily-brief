@@ -2,71 +2,48 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=1120">
+  <meta name="viewport" content="width=1080">
   <link rel="stylesheet" href="style.css">
-  <title>STACORP Daily Brief - V4 - Page 2</title>
+  <title>STACORP Daily Brief V6 - Page 2</title>
 </head>
 <body>
-  <main class="page page-two v4">
-    <header class="mag-header compact-header">
-      <div class="brand-lockup">
-        <img class="brand-logo" src="stacorp-logo.png" alt="STACORP">
-        <div class="brand-copy">
+  <main class="page page-two v6">
+    <header class="masthead compact-head">
+      <div class="brand">
+        <img class="logo" src="stacorp-logo.png" alt="STACORP">
+        <div>
           <div class="brand-title">ĐIỂM TIN CHO DOANH NGHIỆP STACORP</div>
-          <div class="brand-subtitle">Executive Brief • Thị trường • Dự án • Chi phí • Con người</div>
+          <div class="brand-subtitle">Góc nhìn điều hành</div>
         </div>
       </div>
-      <div class="issue-lockup">
-        <div class="issue-date">{{ brief.date }}</div>
-        <div class="issue-meta">02 / 02</div>
-      </div>
+      <div class="date-chip">{{ brief.date }}</div>
     </header>
 
-    <section class="page-two-title">
-      <div class="page-two-kicker">GÓC NHÌN ĐIỀU HÀNH</div>
-      <h1>CHI PHÍ • CÔNG TRƯỜNG • RỦI RO CẦN THEO DÕI</h1>
+    <section class="page2-title">
+      <span>CHI PHÍ • CÔNG TRƯỜNG • RỦI RO</span>
+      <h1>NHỮNG DIỄN BIẾN CẦN THEO DÕI</h1>
     </section>
 
-    <section class="feature-stack">
+    <section class="feature-list">
       {% for item in items %}
       {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
-      <article class="feature-card {% if loop.index == 2 %}reverse{% endif %}">
-        <div class="feature-visual">
-          <img src="{{ item.visual_src }}" alt="">
-        </div>
-
-        <div class="feature-copy">
-          <div class="story-topline">
-            <span class="story-index">0{{ loop.index + 3 }} / 05</span>
-            <span class="category-pill">{{ item.category|upper }}</span>
-            <span class="impact-pill {{ impact_class }}"><i></i>{{ item.impact }}</span>
+      <article class="feature-card">
+        <div class="feature-image"><img src="{{ item.visual_src }}" alt=""></div>
+        <div class="feature-body">
+          <div class="meta-row">
+            <span class="story-no">0{{ loop.index + 3 }} / 05</span>
+            <span class="category">{{ item.category|upper }}</span>
+            <span class="impact {{ impact_class }}">{{ item.impact }}</span>
           </div>
-
-          <h2 class="feature-headline size-{{ item.headline|headline_size('feature') }}">{{ item.headline }}</h2>
-
-          <div class="key-points feature-points">
-            {% for fact in item.facts %}
-            <div class="key-point">
-              <div class="key-index">0{{ loop.index }}</div>
-              <div class="key-text">{{ fact }}</div>
-            </div>
-            {% endfor %}
+          <h2>{{ item.headline }}</h2>
+          <p class="summary">{{ item.facts[0]|clip_text(140) }}</p>
+          <div class="insight small">
+            <b>STACORP CẦN LƯU Ý</b>
+            <span>{{ item.note|clean_note|clip_text(145) }}</span>
           </div>
-
-          <div class="stacorp-note feature-note">
-            <div class="note-label">STACORP CẦN LƯU Ý</div>
-            <div class="note-text">{{ item.note|clean_note }}</div>
-          </div>
-
-          <div class="story-footer feature-footer">
-            <div class="department-chips">
-              {% for d in item.departments %}<span>{{ d|upper }}</span>{% endfor %}
-            </div>
-            <div class="source-block">
-              <b>NGUỒN</b>
-              <span>{{ item.source }}</span>
-              {% if item.source_date %}<small>{{ item.source_date|source_date }}</small>{% endif %}
-            </div>
+          <div class="source-row compact-source">
+            <span>Nguồn: <b>{{ item.source }}</b></span>
+            {% if item.source_date %}<span>{{ item.source_date|source_date }}</span>{% endif %}
           </div>
         </div>
       </article>
@@ -74,37 +51,31 @@
     </section>
 
     {% if brief.action_today %}
-    <section class="action-panel">
-      <div class="action-heading">
-        <span>ƯU TIÊN ĐIỀU HÀNH</span>
-        <strong>VIỆC CẦN LÀM<br>HÔM NAY</strong>
-      </div>
-      <div class="action-content">
-        <div class="action-text">{{ brief.action_today }}</div>
-        <div class="action-chips">
-          {% for d in brief.action_departments %}<span>{{ d|upper }}</span>{% endfor %}
-        </div>
-      </div>
+    <section class="action-box">
+      <div class="action-kicker">ƯU TIÊN ĐIỀU HÀNH</div>
+      <h3>VIỆC CẦN LÀM HÔM NAY</h3>
+      <p>{{ brief.action_today|clip_text(240) }}</p>
     </section>
     {% else %}
-    <section class="watch-panel">
-      <div class="watch-title">3 TÍN HIỆU CẦN THEO DÕI</div>
-      <div class="watch-grid">
-        {% for item in brief.impact_summary %}
-        <div class="watch-item">
-          <span class="watch-impact {{ 'high' if item.impact == 'CAO' else ('medium' if item.impact == 'TRUNG BÌNH' else 'watch') }}"></span>
-          <b>{{ item.category }}</b>
-          <p>{{ item.note|clean_note }}</p>
-        </div>
-        {% endfor %}
-      </div>
+    <section class="action-box quiet">
+      <div class="action-kicker">ƯU TIÊN ĐIỀU HÀNH</div>
+      <h3>CHƯA PHÁT SINH HÀNH ĐỘNG ƯU TIÊN CẤP NGÀY</h3>
     </section>
     {% endif %}
 
-    <footer class="mag-footer">
+    <section class="source-strip">
+      <b>NGUỒN ĐỌC THÊM</b>
+      <span>
+        {% for item in brief.items %}
+          {{ item.source }}{% if not loop.last %} · {% endif %}
+        {% endfor %}
+      </span>
+    </section>
+
+    <footer class="footer">
       <span>STACORP DAILY BRIEF</span>
-      <i></i>
-      <span>02 / 02</span>
+      <span class="footer-line"></span>
+      <span>TRANG 2 / 2</span>
     </footer>
   </main>
 </body>
