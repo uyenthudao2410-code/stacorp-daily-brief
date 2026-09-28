@@ -24,8 +24,8 @@ def _load_payload() -> dict:
         raise RuntimeError("Incoming ChatGPT brief must contain exactly five items.")
 
     OUT_VISUALS.mkdir(parents=True, exist_ok=True)
-
     enriched = []
+
     for index, item in enumerate(items, start=1):
         item = dict(item)
         candidates = [
@@ -50,15 +50,13 @@ def _load_payload() -> dict:
 
 def main() -> int:
     brief = _load_payload()
+    pages = render_brief(brief)
 
-    page1, page2 = render_brief(brief)
-    validate_png(page1)
-    validate_png(page2)
+    for page in pages:
+        validate_png(page)
+        print(f"Rendered: {page} ({page.stat().st_size} bytes)")
 
-    print(f"Rendered: {page1} ({page1.stat().st_size} bytes)")
-    print(f"Rendered: {page2} ({page2.stat().st_size} bytes)")
-
-    message_id = publish_inline_images(page1, page2, brief)
+    message_id = publish_inline_images(*pages, brief)
     print(f"TEAMS_MESSAGE_ID={message_id}")
     return 0
 
