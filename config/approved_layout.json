@@ -1,0 +1,27 @@
+{
+  "version": "STACORP_MAGAZINE_2PAGE_V1",
+  "status": "approved-production",
+  "locked": true,
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "pages": 2
+  },
+  "templates": {
+    "page1": "templates/approved_page1.html",
+    "page2": "templates/approved_page2.html",
+    "style": "templates/approved-style.css"
+  },
+  "template_git_blob_sha": {
+    "page1": "32e648ba4affc34884e1ab1c5f78e50fbbd2e5a4",
+    "page2": "62c1dbbc9abf030cdd1ee0659e4b8ccd99f8ad6c",
+    "style": "3d32e9a6d87ab7ec9a55c2cbf4e8425fc5c6da0b"
+  },
+  "production_rules": [
+    "Production must render exactly two 1600x900 pages.",
+    "Page 1 must contain items 1-3.",
+    "Page 2 must contain items 4-5 plus action_today.",
+    "Experimental templates must never be used by production.",
+    "Layout changes require explicit user approval."
+  ]
+}

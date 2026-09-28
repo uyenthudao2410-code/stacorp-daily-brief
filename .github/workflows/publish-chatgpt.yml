@@ -46,10 +46,27 @@ jobs:
       - name: Install Chromium
         run: python -m playwright install --with-deps chromium
 
+      - name: Verify approved production layout
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          expected = "STACORP_MAGAZINE_2PAGE_V1"
+          config = json.loads(Path("config/approved_layout.json").read_text(encoding="utf-8"))
+          if config.get("version") != expected or not config.get("locked"):
+              raise SystemExit("Approved production layout lock is invalid.")
+          if config.get("canvas") != {"width": 1600, "height": 900, "pages": 2}:
+              raise SystemExit("Approved production canvas/page count changed.")
+          print(f"APPROVED_LAYOUT_VERSION={expected}")
+          PY
+
       - name: Publish ChatGPT package to Teams
         run: python -m src.publish_incoming
 
       - name: Preserve published IDs only
+        if: ${{ hashFiles('incoming/current/.no_state_update') == '' }}
         shell: bash
         run: |
           set -euo pipefail

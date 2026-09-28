@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1600">
+  <link rel="stylesheet" href="approved-style.css">
+  <title>STACORP Daily Brief — Approved Page 2</title>
+</head>
+<body>
+<main class="page">
+  <header class="header">
+    <div class="brand">
+      <img src="stacorp-logo.png" class="logo" alt="STACORP">
+      <div class="brand-copy">
+        <div class="title">ĐIỂM TIN CHO DOANH NGHIỆP STACORP</div>
+        <div class="subtitle">5 DIỄN BIẾN CẦN LƯU Ý HÔM NAY</div>
+      </div>
+    </div>
+    <div class="date-lockup">
+      <div class="calendar-icon">▦</div>
+      <div class="date">{{ brief.date }}</div>
+    </div>
+  </header>
+
+  <section class="layout-page2">
+    {% set left = items[0] %}
+    {% set left_class = "high" if left.impact == "CAO" else ("medium" if left.impact == "TRUNG BÌNH" else "watch") %}
+    <article class="feature-card">
+      <div class="feature-image"><img src="{{ left.visual_src }}" alt=""></div>
+      <div class="feature-copy">
+        <div class="meta-row">
+          <span class="category-pill">{{ left.category|upper }}</span>
+          <span class="impact-pill {{ left_class }}">{{ left.impact }}</span>
+        </div>
+        <h1>{{ left.headline }}</h1>
+        <p class="dek">{{ left.facts[0]|clip_text(165) }}</p>
+        <div class="lead-note">
+          <b>STACORP CẦN LƯU Ý</b>
+          <span>{{ left.note|clean_note|clip_text(170) }}</span>
+        </div>
+        <div class="source">Nguồn: <b>{{ left.source }}</b></div>
+      </div>
+    </article>
+
+    <aside class="page2-right">
+      {% set right = items[1] %}
+      {% set right_class = "high" if right.impact == "CAO" else ("medium" if right.impact == "TRUNG BÌNH" else "watch") %}
+      <article class="side-card tall-side">
+        <div class="side-image"><img src="{{ right.visual_src }}" alt=""></div>
+        <div class="side-copy">
+          <div class="meta-row compact">
+            <span class="category-pill">{{ right.category|upper }}</span>
+            <span class="impact-pill {{ right_class }}">{{ right.impact }}</span>
+          </div>
+          <h2>{{ right.headline }}</h2>
+          <p class="side-dek">{{ right.facts[0]|clip_text(118) }}</p>
+          <div class="source">Nguồn: <b>{{ right.source }}</b></div>
+        </div>
+      </article>
+
+      <section class="action-box">
+        <div class="action-icon">!</div>
+        <div class="action-copy">
+          <div class="action-label">ƯU TIÊN HÔM NAY</div>
+          {% if brief.action_today %}
+          <div class="action-text">{{ brief.action_today|clip_text(240) }}</div>
+          {% else %}
+          <div class="action-text muted">Chưa phát sinh hành động ưu tiên cấp ngày.</div>
+          {% endif %}
+        </div>
+      </section>
+    </aside>
+  </section>
+
+  <footer class="footer">
+    <span>STACORP DAILY BRIEF</span>
+    <i></i>
+    <span>TRANG 2/2</span>
+  </footer>
+</main>
+</body>
+</html>

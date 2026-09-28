@@ -64,7 +64,7 @@ def _prepare_teams_jpeg(path: Path, index: int) -> Path:
         image.save(
             target,
             format="JPEG",
-            quality=93,
+            quality=96,
             optimize=True,
             progressive=True,
             subsampling=0,
@@ -85,42 +85,49 @@ def _safe_url(value: str) -> str:
     return html.escape(value, quote=True)
 
 
+def _clip(value: str, limit: int) -> str:
+    text = " ".join(str(value or "").split())
+    if len(text) <= limit:
+        return text
+    clipped = text[: limit - 1].rsplit(" ", 1)[0].rstrip(" ,;:-")
+    return clipped + "…"
+
+
 def _sources_html(brief: dict) -> str:
-    parts = ["<b>Nguồn:</b>"]
+    parts = ["<b>Nguồn đọc thêm:</b>"]
     for index, item in enumerate(brief.get("items", []), start=1):
         source = html.escape(str(item.get("source", "")).strip())
+        headline = html.escape(_clip(item.get("headline", ""), 74))
         url = _safe_url(item.get("url", ""))
-        if not source:
+        label = " — ".join(part for part in (source, headline) if part)
+        if not label:
             continue
         if url:
-            parts.append(f' &nbsp; {index:02d}. <a href="{url}">{source}</a>')
+            parts.append(f'<br>{index:02d}. <a href="{url}">{label}</a>')
         else:
-            parts.append(f" &nbsp; {index:02d}. {source}")
+            parts.append(f"<br>{index:02d}. {label}")
+
+    action = _clip(brief.get("action_today", ""), 220)
+    if action:
+        parts.append(f"<br><br><b>Ưu tiên hôm nay:</b> {html.escape(action)}")
     return "".join(parts)
 
 
-def publish_inline_images(
-    page1: Path,
-    page2: Path,
-    page3: Path,
-    brief: dict,
-) -> str:
+def publish_inline_images(page1: Path, page2: Path, brief: dict) -> str:
     teams_pages = [
         _prepare_teams_jpeg(page1, 1),
         _prepare_teams_jpeg(page2, 2),
-        _prepare_teams_jpeg(page3, 3),
     ]
 
     date = html.escape(str(brief.get("date", "")).strip())
     body = (
-        f"<b>ĐIỂM TIN STACORP | {date}</b>"
-        "<br>5 diễn biến cần lưu ý hôm nay"
+        f"<b>{date} • ĐIỂM TIN CHO DOANH NGHIỆP STACORP</b>"
         "<br><br>"
-        '<img src="../hostedContents/1/$value" width="900" alt="STACORP page 1">'
+        '<img src="../hostedContents/1/$value" width="900" '
+        'alt="STACORP Daily Brief - Page 1">'
         "<br><br>"
-        '<img src="../hostedContents/2/$value" width="900" alt="STACORP page 2">'
-        "<br><br>"
-        '<img src="../hostedContents/3/$value" width="900" alt="STACORP page 3">'
+        '<img src="../hostedContents/2/$value" width="900" '
+        'alt="STACORP Daily Brief - Page 2">'
         "<br><br>"
         + _sources_html(brief)
     )
@@ -136,11 +143,6 @@ def publish_inline_images(
             {
                 "@microsoft.graph.temporaryId": "2",
                 "contentBytes": _b64(teams_pages[1]),
-                "contentType": "image/jpeg",
-            },
-            {
-                "@microsoft.graph.temporaryId": "3",
-                "contentBytes": _b64(teams_pages[2]),
                 "contentType": "image/jpeg",
             },
         ],

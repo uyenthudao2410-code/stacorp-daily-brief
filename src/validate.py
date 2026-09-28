@@ -1,11 +1,10 @@
 from __future__ import annotations
 
 from pathlib import Path
-
 from PIL import Image
 
-MAX_BYTES = 3_600_000
-EXPECTED_SIZE = (1080, 1350)
+MAX_BYTES = 4_000_000
+EXPECTED_SIZE = (1600, 900)
 
 
 def validate_png(path: Path) -> None:
@@ -13,20 +12,20 @@ def validate_png(path: Path) -> None:
         raise RuntimeError(f"Missing rendered page: {path}")
 
     size = path.stat().st_size
-    if size <= 50_000:
+    if size <= 80_000:
         raise RuntimeError(
             f"Rendered page is suspiciously small: {path} ({size} bytes)"
         )
     if size >= MAX_BYTES:
         raise RuntimeError(
-            f"Rendered page exceeds inline-image safety limit: "
-            f"{path} ({size} bytes)"
+            f"Rendered page exceeds safety limit: {path} ({size} bytes)"
         )
 
     with Image.open(path) as image:
         if image.size != EXPECTED_SIZE:
             raise RuntimeError(
-                f"Unexpected image size for {path}: {image.size}"
+                f"Unexpected image size for {path}: {image.size}; "
+                f"expected {EXPECTED_SIZE}"
             )
         if image.format != "PNG":
             raise RuntimeError(f"Expected PNG for {path}, got {image.format}")
