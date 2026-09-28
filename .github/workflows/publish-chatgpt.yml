@@ -50,6 +50,7 @@ jobs:
         run: python -m src.publish_incoming
 
       - name: Preserve published IDs only
+        if: ${{ hashFiles('incoming/current/.no_state_update') == '' }}
         shell: bash
         run: |
           set -euo pipefail
