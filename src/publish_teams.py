@@ -7,6 +7,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import httpx
+from PIL import Image
 
 GRAPH = "https://graph.microsoft.com/v1.0"
 STACORP_TEAMS_TEAM_ID = "c5bfff4c-a940-464e-a199-db0a169d230b"
@@ -56,6 +57,22 @@ def _endpoint() -> str:
     )
 
 
+def _prepare_teams_jpeg(path: Path, index: int) -> Path:
+    target = Path("/tmp/stacorp-daily-brief") / f"teams-page-{index}.jpg"
+    with Image.open(path) as image:
+        image = image.convert("RGB")
+        image.save(
+            target,
+            format="JPEG",
+            quality=93,
+            optimize=True,
+            progressive=True,
+            subsampling=0,
+        )
+    print(f"TEAMS_JPEG_PAGE_{index}={target.stat().st_size}")
+    return target
+
+
 def _b64(path: Path) -> str:
     return base64.b64encode(path.read_bytes()).decode("ascii")
 
@@ -88,6 +105,12 @@ def publish_inline_images(
     page3: Path,
     brief: dict,
 ) -> str:
+    teams_pages = [
+        _prepare_teams_jpeg(page1, 1),
+        _prepare_teams_jpeg(page2, 2),
+        _prepare_teams_jpeg(page3, 3),
+    ]
+
     date = html.escape(str(brief.get("date", "")).strip())
     body = (
         f"<b>ĐIỂM TIN STACORP | {date}</b>"
@@ -107,18 +130,18 @@ def publish_inline_images(
         "hostedContents": [
             {
                 "@microsoft.graph.temporaryId": "1",
-                "contentBytes": _b64(page1),
-                "contentType": "image/png",
+                "contentBytes": _b64(teams_pages[0]),
+                "contentType": "image/jpeg",
             },
             {
                 "@microsoft.graph.temporaryId": "2",
-                "contentBytes": _b64(page2),
-                "contentType": "image/png",
+                "contentBytes": _b64(teams_pages[1]),
+                "contentType": "image/jpeg",
             },
             {
                 "@microsoft.graph.temporaryId": "3",
-                "contentBytes": _b64(page3),
-                "contentType": "image/png",
+                "contentBytes": _b64(teams_pages[2]),
+                "contentType": "image/jpeg",
             },
         ],
     }
