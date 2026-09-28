@@ -1,3 +1,39 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": "54ff64829288acc5",
+      "date": "2026-09-28",
+      "headline": "VSIP Lạng Sơn có dự án sản xuất đầu tiên khởi công",
+      "source": "Báo và Phát thanh, Truyền hình Lạng Sơn",
+      "url": "https://baolangson.vn/dong-tho-du-an-dau-tu-30-trieu-usd-tai-khu-cong-nghiep-vsip-lang-son-5105363.html"
+    },
+    {
+      "id": "6a33302915b2f232",
+      "date": "2026-09-28",
+      "headline": "Gilimex khởi công thêm 344,68 ha khu công nghiệp tại Bắc Ninh",
+      "source": "Gilimex Industrial Park",
+      "url": "https://gilimexip.com/gilimex-industrial-park-khoi-cong-hai-khu-cong-nghiep-tai-bac-ninh-voi-tong-von-dau-tu-4-186-ty-dong/"
+    },
+    {
+      "id": "dc8cbe8dc894b7c2",
+      "date": "2026-09-28",
+      "headline": "Chính phủ ban hành kế hoạch hành động mới về khu vực FDI",
+      "source": "Cổng Thông tin điện tử Chính phủ",
+      "url": "https://chinhphu.vn/?classid=0&docid=219594&pageid=27160"
+    },
+    {
+      "id": "93fb04c9eeb166a2",
+      "date": "2026-09-28",
+      "headline": "Giá xăng dầu tăng, áp lực trực tiếp lên vận chuyển và thi công",
+      "source": "Bộ Công Thương",
+      "url": "https://minhbach.moit.gov.vn/tin-tuc/mot-so-thong-tin-dieu-hanh-gia-ban-xang-dau-ngay-24-9-2026.html"
+    },
+    {
+      "id": "644766a729d61e9b",
+      "date": "2026-09-28",
+      "headline": "Bộ Xây dựng yêu cầu chủ động ứng phó mưa lớn và sạt lở",
+      "source": "Bộ Xây dựng",
+      "url": "https://moc.gov.vn/vn/tin-tuc/1176/96990/bo-xay-dung-yeu-cau-cac-don-vi-chu-dong-ung-pho-voi-nguy-co-mua-lonngap-lutlu-quetsat-lo-datlocsetmua-da-tai-khu-vuc-nam-trung-bo-va-nam-bo.aspx"
+    }
+  ]
 }
