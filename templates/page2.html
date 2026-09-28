@@ -66,7 +66,7 @@
     <section class="source-strip">
       <b>NGUỒN ĐỌC THÊM</b>
       <span>
-        {% for item in brief.items %}
+        {% for item in brief["items"] %}
           {{ item.source }}{% if not loop.last %} · {% endif %}
         {% endfor %}
       </span>
