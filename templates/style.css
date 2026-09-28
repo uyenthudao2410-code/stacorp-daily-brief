@@ -572,7 +572,7 @@ html, body {
 }
 
 .feature-card {
-  height: 414px;
+  height: 448px;
   display: grid;
   grid-template-columns: 42% 58%;
   overflow: hidden;
