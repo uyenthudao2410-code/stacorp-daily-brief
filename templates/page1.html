@@ -4,132 +4,110 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=1120">
   <link rel="stylesheet" href="style.css">
-  <title>STACORP Daily Brief - Page 1</title>
+  <title>STACORP Daily Brief - V4 - Page 1</title>
 </head>
 <body>
-  <main class="page v3">
-    <header class="topbar">
+  <main class="page page-one v4">
+    <header class="mag-header">
       <div class="brand-lockup">
         <img class="brand-logo" src="stacorp-logo.png" alt="STACORP">
         <div class="brand-copy">
-          <div class="brand-name">STACORP</div>
-          <div class="brand-tagline">KIẾN TẠO GIÁ TRỊ BỀN VỮNG</div>
+          <div class="brand-title">ĐIỂM TIN DOANH NGHIỆP</div>
+          <div class="brand-subtitle">Executive Daily Brief</div>
         </div>
       </div>
-      <div class="date-lockup">
-        <div class="daily-label">DAILY BRIEF</div>
-        <div class="date-value">{{ brief.date }}</div>
+      <div class="issue-lockup">
+        <div class="issue-date">{{ brief.date }}</div>
+        <div class="issue-meta">SỐ HÔM NAY • 05 TIN</div>
       </div>
     </header>
 
-    <section class="intro">
-      <div class="intro-copy">
-        <div class="eyebrow">ĐIỂM TIN</div>
-        <h1>CHO DOANH NGHIỆP STACORP</h1>
-        <p>{{ brief.subtitle }}</p>
-        <div class="intro-rule"></div>
-        <div class="intro-note">Cập nhật nhanh các diễn biến đáng chú ý để chủ động cơ hội, chi phí và vận hành.</div>
-      </div>
-      <div class="intro-art" aria-hidden="true">
-        <span class="arc arc-one"></span>
-        <span class="arc arc-two"></span>
-        <span class="arc arc-three"></span>
-      </div>
-    </section>
-
-    <section class="metrics">
-      {% for m in brief.metrics %}
-      <div class="metric metric-{{ m.tone }}">
-        <div class="metric-badge"></div>
-        <div class="metric-value">{{ m.value }}</div>
-        <div class="metric-label">{{ m.label }}</div>
-        <div class="metric-hint">{{ m.hint }}</div>
-      </div>
-      {% endfor %}
-    </section>
-
-    <div class="section-heading">
-      <span>TIN NỔI BẬT</span>
-      <i></i>
-    </div>
-
     {% set lead = items[0] %}
     {% set impact_class = "high" if lead.impact == "CAO" else ("medium" if lead.impact == "TRUNG BÌNH" else "watch") %}
-    <article class="lead-story">
-      <div class="lead-content">
-        <div class="story-row">
+    <article class="hero-card">
+      <section class="hero-copy">
+        <div class="story-topline">
           <span class="category-pill">{{ lead.category|upper }}</span>
-          <span class="impact {{ impact_class }}">{{ lead.impact }}</span>
+          <span class="impact-pill {{ impact_class }}"><i></i>{{ lead.impact }}</span>
         </div>
-        <h2>{{ lead.headline }}</h2>
-        <ul class="facts lead-facts">
-          {% for fact in lead.facts %}<li>{{ fact }}</li>{% endfor %}
-        </ul>
-        <div class="insight-box">
-          <div class="insight-label">HÀM Ý CHO STACORP</div>
-          <div>{{ lead.note }}</div>
+
+        <h1 class="hero-headline size-{{ lead.headline|headline_size('hero') }}">{{ lead.headline }}</h1>
+
+        <div class="key-points">
+          {% for fact in lead.facts %}
+          <div class="key-point">
+            <div class="key-index">0{{ loop.index }}</div>
+            <div class="key-text">{{ fact }}</div>
+          </div>
+          {% endfor %}
         </div>
-        <div class="story-meta">
-          <span>{{ lead.departments|join(" • ") }}</span>
-          <span>{{ lead.source }}{% if lead.source_date %} • {{ lead.source_date|source_date }}{% endif %}</span>
+
+        <div class="stacorp-note">
+          <div class="note-label">STACORP CẦN LƯU Ý</div>
+          <div class="note-text">{{ lead.note|clean_note }}</div>
         </div>
-      </div>
-      <div class="lead-visual">
-        {% if lead.visual_src %}
-          <img src="{{ lead.visual_src }}" alt="">
-        {% else %}
-          <div class="visual-fallback visual-{{ lead.category|lower|replace(' ', '-') }}"></div>
-        {% endif %}
-      </div>
+
+        <div class="story-footer hero-footer">
+          <div class="department-chips">
+            {% for d in lead.departments %}<span>{{ d|upper }}</span>{% endfor %}
+          </div>
+          <div class="source-block">
+            <b>NGUỒN</b>
+            <span>{{ lead.source }}</span>
+            {% if lead.source_date %}<small>{{ lead.source_date|source_date }}</small>{% endif %}
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-visual">
+        <img src="{{ lead.visual_src }}" alt="">
+      </section>
     </article>
 
-    <div class="section-heading secondary-heading">
-      <span>CÁC TIN ĐÁNG CHÚ Ý KHÁC</span>
-      <i></i>
-    </div>
+    <div class="section-kicker">CƠ HỘI &amp; DIỄN BIẾN ĐÁNG CHÚ Ý</div>
 
-    <section class="compact-grid">
+    <section class="story-grid">
       {% for item in items[1:] %}
       {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
-      <article class="compact-card">
-        <div class="compact-visual">
-          {% if item.visual_src %}
-            <img src="{{ item.visual_src }}" alt="">
-          {% else %}
-            <div class="visual-fallback"></div>
-          {% endif %}
+      <article class="story-card">
+        <div class="card-visual">
+          <img src="{{ item.visual_src }}" alt="">
         </div>
-        <div class="compact-body">
-          <div class="story-row compact-row">
+        <div class="card-body">
+          <div class="story-topline compact-topline">
             <span class="category-pill">{{ item.category|upper }}</span>
-            <span class="impact {{ impact_class }}">{{ item.impact }}</span>
+            <span class="impact-pill {{ impact_class }}"><i></i>{{ item.impact }}</span>
           </div>
-          <h3>{{ item.headline }}</h3>
-          <ul class="facts compact-facts">
+
+          <h2 class="card-headline size-{{ item.headline|headline_size('compact') }}">{{ item.headline }}</h2>
+
+          <ul class="card-facts">
             {% for fact in item.facts %}<li>{{ fact }}</li>{% endfor %}
           </ul>
-          <div class="compact-insight"><strong>STACORP:</strong> {{ item.note }}</div>
-          <div class="story-meta compact-meta">
-            <span>{{ item.departments|join(" • ") }}</span>
-            <span>{{ item.source }}</span>
+
+          <div class="mini-note">
+            <b>STACORP CẦN LƯU Ý</b>
+            <span>{{ item.note|clean_note }}</span>
+          </div>
+
+          <div class="card-meta">
+            <div class="department-chips compact-chips">
+              {% for d in item.departments %}<span>{{ d|upper }}</span>{% endfor %}
+            </div>
+            <div class="source-inline">
+              <span>{{ item.source }}</span>
+              {% if item.source_date %}<small>{{ item.source_date|source_date }}</small>{% endif %}
+            </div>
           </div>
         </div>
       </article>
       {% endfor %}
     </section>
 
-    {% if brief.action_today %}
-    <section class="action-bar">
-      <div class="action-icon">✓</div>
-      <div class="action-title">VIỆC CẦN LÀM HÔM NAY</div>
-      <div class="action-text">{{ brief.action_today }}</div>
-    </section>
-    {% endif %}
-
-    <footer class="page-footer">
-      <span>STACORP • DAILY BRIEF</span>
+    <footer class="mag-footer">
+      <span>STACORP DAILY BRIEF</span>
       <i></i>
-      <span>Kiến tạo giá trị bền vững</span>
+      <span>01 / 02</span>
     </footer>
   </main>
 </body>
