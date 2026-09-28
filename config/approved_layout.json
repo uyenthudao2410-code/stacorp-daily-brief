@@ -1,11 +1,23 @@
 {
-  "version": "STACORP_EDITORIAL_3PAGE_V1",
-  "status": "approved-production",
+  "version": "STACORP_EDITORIAL_3PAGE_FINAL_V1",
+  "status": "approved-production-final",
   "locked": true,
   "canvas": {
     "width": 1080,
     "height": 1620,
     "pages": 3
+  },
+  "render": {
+    "device_scale_factor": 2,
+    "downsample": "LANCZOS",
+    "master_format": "PNG"
+  },
+  "teams_transport": {
+    "format": "JPEG",
+    "quality": 96,
+    "subsampling": 0,
+    "inline_width": 900,
+    "root_posts": 1
   },
   "templates": {
     "page1": "templates/editorial_page1.html",
@@ -14,18 +26,51 @@
     "style": "templates/approved-editorial-style.css"
   },
   "template_git_blob_sha": {
-    "page1": "3b47b676b3ab3d5b2ae42ed3dcb65878cd099d39",
-    "page2": "bc1c8ae987680afd64a221dda6a758d41478e868",
-    "page3": "1c8107f045d9c433b49f1d7bbd966bf910397a90",
-    "style": "7ef2b9f4a402880c168f829d79f139c30df12b6d"
+    "page1": "dd6566c3ed0e18dedc2f119ae32652847bf448b7",
+    "page2": "0311bbedd3cf7db8b9c322547ebd9e4b5ec662a8",
+    "page3": "60bcf18c06a68983cd678f7560aecbc15576cff8",
+    "style": "c0cf73dd6664c9694749c9a165d133af489b44e1"
+  },
+  "brand_lock": {
+    "logo_path": "assets/stacorp-logo.png",
+    "logo_git_blob_sha": "2ffd30fd4c8774bdebb461f157ed6b41c04172be",
+    "logo_sha256": "4fc97e9245c4513b9334a9659690e886aa4563ad892d3fe49f3d6322ba55046d"
+  },
+  "geometry_lock": {
+    "masthead_height": 164,
+    "logo_size": [
+      92,
+      92
+    ],
+    "footer_height": 98,
+    "page1_hero_image_height": 540,
+    "page1_mini_card_height": 425,
+    "page2_story4_image_height": 430,
+    "page2_story5_split_height": 353,
+    "page3_summary_title_height": 88,
+    "page3_highlight_card_height": 240,
+    "tolerance_px": 1
+  },
+  "design_tokens": {
+    "navy": "#062e62",
+    "navy_dark": "#021d42",
+    "blue": "#2a67a8",
+    "gold": "#c38a1c",
+    "gold_bright": "#dda82c",
+    "paper": "#fffdf8",
+    "headline_font": "Georgia, Times New Roman, serif",
+    "body_font": "Segoe UI, Arial, sans-serif"
   },
   "production_rules": [
     "Production must render exactly three 1080x1620 portrait pages.",
-    "Page 1: item 1 hero + item 2 and item 3 secondary cards.",
-    "Page 2: item 4 and item 5 full-width editorial stories with STACORP notes.",
-    "Page 3: executive summary, exactly three executive actions, five highlights, source list and closing visual.",
-    "Final pages are rendered deterministically from HTML/CSS; ChatGPT Images creates story illustrations only.",
-    "Experimental layouts must never be used by production.",
-    "Layout changes require explicit user approval."
+    "Header, approved STACORP logo, date lockup, skyline detail and navy/gold footer are immutable.",
+    "Page 1: item 1 hero + STACORP note + item 2 and item 3 secondary cards.",
+    "Page 2: item 4 full-width story + note; item 5 image-left/copy-right split + note.",
+    "Page 3: executive summary + exactly three executive actions + executive visual + five highlights + source panel + closing visual.",
+    "ChatGPT Images creates story illustrations only; it must never generate final newsletter pages, text, logo, badge or watermark.",
+    "Final pages are always rendered deterministically from the locked HTML/CSS templates.",
+    "Template hash, logo hash, output dimensions and geometry must pass before Teams posting.",
+    "No fallback template is allowed.",
+    "Layout changes require explicit user approval and a new layout version."
   ]
 }

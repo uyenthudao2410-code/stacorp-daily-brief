@@ -7,8 +7,8 @@
   <title>STACORP Daily Brief — Page 2</title>
 </head>
 <body>
-<main class="page">
-  <header class="masthead">
+<main class="page page-2">
+  <header class="masthead" data-lock="masthead">
     <div class="brand">
       <img class="logo" src="stacorp-logo.png" alt="STACORP">
       <div class="brand-rule"></div>
@@ -27,11 +27,12 @@
 
   {% set top = items[0] %}
   {% set top_impact = "high" if top.impact == "CAO" else ("medium" if top.impact == "TRUNG BÌNH" else "watch") %}
-  <article class="story-wide story-top">
+  <article class="story-wide story-top" data-lock="page2-story4">
     <div class="wide-image-wrap">
       <img class="wide-image" src="{{ top.visual_src }}" alt="">
+      <div class="image-vignette soft"></div>
       <div class="story-tag">04 <span></span> {{ top.category|upper }}</div>
-      <div class="impact-tag {{ top_impact }}">TÁC ĐỘNG: {{ top.impact }}</div>
+      <div class="impact-tag {{ top_impact }}">▥&nbsp; TÁC ĐỘNG: {{ top.impact }}</div>
     </div>
     <div class="wide-copy">
       <h1>{{ top.headline }}</h1>
@@ -47,17 +48,20 @@
 
   {% set bottom = items[1] %}
   {% set bottom_impact = "high" if bottom.impact == "CAO" else ("medium" if bottom.impact == "TRUNG BÌNH" else "watch") %}
-  <article class="story-wide story-bottom">
-    <div class="wide-image-wrap lower">
-      <img class="wide-image" src="{{ bottom.visual_src }}" alt="">
-      <div class="story-tag">05 <span></span> {{ bottom.category|upper }}</div>
-      <div class="impact-tag {{ bottom_impact }}">TÁC ĐỘNG: {{ bottom.impact }}</div>
+  <article class="story-split" data-lock="page2-story5">
+    <div class="split-main">
+      <div class="split-image-wrap">
+        <img class="wide-image" src="{{ bottom.visual_src }}" alt="">
+        <div class="image-vignette soft"></div>
+        <div class="story-tag">05 <span></span> {{ bottom.category|upper }}</div>
+        <div class="impact-tag {{ bottom_impact }}">▥&nbsp; TÁC ĐỘNG: {{ bottom.impact }}</div>
+      </div>
+      <div class="split-copy">
+        <h1>{{ bottom.headline }}</h1>
+        <p>{{ bottom.facts[0]|clip_text(205) }}</p>
+      </div>
     </div>
-    <div class="wide-copy">
-      <h1>{{ bottom.headline }}</h1>
-      <p>{{ bottom.facts[0]|clip_text(205) }}</p>
-    </div>
-    <div class="note-box">
+    <div class="note-box compact-note">
       <div class="note-icon">✦</div>
       <div class="note-label">STACORP CẦN LƯU Ý</div>
       <div class="note-divider"></div>
@@ -65,7 +69,8 @@
     </div>
   </article>
 
-  <footer class="footer">
+  <footer class="footer" data-lock="footer">
+    <div class="footer-flourish"></div>
     <div class="footer-brand">
       <b>STACORP</b>
       <span>KIẾN TẠO GIÁ TRỊ BỀN VỮNG<br>CÙNG DOANH NGHIỆP VIỆT</span>

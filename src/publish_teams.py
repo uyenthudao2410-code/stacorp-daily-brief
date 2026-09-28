@@ -66,7 +66,7 @@ def _prepare_teams_jpeg(path: Path, index: int) -> Path:
         image.save(
             target,
             format="JPEG",
-            quality=95,
+            quality=96,
             optimize=True,
             progressive=True,
             subsampling=0,
