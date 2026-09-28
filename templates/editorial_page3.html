@@ -7,8 +7,8 @@
   <title>STACORP Daily Brief — Page 3</title>
 </head>
 <body>
-<main class="page">
-  <header class="masthead">
+<main class="page page-3">
+  <header class="masthead" data-lock="masthead">
     <div class="brand">
       <img class="logo" src="stacorp-logo.png" alt="STACORP">
       <div class="brand-rule"></div>
@@ -25,27 +25,34 @@
     </div>
   </header>
 
-  <section class="summary-title-row">
+  <section class="summary-title-row" data-lock="page3-summary-title">
     <div class="summary-ribbon">▥ <span>TỔNG HỢP ĐIỀU HÀNH</span></div>
-    <div class="summary-count">5 ĐIỂM NỔI BẬT HÔM NAY</div>
+    <div class="summary-count">3 ƯU TIÊN HÀNH ĐỘNG CHO STACORP</div>
   </section>
 
   <p class="summary-lede">{{ summary_lede }}</p>
 
-  <section class="actions">
-    {% for action in executive_actions %}
-    <article class="action-row">
-      <div class="action-num">0{{ loop.index }}</div>
-      <div class="action-marker"></div>
-      <div class="action-copy">
-        <h2>{{ action.title }}</h2>
-        <p>{{ action.detail }}</p>
-      </div>
-    </article>
-    {% endfor %}
+  <section class="executive-zone" data-lock="page3-executive-zone">
+    <div class="actions">
+      {% for action in executive_actions %}
+      <article class="action-row">
+        <div class="action-num">0{{ loop.index }}</div>
+        <div class="action-marker"></div>
+        <div class="action-copy">
+          <h2>{{ action.title }}</h2>
+          <p>{{ action.detail }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <aside class="executive-visual">
+      <img src="{{ brief["items"][0].visual_src }}" alt="">
+      <div class="executive-visual-shade"></div>
+      <div class="executive-quote">Nắm bắt cơ hội<br><span>Kiến tạo giá trị bền vững</span></div>
+    </aside>
   </section>
 
-  <section class="highlights">
+  <section class="highlights" data-lock="page3-highlights">
     <div class="highlights-head">
       <div class="head-main">5 ĐIỂM NHẤN TRONG NGÀY</div>
       <div class="head-sub">NHỮNG DIỄN BIẾN QUAN TRỌNG DOANH NGHIỆP CẦN LƯU Ý</div>
@@ -64,18 +71,24 @@
     </div>
   </section>
 
-  <section class="sources-strip">
-    <div class="sources-title">NGUỒN THAM KHẢO</div>
-    <div class="sources-list">
-      {% for item in brief["items"] %}
-      <div class="source-pill"><b>0{{ loop.index }}</b><span>{{ item.source|clip_text(30) }}</span></div>
-      {% endfor %}
+  <section class="reference-zone" data-lock="page3-reference-zone">
+    <div class="sources-panel">
+      <div class="sources-title">▥&nbsp; NGUỒN THAM KHẢO</div>
+      <div class="sources-list">
+        {% for item in brief["items"] %}
+        <div class="source-pill"><b>0{{ loop.index }}</b><span>{{ item.source|clip_text(30) }}</span></div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="closing-image">
+      <img src="{{ brief["items"][3].visual_src }}" alt="">
+      <div class="closing-overlay"></div>
+      <div class="closing-caption">Cập nhật để chủ động<br><span>Ra quyết định tốt hơn</span></div>
     </div>
   </section>
 
-  <div class="closing-image"><img src="{{ brief["items"][3].visual_src }}" alt=""></div>
-
-  <footer class="footer">
+  <footer class="footer" data-lock="footer">
+    <div class="footer-flourish"></div>
     <div class="footer-brand">
       <b>STACORP</b>
       <span>KIẾN TẠO GIÁ TRỊ BỀN VỮNG<br>CÙNG DOANH NGHIỆP VIỆT</span>
