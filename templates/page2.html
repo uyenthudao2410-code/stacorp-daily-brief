@@ -12,8 +12,8 @@
       <div class="brand-lockup">
         <img class="brand-logo" src="stacorp-logo.png" alt="STACORP">
         <div class="brand-copy">
-          <div class="brand-title">ĐIỂM TIN DOANH NGHIỆP</div>
-          <div class="brand-subtitle">Executive Daily Brief</div>
+          <div class="brand-title">ĐIỂM TIN CHO DOANH NGHIỆP STACORP</div>
+          <div class="brand-subtitle">Executive Brief • Thị trường • Dự án • Chi phí • Con người</div>
         </div>
       </div>
       <div class="issue-lockup">
@@ -23,8 +23,8 @@
     </header>
 
     <section class="page-two-title">
-      <div class="page-two-kicker">CÔNG TRƯỜNG • CHI PHÍ • RỦI RO</div>
-      <h1>NHỮNG DIỄN BIẾN CẦN HÀNH ĐỘNG</h1>
+      <div class="page-two-kicker">GÓC NHÌN ĐIỀU HÀNH</div>
+      <h1>CHI PHÍ • CÔNG TRƯỜNG • RỦI RO CẦN THEO DÕI</h1>
     </section>
 
     <section class="feature-stack">
@@ -37,6 +37,7 @@
 
         <div class="feature-copy">
           <div class="story-topline">
+            <span class="story-index">0{{ loop.index + 3 }} / 05</span>
             <span class="category-pill">{{ item.category|upper }}</span>
             <span class="impact-pill {{ impact_class }}"><i></i>{{ item.impact }}</span>
           </div>
@@ -75,7 +76,7 @@
     {% if brief.action_today %}
     <section class="action-panel">
       <div class="action-heading">
-        <span>EXECUTIVE ACTION</span>
+        <span>ƯU TIÊN ĐIỀU HÀNH</span>
         <strong>VIỆC CẦN LÀM<br>HÔM NAY</strong>
       </div>
       <div class="action-content">
