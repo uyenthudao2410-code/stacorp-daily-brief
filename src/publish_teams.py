@@ -86,41 +86,31 @@ def _safe_url(value: str) -> str:
 
 
 def _sources_html(brief: dict) -> str:
-    parts = ["<b>Nguồn:</b>"]
+    parts = ["<b>Nguồn đọc thêm:</b>"]
     for index, item in enumerate(brief.get("items", []), start=1):
         source = html.escape(str(item.get("source", "")).strip())
         url = _safe_url(item.get("url", ""))
         if not source:
             continue
         if url:
-            parts.append(f' &nbsp; {index:02d}. <a href="{url}">{source}</a>')
+            parts.append(f'<br>{index:02d}. <a href="{url}">{source}</a>')
         else:
-            parts.append(f" &nbsp; {index:02d}. {source}")
+            parts.append(f"<br>{index:02d}. {source}")
+
+    action = " ".join(str(brief.get("action_today", "")).split())
+    if action:
+        parts.append(f"<br><br><b>Ưu tiên hôm nay:</b> {html.escape(action)}")
     return "".join(parts)
 
-
-def publish_inline_images(
-    page1: Path,
-    page2: Path,
-    page3: Path,
-    brief: dict,
-) -> str:
-    teams_pages = [
-        _prepare_teams_jpeg(page1, 1),
-        _prepare_teams_jpeg(page2, 2),
-        _prepare_teams_jpeg(page3, 3),
-    ]
-
+def publish_inline_images(page: Path, brief: dict) -> str:
+    teams_page = _prepare_teams_jpeg(page, 1)
     date = html.escape(str(brief.get("date", "")).strip())
+
     body = (
         f"<b>ĐIỂM TIN STACORP | {date}</b>"
-        "<br>5 diễn biến cần lưu ý hôm nay"
         "<br><br>"
-        '<img src="../hostedContents/1/$value" width="900" alt="STACORP page 1">'
-        "<br><br>"
-        '<img src="../hostedContents/2/$value" width="900" alt="STACORP page 2">'
-        "<br><br>"
-        '<img src="../hostedContents/3/$value" width="900" alt="STACORP page 3">'
+        '<img src="../hostedContents/1/$value" width="900" '
+        'alt="STACORP Daily Brief">'
         "<br><br>"
         + _sources_html(brief)
     )
@@ -130,19 +120,9 @@ def publish_inline_images(
         "hostedContents": [
             {
                 "@microsoft.graph.temporaryId": "1",
-                "contentBytes": _b64(teams_pages[0]),
+                "contentBytes": _b64(teams_page),
                 "contentType": "image/jpeg",
-            },
-            {
-                "@microsoft.graph.temporaryId": "2",
-                "contentBytes": _b64(teams_pages[1]),
-                "contentType": "image/jpeg",
-            },
-            {
-                "@microsoft.graph.temporaryId": "3",
-                "contentBytes": _b64(teams_pages[2]),
-                "contentType": "image/jpeg",
-            },
+            }
         ],
     }
 
