@@ -3,13 +3,14 @@
   "canonical_logo_path": "assets/stacorp-logo.png",
   "canonical_logo_source": "User-approved Logo_Brand3(1).png",
   "original_source_sha256": "56a9b4e2883aec09dbe2b92482aff19dfb83d487c5ac86afcc42fcd157611d9e",
-  "production_asset_sha256": "b41aa7223ca41a3339eb9c0ed553c252c235d5d912cac25fb57574cf8b2bf6cd",
-  "production_git_blob_sha1": "5866065cf220cdd3510822718a45bc31b98b61ca",
+  "production_asset_sha256": "4fc97e9245c4513b9334a9659690e886aa4563ad892d3fe49f3d6322ba55046d",
+  "production_git_blob_sha1": "2ffd30fd4c8774bdebb461f157ed6b41c04172be",
   "render_rules": {
     "page_1_position": "top-left",
     "page_2_position": "top-left",
     "allow_ai_generated_logo": false,
     "allow_story_image_logo": false,
     "fail_if_missing_or_modified": true
-  }
+  },
+  "production_dimensions": "96x96"
 }
