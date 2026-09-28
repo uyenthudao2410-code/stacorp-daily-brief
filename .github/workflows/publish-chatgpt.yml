@@ -53,11 +53,11 @@ jobs:
           import json
           from pathlib import Path
 
-          expected = "STACORP_MAGAZINE_2PAGE_V1"
+          expected = "STACORP_EDITORIAL_3PAGE_V1"
           config = json.loads(Path("config/approved_layout.json").read_text(encoding="utf-8"))
           if config.get("version") != expected or not config.get("locked"):
               raise SystemExit("Approved production layout lock is invalid.")
-          if config.get("canvas") != {"width": 1600, "height": 900, "pages": 2}:
+          if config.get("canvas") != {"width": 1080, "height": 1620, "pages": 3}:
               raise SystemExit("Approved production canvas/page count changed.")
           print(f"APPROVED_LAYOUT_VERSION={expected}")
           PY

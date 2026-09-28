@@ -25,6 +25,7 @@ def refresh_access_token() -> str:
     tenant = _required("MS_TENANT_ID")
     client_id = _required("MS_CLIENT_ID")
     refresh_token = _required("MS_REFRESH_TOKEN")
+
     data = {
         "client_id": client_id,
         "grant_type": "refresh_token",
@@ -35,6 +36,7 @@ def refresh_access_token() -> str:
             "https://graph.microsoft.com/ChannelMessage.Send"
         ),
     }
+
     secret = os.getenv("MS_CLIENT_SECRET", "").strip()
     if secret:
         data["client_secret"] = secret
@@ -64,7 +66,7 @@ def _prepare_teams_jpeg(path: Path, index: int) -> Path:
         image.save(
             target,
             format="JPEG",
-            quality=96,
+            quality=95,
             optimize=True,
             progressive=True,
             subsampling=0,
@@ -95,28 +97,36 @@ def _clip(value: str, limit: int) -> str:
 
 def _sources_html(brief: dict) -> str:
     parts = ["<b>Nguồn đọc thêm:</b>"]
+
     for index, item in enumerate(brief.get("items", []), start=1):
         source = html.escape(str(item.get("source", "")).strip())
-        headline = html.escape(_clip(item.get("headline", ""), 74))
         url = _safe_url(item.get("url", ""))
-        label = " — ".join(part for part in (source, headline) if part)
-        if not label:
+
+        if not source:
             continue
+
         if url:
-            parts.append(f'<br>{index:02d}. <a href="{url}">{label}</a>')
+            parts.append(f'<br>{index:02d}. <a href="{url}">{source}</a>')
         else:
-            parts.append(f"<br>{index:02d}. {label}")
+            parts.append(f"<br>{index:02d}. {source}")
 
     action = _clip(brief.get("action_today", ""), 220)
     if action:
         parts.append(f"<br><br><b>Ưu tiên hôm nay:</b> {html.escape(action)}")
+
     return "".join(parts)
 
 
-def publish_inline_images(page1: Path, page2: Path, brief: dict) -> str:
+def publish_inline_images(
+    page1: Path,
+    page2: Path,
+    page3: Path,
+    brief: dict,
+) -> str:
     teams_pages = [
         _prepare_teams_jpeg(page1, 1),
         _prepare_teams_jpeg(page2, 2),
+        _prepare_teams_jpeg(page3, 3),
     ]
 
     date = html.escape(str(brief.get("date", "")).strip())
@@ -128,6 +138,9 @@ def publish_inline_images(page1: Path, page2: Path, brief: dict) -> str:
         "<br><br>"
         '<img src="../hostedContents/2/$value" width="900" '
         'alt="STACORP Daily Brief - Page 2">'
+        "<br><br>"
+        '<img src="../hostedContents/3/$value" width="900" '
+        'alt="STACORP Daily Brief - Page 3">'
         "<br><br>"
         + _sources_html(brief)
     )
@@ -143,6 +156,11 @@ def publish_inline_images(page1: Path, page2: Path, brief: dict) -> str:
             {
                 "@microsoft.graph.temporaryId": "2",
                 "contentBytes": _b64(teams_pages[1]),
+                "contentType": "image/jpeg",
+            },
+            {
+                "@microsoft.graph.temporaryId": "3",
+                "contentBytes": _b64(teams_pages[2]),
                 "contentType": "image/jpeg",
             },
         ],

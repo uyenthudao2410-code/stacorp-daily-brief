@@ -13,13 +13,15 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates"
 ASSETS = ROOT / "assets"
 
-APPROVED_LAYOUT_VERSION = "STACORP_MAGAZINE_2PAGE_V1"
-APPROVED_PAGE1 = TEMPLATES / "approved_page1.html"
-APPROVED_PAGE2 = TEMPLATES / "approved_page2.html"
-APPROVED_STYLE = TEMPLATES / "approved-style.css"
-APPROVED_PAGE1_BLOB_SHA = "32e648ba4affc34884e1ab1c5f78e50fbbd2e5a4"
-APPROVED_PAGE2_BLOB_SHA = "62c1dbbc9abf030cdd1ee0659e4b8ccd99f8ad6c"
-APPROVED_STYLE_BLOB_SHA = "3d32e9a6d87ab7ec9a55c2cbf4e8425fc5c6da0b"
+APPROVED_LAYOUT_VERSION = "STACORP_EDITORIAL_3PAGE_V1"
+APPROVED_PAGE1 = TEMPLATES / "editorial_page1.html"
+APPROVED_PAGE2 = TEMPLATES / "editorial_page2.html"
+APPROVED_PAGE3 = TEMPLATES / "editorial_page3.html"
+APPROVED_STYLE = TEMPLATES / "approved-editorial-style.css"
+APPROVED_PAGE1_BLOB_SHA = "3b47b676b3ab3d5b2ae42ed3dcb65878cd099d39"
+APPROVED_PAGE2_BLOB_SHA = "bc1c8ae987680afd64a221dda6a758d41478e868"
+APPROVED_PAGE3_BLOB_SHA = "1c8107f045d9c433b49f1d7bbd966bf910397a90"
+APPROVED_STYLE_BLOB_SHA = "7ef2b9f4a402880c168f829d79f139c30df12b6d"
 
 APPROVED_LOGO = ASSETS / "stacorp-logo.png"
 APPROVED_LOGO_GIT_BLOB_SHA = "2ffd30fd4c8774bdebb461f157ed6b41c04172be"
@@ -28,7 +30,8 @@ APPROVED_LOGO_SHA256 = "4fc97e9245c4513b9334a9659690e886aa4563ad892d3fe49f3d6322
 OUT_DIR = Path("/tmp/stacorp-daily-brief")
 PAGE1 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_1.png"
 PAGE2 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_2.png"
-CSS_SIZE = (1600, 900)
+PAGE3 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_3.png"
+CSS_SIZE = (1080, 1620)
 RENDER_SCALE = 2
 
 
@@ -42,6 +45,7 @@ def _verify_layout_lock() -> None:
     expected = {
         APPROVED_PAGE1: APPROVED_PAGE1_BLOB_SHA,
         APPROVED_PAGE2: APPROVED_PAGE2_BLOB_SHA,
+        APPROVED_PAGE3: APPROVED_PAGE3_BLOB_SHA,
         APPROVED_STYLE: APPROVED_STYLE_BLOB_SHA,
     }
     for path, sha in expected.items():
@@ -61,6 +65,7 @@ def _verify_brand_asset() -> None:
 
     data = APPROVED_LOGO.read_bytes()
     git_blob = b"blob " + str(len(data)).encode("ascii") + bytes([0]) + data
+
     if hashlib.sha1(git_blob).hexdigest() != APPROVED_LOGO_GIT_BLOB_SHA:
         raise RuntimeError("STACORP logo git-blob integrity check failed.")
     if hashlib.sha256(data).hexdigest() != APPROVED_LOGO_SHA256:
@@ -84,7 +89,8 @@ def _clip_text(value: str, limit: int) -> str:
     return clipped + "…"
 
 
-def _validate_copy(items: list[dict]) -> None:
+def _validate_copy(brief: dict) -> None:
+    items = brief.get("items", [])
     if len(items) != 5:
         raise RuntimeError("Approved layout requires exactly five news items.")
 
@@ -101,6 +107,10 @@ def _validate_copy(items: list[dict]) -> None:
             raise RuntimeError(f"Story {index} must contain 2-5 departments.")
         if not str(item.get("headline", "")).strip():
             raise RuntimeError(f"Story {index} headline is empty.")
+
+    executive_actions = brief.get("executive_actions", [])
+    if executive_actions and len(executive_actions) != 3:
+        raise RuntimeError("executive_actions must contain exactly three items when provided.")
 
 
 def _ensure_demo_visuals(items: list[dict]) -> None:
@@ -126,16 +136,62 @@ def _verify_visual_resolution(items: list[dict]) -> None:
         src = str(item.get("visual_src", "")).strip()
         if not src:
             raise RuntimeError(f"Story {index} is missing visual_src.")
+
         path = OUT_DIR / src
         if not path.exists():
             raise RuntimeError(f"Story {index} visual is missing: {src}")
+
         with Image.open(path) as image:
             width, height = image.size
+
         if max(width, height) < 1400 or min(width, height) < 900:
             raise RuntimeError(
-                f"Story {index} visual below production minimum: {width}x{height}; "
-                "require long edge >=1400 and short edge >=900."
+                f"Story {index} visual below production minimum: "
+                f"{width}x{height}; require long edge >=1400 and short edge >=900."
             )
+
+
+def _derive_executive_actions(brief: dict) -> list[dict]:
+    supplied = brief.get("executive_actions", [])
+    if supplied:
+        return [
+            {
+                "title": _clip_text(str(item.get("title", "")).strip(), 74),
+                "detail": _clip_text(str(item.get("detail", "")).strip(), 135),
+            }
+            for item in supplied[:3]
+        ]
+
+    items = brief["items"]
+    fallbacks = [
+        (
+            "Bám sát cơ hội đầu tư và khách hàng mới",
+            _clean_note(items[0].get("note", "")),
+        ),
+        (
+            "Chủ động chi phí, tiến độ và chuỗi cung ứng",
+            _clean_note(items[3].get("note", "")),
+        ),
+        (
+            "Siết quản trị rủi ro và an toàn công trường",
+            _clean_note(items[4].get("note", "")),
+        ),
+    ]
+    return [
+        {"title": title, "detail": _clip_text(detail, 135)}
+        for title, detail in fallbacks
+    ]
+
+
+def _derive_summary_lede(brief: dict) -> str:
+    supplied = str(brief.get("summary_lede", "")).strip()
+    if supplied:
+        return _clip_text(supplied, 210)
+
+    return (
+        f"Từ 5 diễn biến nổi bật ngày {brief.get('date', '')}, STACORP cập nhật "
+        "những thông tin chính, giúp doanh nghiệp nắm bắt cơ hội và chủ động ứng phó rủi ro."
+    )
 
 
 def _downsample(src: Path, dst: Path) -> None:
@@ -144,17 +200,18 @@ def _downsample(src: Path, dst: Path) -> None:
         image.save(dst, format="PNG", optimize=True)
 
 
-def render_brief(brief: dict) -> tuple[Path, Path]:
-    items = brief.get("items", [])
+def render_brief(brief: dict) -> tuple[Path, Path, Path]:
     _verify_layout_lock()
     _verify_brand_asset()
-    _validate_copy(items)
+    _validate_copy(brief)
+
+    items = brief["items"]
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     _ensure_demo_visuals(items)
     _verify_visual_resolution(items)
 
-    shutil.copyfile(APPROVED_STYLE, OUT_DIR / "approved-style.css")
+    shutil.copyfile(APPROVED_STYLE, OUT_DIR / "approved-editorial-style.css")
     shutil.copyfile(APPROVED_LOGO, OUT_DIR / "stacorp-logo.png")
 
     env = Environment(
@@ -164,16 +221,23 @@ def render_brief(brief: dict) -> tuple[Path, Path]:
     env.filters["clean_note"] = _clean_note
     env.filters["clip_text"] = _clip_text
 
+    context = {
+        "brief": brief,
+        "summary_lede": _derive_summary_lede(brief),
+        "executive_actions": _derive_executive_actions(brief),
+        "layout_version": APPROVED_LAYOUT_VERSION,
+    }
+
     pages = [
-        ("approved_page1.html", OUT_DIR / "approved_page1.html", PAGE1, items[:3]),
-        ("approved_page2.html", OUT_DIR / "approved_page2.html", PAGE2, items[3:]),
+        ("editorial_page1.html", OUT_DIR / "editorial_page1.html", PAGE1, items[:3]),
+        ("editorial_page2.html", OUT_DIR / "editorial_page2.html", PAGE2, items[3:]),
+        ("editorial_page3.html", OUT_DIR / "editorial_page3.html", PAGE3, items),
     ]
 
     for template_name, html_path, _, page_items in pages:
         html = env.get_template(template_name).render(
-            brief=brief,
+            **context,
             items=page_items,
-            layout_version=APPROVED_LAYOUT_VERSION,
         )
         html_path.write_text(html, encoding="utf-8")
 
@@ -194,7 +258,9 @@ def render_brief(brief: dict) -> tuple[Path, Path]:
             )
             if broken:
                 browser.close()
-                raise RuntimeError(f"Broken image assets in {html_path.name}: {broken}")
+                raise RuntimeError(
+                    f"Broken image assets in {html_path.name}: {broken}"
+                )
 
             overflow = page.evaluate(
                 """() => ({
@@ -204,7 +270,9 @@ def render_brief(brief: dict) -> tuple[Path, Path]:
             )
             if overflow["w"] > CSS_SIZE[0] or overflow["h"] > CSS_SIZE[1]:
                 browser.close()
-                raise RuntimeError(f"Layout overflow in {html_path.name}: {overflow}")
+                raise RuntimeError(
+                    f"Layout overflow in {html_path.name}: {overflow}"
+                )
 
             hi_res = png_path.with_name(png_path.stem + "_2X.png")
             page.screenshot(path=str(hi_res), full_page=False)
@@ -214,4 +282,4 @@ def render_brief(brief: dict) -> tuple[Path, Path]:
         browser.close()
 
     print(f"APPROVED_LAYOUT_VERSION={APPROVED_LAYOUT_VERSION}")
-    return PAGE1, PAGE2
+    return PAGE1, PAGE2, PAGE3

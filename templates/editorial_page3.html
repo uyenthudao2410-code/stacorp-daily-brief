@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080">
+  <link rel="stylesheet" href="approved-editorial-style.css">
+  <title>STACORP Daily Brief — Page 3</title>
+</head>
+<body>
+<main class="page">
+  <header class="masthead">
+    <div class="brand">
+      <img class="logo" src="stacorp-logo.png" alt="STACORP">
+      <div class="brand-rule"></div>
+      <div class="brand-copy">
+        <div class="brand-title">ĐIỂM TIN CHO DOANH NGHIỆP<br><span>STACORP</span></div>
+        <div class="brand-subtitle">5 DIỄN BIẾN CẦN LƯU Ý HÔM NAY</div>
+      </div>
+    </div>
+    <div class="date-block">
+      <div class="date">{{ brief.date }}</div>
+      <div class="date-rule"></div>
+      <div class="edition">BẢN TIN HÀNG NGÀY</div>
+      <div class="edition-sub">KINH TẾ • ĐẦU TƯ • DOANH NGHIỆP</div>
+    </div>
+  </header>
+
+  <section class="summary-title-row">
+    <div class="summary-ribbon">▥ <span>TỔNG HỢP ĐIỀU HÀNH</span></div>
+    <div class="summary-count">5 ĐIỂM NỔI BẬT HÔM NAY</div>
+  </section>
+
+  <p class="summary-lede">{{ summary_lede }}</p>
+
+  <section class="actions">
+    {% for action in executive_actions %}
+    <article class="action-row">
+      <div class="action-num">0{{ loop.index }}</div>
+      <div class="action-marker"></div>
+      <div class="action-copy">
+        <h2>{{ action.title }}</h2>
+        <p>{{ action.detail }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </section>
+
+  <section class="highlights">
+    <div class="highlights-head">
+      <div class="head-main">5 ĐIỂM NHẤN TRONG NGÀY</div>
+      <div class="head-sub">NHỮNG DIỄN BIẾN QUAN TRỌNG DOANH NGHIỆP CẦN LƯU Ý</div>
+    </div>
+    <div class="highlights-grid">
+      {% for item in brief["items"] %}
+      <article class="highlight-card">
+        <div class="highlight-image-wrap">
+          <img src="{{ item.visual_src }}" alt="">
+          <div class="highlight-no">0{{ loop.index }}</div>
+        </div>
+        <h3>{{ item.headline|clip_text(63) }}</h3>
+        <p>{{ item.facts[0]|clip_text(70) }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="sources-strip">
+    <div class="sources-title">NGUỒN THAM KHẢO</div>
+    <div class="sources-list">
+      {% for item in brief["items"] %}
+      <div class="source-pill"><b>0{{ loop.index }}</b><span>{{ item.source|clip_text(30) }}</span></div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <div class="closing-image"><img src="{{ brief["items"][3].visual_src }}" alt=""></div>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <b>STACORP</b>
+      <span>KIẾN TẠO GIÁ TRỊ BỀN VỮNG<br>CÙNG DOANH NGHIỆP VIỆT</span>
+    </div>
+    <div class="footer-motto">CẬP NHẬT HÔM NAY<br>KIẾN TẠO CƠ HỘI NGÀY MAI</div>
+    <div class="page-no">3/3</div>
+  </footer>
+</main>
+</body>
+</html>
