@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates"
 ASSETS = ROOT / "assets"
 APPROVED_LOGO = ASSETS / "stacorp-logo.png"
-APPROVED_LOGO_GIT_BLOB_SHA = "c650caf3be5b8e927a269602b5d66c1f366aea20"
+APPROVED_LOGO_GIT_BLOB_SHA = "2ffd30fd4c8774bdebb461f157ed6b41c04172be"\nAPPROVED_LOGO_SHA256 = "4fc97e9245c4513b9334a9659690e886aa4563ad892d3fe49f3d6322ba55046d"
 
 OUT_DIR = Path("/tmp/stacorp-daily-brief")
 PAGE1 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_1.png"
@@ -30,7 +30,11 @@ def _verify_brand_asset() -> None:
     data = APPROVED_LOGO.read_bytes()
     git_blob = b"blob " + str(len(data)).encode("ascii") + bytes([0]) + data
     digest = hashlib.sha1(git_blob).hexdigest()
-    if digest != APPROVED_LOGO_GIT_BLOB_SHA:
+    sha256 = hashlib.sha256(data).hexdigest()
+    if (
+        digest != APPROVED_LOGO_GIT_BLOB_SHA
+        or sha256 != APPROVED_LOGO_SHA256
+    ):
         raise RuntimeError(
             "STACORP logo integrity check failed. "
             "Refusing to render with an unapproved or modified logo."
