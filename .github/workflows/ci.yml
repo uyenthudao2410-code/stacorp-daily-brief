@@ -35,3 +35,34 @@ jobs:
 
       - name: Render and validate deterministic demo
         run: python -m src.main --demo
+
+
+      - name: Fetch latest ChatGPT delivery package for V4 preview
+        run: |
+          git fetch origin chatgpt-delivery
+          git checkout origin/chatgpt-delivery -- incoming/current
+
+      - name: Render V4 preview from actual delivery
+        run: |
+          python - <<'PY'
+          from src.publish_incoming import _load_payload
+          from src.render import render_brief
+          from src.validate import validate_png
+
+          brief = _load_payload()
+          page1, page2 = render_brief(brief)
+          validate_png(page1)
+          validate_png(page2)
+          print(f"V4_PREVIEW_PAGE_1={page1}")
+          print(f"V4_PREVIEW_PAGE_2={page2}")
+          PY
+
+      - name: Upload V4 preview images
+        uses: actions/upload-artifact@v4
+        with:
+          name: stacorp-v4-preview
+          path: |
+            /tmp/stacorp-daily-brief/STACORP_DAILY_BRIEF_PAGE_1.png
+            /tmp/stacorp-daily-brief/STACORP_DAILY_BRIEF_PAGE_2.png
+          if-no-files-found: error
+          retention-days: 3
