@@ -30,16 +30,12 @@ def _load_demo() -> dict:
 def _live_brief() -> dict:
     candidates = collect_candidates()
     print(f"Collected {len(candidates)} unique candidates.")
-
     if len(candidates) < 20:
         raise RuntimeError("Too few news candidates; refusing to publish.")
 
     selection = select_brief(candidates)
     if not selection.get("publish"):
-        print(
-            "Editorial gate: fewer than five sufficiently strong items. "
-            "Nothing will be published."
-        )
+        print("Editorial gate: fewer than five strong items. Nothing published.")
         return {"publish": False}
 
     return {
@@ -54,21 +50,9 @@ def _live_brief() -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--demo",
-        action="store_true",
-        help="Render deterministic sample content.",
-    )
-    parser.add_argument(
-        "--publish",
-        action="store_true",
-        help="Post both pages to Teams.",
-    )
-    parser.add_argument(
-        "--visuals",
-        action="store_true",
-        help="Generate brand-safe editorial story images with the OpenAI Image API.",
-    )
+    parser.add_argument("--demo", action="store_true")
+    parser.add_argument("--publish", action="store_true")
+    parser.add_argument("--visuals", action="store_true")
     args = parser.parse_args()
 
     brief = _load_demo() if args.demo else _live_brief()
@@ -78,17 +62,14 @@ def main() -> int:
     if args.visuals:
         brief = generate_visuals(brief)
 
-    page1, page2 = render_brief(brief)
-    validate_png(page1)
-    validate_png(page2)
-
-    print(f"Rendered: {page1} ({page1.stat().st_size} bytes)")
-    print(f"Rendered: {page2} ({page2.stat().st_size} bytes)")
+    pages = render_brief(brief)
+    for page in pages:
+        validate_png(page)
+        print(f"Rendered: {page} ({page.stat().st_size} bytes)")
 
     if args.publish:
-        message_id = publish_inline_images(page1, page2, brief)
+        message_id = publish_inline_images(*pages, brief)
         print(f"TEAMS_MESSAGE_ID={message_id}")
-
         if not args.demo:
             remember_published(brief["items"])
     else:

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=1080">
   <link rel="stylesheet" href="style.css">
-  <title>STACORP Daily Brief V7 - Page 2</title>
+  <title>STACORP Daily Brief V7 - Page 3</title>
 </head>
 <body>
 <main class="page">
@@ -12,27 +12,27 @@
     <div class="brand">
       <img src="stacorp-logo.png" class="logo compact-logo" alt="STACORP">
       <div>
-        <div class="eyebrow">CƠ HỘI • THỊ TRƯỜNG • DÒNG VỐN</div>
-        <div class="brand-title compact-title">DIỄN BIẾN ĐÁNG CHÚ Ý</div>
+        <div class="eyebrow">CHI PHÍ • CÔNG TRƯỜNG • RỦI RO</div>
+        <div class="brand-title compact-title">GÓC NHÌN ĐIỀU HÀNH</div>
       </div>
     </div>
     <div class="date">{{ brief.date }}</div>
   </header>
 
-  <section class="story-stack">
+  <section class="story-stack page3-stack">
   {% for item in items %}
     {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
-    <article class="story-panel">
+    <article class="story-panel page3-panel">
       <div class="story-image"><img src="{{ item.visual_src }}" alt=""></div>
       <div class="story-copy">
         <div class="meta">
-          <span class="index">0{{ loop.index + 1 }} / 05</span>
+          <span class="index">0{{ loop.index + 3 }} / 05</span>
           <span class="category">{{ item.category|upper }}</span>
           <span class="impact {{ impact_class }}">{{ item.impact }}</span>
         </div>
         <h2>{{ item.headline }}</h2>
-        <p class="story-summary">{{ item.facts[0]|clip_text(150) }}</p>
-        <div class="story-note"><b>STACORP:</b> {{ item.note|clean_note|clip_text(155) }}</div>
+        <p class="story-summary">{{ item.facts[0]|clip_text(145) }}</p>
+        <div class="story-note"><b>STACORP:</b> {{ item.note|clean_note|clip_text(150) }}</div>
         <div class="source">
           <span>Nguồn: <b>{{ item.source }}</b></span>
           {% if item.source_date %}<span>{{ item.source_date|source_date }}</span>{% endif %}
@@ -42,8 +42,17 @@
   {% endfor %}
   </section>
 
+  <section class="action">
+    <div class="action-label">ƯU TIÊN HÔM NAY</div>
+    {% if brief.action_today %}
+      <div class="action-text">{{ brief.action_today|clip_text(230) }}</div>
+    {% else %}
+      <div class="action-text muted">Chưa phát sinh hành động ưu tiên cấp ngày.</div>
+    {% endif %}
+  </section>
+
   <footer class="footer">
-    <span>STACORP DAILY BRIEF</span><i></i><span>TRANG 2 / 3</span>
+    <span>STACORP DAILY BRIEF</span><i></i><span>TRANG 3 / 3</span>
   </footer>
 </main>
 </body>

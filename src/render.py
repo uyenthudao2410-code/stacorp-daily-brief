@@ -20,6 +20,7 @@ APPROVED_LOGO_SHA256 = "4fc97e9245c4513b9334a9659690e886aa4563ad892d3fe49f3d6322
 OUT_DIR = Path("/tmp/stacorp-daily-brief")
 PAGE1 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_1.png"
 PAGE2 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_2.png"
+PAGE3 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_3.png"
 CSS_SIZE = (1080, 1350)
 RENDER_SCALE = 2
 
@@ -72,48 +73,32 @@ def _clip_text(value: str, limit: int) -> str:
     text = " ".join(str(value or "").split())
     if len(text) <= limit:
         return text
-
     clipped = text[: max(1, limit - 1)].rsplit(" ", 1)[0].rstrip(" ,;:-")
     return clipped + "…"
 
 
 def _validate_copy(items: list[dict]) -> None:
     if len(items) != 5:
-        raise RuntimeError("V6 layout requires exactly five news items.")
+        raise RuntimeError("V7 layout requires exactly five news items.")
 
     if sum(1 for item in items if item.get("impact") == "CAO") > 3:
-        raise RuntimeError("V6 layout allows at most three CAO items.")
+        raise RuntimeError("V7 layout allows at most three CAO items.")
 
     allowed_impacts = {"CAO", "TRUNG BÌNH", "THEO DÕI"}
-
     for index, item in enumerate(items, start=1):
-        headline = str(item.get("headline", "")).strip()
-        facts = item.get("facts", [])
-        departments = item.get("departments", [])
-        impact = item.get("impact")
-
-        if impact not in allowed_impacts:
-            raise RuntimeError(f"Story {index} has unsupported impact: {impact!r}")
-
-        if len(facts) != 2:
+        if item.get("impact") not in allowed_impacts:
+            raise RuntimeError(f"Story {index} has unsupported impact.")
+        if len(item.get("facts", [])) != 2:
             raise RuntimeError(f"Story {index} must contain exactly two facts.")
-
-        if not 2 <= len(departments) <= 5:
+        if not 2 <= len(item.get("departments", [])) <= 5:
             raise RuntimeError(f"Story {index} must contain 2-5 departments.")
-
-        if not headline:
+        if not str(item.get("headline", "")).strip():
             raise RuntimeError(f"Story {index} headline is empty.")
-
-        if len(headline) > 120:
-            raise RuntimeError(
-                f"Story {index} headline is too long for V6 ({len(headline)}>120)."
-            )
 
 
 def _ensure_demo_visuals(items: list[dict]) -> None:
     visuals_dir = OUT_DIR / "visuals"
     visuals_dir.mkdir(parents=True, exist_ok=True)
-
     palette = [
         (218, 234, 251),
         (225, 239, 248),
@@ -125,13 +110,8 @@ def _ensure_demo_visuals(items: list[dict]) -> None:
     for index, item in enumerate(items, start=1):
         if str(item.get("visual_src", "")).strip():
             continue
-
         target = visuals_dir / f"story-{index}-demo.png"
-        Image.new("RGB", (1400, 900), palette[index - 1]).save(
-            target,
-            format="PNG",
-            optimize=True,
-        )
+        Image.new("RGB", (1536, 1024), palette[index - 1]).save(target)
         item["visual_src"] = f"visuals/{target.name}"
 
 
@@ -140,7 +120,6 @@ def _verify_visual_resolution(items: list[dict]) -> None:
         src = str(item.get("visual_src", "")).strip()
         if not src:
             raise RuntimeError(f"Story {index} is missing visual_src.")
-
         path = OUT_DIR / src
         if not path.exists():
             raise RuntimeError(f"Story {index} visual is missing: {src}")
@@ -148,23 +127,21 @@ def _verify_visual_resolution(items: list[dict]) -> None:
         with Image.open(path) as image:
             width, height = image.size
 
-        if max(width, height) < 1100 or min(width, height) < 650:
+        if max(width, height) < 1400 or min(width, height) < 900:
             raise RuntimeError(
-                f"Story {index} visual is below V6 minimum resolution: "
-                f"{width}x{height}; require long edge >=1100 and short edge >=650."
+                f"Story {index} visual is below V7 production minimum: "
+                f"{width}x{height}; require long edge >=1400 and short edge >=900."
             )
 
 
 def _downsample(src: Path, dst: Path) -> None:
     with Image.open(src) as image:
-        image = image.convert("RGB")
-        image = image.resize(CSS_SIZE, Image.Resampling.LANCZOS)
+        image = image.convert("RGB").resize(CSS_SIZE, Image.Resampling.LANCZOS)
         image.save(dst, format="PNG", optimize=True)
 
 
-def render_brief(brief: dict) -> tuple[Path, Path]:
+def render_brief(brief: dict) -> tuple[Path, Path, Path]:
     items = brief.get("items", [])
-
     _validate_copy(items)
     _verify_brand_asset()
 
@@ -188,8 +165,9 @@ def render_brief(brief: dict) -> tuple[Path, Path]:
     brief.setdefault("subtitle", "Thị trường • Dự án • Chi phí • Con người")
 
     pages = [
-        ("page1.html", OUT_DIR / "page1.html", PAGE1, items[:3]),
-        ("page2.html", OUT_DIR / "page2.html", PAGE2, items[3:]),
+        ("page1.html", OUT_DIR / "page1.html", PAGE1, items[:1]),
+        ("page2.html", OUT_DIR / "page2.html", PAGE2, items[1:3]),
+        ("page3.html", OUT_DIR / "page3.html", PAGE3, items[3:5]),
     ]
 
     for template_name, html_path, _, page_items in pages:
@@ -239,4 +217,4 @@ def render_brief(brief: dict) -> tuple[Path, Path]:
 
         browser.close()
 
-    return PAGE1, PAGE2
+    return PAGE1, PAGE2, PAGE3
