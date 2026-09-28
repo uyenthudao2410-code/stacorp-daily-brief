@@ -12,8 +12,8 @@
       <div class="brand-lockup">
         <img class="brand-logo" src="stacorp-logo.png" alt="STACORP">
         <div class="brand-copy">
-          <div class="brand-title">ĐIỂM TIN DOANH NGHIỆP</div>
-          <div class="brand-subtitle">Executive Daily Brief</div>
+          <div class="brand-title">ĐIỂM TIN CHO DOANH NGHIỆP STACORP</div>
+          <div class="brand-subtitle">Executive Brief • Thị trường • Dự án • Chi phí • Con người</div>
         </div>
       </div>
       <div class="issue-lockup">
@@ -27,6 +27,7 @@
     <article class="hero-card">
       <section class="hero-copy">
         <div class="story-topline">
+          <span class="story-index">01 / 05</span>
           <span class="category-pill">{{ lead.category|upper }}</span>
           <span class="impact-pill {{ impact_class }}"><i></i>{{ lead.impact }}</span>
         </div>
@@ -75,6 +76,7 @@
         </div>
         <div class="card-body">
           <div class="story-topline compact-topline">
+            <span class="story-index">0{{ loop.index + 1 }} / 05</span>
             <span class="category-pill">{{ item.category|upper }}</span>
             <span class="impact-pill {{ impact_class }}"><i></i>{{ item.impact }}</span>
           </div>
