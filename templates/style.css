@@ -48,7 +48,7 @@ html, body {
 }
 
 .mag-header {
-  height: 86px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,8 +65,8 @@ html, body {
 }
 
 .brand-logo {
-  width: 60px;
-  height: 60px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
   flex: none;
 }
@@ -530,13 +530,13 @@ html, body {
 
 /* PAGE 2 */
 .compact-header {
-  height: 76px;
+  height: 84px;
   padding-bottom: 12px;
 }
 
 .compact-header .brand-logo {
-  width: 54px;
-  height: 54px;
+  width: 64px;
+  height: 64px;
 }
 
 .compact-header .brand-title {
