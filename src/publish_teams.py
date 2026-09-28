@@ -85,23 +85,12 @@ def _clip(value: str, limit: int) -> str:
     return clipped + "…"
 
 
-def _source_footer_html(brief: dict) -> str:
-    """
-    Keep Teams text intentionally compact.
-
-    The two rendered pages carry the editorial content. This footer exists only
-    to make the original reporting easy to open and to surface an action_today
-    line when the brief explicitly contains one.
-    """
-    date = html.escape(str(brief.get("date", "")).strip())
-    parts = [
-        f"<b>{date} • ĐIỂM TIN STACORP</b>",
-        "<br><b>Nguồn đọc thêm:</b>",
-    ]
+def _sources_html(brief: dict) -> str:
+    parts = ["<b>Nguồn đọc thêm:</b>"]
 
     for index, item in enumerate(brief.get("items", []), start=1):
         source = html.escape(str(item.get("source", "")).strip())
-        headline = html.escape(_clip(item.get("headline", ""), 78))
+        headline = html.escape(_clip(item.get("headline", ""), 72))
         url = _safe_url(item.get("url", ""))
 
         label = " — ".join(part for part in (source, headline) if part)
@@ -109,9 +98,7 @@ def _source_footer_html(brief: dict) -> str:
             continue
 
         if url:
-            parts.append(
-                f'<br>{index:02d}. <a href="{url}">{label}</a>'
-            )
+            parts.append(f'<br>{index:02d}. <a href="{url}">{label}</a>')
         else:
             parts.append(f"<br>{index:02d}. {label}")
 
@@ -127,48 +114,46 @@ def _source_footer_html(brief: dict) -> str:
     return "".join(parts)
 
 
-def _post(
-    client: httpx.Client,
-    endpoint: str,
-    headers: dict[str, str],
-    payload: dict,
-) -> str:
-    response = client.post(endpoint, headers=headers, json=payload)
-    response.raise_for_status()
-    data = response.json()
-    message_id = str(data.get("id", "")).strip()
-    if not message_id:
-        raise RuntimeError("Teams post succeeded without returning a message id.")
-    return message_id
+def _single_post_payload(page1: Path, page2: Path, brief: dict) -> dict:
+    date = html.escape(str(brief.get("date", "")).strip())
+    body = (
+        f"<b>{date} • ĐIỂM TIN CHO DOANH NGHIỆP STACORP</b>"
+        "<br><br>"
+        '<img src="../hostedContents/1/$value" '
+        'width="900" alt="STACORP Daily Brief - Page 1">'
+        "<br><br>"
+        '<img src="../hostedContents/2/$value" '
+        'width="900" alt="STACORP Daily Brief - Page 2">'
+        "<br><br>"
+        + _sources_html(brief)
+    )
 
-
-def _image_payload(path: Path, caption: str, temporary_id: str) -> dict:
-    safe_caption = html.escape(caption)
     return {
         "body": {
             "contentType": "html",
-            "content": (
-                f"<b>{safe_caption}</b><br><br>"
-                f'<img src="../hostedContents/{temporary_id}/$value" '
-                'width="900" alt="STACORP Daily Brief">'
-            ),
+            "content": body,
         },
         "hostedContents": [
             {
-                "@microsoft.graph.temporaryId": temporary_id,
-                "contentBytes": _b64(path),
+                "@microsoft.graph.temporaryId": "1",
+                "contentBytes": _b64(page1),
                 "contentType": "image/png",
-            }
+            },
+            {
+                "@microsoft.graph.temporaryId": "2",
+                "contentBytes": _b64(page2),
+                "contentType": "image/png",
+            },
         ],
     }
 
 
 def publish_inline_images(page1: Path, page2: Path, brief: dict) -> str:
     """
-    Publish the visual brief first, then a short source/link footer.
+    Publish the whole daily brief as one Teams post.
 
-    This keeps the daily Teams post magazine-led: the images carry the news,
-    while the final text message is intentionally short and clickable.
+    Both rendered pages and the compact source/action footer are contained in
+    the same root message, avoiding fragmented multi-message delivery.
     """
     token = refresh_access_token()
     endpoint = _target_endpoint()
@@ -177,31 +162,16 @@ def publish_inline_images(page1: Path, page2: Path, brief: dict) -> str:
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json",
     }
+    payload = _single_post_payload(page1, page2, brief)
 
-    date = str(brief.get("date", "")).strip()
-    page1_payload = _image_payload(
-        page1,
-        f"{date} • ĐIỂM TIN STACORP • 1/2",
-        "1",
-    )
-    page2_payload = _image_payload(
-        page2,
-        f"{date} • ĐIỂM TIN STACORP • 2/2",
-        "1",
-    )
-    source_payload = {
-        "body": {
-            "contentType": "html",
-            "content": _source_footer_html(brief),
-        }
-    }
+    with httpx.Client(timeout=90) as client:
+        response = client.post(endpoint, headers=headers, json=payload)
+        response.raise_for_status()
+        data = response.json()
 
-    with httpx.Client(timeout=60) as client:
-        page1_id = _post(client, endpoint, headers, page1_payload)
-        page2_id = _post(client, endpoint, headers, page2_payload)
-        source_id = _post(client, endpoint, headers, source_payload)
+    message_id = str(data.get("id", "")).strip()
+    if not message_id:
+        raise RuntimeError("Teams post succeeded without returning a message id.")
 
-    print(f"TEAMS_PAGE_1_MESSAGE_ID={page1_id}")
-    print(f"TEAMS_PAGE_2_MESSAGE_ID={page2_id}")
-    print(f"TEAMS_SOURCE_MESSAGE_ID={source_id}")
-    return page1_id
+    print(f"TEAMS_MESSAGE_ID={message_id}")
+    return message_id
