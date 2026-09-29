@@ -10,10 +10,6 @@ import httpx
 from PIL import Image
 
 GRAPH = "https://graph.microsoft.com/v1.0"
-STACORP_TEAMS_TEAM_ID = "c5bfff4c-a940-464e-a199-db0a169d230b"
-STACORP_TEAMS_CHANNEL_ID = "19:YNeQ_V26FnwoIYtdH_W6imrVXAxwRWXpUfPi2W76CnQ1@thread.tacv2"
-
-
 def _required(name: str) -> str:
     value = os.getenv(name, "").strip()
     if not value:
@@ -53,10 +49,19 @@ def refresh_access_token() -> str:
 
 
 def _endpoint() -> str:
-    return (
-        f"{GRAPH}/teams/{STACORP_TEAMS_TEAM_ID}/channels/"
-        f"{STACORP_TEAMS_CHANNEL_ID}/messages"
-    )
+    target_type = os.getenv("TEAMS_TARGET_TYPE", "channel").strip().lower()
+    if target_type != "channel":
+        raise RuntimeError(
+            "Production STACORP delivery requires TEAMS_TARGET_TYPE=channel."
+        )
+
+    team_id = _required("TEAMS_TEAM_ID")
+    channel_id = _required("TEAMS_CHANNEL_ID")
+    print(f"TEAMS_TARGET_TYPE={target_type}")
+    print(f"TEAMS_TEAM_ID={team_id}")
+    print(f"TEAMS_CHANNEL_ID={channel_id}")
+
+    return f"{GRAPH}/teams/{team_id}/channels/{channel_id}/messages"
 
 
 def _prepare_teams_jpeg(path: Path, index: int) -> Path:
