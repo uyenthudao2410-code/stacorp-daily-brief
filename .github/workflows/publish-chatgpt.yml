@@ -25,10 +25,9 @@ jobs:
       MS_CLIENT_ID: ${{ secrets.MS_CLIENT_ID }}
       MS_CLIENT_SECRET: ${{ secrets.MS_CLIENT_SECRET }}
       MS_REFRESH_TOKEN: ${{ secrets.MS_REFRESH_TOKEN }}
-      TEAMS_TARGET_TYPE: ${{ vars.TEAMS_TARGET_TYPE || 'chat' }}
-      TEAMS_CHAT_ID: ${{ secrets.TEAMS_CHAT_ID }}
-      TEAMS_TEAM_ID: ${{ secrets.TEAMS_TEAM_ID }}
-      TEAMS_CHANNEL_ID: ${{ secrets.TEAMS_CHANNEL_ID }}
+      TEAMS_TARGET_TYPE: ${{ vars.TEAMS_TARGET_TYPE || 'channel' }}
+      TEAMS_TEAM_ID: ${{ vars.TEAMS_TEAM_ID || secrets.TEAMS_TEAM_ID }}
+      TEAMS_CHANNEL_ID: ${{ vars.TEAMS_CHANNEL_ID || secrets.TEAMS_CHANNEL_ID }}
 
     steps:
       - uses: actions/checkout@v4
