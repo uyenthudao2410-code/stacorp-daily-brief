@@ -13,15 +13,15 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates"
 ASSETS = ROOT / "assets"
 
-APPROVED_LAYOUT_VERSION = "STACORP_EDITORIAL_3PAGE_FINAL_V1"
+APPROVED_LAYOUT_VERSION = "STACORP_EDITORIAL_3PAGE_FINAL_V2"
 APPROVED_PAGE1 = TEMPLATES / "editorial_page1.html"
 APPROVED_PAGE2 = TEMPLATES / "editorial_page2.html"
 APPROVED_PAGE3 = TEMPLATES / "editorial_page3.html"
 APPROVED_STYLE = TEMPLATES / "approved-editorial-style.css"
-APPROVED_PAGE1_BLOB_SHA = "dd6566c3ed0e18dedc2f119ae32652847bf448b7"
-APPROVED_PAGE2_BLOB_SHA = "0311bbedd3cf7db8b9c322547ebd9e4b5ec662a8"
-APPROVED_PAGE3_BLOB_SHA = "60bcf18c06a68983cd678f7560aecbc15576cff8"
-APPROVED_STYLE_BLOB_SHA = "c0cf73dd6664c9694749c9a165d133af489b44e1"
+APPROVED_PAGE1_BLOB_SHA = "ce1d85f45184653ad349aa1efac5160d93256af2"
+APPROVED_PAGE2_BLOB_SHA = "058b2f0f721e11577807515622a97ce2b72a2422"
+APPROVED_PAGE3_BLOB_SHA = "7927990f492de9597043fc65b95d094f9aefcccf"
+APPROVED_STYLE_BLOB_SHA = "c6f870dcaa7071b817757d1f125c7c25669742f8"
 
 APPROVED_LOGO = ASSETS / "stacorp-logo.png"
 APPROVED_LOGO_GIT_BLOB_SHA = "2ffd30fd4c8774bdebb461f157ed6b41c04172be"
@@ -32,23 +32,25 @@ PAGE1 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_1.png"
 PAGE2 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_2.png"
 PAGE3 = OUT_DIR / "STACORP_DAILY_BRIEF_PAGE_3.png"
 CSS_SIZE = (1080, 1620)
+TEAMS_SIZE = (1440, 2160)
 RENDER_SCALE = 2
+TEAMS_DIR = OUT_DIR / "teams"
 
 LOCKED_GEOMETRY = {
     "editorial_page1.html": {
         ".page": {"width": 1080, "height": 1620},
         ".masthead": {"height": 164},
         ".logo": {"width": 92, "height": 92},
-        ".hero-image-wrap": {"height": 540},
-        ".mini-card": {"height": 425},
+        ".hero-image-wrap": {"height": 430},
+        ".mini-card": {"height": 455},
         ".footer": {"height": 98},
     },
     "editorial_page2.html": {
         ".page": {"width": 1080, "height": 1620},
         ".masthead": {"height": 164},
         ".logo": {"width": 92, "height": 92},
-        ".wide-image-wrap": {"height": 430},
-        ".split-main": {"height": 353},
+        ".wide-image-wrap": {"height": 385},
+        ".split-main": {"height": 390},
         ".footer": {"height": 98},
     },
     "editorial_page3.html": {
@@ -258,9 +260,9 @@ def _assert_locked_geometry(page, html_name: str) -> None:
         )
 
 
-def _downsample(src: Path, dst: Path) -> None:
+def _downsample(src: Path, dst: Path, size: tuple[int, int]) -> None:
     with Image.open(src) as image:
-        image = image.convert("RGB").resize(CSS_SIZE, Image.Resampling.LANCZOS)
+        image = image.convert("RGB").resize(size, Image.Resampling.LANCZOS)
         image.save(dst, format="PNG", optimize=True)
 
 
@@ -272,6 +274,7 @@ def render_brief(brief: dict) -> tuple[Path, Path, Path]:
     items = brief["items"]
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    TEAMS_DIR.mkdir(parents=True, exist_ok=True)
     _ensure_demo_visuals(items)
     _verify_visual_resolution(items)
 
@@ -342,7 +345,13 @@ def render_brief(brief: dict) -> tuple[Path, Path, Path]:
 
             hi_res = png_path.with_name(png_path.stem + "_2X.png")
             page.screenshot(path=str(hi_res), full_page=False)
-            _downsample(hi_res, png_path)
+            _downsample(hi_res, png_path, CSS_SIZE)
+            teams_path = TEAMS_DIR / f"{png_path.stem}_TEAMS.png"
+            _downsample(hi_res, teams_path, TEAMS_SIZE)
+            print(
+                f"Teams master: {teams_path} "
+                f"({TEAMS_SIZE[0]}x{TEAMS_SIZE[1]}, {teams_path.stat().st_size} bytes)"
+            )
             hi_res.unlink(missing_ok=True)
 
         browser.close()
