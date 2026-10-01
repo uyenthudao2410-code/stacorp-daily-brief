@@ -64,19 +64,45 @@ def _endpoint() -> str:
     return f"{GRAPH}/teams/{team_id}/channels/{channel_id}/messages"
 
 
-def _prepare_teams_jpeg(path: Path, index: int) -> Path:
-    target = Path("/tmp/stacorp-daily-brief") / f"teams-page-{index}.jpg"
-    with Image.open(path) as image:
-        image = image.convert("RGB")
-        image.save(
-            target,
-            format="JPEG",
-            quality=96,
-            optimize=True,
-            progressive=True,
-            subsampling=0,
+MAX_HOSTED_CONTENT_BYTES = 4 * 1024 * 1024
+TEAMS_MASTER_SIZE = (1440, 2160)
+
+
+def _prepare_teams_png(path: Path, index: int) -> Path:
+    target = (
+        Path("/tmp/stacorp-daily-brief")
+        / "teams"
+        / f"{path.stem}_TEAMS.png"
+    )
+    if not target.exists():
+        raise RuntimeError(
+            f"Missing high-density Teams master for page {index}: {target}"
         )
-    print(f"TEAMS_JPEG_PAGE_{index}={target.stat().st_size}")
+
+    with Image.open(target) as image:
+        if image.size != TEAMS_MASTER_SIZE:
+            raise RuntimeError(
+                f"Teams page {index} has invalid dimensions: "
+                f"{image.size[0]}x{image.size[1]}; "
+                f"expected {TEAMS_MASTER_SIZE[0]}x{TEAMS_MASTER_SIZE[1]}."
+            )
+        if image.format != "PNG":
+            raise RuntimeError(
+                f"Teams page {index} must be PNG, got {image.format}."
+            )
+
+    size = target.stat().st_size
+    if size > MAX_HOSTED_CONTENT_BYTES:
+        raise RuntimeError(
+            f"Teams page {index} exceeds Graph hostedContent limit: "
+            f"{size} > {MAX_HOSTED_CONTENT_BYTES} bytes."
+        )
+
+    print(f"TEAMS_PNG_PAGE_{index}={size}")
+    print(
+        f"TEAMS_PNG_DIMENSIONS_{index}="
+        f"{TEAMS_MASTER_SIZE[0]}x{TEAMS_MASTER_SIZE[1]}"
+    )
     return target
 
 
@@ -129,9 +155,9 @@ def publish_inline_images(
     brief: dict,
 ) -> str:
     teams_pages = [
-        _prepare_teams_jpeg(page1, 1),
-        _prepare_teams_jpeg(page2, 2),
-        _prepare_teams_jpeg(page3, 3),
+        _prepare_teams_png(page1, 1),
+        _prepare_teams_png(page2, 2),
+        _prepare_teams_png(page3, 3),
     ]
 
     date = html.escape(str(brief.get("date", "")).strip())
@@ -156,17 +182,17 @@ def publish_inline_images(
             {
                 "@microsoft.graph.temporaryId": "1",
                 "contentBytes": _b64(teams_pages[0]),
-                "contentType": "image/jpeg",
+                "contentType": "image/png",
             },
             {
                 "@microsoft.graph.temporaryId": "2",
                 "contentBytes": _b64(teams_pages[1]),
-                "contentType": "image/jpeg",
+                "contentType": "image/png",
             },
             {
                 "@microsoft.graph.temporaryId": "3",
                 "contentBytes": _b64(teams_pages[2]),
-                "contentType": "image/jpeg",
+                "contentType": "image/png",
             },
         ],
     }
