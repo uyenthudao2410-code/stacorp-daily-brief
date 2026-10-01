@@ -14,7 +14,7 @@
       <div class="brand-rule"></div>
       <div class="brand-copy">
         <div class="brand-title">ĐIỂM TIN CHO DOANH NGHIỆP<br><span>STACORP</span></div>
-        <div class="brand-subtitle">5 DIỄN BIẾN CẦN LƯU Ý HÔM NAY</div>
+        <div class="brand-subtitle">{{ brief.subtitle }}</div>
       </div>
     </div>
     <div class="date-block">
@@ -26,7 +26,7 @@
   </header>
 
   <section class="summary-title-row" data-lock="page3-summary-title">
-    <div class="summary-ribbon">▥ <span>TỔNG HỢP ĐIỀU HÀNH</span></div>
+    <div class="summary-ribbon">TỔNG HỢP ĐIỀU HÀNH</div>
     <div class="summary-count">3 ƯU TIÊN HÀNH ĐỘNG CHO STACORP</div>
   </section>
 
@@ -37,7 +37,6 @@
       {% for action in executive_actions %}
       <article class="action-row">
         <div class="action-num">0{{ loop.index }}</div>
-        <div class="action-marker"></div>
         <div class="action-copy">
           <h2>{{ action.title }}</h2>
           <p>{{ action.detail }}</p>
@@ -55,17 +54,17 @@
   <section class="highlights" data-lock="page3-highlights">
     <div class="highlights-head">
       <div class="head-main">5 ĐIỂM NHẤN TRONG NGÀY</div>
-      <div class="head-sub">NHỮNG DIỄN BIẾN QUAN TRỌNG DOANH NGHIỆP CẦN LƯU Ý</div>
+      <div class="head-sub">TÓM TẮT NHANH ĐỂ RA QUYẾT ĐỊNH</div>
     </div>
     <div class="highlights-grid">
       {% for item in brief["items"] %}
-      <article class="highlight-card">
-        <div class="highlight-image-wrap">
-          <img src="{{ item.visual_src }}" alt="">
+      {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
+      <article class="highlight-card {% if loop.last %}highlight-last{% endif %}">
+        <div class="highlight-top">
           <div class="highlight-no">0{{ loop.index }}</div>
+          <div class="impact-chip {{ impact_class }}">{{ item.impact }}</div>
         </div>
-        <h3>{{ item.headline|clip_text(63) }}</h3>
-        <p>{{ item.facts[0]|clip_text(70) }}</p>
+        <h3>{{ item.headline|clip_text(82) }}</h3>
       </article>
       {% endfor %}
     </div>
@@ -73,10 +72,10 @@
 
   <section class="reference-zone" data-lock="page3-reference-zone">
     <div class="sources-panel">
-      <div class="sources-title">▥&nbsp; NGUỒN THAM KHẢO</div>
+      <div class="sources-title">NGUỒN THAM KHẢO</div>
       <div class="sources-list">
         {% for item in brief["items"] %}
-        <div class="source-pill"><b>0{{ loop.index }}</b><span>{{ item.source|clip_text(30) }}</span></div>
+        <div class="source-pill"><b>0{{ loop.index }}</b><span>{{ item.source|clip_text(36) }}</span></div>
         {% endfor %}
       </div>
     </div>
