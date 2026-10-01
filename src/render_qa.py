@@ -30,7 +30,7 @@ def main() -> int:
         source = TMP_ROOT / "teams" / f"{page.stem}_TEAMS.png"
         if not source.exists():
             raise RuntimeError(f"Missing QA master: {source}")
-        target = QA_OUT / f"STACORP_V3_QA_PAGE_{index}.png"
+        target = QA_OUT / f"STACORP_V4_QA_PAGE_{index}.png"
         shutil.copyfile(source, target)
         print(f"QA_PAGE_{index}={target} ({target.stat().st_size} bytes)")
 
