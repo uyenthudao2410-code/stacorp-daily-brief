@@ -65,46 +65,73 @@ def _endpoint() -> str:
 
 
 MAX_HOSTED_CONTENT_BYTES = 4 * 1024 * 1024
-TEAMS_MASTER_SIZE = (1440, 2160)
+MAX_TEAMS_PAGE_BYTES = 850_000
+MAX_TEAMS_BINARY_TOTAL = 2_550_000
+TEAMS_MASTER_SIZE = (1200, 1800)
+TEAMS_JPEG_QUALITIES = (97, 96, 95, 94, 93, 92, 90)
 
 
-def _prepare_teams_png(path: Path, index: int) -> Path:
-    target = (
+def _prepare_teams_jpeg(path: Path, index: int) -> Path:
+    source = (
         Path("/tmp/stacorp-daily-brief")
         / "teams"
         / f"{path.stem}_TEAMS.png"
     )
-    if not target.exists():
+    if not source.exists():
         raise RuntimeError(
-            f"Missing high-density Teams master for page {index}: {target}"
+            f"Missing high-density Teams master for page {index}: {source}"
         )
 
-    with Image.open(target) as image:
+    with Image.open(source) as image:
         if image.size != TEAMS_MASTER_SIZE:
             raise RuntimeError(
                 f"Teams page {index} has invalid dimensions: "
                 f"{image.size[0]}x{image.size[1]}; "
                 f"expected {TEAMS_MASTER_SIZE[0]}x{TEAMS_MASTER_SIZE[1]}."
             )
-        if image.format != "PNG":
-            raise RuntimeError(
-                f"Teams page {index} must be PNG, got {image.format}."
-            )
+        image = image.convert("RGB")
 
-    size = target.stat().st_size
-    if size > MAX_HOSTED_CONTENT_BYTES:
-        raise RuntimeError(
-            f"Teams page {index} exceeds Graph hostedContent limit: "
-            f"{size} > {MAX_HOSTED_CONTENT_BYTES} bytes."
+        target = (
+            Path("/tmp/stacorp-daily-brief")
+            / f"teams-page-{index}.jpg"
         )
 
-    print(f"TEAMS_PNG_PAGE_{index}={size}")
+        selected_quality = None
+        selected_size = None
+        for quality in TEAMS_JPEG_QUALITIES:
+            image.save(
+                target,
+                format="JPEG",
+                quality=quality,
+                optimize=True,
+                progressive=False,
+                subsampling=0,
+            )
+            size = target.stat().st_size
+            if size <= MAX_TEAMS_PAGE_BYTES:
+                selected_quality = quality
+                selected_size = size
+                break
+
+    if selected_quality is None or selected_size is None:
+        raise RuntimeError(
+            f"Teams page {index} cannot fit deterministic payload budget "
+            f"of {MAX_TEAMS_PAGE_BYTES} bytes without dropping below quality 90."
+        )
+
+    if selected_size > MAX_HOSTED_CONTENT_BYTES:
+        raise RuntimeError(
+            f"Teams page {index} exceeds Graph hostedContent limit: "
+            f"{selected_size} > {MAX_HOSTED_CONTENT_BYTES} bytes."
+        )
+
+    print(f"TEAMS_JPEG_PAGE_{index}={selected_size}")
+    print(f"TEAMS_JPEG_QUALITY_{index}={selected_quality}")
     print(
-        f"TEAMS_PNG_DIMENSIONS_{index}="
+        f"TEAMS_JPEG_DIMENSIONS_{index}="
         f"{TEAMS_MASTER_SIZE[0]}x{TEAMS_MASTER_SIZE[1]}"
     )
     return target
-
 
 def _b64(path: Path) -> str:
     return base64.b64encode(path.read_bytes()).decode("ascii")
@@ -155,10 +182,18 @@ def publish_inline_images(
     brief: dict,
 ) -> str:
     teams_pages = [
-        _prepare_teams_png(page1, 1),
-        _prepare_teams_png(page2, 2),
-        _prepare_teams_png(page3, 3),
+        _prepare_teams_jpeg(page1, 1),
+        _prepare_teams_jpeg(page2, 2),
+        _prepare_teams_jpeg(page3, 3),
     ]
+
+    total_binary = sum(page.stat().st_size for page in teams_pages)
+    if total_binary > MAX_TEAMS_BINARY_TOTAL:
+        raise RuntimeError(
+            f"Teams payload exceeds deterministic binary budget: "
+            f"{total_binary} > {MAX_TEAMS_BINARY_TOTAL} bytes."
+        )
+    print(f"TEAMS_BINARY_TOTAL={total_binary}")
 
     date = html.escape(str(brief.get("date", "")).strip())
     body = (
@@ -182,17 +217,17 @@ def publish_inline_images(
             {
                 "@microsoft.graph.temporaryId": "1",
                 "contentBytes": _b64(teams_pages[0]),
-                "contentType": "image/png",
+                "contentType": "image/jpeg",
             },
             {
                 "@microsoft.graph.temporaryId": "2",
                 "contentBytes": _b64(teams_pages[1]),
-                "contentType": "image/png",
+                "contentType": "image/jpeg",
             },
             {
                 "@microsoft.graph.temporaryId": "3",
                 "contentBytes": _b64(teams_pages[2]),
-                "contentType": "image/png",
+                "contentType": "image/jpeg",
             },
         ],
     }
