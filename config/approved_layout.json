@@ -1,6 +1,6 @@
 {
-  "version": "STACORP_EDITORIAL_3PAGE_FINAL_V2",
-  "status": "approved-production-final-teams-readable",
+  "version": "STACORP_EDITORIAL_3PAGE_FINAL_V3_REGIONAL_8NEWS",
+  "status": "approved-production-final-regional-8news",
   "locked": true,
   "canvas": {
     "width": 1080,
@@ -42,10 +42,10 @@
     "style": "templates/approved-editorial-style.css"
   },
   "template_git_blob_sha": {
-    "page1": "ce1d85f45184653ad349aa1efac5160d93256af2",
-    "page2": "058b2f0f721e11577807515622a97ce2b72a2422",
-    "page3": "7927990f492de9597043fc65b95d094f9aefcccf",
-    "style": "c6f870dcaa7071b817757d1f125c7c25669742f8"
+    "page1": "153527d2dcc1005a54d616053ad0756d8db69129",
+    "page2": "7e999267059f3f536c728908440537c96f3af971",
+    "page3": "d83a4c48536593aa582b783a791c4a4b0fbaadaf",
+    "style": "4956aa57da4f82902fcee5175e2362a6b4ba8681"
   },
   "brand_lock": {
     "logo_path": "assets/stacorp-logo.png",
@@ -59,12 +59,13 @@
       92
     ],
     "footer_height": 98,
-    "page1_hero_image_height": 430,
-    "page1_mini_card_height": 455,
-    "page2_story4_image_height": 385,
-    "page2_story5_split_height": 390,
+    "page1_hero_image_height": 350,
+    "page1_news_row_height": 180,
+    "page2_kicker_height": 62,
+    "page2_news_grid_card_height": 570,
     "page3_summary_title_height": 88,
-    "page3_highlight_card_height": 122,
+    "page3_department_card_height": 216,
+    "page3_watch_card_height": 154,
     "tolerance_px": 1
   },
   "design_tokens": {
@@ -79,27 +80,29 @@
   },
   "production_rules": [
     "Production renders exactly three locked 1080x1620 portrait pages.",
-    "Header, approved STACORP logo, date lockup, skyline detail and navy/gold footer are immutable inside V2.",
-    "Typography is Teams-first: no critical story copy is rendered at the tiny sizes used by V1.",
-    "Page 1: item 1 hero + STACORP note + item 2 and item 3 secondary cards.",
-    "Page 2: item 4 full-width story + note; item 5 image-left/copy-right split + note.",
-    "Page 3: executive summary + exactly three executive actions + executive visual + five readable highlight cards + source panel + closing visual.",
-    "ChatGPT Images creates story illustrations only; it must never generate final newsletter pages, text, logo, badge or watermark.",
+    "Header, approved STACORP logo, date lockup and navy/gold footer are immutable inside V3.",
+    "The brief contains exactly eight qualified news items focused on MIỀN BẮC and MIỀN TRUNG: at least three per region and no more than two TOÀN QUỐC items.",
+    "Standalone southern-region items are excluded; only nationwide developments with direct material impact on North/Central operations may appear as TOÀN QUỐC.",
+    "Page 1 presents story 1 as the hero plus stories 2-4 as three readable horizontal news rows.",
+    "Page 2 presents stories 5-8 as a 2x2 regional news grid with headline, one fact and a short STACORP note.",
+    "Page 3 never repeats the eight headlines. It synthesizes four cross-department impact groups, North/Central regional pulse, exactly three 24-48h watchpoints and eight compact source references.",
+    "summary_lede must be 140-240 characters; department_digest must contain exactly four groups; regional_pulse exactly MIỀN BẮC and MIỀN TRUNG; watchpoints exactly three.",
+    "ChatGPT Images creates exactly eight story illustrations only; it must never generate final newsletter pages, text, logo, badge or watermark.",
+    "Every story visual must pass the original-source quality gate before rendering; preview/thumbnail WEBP files are blocked.",
+    "Source visuals require PNG/JPEG, long edge >=1400, short edge >=900, source bytes >=250,000 and sharpness >=18.0.",
+    "If direct original bytes cannot be committed, delivery may provide visual_sources.json containing exactly eight original ChatGPT Images oaiusercontent.com /raw URLs for immediate download by GitHub Actions.",
     "Final pages are always rendered deterministically from the locked HTML/CSS templates.",
     "Teams delivery uses a 1200x1800 high-density master and deterministic JPEG 4:4:4 transport within the Graph message payload budget.",
     "Each Teams page must remain within the deterministic page budget and the three-page binary total must not exceed 2,550,000 bytes.",
     "Template hash, logo hash, output dimensions and geometry must pass before Teams posting.",
+    "Any source visual, copy schema, regional-balance or geometry failure blocks render, Teams posting and state update.",
     "No fallback template is allowed; Teams transport may only step through the locked JPEG quality ladder 97→90.",
-    "Layout changes require explicit user approval and a new layout version.",
-    "Every story visual must pass the original-source quality gate before rendering; preview/thumbnail WEBP files are blocked.",
-    "Source visuals require PNG/JPEG, long edge >=1400, short edge >=900, source bytes >=250,000 and sharpness >=18.0.",
-    "If direct original bytes cannot be committed, delivery may provide visual_sources.json containing exactly five original ChatGPT Images oaiusercontent.com /raw URLs for immediate download by GitHub Actions.",
-    "Any source visual quality failure blocks render, Teams posting and state update."
+    "Layout changes require explicit user approval and a new layout version."
   ],
   "source_visual_quality": {
     "delivery_modes": [
-      "local original story-N.png/jpg/jpeg",
-      "visual_sources.json with five original ChatGPT Images /raw URLs"
+      "local original story-N.png/jpg/jpeg for story-1..story-8",
+      "visual_sources.json with eight original ChatGPT Images /raw URLs"
     ],
     "allowed_formats": [
       "PNG",
@@ -114,6 +117,39 @@
     "min_source_bytes": 250000,
     "min_sharpness": 18,
     "renderer_canonical_format": "PNG",
-    "fail_closed": true
+    "fail_closed": true,
+    "story_count": 8
+  },
+  "editorial_scope": {
+    "item_count": 8,
+    "primary_geographies": [
+      "MIỀN BẮC",
+      "MIỀN TRUNG"
+    ],
+    "minimum_north_items": 3,
+    "minimum_central_items": 3,
+    "maximum_national_items": 2,
+    "standalone_south_items_allowed": false,
+    "south_exception": "Only a nationwide development with direct material impact on North/Central operations may be included and must be tagged TOÀN QUỐC.",
+    "typical_high_impact_max": 3
+  },
+  "summary_schema": {
+    "summary_lede_chars": [
+      140,
+      240
+    ],
+    "department_digest_count": 4,
+    "department_digest_groups": [
+      "Kinh doanh • Đấu thầu • Marketing",
+      "Dự án • Kỹ thuật • HSE",
+      "Cung ứng • Tài chính • Kế toán",
+      "Nhân sự • Pháp chế • Ban Giám đốc"
+    ],
+    "regional_pulse_regions": [
+      "MIỀN BẮC",
+      "MIỀN TRUNG"
+    ],
+    "watchpoints_count": 3,
+    "purpose": "Cross-department synthesis; do not repeat the eight headlines."
   }
 }
