@@ -109,11 +109,31 @@ jobs:
       - name: Validate original source visuals
         run: python -m src.validate_source_visuals
 
+      - name: Render QA package only
+        if: ${{ hashFiles('incoming/current/.qa_render_only') != '' }}
+        run: python -m src.render_qa
+
       - name: Publish ChatGPT package to Teams
+        if: ${{ hashFiles('incoming/current/.qa_render_only') == '' }}
         run: python -m src.publish_incoming
 
+      - name: Commit QA render output
+        if: ${{ hashFiles('incoming/current/.qa_render_only') != '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "stacorp-daily-brief-bot"
+          git config user.email "stacorp-daily-brief-bot@users.noreply.github.com"
+          git add qa/output/
+          if git diff --cached --quiet; then
+            echo "No QA output change."
+            exit 0
+          fi
+          git commit -m "qa: render STACORP V3 preview"
+          git push origin HEAD:chatgpt-delivery
+
       - name: Preserve published IDs only
-        if: ${{ hashFiles('incoming/current/.no_state_update') == '' }}
+        if: ${{ hashFiles('incoming/current/.no_state_update') == '' && hashFiles('incoming/current/.qa_render_only') == '' }}
         shell: bash
         run: |
           set -euo pipefail
