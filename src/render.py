@@ -13,15 +13,15 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates"
 ASSETS = ROOT / "assets"
 
-APPROVED_LAYOUT_VERSION = "STACORP_EDITORIAL_3PAGE_FINAL_V3_REGIONAL_8NEWS"
+APPROVED_LAYOUT_VERSION = "STACORP_EDITORIAL_3PAGE_FINAL_V4_NEWSROOM_8NEWS"
 APPROVED_PAGE1 = TEMPLATES / "editorial_page1.html"
 APPROVED_PAGE2 = TEMPLATES / "editorial_page2.html"
 APPROVED_PAGE3 = TEMPLATES / "editorial_page3.html"
 APPROVED_STYLE = TEMPLATES / "approved-editorial-style.css"
 APPROVED_PAGE1_BLOB_SHA = "153527d2dcc1005a54d616053ad0756d8db69129"
 APPROVED_PAGE2_BLOB_SHA = "7e999267059f3f536c728908440537c96f3af971"
-APPROVED_PAGE3_BLOB_SHA = "d83a4c48536593aa582b783a791c4a4b0fbaadaf"
-APPROVED_STYLE_BLOB_SHA = "4956aa57da4f82902fcee5175e2362a6b4ba8681"
+APPROVED_PAGE3_BLOB_SHA = "d481eaf5be16d17a9d2daf0243a1a58591f2bc85"
+APPROVED_STYLE_BLOB_SHA = "4ae7e1d44408a272ecdf6b061cac21130fff8b13"
 
 APPROVED_LOGO = ASSETS / "stacorp-logo.png"
 APPROVED_LOGO_GIT_BLOB_SHA = "2ffd30fd4c8774bdebb461f157ed6b41c04172be"
@@ -58,8 +58,8 @@ LOCKED_GEOMETRY = {
         ".masthead": {"height": 164},
         ".logo": {"width": 92, "height": 92},
         ".summary-title-row": {"height": 88},
-        ".department-card": {"height": 216},
-        ".watch-card": {"height": 154},
+        ".news-theme-card": {"height": 190},
+        ".number-card": {"height": 148},
         ".footer": {"height": 98},
     },
 }
@@ -165,18 +165,12 @@ def _validate_copy(brief: dict) -> None:
     if not 140 <= len(lede) <= 240:
         raise RuntimeError("summary_lede must contain 140-240 characters.")
 
-    department_digest = brief.get("department_digest", [])
-    if len(department_digest) != 4:
-        raise RuntimeError("department_digest must contain exactly four groups.")
-    for index, digest in enumerate(department_digest, start=1):
-        if not str(digest.get("group", "")).strip():
-            raise RuntimeError(f"department_digest {index} group is empty.")
-        if not str(digest.get("title", "")).strip():
-            raise RuntimeError(f"department_digest {index} title is empty.")
-        if not str(digest.get("detail", "")).strip():
-            raise RuntimeError(f"department_digest {index} detail is empty.")
-        if not digest.get("departments"):
-            raise RuntimeError(f"department_digest {index} departments is empty.")
+    news_themes = brief.get("news_themes", [])
+    if len(news_themes) != 4:
+        raise RuntimeError("news_themes must contain exactly four editorial themes.")
+    for index, theme in enumerate(news_themes, start=1):
+        if not all(str(theme.get(k, "")).strip() for k in ("label", "title", "detail")):
+            raise RuntimeError(f"news_theme {index} is incomplete.")
 
     regional_pulse = brief.get("regional_pulse", [])
     if len(regional_pulse) != 2:
@@ -185,12 +179,12 @@ def _validate_copy(brief: dict) -> None:
     if pulse_regions != {"MIỀN BẮC", "MIỀN TRUNG"}:
         raise RuntimeError("regional_pulse must contain MIỀN BẮC and MIỀN TRUNG.")
 
-    watchpoints = brief.get("watchpoints", [])
-    if len(watchpoints) != 3:
-        raise RuntimeError("watchpoints must contain exactly three items.")
-    for index, point in enumerate(watchpoints, start=1):
-        if not all(str(point.get(k, "")).strip() for k in ("label", "title", "detail")):
-            raise RuntimeError(f"watchpoint {index} is incomplete.")
+    news_numbers = brief.get("news_numbers", [])
+    if len(news_numbers) != 4:
+        raise RuntimeError("news_numbers must contain exactly four memorable figures.")
+    for index, number in enumerate(news_numbers, start=1):
+        if not all(str(number.get(k, "")).strip() for k in ("value", "label", "context")):
+            raise RuntimeError(f"news_number {index} is incomplete.")
 
 
 def _ensure_demo_visuals(items: list[dict]) -> None:
@@ -238,23 +232,15 @@ def _derive_summary_lede(brief: dict) -> str:
     return _clip_text(str(brief.get("summary_lede", "")).strip(), 240)
 
 
-def _derive_department_digest(brief: dict) -> list[dict]:
-    result = []
-    for item in brief["department_digest"]:
-        departments = item.get("departments", [])
-        if isinstance(departments, list):
-            departments_text = " • ".join(str(x).strip() for x in departments if str(x).strip())
-        else:
-            departments_text = str(departments).strip()
-        result.append(
-            {
-                "group": _clip_text(item.get("group", ""), 52),
-                "title": _clip_text(item.get("title", ""), 62),
-                "detail": _clip_text(item.get("detail", ""), 170),
-                "departments": _clip_text(departments_text, 72),
-            }
-        )
-    return result
+def _derive_news_themes(brief: dict) -> list[dict]:
+    return [
+        {
+            "label": _clip_text(theme.get("label", ""), 34),
+            "title": _clip_text(theme.get("title", ""), 68),
+            "detail": _clip_text(theme.get("detail", ""), 175),
+        }
+        for theme in brief["news_themes"]
+    ]
 
 
 def _derive_regional_pulse(brief: dict) -> list[dict]:
@@ -276,16 +262,15 @@ def _derive_regional_pulse(brief: dict) -> list[dict]:
     return result
 
 
-def _derive_watchpoints(brief: dict) -> list[dict]:
+def _derive_news_numbers(brief: dict) -> list[dict]:
     return [
         {
-            "label": _clip_text(point.get("label", ""), 24),
-            "title": _clip_text(point.get("title", ""), 58),
-            "detail": _clip_text(point.get("detail", ""), 130),
+            "value": _clip_text(number.get("value", ""), 16),
+            "label": _clip_text(number.get("label", ""), 46),
+            "context": _clip_text(number.get("context", ""), 105),
         }
-        for point in brief["watchpoints"]
+        for number in brief["news_numbers"]
     ]
-
 
 def _assert_locked_geometry(page, html_name: str) -> None:
     rules = LOCKED_GEOMETRY[html_name]
@@ -352,9 +337,9 @@ def render_brief(brief: dict) -> tuple[Path, Path, Path]:
     context = {
         "brief": brief,
         "summary_lede": _derive_summary_lede(brief),
-        "department_digest": _derive_department_digest(brief),
+        "news_themes": _derive_news_themes(brief),
         "regional_pulse": _derive_regional_pulse(brief),
-        "watchpoints": _derive_watchpoints(brief),
+        "news_numbers": _derive_news_numbers(brief),
         "layout_version": APPROVED_LAYOUT_VERSION,
     }
 
