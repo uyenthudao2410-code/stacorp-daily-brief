@@ -1,16 +1,15 @@
 from __future__ import annotations
 
 import json
-import shutil
 from pathlib import Path
 
 from .publish_teams import publish_inline_images
 from .render import render_brief
 from .validate import validate_png
+from .validate_source_visuals import prepare_source_visuals
 
 ROOT = Path(__file__).resolve().parents[1]
 INCOMING = ROOT / "incoming" / "current"
-OUT_VISUALS = Path("/tmp/stacorp-daily-brief/visuals")
 
 
 def _load_payload() -> dict:
@@ -23,29 +22,7 @@ def _load_payload() -> dict:
     if len(items) != 5:
         raise RuntimeError("Incoming ChatGPT brief must contain exactly five items.")
 
-    OUT_VISUALS.mkdir(parents=True, exist_ok=True)
-    enriched = []
-
-    for index, item in enumerate(items, start=1):
-        item = dict(item)
-        candidates = [
-            INCOMING / f"story-{index}.jpg",
-            INCOMING / f"story-{index}.jpeg",
-            INCOMING / f"story-{index}.png",
-            INCOMING / f"story-{index}.webp",
-        ]
-        source = next((p for p in candidates if p.exists()), None)
-        if source is None:
-            raise RuntimeError(f"Missing visual for story {index}.")
-
-        ext = source.suffix.lower()
-        target = OUT_VISUALS / f"story-{index}{ext}"
-        shutil.copyfile(source, target)
-        item["visual_src"] = f"visuals/{target.name}"
-        enriched.append(item)
-
-    brief["items"] = enriched
-    return brief
+    return prepare_source_visuals(brief)
 
 
 def main() -> int:
