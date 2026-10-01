@@ -64,7 +64,7 @@ jobs:
           import json
           from pathlib import Path
 
-          expected = "STACORP_EDITORIAL_3PAGE_FINAL_V3_REGIONAL_8NEWS"
+          expected = "STACORP_EDITORIAL_3PAGE_FINAL_V4_NEWSROOM_8NEWS"
           config = json.loads(Path("config/approved_layout.json").read_text(encoding="utf-8"))
           if config.get("version") != expected or not config.get("locked"):
               raise SystemExit("Approved production layout lock is invalid.")
@@ -107,10 +107,12 @@ jobs:
               raise SystemExit("National item cap changed.")
 
           summary = config.get("summary_schema", {})
-          if summary.get("department_digest_count") != 4:
-              raise SystemExit("department_digest_count changed.")
-          if summary.get("watchpoints_count") != 3:
-              raise SystemExit("watchpoints_count changed.")
+          if summary.get("news_themes_count") != 4:
+              raise SystemExit("news_themes_count changed.")
+          if summary.get("news_numbers_count") != 4:
+              raise SystemExit("news_numbers_count changed.")
+          if summary.get("regional_pulse_regions") != ["MIỀN BẮC", "MIỀN TRUNG"]:
+              raise SystemExit("regional_pulse_regions changed.")
 
           print(f"APPROVED_LAYOUT_VERSION={expected}")
           print("LAYOUT_LOCK_LEVEL=FINAL")
