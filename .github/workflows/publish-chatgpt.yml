@@ -60,15 +60,15 @@ jobs:
               raise SystemExit("Approved production canvas/page count changed.")
           teams = config.get("teams_transport", {})
           master = config.get("render", {}).get("teams_master", {})
-          if teams.get("format") != "PNG":
-              raise SystemExit("Teams transport must use lossless PNG.")
-          if teams.get("hosted_content_max_bytes") != 4194304:
-              raise SystemExit("Teams hostedContent size guard changed.")
-          if master.get("width") != 1440 or master.get("height") != 2160:
+          if teams.get("format") != "JPEG":
+              raise SystemExit("Teams transport must use locked JPEG mode.")
+          if teams.get("max_page_bytes") != 850000 or teams.get("max_binary_total") != 2550000:
+              raise SystemExit("Teams payload budget changed.")
+          if master.get("width") != 1200 or master.get("height") != 1800:
               raise SystemExit("Teams high-density master dimensions changed.")
           print(f"APPROVED_LAYOUT_VERSION={expected}")
           print("LAYOUT_LOCK_LEVEL=FINAL")
-          print("TEAMS_TRANSPORT=PNG_1440X2160")
+          print("TEAMS_TRANSPORT=JPEG_1200X1800_444")
           PY
 
       - name: Publish ChatGPT package to Teams
