@@ -13,15 +13,15 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates"
 ASSETS = ROOT / "assets"
 
-APPROVED_LAYOUT_VERSION = "STACORP_EDITORIAL_3PAGE_FINAL_V2"
+APPROVED_LAYOUT_VERSION = "STACORP_EDITORIAL_3PAGE_FINAL_V3_REGIONAL_8NEWS"
 APPROVED_PAGE1 = TEMPLATES / "editorial_page1.html"
 APPROVED_PAGE2 = TEMPLATES / "editorial_page2.html"
 APPROVED_PAGE3 = TEMPLATES / "editorial_page3.html"
 APPROVED_STYLE = TEMPLATES / "approved-editorial-style.css"
-APPROVED_PAGE1_BLOB_SHA = "ce1d85f45184653ad349aa1efac5160d93256af2"
-APPROVED_PAGE2_BLOB_SHA = "058b2f0f721e11577807515622a97ce2b72a2422"
-APPROVED_PAGE3_BLOB_SHA = "7927990f492de9597043fc65b95d094f9aefcccf"
-APPROVED_STYLE_BLOB_SHA = "c6f870dcaa7071b817757d1f125c7c25669742f8"
+APPROVED_PAGE1_BLOB_SHA = "153527d2dcc1005a54d616053ad0756d8db69129"
+APPROVED_PAGE2_BLOB_SHA = "7e999267059f3f536c728908440537c96f3af971"
+APPROVED_PAGE3_BLOB_SHA = "d83a4c48536593aa582b783a791c4a4b0fbaadaf"
+APPROVED_STYLE_BLOB_SHA = "4956aa57da4f82902fcee5175e2362a6b4ba8681"
 
 APPROVED_LOGO = ASSETS / "stacorp-logo.png"
 APPROVED_LOGO_GIT_BLOB_SHA = "2ffd30fd4c8774bdebb461f157ed6b41c04172be"
@@ -41,16 +41,16 @@ LOCKED_GEOMETRY = {
         ".page": {"width": 1080, "height": 1620},
         ".masthead": {"height": 164},
         ".logo": {"width": 92, "height": 92},
-        ".hero-image-wrap": {"height": 430},
-        ".mini-card": {"height": 455},
+        ".hero-image-wrap": {"height": 350},
+        ".p1-news-row": {"height": 180},
         ".footer": {"height": 98},
     },
     "editorial_page2.html": {
         ".page": {"width": 1080, "height": 1620},
         ".masthead": {"height": 164},
         ".logo": {"width": 92, "height": 92},
-        ".wide-image-wrap": {"height": 385},
-        ".split-main": {"height": 390},
+        ".page2-kicker": {"height": 62},
+        ".news-grid-card": {"height": 570},
         ".footer": {"height": 98},
     },
     "editorial_page3.html": {
@@ -58,7 +58,8 @@ LOCKED_GEOMETRY = {
         ".masthead": {"height": 164},
         ".logo": {"width": 92, "height": 92},
         ".summary-title-row": {"height": 88},
-        ".highlight-card": {"height": 122},
+        ".department-card": {"height": 216},
+        ".watch-card": {"height": 154},
         ".footer": {"height": 98},
     },
 }
@@ -120,16 +121,33 @@ def _clip_text(value: str, limit: int) -> str:
 
 def _validate_copy(brief: dict) -> None:
     items = brief.get("items", [])
-    if len(items) != 5:
-        raise RuntimeError("Approved layout requires exactly five news items.")
+    if len(items) != 8:
+        raise RuntimeError("Approved V3 layout requires exactly eight news items.")
 
     if sum(1 for item in items if item.get("impact") == "CAO") > 3:
         raise RuntimeError("Approved layout allows at most three CAO items.")
 
-    allowed = {"CAO", "TRUNG BÌNH", "THEO DÕI"}
+    allowed_impact = {"CAO", "TRUNG BÌNH", "THEO DÕI"}
+    allowed_region = {"MIỀN BẮC", "MIỀN TRUNG", "TOÀN QUỐC"}
+
+    north = 0
+    central = 0
+    national = 0
+
     for index, item in enumerate(items, start=1):
-        if item.get("impact") not in allowed:
+        if item.get("impact") not in allowed_impact:
             raise RuntimeError(f"Story {index} has invalid impact.")
+        if item.get("region") not in allowed_region:
+            raise RuntimeError(
+                f"Story {index} region must be MIỀN BẮC, MIỀN TRUNG or TOÀN QUỐC."
+            )
+        if item.get("region") == "MIỀN BẮC":
+            north += 1
+        elif item.get("region") == "MIỀN TRUNG":
+            central += 1
+        else:
+            national += 1
+
         if len(item.get("facts", [])) != 2:
             raise RuntimeError(f"Story {index} must contain exactly two facts.")
         if not 2 <= len(item.get("departments", [])) <= 5:
@@ -137,11 +155,42 @@ def _validate_copy(brief: dict) -> None:
         if not str(item.get("headline", "")).strip():
             raise RuntimeError(f"Story {index} headline is empty.")
 
-    executive_actions = brief.get("executive_actions", [])
-    if executive_actions and len(executive_actions) != 3:
+    if north < 3 or central < 3 or national > 2:
         raise RuntimeError(
-            "executive_actions must contain exactly three items when provided."
+            "Regional balance failed: require >=3 MIỀN BẮC, >=3 MIỀN TRUNG "
+            "and <=2 TOÀN QUỐC items."
         )
+
+    lede = str(brief.get("summary_lede", "")).strip()
+    if not 140 <= len(lede) <= 240:
+        raise RuntimeError("summary_lede must contain 140-240 characters.")
+
+    department_digest = brief.get("department_digest", [])
+    if len(department_digest) != 4:
+        raise RuntimeError("department_digest must contain exactly four groups.")
+    for index, digest in enumerate(department_digest, start=1):
+        if not str(digest.get("group", "")).strip():
+            raise RuntimeError(f"department_digest {index} group is empty.")
+        if not str(digest.get("title", "")).strip():
+            raise RuntimeError(f"department_digest {index} title is empty.")
+        if not str(digest.get("detail", "")).strip():
+            raise RuntimeError(f"department_digest {index} detail is empty.")
+        if not digest.get("departments"):
+            raise RuntimeError(f"department_digest {index} departments is empty.")
+
+    regional_pulse = brief.get("regional_pulse", [])
+    if len(regional_pulse) != 2:
+        raise RuntimeError("regional_pulse must contain exactly MIỀN BẮC and MIỀN TRUNG.")
+    pulse_regions = {str(x.get("region", "")).strip() for x in regional_pulse}
+    if pulse_regions != {"MIỀN BẮC", "MIỀN TRUNG"}:
+        raise RuntimeError("regional_pulse must contain MIỀN BẮC and MIỀN TRUNG.")
+
+    watchpoints = brief.get("watchpoints", [])
+    if len(watchpoints) != 3:
+        raise RuntimeError("watchpoints must contain exactly three items.")
+    for index, point in enumerate(watchpoints, start=1):
+        if not all(str(point.get(k, "")).strip() for k in ("label", "title", "detail")):
+            raise RuntimeError(f"watchpoint {index} is incomplete.")
 
 
 def _ensure_demo_visuals(items: list[dict]) -> None:
@@ -153,6 +202,9 @@ def _ensure_demo_visuals(items: list[dict]) -> None:
         (232, 241, 250),
         (221, 235, 247),
         (227, 238, 246),
+        (219, 233, 245),
+        (230, 240, 248),
+        (223, 236, 247),
     ]
     for index, item in enumerate(items, start=1):
         if str(item.get("visual_src", "")).strip():
@@ -182,48 +234,57 @@ def _verify_visual_resolution(items: list[dict]) -> None:
             )
 
 
-def _derive_executive_actions(brief: dict) -> list[dict]:
-    supplied = brief.get("executive_actions", [])
-    if supplied:
-        return [
-            {
-                "title": _clip_text(str(item.get("title", "")).strip(), 74),
-                "detail": _clip_text(str(item.get("detail", "")).strip(), 135),
-            }
-            for item in supplied[:3]
-        ]
-
-    items = brief["items"]
-    fallbacks = [
-        (
-            "Bám sát cơ hội đầu tư và khách hàng mới",
-            _clean_note(items[0].get("note", "")),
-        ),
-        (
-            "Chủ động chi phí, tiến độ và chuỗi cung ứng",
-            _clean_note(items[3].get("note", "")),
-        ),
-        (
-            "Siết quản trị rủi ro và an toàn công trường",
-            _clean_note(items[4].get("note", "")),
-        ),
-    ]
-    return [
-        {"title": title, "detail": _clip_text(detail, 135)}
-        for title, detail in fallbacks
-    ]
-
-
 def _derive_summary_lede(brief: dict) -> str:
-    supplied = str(brief.get("summary_lede", "")).strip()
-    if supplied:
-        return _clip_text(supplied, 210)
+    return _clip_text(str(brief.get("summary_lede", "")).strip(), 240)
 
-    return (
-        f"Từ 5 diễn biến nổi bật ngày {brief.get('date', '')}, STACORP cập nhật "
-        "những thông tin chính, giúp doanh nghiệp nắm bắt cơ hội và chủ động "
-        "ứng phó rủi ro."
-    )
+
+def _derive_department_digest(brief: dict) -> list[dict]:
+    result = []
+    for item in brief["department_digest"]:
+        departments = item.get("departments", [])
+        if isinstance(departments, list):
+            departments_text = " • ".join(str(x).strip() for x in departments if str(x).strip())
+        else:
+            departments_text = str(departments).strip()
+        result.append(
+            {
+                "group": _clip_text(item.get("group", ""), 52),
+                "title": _clip_text(item.get("title", ""), 62),
+                "detail": _clip_text(item.get("detail", ""), 170),
+                "departments": _clip_text(departments_text, 72),
+            }
+        )
+    return result
+
+
+def _derive_regional_pulse(brief: dict) -> list[dict]:
+    counts = {
+        "MIỀN BẮC": sum(1 for item in brief["items"] if item.get("region") == "MIỀN BẮC"),
+        "MIỀN TRUNG": sum(1 for item in brief["items"] if item.get("region") == "MIỀN TRUNG"),
+    }
+    result = []
+    for pulse in brief["regional_pulse"]:
+        region = str(pulse.get("region", "")).strip()
+        result.append(
+            {
+                "region": region,
+                "count": counts.get(region, 0),
+                "title": _clip_text(pulse.get("title", ""), 72),
+                "detail": _clip_text(pulse.get("detail", ""), 150),
+            }
+        )
+    return result
+
+
+def _derive_watchpoints(brief: dict) -> list[dict]:
+    return [
+        {
+            "label": _clip_text(point.get("label", ""), 24),
+            "title": _clip_text(point.get("title", ""), 58),
+            "detail": _clip_text(point.get("detail", ""), 130),
+        }
+        for point in brief["watchpoints"]
+    ]
 
 
 def _assert_locked_geometry(page, html_name: str) -> None:
@@ -291,13 +352,15 @@ def render_brief(brief: dict) -> tuple[Path, Path, Path]:
     context = {
         "brief": brief,
         "summary_lede": _derive_summary_lede(brief),
-        "executive_actions": _derive_executive_actions(brief),
+        "department_digest": _derive_department_digest(brief),
+        "regional_pulse": _derive_regional_pulse(brief),
+        "watchpoints": _derive_watchpoints(brief),
         "layout_version": APPROVED_LAYOUT_VERSION,
     }
 
     pages = [
-        ("editorial_page1.html", OUT_DIR / "editorial_page1.html", PAGE1, items[:3]),
-        ("editorial_page2.html", OUT_DIR / "editorial_page2.html", PAGE2, items[3:]),
+        ("editorial_page1.html", OUT_DIR / "editorial_page1.html", PAGE1, items[:4]),
+        ("editorial_page2.html", OUT_DIR / "editorial_page2.html", PAGE2, items[4:8]),
         ("editorial_page3.html", OUT_DIR / "editorial_page3.html", PAGE3, items),
     ]
 
