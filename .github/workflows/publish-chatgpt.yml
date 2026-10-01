@@ -25,9 +25,9 @@ jobs:
       MS_CLIENT_ID: ${{ secrets.MS_CLIENT_ID }}
       MS_CLIENT_SECRET: ${{ secrets.MS_CLIENT_SECRET }}
       MS_REFRESH_TOKEN: ${{ secrets.MS_REFRESH_TOKEN }}
-      TEAMS_TARGET_TYPE: ${{ vars.TEAMS_TARGET_TYPE || 'channel' }}
-      TEAMS_TEAM_ID: ${{ vars.TEAMS_TEAM_ID || secrets.TEAMS_TEAM_ID }}
-      TEAMS_CHANNEL_ID: ${{ vars.TEAMS_CHANNEL_ID || secrets.TEAMS_CHANNEL_ID }}
+      TEAMS_TARGET_TYPE: channel
+      TEAMS_TEAM_ID: 85f93dd1-97df-43b4-88c2-a156e57b5223
+      TEAMS_CHANNEL_ID: 19:ae875099856a42569438d9c056e1294f@thread.tacv2
 
     steps:
       - uses: actions/checkout@v4
