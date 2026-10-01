@@ -66,10 +66,32 @@ jobs:
               raise SystemExit("Teams payload budget changed.")
           if master.get("width") != 1200 or master.get("height") != 1800:
               raise SystemExit("Teams high-density master dimensions changed.")
+
+          source_quality = config.get("source_visual_quality", {})
+          expected_quality = {
+              "min_long_edge": 1400,
+              "min_short_edge": 900,
+              "min_source_bytes": 250000,
+              "min_sharpness": 18.0,
+              "reject_webp": True,
+              "reject_preview_thumbnail": True,
+              "fail_closed": True,
+          }
+          for key, value in expected_quality.items():
+              if source_quality.get(key) != value:
+                  raise SystemExit(
+                      f"Source visual quality lock changed for {key}: "
+                      f"{source_quality.get(key)!r} != {value!r}"
+                  )
+
           print(f"APPROVED_LAYOUT_VERSION={expected}")
           print("LAYOUT_LOCK_LEVEL=FINAL")
           print("TEAMS_TRANSPORT=JPEG_1200X1800_444")
+          print("SOURCE_VISUAL_POLICY=ORIGINAL_ONLY_FAIL_CLOSED")
           PY
+
+      - name: Validate original source visuals
+        run: python -m src.validate_source_visuals
 
       - name: Publish ChatGPT package to Teams
         run: python -m src.publish_incoming
