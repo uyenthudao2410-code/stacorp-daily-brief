@@ -1,0 +1,40 @@
+{
+  "name": "ĐIỂM TIN ĐIỀU HÀNH STACORP",
+  "delivery": {
+    "email_enabled": false,
+    "teams_enabled": true,
+    "team_id": "0bff3781-b351-4ff5-a611-94cbe315f4b0",
+    "channel_id": "19:OEyXLFXSzP7bezGLJ-mlRecQ3FcMLdK9vfoCA7Iqq141@thread.tacv2",
+    "team_name": "06. STA - Văn Phòng",
+    "channel_name": "VP - Tin tức",
+    "subject_template": "ĐIỂM TIN ĐIỀU HÀNH STACORP | {date}"
+  },
+  "editorial": {
+    "weekday_window_hours": 24,
+    "sunday_monday_window_hours": 48,
+    "target_items_min": 6,
+    "target_items_max": 8,
+    "highlights_count": 3,
+    "impact_items_min": 4,
+    "impact_items_max": 6,
+    "actions_items_min": 1,
+    "actions_items_max": 5,
+    "teams_word_target_min": 650,
+    "teams_word_target_max": 900
+  },
+  "teams_groups": [
+    "KẾ TOÁN · THUẾ · TÀI CHÍNH",
+    "PHÁP LÝ · CHÍNH SÁCH DOANH NGHIỆP",
+    "NHÂN SỰ · THỊ TRƯỜNG LAO ĐỘNG"
+  ],
+  "allowed_html_tags": [
+    "h2",
+    "h3",
+    "strong",
+    "p",
+    "hr",
+    "a",
+    "ul",
+    "li"
+  ]
+}
