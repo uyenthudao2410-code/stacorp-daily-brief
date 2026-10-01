@@ -19,8 +19,8 @@ def _load_payload() -> dict:
 
     brief = json.loads(brief_path.read_text(encoding="utf-8"))
     items = brief.get("items", [])
-    if len(items) != 5:
-        raise RuntimeError("Incoming ChatGPT brief must contain exactly five items.")
+    if len(items) != 8:
+        raise RuntimeError("Incoming ChatGPT brief must contain exactly eight items.")
 
     return prepare_source_visuals(brief)
 
