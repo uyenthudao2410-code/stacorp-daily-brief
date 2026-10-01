@@ -1,122 +1,74 @@
 # STACORP Daily Brief
 
-Automated enterprise-news brief for STACORP. The project scans current business news, selects exactly five material items, renders a two-page 1120x1400 executive brief, and can post both pages inline to Microsoft Teams.
+Automated enterprise-news brief for STACORP using **ChatGPT Scheduled Task + GitHub connected app**. Production does **not** use OpenAI API, OPENAI_API_KEY, Codex, Power Automate or Outlook.
 
-## V3 design and brand rules
+## Production format
 
-- Light, elegant, professional visual system approved for daily use.
-- Page 1: executive header, four KPI tiles, one lead story, two supporting stories, optional action strip.
-- Page 2: two follow-up stories plus an impact-summary panel.
-- Vietnamese text is rendered deterministically with HTML/CSS + Playwright.
-- Story photography can be generated separately with the OpenAI Image API.
-- Generated story images are strictly unbranded: no text, no signage, no logos, no STACORP marks.
-- The STACORP logo is the approved local asset at `assets/stacorp-logo.png`.
-- Rendering verifies the exact approved Git blob identity of the logo and refuses to build if that file is modified or replaced.
+Approved layout:
 
-## Storage
+`STACORP_EDITORIAL_3PAGE_FINAL_V3_REGIONAL_8NEWS`
 
-- Final PNG pages and AI story visuals exist only on the GitHub runner.
-- They are not committed to the repository and are not archived in SharePoint/OneDrive.
-- After posting, Teams retains the inline message content; the runner's temporary files disappear.
-- Only lightweight article hashes are committed to `state/published_hashes.json` to prevent duplicate news.
+- Exactly **8 qualified stories** per issue.
+- Primary geography: **MIỀN BẮC + MIỀN TRUNG**.
+- At least 3 North items and 3 Central items; at most 2 nationwide items.
+- No standalone southern item unless the development is nationwide and materially affects North/Central operations.
+- Page 1: story 1 hero + stories 2–4 as three horizontal rows.
+- Page 2: stories 5–8 as a 2×2 grid.
+- Page 3: cross-department synthesis only; it does not repeat the eight headlines.
+
+## Page 3 synthesis
+
+The final page is designed for multiple departments reading the same brief:
+
+- 4 cross-functional digest cards:
+  - Kinh doanh • Đấu thầu • Marketing
+  - Dự án • Kỹ thuật • HSE
+  - Cung ứng • Tài chính • Kế toán
+  - Nhân sự • Pháp chế • Ban Giám đốc
+- North/Central regional pulse.
+- Exactly 3 watchpoints for the next 24–48 hours.
+- 8 compact source references.
+
+## Source visual quality lock
+
+ChatGPT Images produces exactly 8 unbranded story illustrations.
+
+Production accepts original PNG/JPEG only:
+
+- long edge >= 1400 px
+- short edge >= 900 px
+- source bytes >= 250,000
+- sharpness >= 18.0
+- WEBP previews, screenshots and thumbnails are blocked
+
+If original binary cannot be committed, `incoming/current/visual_sources.json` may contain exactly eight original `oaiusercontent.com/.../raw` URLs.
+
+Any source visual failure blocks rendering, Teams posting and state update.
+
+## Teams output
+
+- 3 final pages, each 1080×1620.
+- Teams master 1200×1800 derived from browser render 2x; never upscaled from final.
+- JPEG 4:4:4, subsampling 0, deterministic quality ladder 97→90.
+- <= 850,000 bytes per page and <= 2,550,000 bytes total.
+- One root post only: Page 1 → Page 2 → Page 3 → 8 source links → optional action_today.
+- Publication is successful only when GitHub Actions concludes `success` and logs `TEAMS_MESSAGE_ID=<id>`.
 
 ## Schedule
 
-GitHub Actions uses `30 1 * * *`, which is 08:30 in Vietnam (UTC+7).
+The ChatGPT Scheduled Task runs every day at **08:15 Asia/Ho_Chi_Minh**.
 
-Scheduled production is OFF until repository variable:
+Official Teams destination:
 
-```text
-AUTOMATION_ENABLED=true
-```
+- Team: `85f93dd1-97df-43b4-88c2-a156e57b5223`
+- Channel: `19:ae875099856a42569438d9c056e1294f@thread.tacv2`
+- Channel name: `2. Thông tin và tin tức`
 
-## Required GitHub configuration
+## Deduplication
 
-### Secrets
-
-- `OPENAI_API_KEY`
-- `MS_TENANT_ID`
-- `MS_CLIENT_ID`
-- `MS_REFRESH_TOKEN`
-- optional `MS_CLIENT_SECRET`
-- `TEAMS_CHAT_ID` for test chat
-- later: `TEAMS_TEAM_ID`, `TEAMS_CHANNEL_ID` for the official channel
-
-### Variables
-
-- `OPENAI_MODEL=gpt-5.6-terra`
-- `OPENAI_IMAGE_MODEL=gpt-image-2.5-flare`
-- `TEAMS_TARGET_TYPE=chat`
-- `AUTOMATION_ENABLED=false` until final approval
-
-Keep all credentials and tenant-specific identifiers in GitHub Secrets/Variables, never in this public repository.
-
-## Manual preview
-
-In **Actions -> STACORP Daily Brief -> Run workflow**:
-
-For a zero-cost layout preview:
-
-```text
-demo=true
-visuals=false
-publish=false
-preview_artifact=true
-```
-
-For the approved photo-rich V3 look after `OPENAI_API_KEY` is configured:
-
-```text
-demo=true
-visuals=true
-publish=false
-preview_artifact=true
-```
-
-For a Teams test:
-
-```text
-demo=true
-visuals=true
-publish=true
-preview_artifact=false
-```
-
-Only a successful Microsoft Graph response containing a Teams message ID is treated as a successful publication.
-
-## Production pipeline
-
-```text
-GitHub Actions 08:30
-  -> collect 50-80 candidates
-  -> filter NEW -> RELEVANT -> MATERIAL -> DISTINCT
-  -> select exactly 5 stories >= 7/10
-  -> generate five unbranded editorial visuals
-  -> verify approved STACORP logo identity
-  -> render V3 Page 1 + Page 2
-  -> validate dimensions and file size
-  -> POST both PNGs to Teams as inline hosted content
-  -> save only deduplication hashes
-  -> temporary images disappear with the runner
-```
-
-## Editorial rules
-
-- shortlist 12-18 internally
-- exactly five final items, each >= 7/10
-- balanced opportunity / market / cost-finance / worksite mix
-- normally no more than three HIGH-impact items
-- exactly two supported facts per item
-- 2-5 genuinely relevant departments
-- never default to "Toàn công ty"
-- preserve source and publication date
-- legal/risk items require an official-source candidate
-- do not publish when fewer than five items pass
-- only show "VIỆC CẦN LÀM" when a clear action follows from HIGH-impact news
+Only successful production runs update `state/published_hashes.json`. Published items are excluded for 120 days unless a materially new development occurs.
 
 ## Microsoft Entra
-
-The included helper `scripts/bootstrap_ms_refresh_token.py` uses delegated Microsoft Graph permissions.
 
 Required delegated permissions:
 
@@ -124,43 +76,9 @@ Required delegated permissions:
 - `ChannelMessage.Send`
 - `offline_access`
 
-After the app is configured and public-client flow is enabled, run:
+Repository secrets:
 
-```bash
-python -m pip install -r requirements.txt
-python scripts/bootstrap_ms_refresh_token.py --tenant <tenant-id> --client-id <client-id>
-```
-
-Store the resulting refresh token as GitHub secret `MS_REFRESH_TOKEN`.
-
-## Repository layout
-
-```text
-.github/workflows/
-  ci.yml
-  daily-brief.yml
-assets/
-  stacorp-logo.png
-config/
-  news_queries.json
-sample/
-  brief.sample.json
-scripts/
-  bootstrap_ms_refresh_token.py
-src/
-  collect_news.py
-  generate_visuals.py
-  main.py
-  models.py
-  publish_teams.py
-  rank_news.py
-  render.py
-  state.py
-  validate.py
-state/
-  published_hashes.json
-templates/
-  page1.html
-  page2.html
-  style.css
-```
+- `MS_TENANT_ID`
+- `MS_CLIENT_ID`
+- `MS_REFRESH_TOKEN`
+- optional `MS_CLIENT_SECRET`
