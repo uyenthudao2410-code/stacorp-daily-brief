@@ -1,6 +1,6 @@
 {
-  "version": "STACORP_EDITORIAL_3PAGE_FINAL_V3_REGIONAL_8NEWS",
-  "status": "approved-production-final-regional-8news",
+  "version": "STACORP_EDITORIAL_3PAGE_FINAL_V4_NEWSROOM_8NEWS",
+  "status": "approved-production-final-newsroom-8news",
   "locked": true,
   "canvas": {
     "width": 1080,
@@ -44,8 +44,8 @@
   "template_git_blob_sha": {
     "page1": "153527d2dcc1005a54d616053ad0756d8db69129",
     "page2": "7e999267059f3f536c728908440537c96f3af971",
-    "page3": "d83a4c48536593aa582b783a791c4a4b0fbaadaf",
-    "style": "4956aa57da4f82902fcee5175e2362a6b4ba8681"
+    "page3": "d481eaf5be16d17a9d2daf0243a1a58591f2bc85",
+    "style": "4ae7e1d44408a272ecdf6b061cac21130fff8b13"
   },
   "brand_lock": {
     "logo_path": "assets/stacorp-logo.png",
@@ -64,9 +64,9 @@
     "page2_kicker_height": 62,
     "page2_news_grid_card_height": 570,
     "page3_summary_title_height": 88,
-    "page3_department_card_height": 216,
-    "page3_watch_card_height": 154,
-    "tolerance_px": 1
+    "tolerance_px": 1,
+    "page3_news_theme_card_height": 190,
+    "page3_number_card_height": 148
   },
   "design_tokens": {
     "navy": "#062e62",
@@ -85,8 +85,8 @@
     "Standalone southern-region items are excluded; only nationwide developments with direct material impact on North/Central operations may appear as TOÀN QUỐC.",
     "Page 1 presents story 1 as the hero plus stories 2-4 as three readable horizontal news rows.",
     "Page 2 presents stories 5-8 as a 2x2 regional news grid with headline, one fact and a short STACORP note.",
-    "Page 3 never repeats the eight headlines. It synthesizes four cross-department impact groups, North/Central regional pulse, exactly three 24-48h watchpoints and eight compact source references.",
-    "summary_lede must be 140-240 characters; department_digest must contain exactly four groups; regional_pulse exactly MIỀN BẮC and MIỀN TRUNG; watchpoints exactly three.",
+    "Page 3 never repeats the eight headlines. It presents a newsroom-style digest for all employees: four editorial themes, North/Central regional pulse, four memorable figures and eight compact source references.",
+    "summary_lede must be 140-240 characters; news_themes must contain exactly four editorial themes; regional_pulse exactly MIỀN BẮC and MIỀN TRUNG; news_numbers exactly four memorable figures.",
     "ChatGPT Images creates exactly eight story illustrations only; it must never generate final newsletter pages, text, logo, badge or watermark.",
     "Every story visual must pass the original-source quality gate before rendering; preview/thumbnail WEBP files are blocked.",
     "Source visuals require PNG/JPEG, long edge >=1400, short edge >=900, source bytes >=250,000 and sharpness >=18.0.",
@@ -97,7 +97,8 @@
     "Template hash, logo hash, output dimensions and geometry must pass before Teams posting.",
     "Any source visual, copy schema, regional-balance or geometry failure blocks render, Teams posting and state update.",
     "No fallback template is allowed; Teams transport may only step through the locked JPEG quality ladder 97→90.",
-    "Layout changes require explicit user approval and a new layout version."
+    "Layout changes require explicit user approval and a new layout version.",
+    "Page 3 must read like a business news digest for the whole company, not an executive control dashboard: no department ownership tags, no mandatory-action checklist and no control/watchpoint framing."
   ],
   "source_visual_quality": {
     "delivery_modes": [
@@ -138,18 +139,22 @@
       140,
       240
     ],
-    "department_digest_count": 4,
-    "department_digest_groups": [
-      "Kinh doanh • Đấu thầu • Marketing",
-      "Dự án • Kỹ thuật • HSE",
-      "Cung ứng • Tài chính • Kế toán",
-      "Nhân sự • Pháp chế • Ban Giám đốc"
+    "news_themes_count": 4,
+    "news_themes_fields": [
+      "label",
+      "title",
+      "detail"
     ],
     "regional_pulse_regions": [
       "MIỀN BẮC",
       "MIỀN TRUNG"
     ],
-    "watchpoints_count": 3,
-    "purpose": "Cross-department synthesis; do not repeat the eight headlines."
+    "news_numbers_count": 4,
+    "news_numbers_fields": [
+      "value",
+      "label",
+      "context"
+    ],
+    "purpose": "Newsroom-style synthesis for all employees; summarize themes and memorable facts without operational control language or department-specific directives."
   }
 }
