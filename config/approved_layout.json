@@ -12,18 +12,28 @@
     "downsample": "LANCZOS",
     "master_format": "PNG",
     "teams_master": {
-      "width": 1440,
-      "height": 2160,
+      "width": 1200,
+      "height": 1800,
       "format": "PNG",
       "source": "2x browser render downsampled; never upscaled"
     }
   },
   "teams_transport": {
-    "format": "PNG",
-    "hosted_content_max_bytes": 4194304,
+    "format": "JPEG",
+    "max_page_bytes": 850000,
+    "max_binary_total": 2550000,
+    "quality_ladder": [
+      97,
+      96,
+      95,
+      94,
+      93,
+      92,
+      90
+    ],
+    "subsampling": 0,
     "inline_width": 900,
-    "root_posts": 1,
-    "preserve_lossless_text_edges": true
+    "root_posts": 1
   },
   "templates": {
     "page1": "templates/editorial_page1.html",
@@ -76,10 +86,10 @@
     "Page 3: executive summary + exactly three executive actions + executive visual + five readable highlight cards + source panel + closing visual.",
     "ChatGPT Images creates story illustrations only; it must never generate final newsletter pages, text, logo, badge or watermark.",
     "Final pages are always rendered deterministically from the locked HTML/CSS templates.",
-    "Teams delivery uses a lossless 1440x2160 PNG master derived from the 2x browser render; it never upscales the 1080x1620 final page.",
-    "Each Teams hostedContent PNG must stay at or below 4 MiB or production fails.",
+    "Teams delivery uses a 1200x1800 high-density master and deterministic JPEG 4:4:4 transport within the Graph message payload budget.",
+    "Each Teams page must remain within the deterministic page budget and the three-page binary total must not exceed 2,550,000 bytes.",
     "Template hash, logo hash, output dimensions and geometry must pass before Teams posting.",
-    "No fallback template or lossy JPEG fallback is allowed.",
+    "No fallback template is allowed; Teams transport may only step through the locked JPEG quality ladder 97→90.",
     "Layout changes require explicit user approval and a new layout version."
   ]
 }
