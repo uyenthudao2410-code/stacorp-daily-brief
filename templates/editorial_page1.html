@@ -14,7 +14,7 @@
       <div class="brand-rule"></div>
       <div class="brand-copy">
         <div class="brand-title">ĐIỂM TIN CHO DOANH NGHIỆP<br><span>STACORP</span></div>
-        <div class="brand-subtitle">5 DIỄN BIẾN CẦN LƯU Ý HÔM NAY</div>
+        <div class="brand-subtitle">{{ brief.subtitle }}</div>
       </div>
     </div>
     <div class="date-block">
@@ -32,17 +32,17 @@
       <img class="hero-image" src="{{ lead.visual_src }}" alt="">
       <div class="image-vignette"></div>
       <div class="story-tag">01 <span></span> {{ lead.category|upper }}</div>
-      <div class="impact-tag {{ lead_impact }}">▥&nbsp; TÁC ĐỘNG: {{ lead.impact }}</div>
+      <div class="impact-tag {{ lead_impact }}">TÁC ĐỘNG: {{ lead.impact }}</div>
     </div>
     <div class="hero-copy">
       <h1>{{ lead.headline }}</h1>
-      <p>{{ lead.facts[0]|clip_text(190) }}</p>
+      <p>{{ lead.facts[0]|clip_text(175) }}</p>
     </div>
     <div class="note-box">
       <div class="note-icon">✦</div>
       <div class="note-label">STACORP CẦN LƯU Ý</div>
       <div class="note-divider"></div>
-      <div class="note-text">{{ lead.note|clean_note|clip_text(175) }}</div>
+      <div class="note-text">{{ lead.note|clean_note|clip_text(160) }}</div>
     </div>
   </article>
 
@@ -54,11 +54,11 @@
         <img class="mini-image" src="{{ item.visual_src }}" alt="">
         <div class="image-vignette soft"></div>
         <div class="story-tag compact">0{{ loop.index + 1 }} <span></span> {{ item.category|upper }}</div>
-        <div class="impact-tag compact {{ impact_class }}">▥&nbsp; TÁC ĐỘNG: {{ item.impact }}</div>
+        <div class="impact-tag compact {{ impact_class }}">{{ item.impact }}</div>
       </div>
       <div class="mini-copy">
         <h2>{{ item.headline }}</h2>
-        <p>{{ item.facts[0]|clip_text(118) }}</p>
+        <p>{{ item.facts[0]|clip_text(105) }}</p>
       </div>
     </article>
     {% endfor %}
