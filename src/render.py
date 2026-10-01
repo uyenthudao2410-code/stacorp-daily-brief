@@ -58,7 +58,7 @@ LOCKED_GEOMETRY = {
         ".masthead": {"height": 164},
         ".logo": {"width": 92, "height": 92},
         ".summary-title-row": {"height": 88},
-        ".highlight-card": {"height": 240},
+        ".highlight-card": {"height": 122},
         ".footer": {"height": 98},
     },
 }
