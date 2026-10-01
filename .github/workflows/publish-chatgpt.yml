@@ -52,14 +52,23 @@ jobs:
           import json
           from pathlib import Path
 
-          expected = "STACORP_EDITORIAL_3PAGE_FINAL_V1"
+          expected = "STACORP_EDITORIAL_3PAGE_FINAL_V2"
           config = json.loads(Path("config/approved_layout.json").read_text(encoding="utf-8"))
           if config.get("version") != expected or not config.get("locked"):
               raise SystemExit("Approved production layout lock is invalid.")
           if config.get("canvas") != {"width": 1080, "height": 1620, "pages": 3}:
               raise SystemExit("Approved production canvas/page count changed.")
+          teams = config.get("teams_transport", {})
+          master = config.get("render", {}).get("teams_master", {})
+          if teams.get("format") != "PNG":
+              raise SystemExit("Teams transport must use lossless PNG.")
+          if teams.get("hosted_content_max_bytes") != 4194304:
+              raise SystemExit("Teams hostedContent size guard changed.")
+          if master.get("width") != 1440 or master.get("height") != 2160:
+              raise SystemExit("Teams high-density master dimensions changed.")
           print(f"APPROVED_LAYOUT_VERSION={expected}")
           print("LAYOUT_LOCK_LEVEL=FINAL")
+          print("TEAMS_TRANSPORT=PNG_1440X2160")
           PY
 
       - name: Publish ChatGPT package to Teams
