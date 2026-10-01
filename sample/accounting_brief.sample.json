@@ -1,0 +1,134 @@
+{
+  "date": "01.10.2026",
+  "window": "24 giờ gần nhất",
+  "summary": "Mẫu kiểm thử cấu trúc bản tin điều hành dành cho Kế toán, Nhân sự, Pháp lý và Ban điều hành.",
+  "highlights": [
+    "Mẫu điểm nổi bật số 1.",
+    "Mẫu điểm nổi bật số 2.",
+    "Mẫu điểm nổi bật số 3."
+  ],
+  "items": [
+    {
+      "category": "KẾ TOÁN · THUẾ · TÀI CHÍNH",
+      "label": "CAO · THUẾ · MỚI",
+      "title": "Mẫu thay đổi chính sách thuế cần theo dõi trong ngày",
+      "facts": [
+        "Dữ kiện kiểm thử thứ nhất.",
+        "Dữ kiện kiểm thử thứ hai."
+      ],
+      "sources": [
+        {
+          "name": "Cổng Thông tin điện tử Chính phủ",
+          "url": "https://chinhphu.vn/"
+        }
+      ]
+    },
+    {
+      "category": "KẾ TOÁN · THUẾ · TÀI CHÍNH",
+      "label": "TRUNG BÌNH · TÀI CHÍNH · THEO DÕI",
+      "title": "Mẫu tín hiệu tài chính doanh nghiệp cần lưu ý hôm nay",
+      "facts": [
+        "Dữ kiện kiểm thử thứ nhất.",
+        "Dữ kiện kiểm thử thứ hai."
+      ],
+      "sources": [
+        {
+          "name": "Ngân hàng Nhà nước Việt Nam",
+          "url": "https://www.sbv.gov.vn/"
+        }
+      ]
+    },
+    {
+      "category": "KẾ TOÁN · THUẾ · TÀI CHÍNH",
+      "label": "THEO DÕI · HÓA ĐƠN · MỚI",
+      "title": "Mẫu thông tin hóa đơn chứng từ cần rà soát nội bộ",
+      "facts": [
+        "Dữ kiện kiểm thử thứ nhất.",
+        "Dữ kiện kiểm thử thứ hai."
+      ],
+      "sources": [
+        {
+          "name": "Bộ Tài chính",
+          "url": "https://mof.gov.vn/"
+        }
+      ]
+    },
+    {
+      "category": "PHÁP LÝ · CHÍNH SÁCH DOANH NGHIỆP",
+      "label": "CAO · PHÁP LÝ · CÓ HIỆU LỰC TỪ...",
+      "title": "Mẫu chính sách doanh nghiệp có mốc hiệu lực cần lưu ý",
+      "facts": [
+        "Dữ kiện kiểm thử thứ nhất.",
+        "Dữ kiện kiểm thử thứ hai."
+      ],
+      "sources": [
+        {
+          "name": "Cơ sở dữ liệu quốc gia về văn bản pháp luật",
+          "url": "https://vbpl.vn/"
+        },
+        {
+          "name": "Bộ Tư pháp",
+          "url": "https://moj.gov.vn/"
+        }
+      ]
+    },
+    {
+      "category": "PHÁP LÝ · CHÍNH SÁCH DOANH NGHIỆP",
+      "label": "TRUNG BÌNH · BĐS · THEO DÕI",
+      "title": "Mẫu chính sách đất đai bất động sản tác động doanh nghiệp",
+      "facts": [
+        "Dữ kiện kiểm thử thứ nhất.",
+        "Dữ kiện kiểm thử thứ hai."
+      ],
+      "sources": [
+        {
+          "name": "Bộ Nông nghiệp và Môi trường",
+          "url": "https://mae.gov.vn/"
+        }
+      ]
+    },
+    {
+      "category": "NHÂN SỰ · THỊ TRƯỜNG LAO ĐỘNG",
+      "label": "TRUNG BÌNH · NHÂN SỰ · MỚI",
+      "title": "Mẫu thay đổi lao động bảo hiểm cần theo dõi hôm nay",
+      "facts": [
+        "Dữ kiện kiểm thử thứ nhất.",
+        "Dữ kiện kiểm thử thứ hai."
+      ],
+      "sources": [
+        {
+          "name": "Bảo hiểm xã hội Việt Nam",
+          "url": "https://baohiemxahoi.gov.vn/"
+        }
+      ]
+    }
+  ],
+  "impacts": [
+    {
+      "area": "Kế toán–Tài chính",
+      "text": "Mẫu tổng hợp tác động tới nghĩa vụ thuế, chi phí hoặc dòng tiền."
+    },
+    {
+      "area": "Pháp lý",
+      "text": "Mẫu tổng hợp tác động tới hợp đồng, tài sản hoặc rủi ro tuân thủ."
+    },
+    {
+      "area": "Nhân sự",
+      "text": "Mẫu tổng hợp tác động tới lao động, bảo hiểm hoặc tuyển dụng."
+    },
+    {
+      "area": "Ban điều hành",
+      "text": "Mẫu tổng hợp tác động cần theo dõi ở cấp quyết định."
+    }
+  ],
+  "actions": [
+    {
+      "owner": "Kế toán",
+      "text": "Mẫu việc cần rà soát trong ngày."
+    },
+    {
+      "owner": "Pháp lý",
+      "text": "Mẫu đầu việc cần xác minh văn bản hoặc hợp đồng."
+    }
+  ]
+}
