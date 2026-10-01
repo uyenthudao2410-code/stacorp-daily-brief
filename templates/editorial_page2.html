@@ -21,53 +21,36 @@
       <div class="date">{{ brief.date }}</div>
       <div class="date-rule"></div>
       <div class="edition">BẢN TIN HÀNG NGÀY</div>
-      <div class="edition-sub">KINH TẾ • ĐẦU TƯ • DOANH NGHIỆP</div>
+      <div class="edition-sub">MIỀN BẮC • MIỀN TRUNG • DOANH NGHIỆP</div>
     </div>
   </header>
 
-  {% set top = items[0] %}
-  {% set top_impact = "high" if top.impact == "CAO" else ("medium" if top.impact == "TRUNG BÌNH" else "watch") %}
-  <article class="story-wide story-top" data-lock="page2-story4">
-    <div class="wide-image-wrap">
-      <img class="wide-image" src="{{ top.visual_src }}" alt="">
-      <div class="image-vignette soft"></div>
-      <div class="story-tag">04 <span></span> {{ top.category|upper }}</div>
-      <div class="impact-tag {{ top_impact }}">TÁC ĐỘNG: {{ top.impact }}</div>
+  <section class="page2-kicker">
+    <div>
+      <b>4 TIN CHUYÊN SÂU TIẾP THEO</b>
+      <span>Dự án • Chi phí • Công trường • Tài chính • Pháp lý • Công nghệ</span>
     </div>
-    <div class="wide-copy">
-      <h1>{{ top.headline }}</h1>
-      <p>{{ top.facts[0]|clip_text(180) }}</p>
-    </div>
-    <div class="note-box">
-      <div class="note-icon">✦</div>
-      <div class="note-label">STACORP CẦN LƯU Ý</div>
-      <div class="note-divider"></div>
-      <div class="note-text">{{ top.note|clean_note|clip_text(165) }}</div>
-    </div>
-  </article>
+    <div class="page2-counter">05–08</div>
+  </section>
 
-  {% set bottom = items[1] %}
-  {% set bottom_impact = "high" if bottom.impact == "CAO" else ("medium" if bottom.impact == "TRUNG BÌNH" else "watch") %}
-  <article class="story-split" data-lock="page2-story5">
-    <div class="split-main">
-      <div class="split-image-wrap">
-        <img class="wide-image" src="{{ bottom.visual_src }}" alt="">
-        <div class="image-vignette soft"></div>
-        <div class="story-tag">05 <span></span> {{ bottom.category|upper }}</div>
-        <div class="impact-tag {{ bottom_impact }}">{{ bottom.impact }}</div>
+  <section class="regional-news-grid" data-lock="page2-news-grid">
+    {% for item in items %}
+    {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
+    <article class="news-grid-card">
+      <div class="news-grid-image">
+        <img src="{{ item.visual_src }}" alt="">
+        <div class="story-tag compact">{{ "%02d"|format(loop.index + 4) }} <span></span> {{ item.region }}</div>
+        <div class="impact-tag compact {{ impact_class }}">{{ item.impact }}</div>
       </div>
-      <div class="split-copy">
-        <h1>{{ bottom.headline }}</h1>
-        <p>{{ bottom.facts[0]|clip_text(175) }}</p>
+      <div class="news-grid-copy">
+        <div class="grid-category">{{ item.category|upper }}</div>
+        <h2>{{ item.headline }}</h2>
+        <p>{{ item.facts[0]|clip_text(118) }}</p>
+        <div class="grid-note"><b>STACORP:</b> {{ item.note|clean_note|clip_text(112) }}</div>
       </div>
-    </div>
-    <div class="note-box compact-note">
-      <div class="note-icon">✦</div>
-      <div class="note-label">STACORP CẦN LƯU Ý</div>
-      <div class="note-divider"></div>
-      <div class="note-text">{{ bottom.note|clean_note|clip_text(165) }}</div>
-    </div>
-  </article>
+    </article>
+    {% endfor %}
+  </section>
 
   <footer class="footer" data-lock="footer">
     <div class="footer-flourish"></div>
