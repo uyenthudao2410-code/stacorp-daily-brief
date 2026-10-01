@@ -26,30 +26,35 @@
   </header>
 
   <section class="summary-title-row" data-lock="page3-summary-title">
-    <div class="summary-ribbon">TỔNG HỢP LIÊN PHÒNG BAN</div>
-    <div class="summary-count">8 TÍN HIỆU • BẮC & TRUNG</div>
+    <div class="summary-ribbon">TOÀN CẢNH TRONG NGÀY</div>
+    <div class="summary-count">8 TIN • BẮC & TRUNG</div>
   </section>
 
   <p class="summary-lede">{{ summary_lede }}</p>
 
-  <section class="department-grid" data-lock="page3-department-grid">
-    {% for digest in department_digest %}
-    <article class="department-card">
-      <div class="department-index">0{{ loop.index }}</div>
-      <div class="department-copy">
-        <div class="department-group">{{ digest.group }}</div>
-        <h2>{{ digest.title }}</h2>
-        <p>{{ digest.detail }}</p>
-        <div class="department-tags">{{ digest.departments }}</div>
-      </div>
-    </article>
-    {% endfor %}
+  <section class="news-themes" data-lock="page3-news-themes">
+    <div class="section-bar">
+      <b>4 CHUYỂN ĐỘNG NỔI BẬT</b>
+      <span>Từ 8 tin, nhìn ra bức tranh chung của thị trường và doanh nghiệp</span>
+    </div>
+    <div class="news-themes-grid">
+      {% for theme in news_themes %}
+      <article class="news-theme-card">
+        <div class="theme-index">0{{ loop.index }}</div>
+        <div class="theme-copy">
+          <div class="theme-label">{{ theme.label }}</div>
+          <h2>{{ theme.title }}</h2>
+          <p>{{ theme.detail }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
   </section>
 
   <section class="regional-pulse">
     <div class="section-bar">
-      <b>NHỊP THỊ TRƯỜNG THEO KHU VỰC</b>
-      <span>Nhìn nhanh nơi cơ hội và rủi ro đang tập trung</span>
+      <b>NHỊP THỊ TRƯỜNG BẮC • TRUNG</b>
+      <span>Bức tranh nhanh theo khu vực</span>
     </div>
     <div class="regional-pulse-grid">
       {% for pulse in regional_pulse %}
@@ -65,17 +70,17 @@
     </div>
   </section>
 
-  <section class="watch-section">
+  <section class="numbers-section">
     <div class="section-bar compact-bar">
-      <b>3 ĐIỂM CẦN THEO DÕI 24–48 GIỜ</b>
-      <span>Không lặp tin — chỉ tổng hợp tín hiệu cần hành động</span>
+      <b>4 CON SỐ ĐÁNG CHÚ Ý</b>
+      <span>Những dữ kiện dễ nhớ nhất từ bản tin hôm nay</span>
     </div>
-    <div class="watch-grid">
-      {% for point in watchpoints %}
-      <article class="watch-card">
-        <div class="watch-label">{{ point.label }}</div>
-        <h3>{{ point.title }}</h3>
-        <p>{{ point.detail }}</p>
+    <div class="numbers-grid">
+      {% for number in news_numbers %}
+      <article class="number-card">
+        <div class="number-value">{{ number.value }}</div>
+        <div class="number-label">{{ number.label }}</div>
+        <p>{{ number.context }}</p>
       </article>
       {% endfor %}
     </div>
