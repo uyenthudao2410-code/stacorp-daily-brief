@@ -21,68 +21,72 @@
       <div class="date">{{ brief.date }}</div>
       <div class="date-rule"></div>
       <div class="edition">BẢN TIN HÀNG NGÀY</div>
-      <div class="edition-sub">KINH TẾ • ĐẦU TƯ • DOANH NGHIỆP</div>
+      <div class="edition-sub">MIỀN BẮC • MIỀN TRUNG • DOANH NGHIỆP</div>
     </div>
   </header>
 
   <section class="summary-title-row" data-lock="page3-summary-title">
-    <div class="summary-ribbon">TỔNG HỢP ĐIỀU HÀNH</div>
-    <div class="summary-count">3 ƯU TIÊN HÀNH ĐỘNG CHO STACORP</div>
+    <div class="summary-ribbon">TỔNG HỢP LIÊN PHÒNG BAN</div>
+    <div class="summary-count">8 TÍN HIỆU • BẮC & TRUNG</div>
   </section>
 
   <p class="summary-lede">{{ summary_lede }}</p>
 
-  <section class="executive-zone" data-lock="page3-executive-zone">
-    <div class="actions">
-      {% for action in executive_actions %}
-      <article class="action-row">
-        <div class="action-num">0{{ loop.index }}</div>
-        <div class="action-copy">
-          <h2>{{ action.title }}</h2>
-          <p>{{ action.detail }}</p>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-    <aside class="executive-visual">
-      <img src="{{ brief["items"][0].visual_src }}" alt="">
-      <div class="executive-visual-shade"></div>
-      <div class="executive-quote">Nắm bắt cơ hội<br><span>Kiến tạo giá trị bền vững</span></div>
-    </aside>
-  </section>
-
-  <section class="highlights" data-lock="page3-highlights">
-    <div class="highlights-head">
-      <div class="head-main">5 ĐIỂM NHẤN TRONG NGÀY</div>
-      <div class="head-sub">TÓM TẮT NHANH ĐỂ RA QUYẾT ĐỊNH</div>
-    </div>
-    <div class="highlights-grid">
-      {% for item in brief["items"] %}
-      {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
-      <article class="highlight-card {% if loop.last %}highlight-last{% endif %}">
-        <div class="highlight-top">
-          <div class="highlight-no">0{{ loop.index }}</div>
-          <div class="impact-chip {{ impact_class }}">{{ item.impact }}</div>
-        </div>
-        <h3>{{ item.headline|clip_text(82) }}</h3>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-
-  <section class="reference-zone" data-lock="page3-reference-zone">
-    <div class="sources-panel">
-      <div class="sources-title">NGUỒN THAM KHẢO</div>
-      <div class="sources-list">
-        {% for item in brief["items"] %}
-        <div class="source-pill"><b>0{{ loop.index }}</b><span>{{ item.source|clip_text(36) }}</span></div>
-        {% endfor %}
+  <section class="department-grid" data-lock="page3-department-grid">
+    {% for digest in department_digest %}
+    <article class="department-card">
+      <div class="department-index">0{{ loop.index }}</div>
+      <div class="department-copy">
+        <div class="department-group">{{ digest.group }}</div>
+        <h2>{{ digest.title }}</h2>
+        <p>{{ digest.detail }}</p>
+        <div class="department-tags">{{ digest.departments }}</div>
       </div>
+    </article>
+    {% endfor %}
+  </section>
+
+  <section class="regional-pulse">
+    <div class="section-bar">
+      <b>NHỊP THỊ TRƯỜNG THEO KHU VỰC</b>
+      <span>Nhìn nhanh nơi cơ hội và rủi ro đang tập trung</span>
     </div>
-    <div class="closing-image">
-      <img src="{{ brief["items"][3].visual_src }}" alt="">
-      <div class="closing-overlay"></div>
-      <div class="closing-caption">Cập nhật để chủ động<br><span>Ra quyết định tốt hơn</span></div>
+    <div class="regional-pulse-grid">
+      {% for pulse in regional_pulse %}
+      <article class="pulse-card">
+        <div class="pulse-top">
+          <span>{{ pulse.region }}</span>
+          <b>{{ pulse.count }} TIN</b>
+        </div>
+        <h3>{{ pulse.title }}</h3>
+        <p>{{ pulse.detail }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="watch-section">
+    <div class="section-bar compact-bar">
+      <b>3 ĐIỂM CẦN THEO DÕI 24–48 GIỜ</b>
+      <span>Không lặp tin — chỉ tổng hợp tín hiệu cần hành động</span>
+    </div>
+    <div class="watch-grid">
+      {% for point in watchpoints %}
+      <article class="watch-card">
+        <div class="watch-label">{{ point.label }}</div>
+        <h3>{{ point.title }}</h3>
+        <p>{{ point.detail }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="sources-compact">
+    <div class="sources-compact-title">NGUỒN THAM KHẢO</div>
+    <div class="sources-compact-grid">
+      {% for item in brief["items"] %}
+      <div class="source-pill"><b>{{ "%02d"|format(loop.index) }}</b><span>{{ item.source|clip_text(28) }}</span></div>
+      {% endfor %}
     </div>
   </section>
 
