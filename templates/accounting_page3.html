@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="accounting-style.css"></head><body><div class="page">
+<header class="masthead"><div class="brand"><img class="logo" src="stacorp-logo.png"><div class="brand-rule"></div><div class="brand-copy"><div class="eyebrow">BẢN TIN NỘI BỘ</div><div class="brand-title">ĐIỂM TIN ĐIỀU HÀNH<br>STACORP</div><div class="brand-sub">KẾ TOÁN • NHÂN SỰ • PHÁP LÝ • ĐIỀU HÀNH</div></div></div><div class="datebox"><div class="date">{{ brief.date }}</div><div class="window">{{ brief.window }}</div></div></header>
+<div class="synth-lede">Tác động quản trị được tách riêng khỏi phần tin để Kế toán, Nhân sự, Pháp lý và Ban điều hành dễ rà soát.</div>
+<div class="section-title">🎯 TÁC ĐỘNG ĐẾN STACORP</div>
+<div class="impact-grid">{% for item in brief.impacts %}<div class="impact-card"><div class="area">{{ item.area }}</div><p>{{ item.text }}</p></div>{% endfor %}</div>
+<div class="section-title">✅ VIỆC CẦN LÀM HÔM NAY</div>
+<div class="actions">{% for item in brief.actions %}<div class="action"><div class="owner">{{ item.owner }}</div><div class="action-text">{{ item.text }}</div></div>{% endfor %}</div>
+<div class="source-note">Nguồn dẫn chi tiết được đính kèm ngay dưới bài đăng Teams. Tin pháp lý/chính sách quan trọng ưu tiên văn bản gốc và nguồn đối chiếu cùng xác nhận dữ kiện cốt lõi.</div>
+<footer class="footer"><div class="footer-brand"><b>STACORP</b>Thông tin phục vụ điều hành doanh nghiệp</div><div class="footer-mid">TÁC ĐỘNG • QUYẾT ĐỊNH • HÀNH ĐỘNG</div><div class="page-no">03</div></footer>
+</div></body></html>
