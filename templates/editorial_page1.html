@@ -21,7 +21,7 @@
       <div class="date">{{ brief.date }}</div>
       <div class="date-rule"></div>
       <div class="edition">BẢN TIN HÀNG NGÀY</div>
-      <div class="edition-sub">KINH TẾ • ĐẦU TƯ • DOANH NGHIỆP</div>
+      <div class="edition-sub">MIỀN BẮC • MIỀN TRUNG • DOANH NGHIỆP</div>
     </div>
   </header>
 
@@ -31,34 +31,44 @@
     <div class="hero-image-wrap">
       <img class="hero-image" src="{{ lead.visual_src }}" alt="">
       <div class="image-vignette"></div>
-      <div class="story-tag">01 <span></span> {{ lead.category|upper }}</div>
+      <div class="story-tag">01 <span></span> {{ lead.region }} • {{ lead.category|upper }}</div>
       <div class="impact-tag {{ lead_impact }}">TÁC ĐỘNG: {{ lead.impact }}</div>
     </div>
     <div class="hero-copy">
       <h1>{{ lead.headline }}</h1>
-      <p>{{ lead.facts[0]|clip_text(175) }}</p>
+      <p>{{ lead.facts[0]|clip_text(165) }}</p>
     </div>
-    <div class="note-box">
+    <div class="note-box hero-note">
       <div class="note-icon">✦</div>
       <div class="note-label">STACORP CẦN LƯU Ý</div>
       <div class="note-divider"></div>
-      <div class="note-text">{{ lead.note|clean_note|clip_text(160) }}</div>
+      <div class="note-text">{{ lead.note|clean_note|clip_text(150) }}</div>
     </div>
   </article>
 
-  <section class="two-cards" data-lock="page1-secondary-grid">
+  <section class="page-section-heading">
+    <div>
+      <b>3 TIN ĐÁNG CHÚ Ý TIẾP THEO</b>
+      <span>Ưu tiên thông tin có tác động trực tiếp đến cơ hội, dự án và vận hành</span>
+    </div>
+  </section>
+
+  <section class="p1-news-list" data-lock="page1-secondary-list">
     {% for item in items[1:] %}
     {% set impact_class = "high" if item.impact == "CAO" else ("medium" if item.impact == "TRUNG BÌNH" else "watch") %}
-    <article class="mini-card">
-      <div class="mini-image-wrap">
-        <img class="mini-image" src="{{ item.visual_src }}" alt="">
-        <div class="image-vignette soft"></div>
-        <div class="story-tag compact">0{{ loop.index + 1 }} <span></span> {{ item.category|upper }}</div>
-        <div class="impact-tag compact {{ impact_class }}">{{ item.impact }}</div>
+    <article class="p1-news-row">
+      <div class="p1-row-image">
+        <img src="{{ item.visual_src }}" alt="">
+        <div class="story-index">0{{ loop.index + 1 }}</div>
       </div>
-      <div class="mini-copy">
+      <div class="p1-row-copy">
+        <div class="row-meta">
+          <span class="region-chip">{{ item.region }}</span>
+          <span class="category-chip">{{ item.category|upper }}</span>
+          <span class="impact-chip {{ impact_class }}">{{ item.impact }}</span>
+        </div>
         <h2>{{ item.headline }}</h2>
-        <p>{{ item.facts[0]|clip_text(105) }}</p>
+        <p>{{ item.facts[0]|clip_text(118) }}</p>
       </div>
     </article>
     {% endfor %}
