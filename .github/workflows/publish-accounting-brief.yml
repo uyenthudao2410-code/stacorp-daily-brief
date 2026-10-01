@@ -1,0 +1,80 @@
+name: Publish Accounting Brief
+
+on:
+  push:
+    branches:
+      - accounting-delivery
+    paths:
+      - "incoming/accounting/current/brief.json"
+  workflow_dispatch:
+    inputs:
+      sample:
+        description: "Publish deterministic sample payload to the locked Teams channel"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: stacorp-accounting-brief
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TZ: Asia/Ho_Chi_Minh
+      MS_TENANT_ID: ${{ secrets.MS_TENANT_ID }}
+      MS_CLIENT_ID: ${{ secrets.MS_CLIENT_ID }}
+      MS_CLIENT_SECRET: ${{ secrets.MS_CLIENT_SECRET }}
+      MS_REFRESH_TOKEN: ${{ secrets.MS_REFRESH_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Assert Teams-only delivery lock
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          cfg = json.loads(
+              Path("config/accounting_brief.json").read_text(encoding="utf-8")
+          )
+          delivery = cfg["delivery"]
+          assert delivery["email_enabled"] is False
+          assert delivery["teams_enabled"] is True
+          assert delivery["team_id"] == "0bff3781-b351-4ff5-a611-94cbe315f4b0"
+          assert delivery["channel_id"] == "19:OEyXLFXSzP7bezGLJ-mlRecQ3FcMLdK9vfoCA7Iqq141@thread.tacv2"
+          print("DELIVERY_MODE=TEAMS_ONLY")
+          print("EMAIL_ENABLED=false")
+          print("TARGET=06. STA - Văn Phòng / VP - Tin tức")
+          PY
+
+      - name: Load sample payload
+        if: ${{ inputs.sample }}
+        shell: bash
+        run: |
+          mkdir -p incoming/accounting/current
+          cp sample/accounting_brief.sample.json incoming/accounting/current/brief.json
+
+      - name: Verify production payload exists
+        if: ${{ !inputs.sample }}
+        shell: bash
+        run: |
+          test -f incoming/accounting/current/brief.json
+
+      - name: Publish accounting brief to Teams
+        run: python -m src.publish_accounting_brief
