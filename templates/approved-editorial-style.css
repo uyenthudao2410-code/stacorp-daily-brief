@@ -214,47 +214,48 @@ html,body{
 }
 .grid-note b{color:#173864}
 
-/* PAGE 3 — CROSS-DEPARTMENT SYNTHESIS */
+/* PAGE 3 — NEWSROOM DIGEST FOR ALL STAFF */
 .summary-title-row{
   margin-top:8px;display:grid;grid-template-columns:56% 44%;height:88px;align-items:center;gap:12px
 }
 .summary-ribbon{
   height:72px;border-radius:17px;background:linear-gradient(135deg,#b9780d,#dba839);
   color:#fff;display:flex;align-items:center;padding:0 22px;
-  font-family:Georgia,"Times New Roman",serif;font-size:28px;font-weight:800;
+  font-family:Georgia,"Times New Roman",serif;font-size:29px;font-weight:800;
   box-shadow:0 7px 18px rgba(140,89,7,.13)
 }
 .summary-count{
   height:72px;border:1px solid #dce5ee;border-radius:17px;background:rgba(255,255,255,.94);
   display:flex;align-items:center;justify-content:center;color:#173864;
-  font-size:17px;font-weight:900;letter-spacing:.015em;text-align:center;padding:0 16px
+  font-size:18px;font-weight:900;letter-spacing:.015em;text-align:center;padding:0 16px
 }
 .summary-lede{
-  margin:11px 0 12px;color:#163560;font-family:Georgia,"Times New Roman",serif;
-  font-size:25px;line-height:1.26;font-weight:700
+  margin:11px 0 13px;color:#163560;font-family:Georgia,"Times New Roman",serif;
+  font-size:26px;line-height:1.27;font-weight:700
 }
-.department-grid{
-  display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:216px;gap:12px
+.news-themes{margin-top:2px}
+.news-themes-grid{
+  display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:190px;gap:12px;margin-top:10px
 }
-.department-card{
+.news-theme-card{
   border:1px solid #dce5ee;border-radius:14px;background:#fff;
   box-shadow:0 5px 15px rgba(18,41,76,.035);
   display:grid;grid-template-columns:58px 1fr;gap:12px;padding:13px 14px
 }
-.department-index{
+.theme-index{
   width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,#b9780d,#dba839);
   color:#fff;display:flex;align-items:center;justify-content:center;
   font-family:Georgia,"Times New Roman",serif;font-size:20px;font-weight:800
 }
-.department-group{font-size:11px;font-weight:900;color:#8c681d;letter-spacing:.055em;margin-bottom:6px}
-.department-copy h2{
+.theme-label{
+  font-size:11px;font-weight:900;color:#9d7117;letter-spacing:.06em;margin-bottom:6px
+}
+.theme-copy h2{
   margin:0;color:#14325d;font-family:Georgia,"Times New Roman",serif;
   font-size:23px;line-height:1.08;font-weight:800
 }
-.department-copy p{margin:7px 0 8px;color:#435d79;font-size:15px;line-height:1.29;font-weight:520}
-.department-tags{
-  display:inline-flex;max-width:100%;padding:6px 9px;border-radius:999px;
-  background:#eef5fb;color:#2b567e;font-size:11px;font-weight:800
+.theme-copy p{
+  margin:7px 0 0;color:#435d79;font-size:15px;line-height:1.30;font-weight:520
 }
 .regional-pulse{margin-top:14px}
 .section-bar{
@@ -279,22 +280,25 @@ html,body{
   font-size:21px;line-height:1.08
 }
 .pulse-card p{margin:7px 0 0;color:#435d79;font-size:14px;line-height:1.30}
-.watch-section{margin-top:13px}
+.numbers-section{margin-top:13px}
 .compact-bar{height:46px}
-.watch-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:9px}
-.watch-card{
-  height:154px;border:1px solid #dce5ee;border-radius:12px;background:#fff;
-  padding:11px 12px;overflow:hidden
+.numbers-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:9px
 }
-.watch-label{
-  display:inline-flex;padding:5px 8px;border-radius:999px;background:#fff3d7;
-  color:#a56d08;font-size:10px;font-weight:900;letter-spacing:.04em;margin-bottom:7px
+.number-card{
+  height:148px;border:1px solid #dce5ee;border-radius:12px;background:#fff;
+  padding:12px 12px 10px;overflow:hidden;text-align:left
 }
-.watch-card h3{
-  margin:0;color:#14325d;font-family:Georgia,"Times New Roman",serif;
-  font-size:18px;line-height:1.10
+.number-value{
+  color:#b8790e;font-family:Georgia,"Times New Roman",serif;
+  font-size:30px;line-height:1;font-weight:800
 }
-.watch-card p{margin:6px 0 0;color:#435d79;font-size:13px;line-height:1.27}
+.number-label{
+  margin-top:7px;color:#14325d;font-size:13px;line-height:1.15;font-weight:900
+}
+.number-card p{
+  margin:7px 0 0;color:#526b84;font-size:12px;line-height:1.28;font-weight:520
+}
 .sources-compact{margin-top:13px}
 .sources-compact-title{
   height:38px;display:flex;align-items:center;padding-left:14px;
