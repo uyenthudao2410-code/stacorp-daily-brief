@@ -14,7 +14,7 @@
       <div class="brand-rule"></div>
       <div class="brand-copy">
         <div class="brand-title">ĐIỂM TIN CHO DOANH NGHIỆP<br><span>STACORP</span></div>
-        <div class="brand-subtitle">5 DIỄN BIẾN CẦN LƯU Ý HÔM NAY</div>
+        <div class="brand-subtitle">{{ brief.subtitle }}</div>
       </div>
     </div>
     <div class="date-block">
@@ -32,17 +32,17 @@
       <img class="wide-image" src="{{ top.visual_src }}" alt="">
       <div class="image-vignette soft"></div>
       <div class="story-tag">04 <span></span> {{ top.category|upper }}</div>
-      <div class="impact-tag {{ top_impact }}">▥&nbsp; TÁC ĐỘNG: {{ top.impact }}</div>
+      <div class="impact-tag {{ top_impact }}">TÁC ĐỘNG: {{ top.impact }}</div>
     </div>
     <div class="wide-copy">
       <h1>{{ top.headline }}</h1>
-      <p>{{ top.facts[0]|clip_text(205) }}</p>
+      <p>{{ top.facts[0]|clip_text(180) }}</p>
     </div>
     <div class="note-box">
       <div class="note-icon">✦</div>
       <div class="note-label">STACORP CẦN LƯU Ý</div>
       <div class="note-divider"></div>
-      <div class="note-text">{{ top.note|clean_note|clip_text(185) }}</div>
+      <div class="note-text">{{ top.note|clean_note|clip_text(165) }}</div>
     </div>
   </article>
 
@@ -54,18 +54,18 @@
         <img class="wide-image" src="{{ bottom.visual_src }}" alt="">
         <div class="image-vignette soft"></div>
         <div class="story-tag">05 <span></span> {{ bottom.category|upper }}</div>
-        <div class="impact-tag {{ bottom_impact }}">▥&nbsp; TÁC ĐỘNG: {{ bottom.impact }}</div>
+        <div class="impact-tag {{ bottom_impact }}">{{ bottom.impact }}</div>
       </div>
       <div class="split-copy">
         <h1>{{ bottom.headline }}</h1>
-        <p>{{ bottom.facts[0]|clip_text(205) }}</p>
+        <p>{{ bottom.facts[0]|clip_text(175) }}</p>
       </div>
     </div>
     <div class="note-box compact-note">
       <div class="note-icon">✦</div>
       <div class="note-label">STACORP CẦN LƯU Ý</div>
       <div class="note-divider"></div>
-      <div class="note-text">{{ bottom.note|clean_note|clip_text(185) }}</div>
+      <div class="note-text">{{ bottom.note|clean_note|clip_text(165) }}</div>
     </div>
   </article>
 
