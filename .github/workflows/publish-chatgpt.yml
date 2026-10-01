@@ -52,7 +52,7 @@ jobs:
           import json
           from pathlib import Path
 
-          expected = "STACORP_EDITORIAL_3PAGE_FINAL_V2"
+          expected = "STACORP_EDITORIAL_3PAGE_FINAL_V3_REGIONAL_8NEWS"
           config = json.loads(Path("config/approved_layout.json").read_text(encoding="utf-8"))
           if config.get("version") != expected or not config.get("locked"):
               raise SystemExit("Approved production layout lock is invalid.")
@@ -83,6 +83,22 @@ jobs:
                       f"Source visual quality lock changed for {key}: "
                       f"{source_quality.get(key)!r} != {value!r}"
                   )
+          if source_quality.get("story_count") != 8:
+              raise SystemExit("Source visual story_count must be 8.")
+
+          editorial = config.get("editorial_scope", {})
+          if editorial.get("item_count") != 8:
+              raise SystemExit("Editorial item_count must be 8.")
+          if editorial.get("minimum_north_items") != 3 or editorial.get("minimum_central_items") != 3:
+              raise SystemExit("North/Central regional minimums changed.")
+          if editorial.get("maximum_national_items") != 2:
+              raise SystemExit("National item cap changed.")
+
+          summary = config.get("summary_schema", {})
+          if summary.get("department_digest_count") != 4:
+              raise SystemExit("department_digest_count changed.")
+          if summary.get("watchpoints_count") != 3:
+              raise SystemExit("watchpoints_count changed.")
 
           print(f"APPROVED_LAYOUT_VERSION={expected}")
           print("LAYOUT_LOCK_LEVEL=FINAL")
