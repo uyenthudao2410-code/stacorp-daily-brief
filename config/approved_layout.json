@@ -90,6 +90,30 @@
     "Each Teams page must remain within the deterministic page budget and the three-page binary total must not exceed 2,550,000 bytes.",
     "Template hash, logo hash, output dimensions and geometry must pass before Teams posting.",
     "No fallback template is allowed; Teams transport may only step through the locked JPEG quality ladder 97→90.",
-    "Layout changes require explicit user approval and a new layout version."
-  ]
+    "Layout changes require explicit user approval and a new layout version.",
+    "Every story visual must pass the original-source quality gate before rendering; preview/thumbnail WEBP files are blocked.",
+    "Source visuals require PNG/JPEG, long edge >=1400, short edge >=900, source bytes >=250,000 and sharpness >=18.0.",
+    "If direct original bytes cannot be committed, delivery may provide visual_sources.json containing exactly five original ChatGPT Images oaiusercontent.com /raw URLs for immediate download by GitHub Actions.",
+    "Any source visual quality failure blocks render, Teams posting and state update."
+  ],
+  "source_visual_quality": {
+    "delivery_modes": [
+      "local original story-N.png/jpg/jpeg",
+      "visual_sources.json with five original ChatGPT Images /raw URLs"
+    ],
+    "allowed_formats": [
+      "PNG",
+      "JPEG"
+    ],
+    "reject_webp": true,
+    "reject_preview_thumbnail": true,
+    "raw_url_host_suffix": "oaiusercontent.com",
+    "raw_url_path_must_include": "/raw",
+    "min_long_edge": 1400,
+    "min_short_edge": 900,
+    "min_source_bytes": 250000,
+    "min_sharpness": 18,
+    "renderer_canonical_format": "PNG",
+    "fail_closed": true
+  }
 }
