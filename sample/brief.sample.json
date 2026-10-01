@@ -1,84 +1,232 @@
 {
-  "date": "26.09.2026",
+  "date": "02.10.2026",
   "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
   "subtitle": "Thị trường • Dự án • Chi phí • Con người",
-  "metrics": [
-    {"label": "CƠ HỘI", "value": "2"},
-    {"label": "THỊ TRƯỜNG", "value": "1"},
-    {"label": "CHI PHÍ", "value": "1"},
-    {"label": "CÔNG TRƯỜNG", "value": "1"}
-  ],
-  "action_today": "Ưu tiên rà soát các cơ hội có lịch triển khai gần và cập nhật biến động đầu vào vào báo giá đang mở.",
+  "summary_lede": "Mẫu V3 tập trung tám tín hiệu có tác động trực tiếp tại miền Bắc và miền Trung, đồng thời tổng hợp chéo theo phòng ban để hỗ trợ bán hàng, dự án, chi phí và quản trị rủi ro.",
   "items": [
     {
+      "region": "MIỀN BẮC",
       "category": "CƠ HỘI & KHÁCH HÀNG",
       "impact": "CAO",
-      "headline": "Mẫu bố cục: cơ hội dự án công nghiệp mới cần được đưa vào pipeline sớm",
+      "headline": "Mẫu: dự án công nghiệp mới tại miền Bắc mở thêm cơ hội tiếp cận khách hàng",
       "facts": [
-        "Đây là dữ liệu mẫu để kiểm tra bố cục và chất lượng ảnh, không phải tin phát hành.",
-        "Hệ thống production chỉ dùng thông tin có nguồn và ngày xuất bản rõ ràng."
+        "Đây là dữ liệu mẫu để kiểm tra bố cục V3, không phải tin phát hành.",
+        "Production chỉ sử dụng thông tin có nguồn, ngày xuất bản và mức độ tác động rõ ràng."
       ],
-      "note": "Khối Kinh doanh cần có đầu mối theo dõi và cập nhật xác suất cơ hội.",
-      "departments": ["Kinh doanh", "Đấu thầu", "Ban Giám đốc"],
+      "note": "STACORP cần lưu ý: chuyển tín hiệu này thành đầu việc ngắn cho đúng bộ phận phụ trách.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Ban Giám đốc"
+      ],
       "source": "Dữ liệu mẫu",
-      "source_date": "26.09.2026",
+      "source_date": "02.10.2026",
       "url": "https://example.com/1"
     },
     {
-      "category": "CƠ HỘI & KHÁCH HÀNG",
+      "region": "MIỀN BẮC",
+      "category": "DỰ ÁN & HẠ TẦNG",
       "impact": "TRUNG BÌNH",
-      "headline": "Mẫu bố cục: một dự án hạ tầng tạo thêm nhu cầu cho chuỗi nhà thầu phụ trợ",
+      "headline": "Mẫu: tiến độ một dự án hạ tầng lớn tạo nhu cầu cho chuỗi nhà thầu phụ trợ",
       "facts": [
-        "Card được giới hạn chiều cao để giữ khả năng đọc tốt trên màn hình điện thoại.",
-        "Headline dài được co cỡ chữ có kiểm soát thay vì để Teams tự dàn trang."
+        "Đây là dữ liệu mẫu để kiểm tra bố cục V3, không phải tin phát hành.",
+        "Production chỉ sử dụng thông tin có nguồn, ngày xuất bản và mức độ tác động rõ ràng."
       ],
-      "note": "Theo dõi thời điểm mời thầu và tiêu chuẩn kỹ thuật của gói việc liên quan.",
-      "departments": ["Kinh doanh", "Đấu thầu"],
+      "note": "STACORP cần lưu ý: chuyển tín hiệu này thành đầu việc ngắn cho đúng bộ phận phụ trách.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Ban Giám đốc"
+      ],
       "source": "Dữ liệu mẫu",
-      "source_date": "26.09.2026",
+      "source_date": "02.10.2026",
       "url": "https://example.com/2"
     },
     {
-      "category": "THỊ TRƯỜNG & KINH DOANH",
-      "impact": "TRUNG BÌNH",
-      "headline": "Mẫu bố cục: dòng vốn sản xuất tiếp tục tạo nhu cầu nhà xưởng và hạ tầng phụ trợ",
+      "region": "MIỀN TRUNG",
+      "category": "FDI & KHU CÔNG NGHIỆP",
+      "impact": "CAO",
+      "headline": "Mẫu: dòng vốn sản xuất tại miền Trung tạo thêm nhu cầu nhà xưởng và hạ tầng",
       "facts": [
-        "Trang 2 dành cho ba tin còn lại để tránh mật độ chữ quá cao.",
-        "Mỗi tin giữ hai dữ kiện chính và một dòng STACORP cần lưu ý."
+        "Đây là dữ liệu mẫu để kiểm tra bố cục V3, không phải tin phát hành.",
+        "Production chỉ sử dụng thông tin có nguồn, ngày xuất bản và mức độ tác động rõ ràng."
       ],
-      "note": "Dùng xu hướng thị trường để ưu tiên ngành khách hàng và địa bàn tiếp cận.",
-      "departments": ["Kinh doanh", "Chiến lược"],
+      "note": "STACORP cần lưu ý: chuyển tín hiệu này thành đầu việc ngắn cho đúng bộ phận phụ trách.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật"
+      ],
       "source": "Dữ liệu mẫu",
-      "source_date": "26.09.2026",
+      "source_date": "02.10.2026",
       "url": "https://example.com/3"
     },
     {
-      "category": "CHI PHÍ & CHUỖI CUNG ỨNG",
-      "impact": "CAO",
-      "headline": "Mẫu bố cục: biến động vật liệu cần được phản ánh sớm vào các báo giá đang mở",
+      "region": "MIỀN TRUNG",
+      "category": "LOGISTICS & HẠ TẦNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Mẫu: đầu tư logistics mới làm thay đổi nhu cầu kho bãi và kết nối công nghiệp",
       "facts": [
-        "Các chỉ báo chi phí được tách thành nhóm riêng để lãnh đạo nhận diện nhanh.",
-        "Production sẽ loại tin lặp và chỉ giữ diễn biến mới có tác động."
+        "Đây là dữ liệu mẫu để kiểm tra bố cục V3, không phải tin phát hành.",
+        "Production chỉ sử dụng thông tin có nguồn, ngày xuất bản và mức độ tác động rõ ràng."
       ],
-      "note": "Đối chiếu báo giá nhà cung cấp và điều khoản trượt giá của hồ sơ đang đàm phán.",
-      "departments": ["Mua hàng", "Đấu thầu", "Tài chính"],
+      "note": "STACORP cần lưu ý: chuyển tín hiệu này thành đầu việc ngắn cho đúng bộ phận phụ trách.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật"
+      ],
       "source": "Dữ liệu mẫu",
-      "source_date": "26.09.2026",
+      "source_date": "02.10.2026",
       "url": "https://example.com/4"
     },
     {
-      "category": "CÔNG TRƯỜNG & CON NGƯỜI",
-      "impact": "THEO DÕI",
-      "headline": "Mẫu bố cục: an toàn và năng suất hiện trường được theo dõi như một nhóm tin độc lập",
+      "region": "MIỀN BẮC",
+      "category": "CHI PHÍ & CHUỖI CUNG ỨNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Mẫu: biến động vật liệu tại miền Bắc cần được phản ánh sớm vào báo giá",
       "facts": [
-        "Tin công trường chỉ vào bản tin khi có liên hệ thực tế với vận hành hoặc con người.",
-        "Không mặc định gắn Toàn công ty; chỉ nêu 2-5 bộ phận thật sự liên quan."
+        "Đây là dữ liệu mẫu để kiểm tra bố cục V3, không phải tin phát hành.",
+        "Production chỉ sử dụng thông tin có nguồn, ngày xuất bản và mức độ tác động rõ ràng."
       ],
-      "note": "Chuyển các cảnh báo có tính thực hành thành checklist ngắn cho quản lý hiện trường.",
-      "departments": ["Ban Điều hành", "HSE", "Nhân sự"],
+      "note": "STACORP cần lưu ý: chuyển tín hiệu này thành đầu việc ngắn cho đúng bộ phận phụ trách.",
+      "departments": [
+        "Dự án",
+        "Cung ứng",
+        "HSE"
+      ],
       "source": "Dữ liệu mẫu",
-      "source_date": "26.09.2026",
+      "source_date": "02.10.2026",
       "url": "https://example.com/5"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "CÔNG TRƯỜNG & HSE",
+      "impact": "THEO DÕI",
+      "headline": "Mẫu: áp lực tiến độ hiện trường cần đi kèm kế hoạch an toàn và nhân lực",
+      "facts": [
+        "Đây là dữ liệu mẫu để kiểm tra bố cục V3, không phải tin phát hành.",
+        "Production chỉ sử dụng thông tin có nguồn, ngày xuất bản và mức độ tác động rõ ràng."
+      ],
+      "note": "STACORP cần lưu ý: chuyển tín hiệu này thành đầu việc ngắn cho đúng bộ phận phụ trách.",
+      "departments": [
+        "Dự án",
+        "Cung ứng",
+        "HSE"
+      ],
+      "source": "Dữ liệu mẫu",
+      "source_date": "02.10.2026",
+      "url": "https://example.com/6"
+    },
+    {
+      "region": "TOÀN QUỐC",
+      "category": "TÀI CHÍNH & DÒNG TIỀN",
+      "impact": "TRUNG BÌNH",
+      "headline": "Mẫu: thay đổi điều kiện tín dụng có tác động tới dòng tiền dự án Bắc - Trung",
+      "facts": [
+        "Đây là dữ liệu mẫu để kiểm tra bố cục V3, không phải tin phát hành.",
+        "Production chỉ sử dụng thông tin có nguồn, ngày xuất bản và mức độ tác động rõ ràng."
+      ],
+      "note": "STACORP cần lưu ý: chuyển tín hiệu này thành đầu việc ngắn cho đúng bộ phận phụ trách.",
+      "departments": [
+        "Tài chính",
+        "Pháp chế",
+        "Ban Giám đốc"
+      ],
+      "source": "Dữ liệu mẫu",
+      "source_date": "02.10.2026",
+      "url": "https://example.com/7"
+    },
+    {
+      "region": "TOÀN QUỐC",
+      "category": "PHÁP LÝ & CÔNG NGHỆ",
+      "impact": "THEO DÕI",
+      "headline": "Mẫu: cập nhật chính sách mới cần được rà soát theo từng nhóm hoạt động",
+      "facts": [
+        "Đây là dữ liệu mẫu để kiểm tra bố cục V3, không phải tin phát hành.",
+        "Production chỉ sử dụng thông tin có nguồn, ngày xuất bản và mức độ tác động rõ ràng."
+      ],
+      "note": "STACORP cần lưu ý: chuyển tín hiệu này thành đầu việc ngắn cho đúng bộ phận phụ trách.",
+      "departments": [
+        "Tài chính",
+        "Pháp chế",
+        "Ban Giám đốc"
+      ],
+      "source": "Dữ liệu mẫu",
+      "source_date": "02.10.2026",
+      "url": "https://example.com/8"
     }
-  ]
+  ],
+  "department_digest": [
+    {
+      "group": "KINH DOANH • ĐẤU THẦU • MARKETING",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Marketing"
+      ],
+      "title": "Mở pipeline theo cụm dự án Bắc - Trung",
+      "detail": "Tập trung các dự án có mốc triển khai gần, xác định chủ đầu tư và đầu mối tiếp cận thay vì chỉ theo dõi tin tức."
+    },
+    {
+      "group": "DỰ ÁN • KỸ THUẬT • HSE",
+      "departments": [
+        "Dự án",
+        "Kỹ thuật",
+        "HSE"
+      ],
+      "title": "Giữ tiến độ đi cùng năng lực huy động",
+      "detail": "Đối chiếu tiến độ, nguồn lực kỹ thuật và điều kiện an toàn tại các dự án có dấu hiệu tăng tốc."
+    },
+    {
+      "group": "CUNG ỨNG • TÀI CHÍNH • KẾ TOÁN",
+      "departments": [
+        "Cung ứng",
+        "Tài chính",
+        "Kế toán"
+      ],
+      "title": "Khóa biến động đầu vào và dòng tiền",
+      "detail": "Theo dõi vật liệu, điều khoản thanh toán và chi phí vốn để tránh biên lợi nhuận bị bào mòn."
+    },
+    {
+      "group": "NHÂN SỰ • PHÁP CHẾ • BAN GIÁM ĐỐC",
+      "departments": [
+        "Nhân sự",
+        "Pháp chế",
+        "Ban Giám đốc"
+      ],
+      "title": "Chủ động nguồn lực và tuân thủ",
+      "detail": "Chuyển các thay đổi pháp lý và áp lực nhân lực thành checklist kiểm soát thay vì chờ phát sinh."
+    }
+  ],
+  "regional_pulse": [
+    {
+      "region": "MIỀN BẮC",
+      "title": "Cơ hội dự án và chi phí đầu vào cùng tăng độ nhạy",
+      "detail": "Ưu tiên theo dõi các cụm công nghiệp, hạ tầng và nhà cung cấp có tác động trực tiếp tới pipeline."
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "title": "FDI, logistics và tiến độ công trường là ba tín hiệu chính",
+      "detail": "Tập trung địa bàn có dự án mới và hạ tầng kết nối đang bước vào giai đoạn triển khai."
+    }
+  ],
+  "watchpoints": [
+    {
+      "label": "CƠ HỘI",
+      "title": "Chủ đầu tư nào cần tiếp cận trước?",
+      "detail": "Ưu tiên dự án có lịch chuẩn bị hoặc lựa chọn nhà thầu gần nhất."
+    },
+    {
+      "label": "CHI PHÍ / TIẾN ĐỘ",
+      "title": "Điểm nghẽn nào có thể ảnh hưởng báo giá?",
+      "detail": "Theo dõi vật liệu, logistics và các mốc thi công có nguy cơ tạo chi phí bổ sung."
+    },
+    {
+      "label": "RỦI RO / CON NGƯỜI",
+      "title": "Nguồn lực và tuân thủ có đủ sẵn sàng?",
+      "detail": "Kiểm tra nhân lực, HSE và yêu cầu pháp lý trước khi tăng tốc triển khai."
+    }
+  ],
+  "action_today": "Rà soát ba cơ hội ưu tiên miền Bắc và ba cơ hội ưu tiên miền Trung để phân công đầu mối theo dõi."
 }
