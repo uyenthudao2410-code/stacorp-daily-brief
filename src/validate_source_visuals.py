@@ -125,7 +125,7 @@ def _load_raw_urls() -> list[str] | None:
     urls = payload.get("story_urls")
     if not isinstance(urls, list) or len(urls) != 8:
         raise RuntimeError(
-            "incoming/current/visual_sources.json must contain exactly five "
+            "incoming/current/visual_sources.json must contain exactly eight "
             "story_urls."
         )
 
@@ -204,7 +204,7 @@ def prepare_source_visuals(brief: dict) -> dict:
                 raise RuntimeError(
                     f"Missing original visual for story {index}. "
                     "Provide story-N.png/jpg/jpeg or visual_sources.json with "
-                    "five original ChatGPT Images /raw URLs. WEBP preview files "
+                    "eight original ChatGPT Images /raw URLs. WEBP preview files "
                     "are intentionally rejected."
                 )
 
