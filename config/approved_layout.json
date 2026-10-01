@@ -54,7 +54,7 @@
     "page2_story4_image_height": 385,
     "page2_story5_split_height": 390,
     "page3_summary_title_height": 88,
-    "page3_highlight_card_height": 240,
+    "page3_highlight_card_height": 122,
     "tolerance_px": 1
   },
   "design_tokens": {
