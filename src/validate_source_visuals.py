@@ -123,7 +123,7 @@ def _load_raw_urls() -> list[str] | None:
 
     payload = json.loads(RAW_URL_MANIFEST.read_text(encoding="utf-8"))
     urls = payload.get("story_urls")
-    if not isinstance(urls, list) or len(urls) != 5:
+    if not isinstance(urls, list) or len(urls) != 8:
         raise RuntimeError(
             "incoming/current/visual_sources.json must contain exactly five "
             "story_urls."
@@ -164,15 +164,15 @@ def _prepared_report_is_usable() -> bool:
         report = json.loads(QUALITY_REPORT.read_text(encoding="utf-8"))
     except Exception:
         return False
-    if report.get("gate") != "PASS" or len(report.get("stories", [])) != 5:
+    if report.get("gate") != "PASS" or len(report.get("stories", [])) != 8:
         return False
-    return all((OUT_VISUALS / f"story-{index}.png").exists() for index in range(1, 6))
+    return all((OUT_VISUALS / f"story-{index}.png").exists() for index in range(1, 9))
 
 
 def prepare_source_visuals(brief: dict) -> dict:
     items = brief.get("items", [])
-    if len(items) != 5:
-        raise RuntimeError("Source visual gate requires exactly five brief items.")
+    if len(items) != 8:
+        raise RuntimeError("Source visual gate requires exactly eight brief items.")
 
     OUT_VISUALS.mkdir(parents=True, exist_ok=True)
 
