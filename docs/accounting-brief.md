@@ -140,9 +140,9 @@ Schema tối thiểu:
 Publisher sẽ từ chối đăng nếu cấu trúc sai, target bị đổi hoặc email bị bật lại.
 
 
-## Visual V2 — layout production
+## Editorial V3 — layout production
 
-Layout khóa: `STACORP_ACCOUNTING_VISUAL_V2`.
+Layout khóa: `STACORP_ACCOUNTING_EDITORIAL_V3`.
 
 - 3 trang cố định, mỗi trang 1080×1620; Teams master 1200×1800.
 - Trang 1: masthead + hero visual + tóm tắt + 3 điểm nổi bật có ảnh + 3 story cards có ảnh.
@@ -189,3 +189,14 @@ Bản tin điều hành dùng đúng cùng canonical logo với bản “Điểm
 - Cấm AI tạo/vẽ lại logo STACORP; cấm nhúng logo vào story visuals.
 - GitHub Actions chạy brand gate trước render. Thiếu logo, checksum sai, đường dẫn logo bị đổi hoặc template tham chiếu logo khác => FAIL CLOSED, không render và không đăng Teams.
 - Log thành công bắt buộc có `ACCOUNTING_BRAND_GATE=PASS`, `ACCOUNTING_LOGO_SHA256=...` và `ACCOUNTING_LOGO_GIT_BLOB_SHA1=...`.
+
+
+### Editorial V3 — cấu trúc khóa theo mẫu duyệt
+
+- Page 1: dark navy editorial header + canonical STACORP logo + skyline + hero visual + 5 category tiles + summary + 3 highlights + 3 story cards.
+- Page 2: category bands, feature rows text/visual, insight chips khi có dữ liệu và full-width focus block.
+- Page 3: 2x2 management impact cards theo Kế toán–Tài chính / Pháp lý / Nhân sự / Ban điều hành; 4 action rows; nguồn tham khảo chính.
+- Màu phòng ban: Finance blue, Legal green, People orange, Executive purple; gold dùng làm brand accent.
+- Runtime phải log `ACCOUNTING_PAGE_1_GATE=PASS`, `ACCOUNTING_PAGE_2_GATE=PASS`, `ACCOUNTING_PAGE_3_GATE=PASS` và `ACCOUNTING_LAYOUT_VERSION=STACORP_ACCOUNTING_EDITORIAL_V3`.
+- Page 1 phải có content bottom >= 1450px trước footer để tránh vùng trắng chết.
+- Visual V2 đã bị superseded và không còn là layout production.
