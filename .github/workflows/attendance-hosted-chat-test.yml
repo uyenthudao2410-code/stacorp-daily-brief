@@ -1,0 +1,40 @@
+name: Attendance Hosted Chat Test
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/attendance-hosted-chat-test-trigger.json"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: attendance-hosted-chat-test
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TZ: Asia/Ho_Chi_Minh
+      MS_TENANT_ID: ${{ secrets.MS_TENANT_ID }}
+      MS_CLIENT_ID: ${{ secrets.MS_CLIENT_ID }}
+      MS_CLIENT_SECRET: ${{ secrets.MS_CLIENT_SECRET }}
+      MS_REFRESH_TOKEN: ${{ secrets.MS_REFRESH_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Publish attendance images to TEST chat as native hosted content
+        run: python -m src.publish_attendance_chat_test
