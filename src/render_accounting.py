@@ -32,7 +32,7 @@ VISUALS = OUT / "accounting-visuals"
 CSS_SIZE = (1080, 1620)
 TEAMS_SIZE = (1200, 1800)
 SCALE = 2
-LAYOUT_VERSION = "STACORP_ACCOUNTING_VISUAL_V2"
+LAYOUT_VERSION = "STACORP_ACCOUNTING_EDITORIAL_V3"
 LOCAL_TZ = ZoneInfo("Asia/Ho_Chi_Minh")
 ALLOWED_REMOTE_VISUAL_HOSTS = {"images.pexels.com"}
 
@@ -353,15 +353,175 @@ def _prepare_visuals(brief: dict, cfg: dict) -> dict:
             f"Story {index} is missing a real visual. Placeholder fallback is disabled."
         )
 
-    prepared["hero_visual_src"] = prepared["items"][0]["render_visual_src"]
     prepared = _apply_runtime_stamp(prepared)
-
-    for index, impact in enumerate(prepared.get("impacts", [])):
-        area = _clean(impact.get("area"))
-        impact["render_visual_src"] = _pick_visual(prepared["items"], area, index)
-        impact["tag"] = _impact_tag(area)
-
+    prepared = _normalize_editorial_v3(prepared)
     return prepared
+
+
+def _category_key(category: str) -> tuple[str, str]:
+    text = _clean(category).upper()
+    if text.startswith("KẾ TOÁN"):
+        return "finance", "KẾ TOÁN – THUẾ"
+    if text.startswith("PHÁP LÝ"):
+        return "legal", "PHÁP LÝ – DOANH NGHIỆP"
+    if text.startswith("NHÂN SỰ"):
+        return "people", "NHÂN SỰ – THỊ TRƯỜNG"
+    return "finance", _clean(category)
+
+
+def _area_key(area: str) -> tuple[str, str, str]:
+    text = _clean(area).lower()
+    if "pháp" in text or "đầu tư" in text:
+        return "legal", "⚖", "Cập nhật – Rà soát – Đảm bảo tuân thủ"
+    if "nhân" in text or "lao động" in text:
+        return "people", "●●●", "Ổn định – Phát triển – Gắn kết"
+    if "điều hành" in text or "ban điều hành" in text:
+        return "exec", "▥", "Định hướng – Quyết liệt – Tận dụng cơ hội"
+    return "finance", "▦", "Minh bạch – Chủ động – Tuân thủ"
+
+
+def _as_points(value: object) -> list[str]:
+    if isinstance(value, list):
+        return [_clean(x) for x in value if _clean(x)]
+    text = _clean(value)
+    return [text] if text else []
+
+
+def _normalize_editorial_v3(brief: dict) -> dict:
+    items = brief["items"]
+    for idx, item in enumerate(items, start=1):
+        key, short = _category_key(item.get("category", ""))
+        item["category_key"] = key
+        item["short_category"] = short
+        item["display_no"] = idx
+        raw_insights = item.get("insights", [])
+        item["insights"] = _as_points(raw_insights)
+
+    header_index = int(brief.get("header_story_index", 2) or 2)
+    hero_index = int(brief.get("hero_story_index", 0) or 0)
+    header_index = max(0, min(header_index, len(items) - 1))
+    hero_index = max(0, min(hero_index, len(items) - 1))
+    brief["header_visual_src"] = items[header_index]["render_visual_src"]
+    brief["hero_visual_src"] = items[hero_index]["render_visual_src"]
+
+    normalized_highlights = []
+    for idx, raw in enumerate(brief.get("highlights", [])[:3]):
+        story = items[min(idx, len(items) - 1)]
+        if isinstance(raw, dict):
+            title = _clean(raw.get("title")) or story["title"]
+            summary = _clean(raw.get("summary")) or _clean(story["facts"][0])
+            story_index = int(raw.get("story_index", idx) or idx)
+            story_index = max(0, min(story_index, len(items) - 1))
+            story = items[story_index]
+        else:
+            title = _clean(raw)
+            summary = _clean(story["facts"][0])
+        normalized_highlights.append(
+            {
+                "title": title,
+                "summary": summary,
+                "visual_src": story["render_visual_src"],
+            }
+        )
+    brief["display_highlights"] = normalized_highlights
+
+    remaining = items[3:]
+    groups = []
+    for key, title, icon, caption in (
+        ("legal", "PHÁP LÝ • CHÍNH SÁCH DOANH NGHIỆP", "⚖", "CẬP NHẬT QUY ĐỊNH MỚI • HỖ TRỢ DOANH NGHIỆP"),
+        ("people", "NHÂN SỰ • THỊ TRƯỜNG LAO ĐỘNG", "●●●", "CẬP NHẬT XU HƯỚNG NHÂN SỰ • PHÁT TRIỂN NGUỒN LỰC"),
+        ("finance", "KẾ TOÁN • THUẾ • TÀI CHÍNH", "▦", "CẬP NHẬT TÀI CHÍNH • HỖ TRỢ ĐIỀU HÀNH"),
+    ):
+        members = [x for x in remaining if x["category_key"] == key]
+        if members:
+            groups.append(
+                {
+                    "key": key,
+                    "title": title,
+                    "icon": icon,
+                    "caption": caption,
+                    "items": members,
+                }
+            )
+    brief["page2_groups"] = groups
+
+    raw_focus = brief.get("focus")
+    if isinstance(raw_focus, dict):
+        focus_index = int(raw_focus.get("story_index", len(items) - 1) or len(items) - 1)
+        focus_index = max(0, min(focus_index, len(items) - 1))
+        focus_story = items[focus_index]
+        brief["focus"] = {
+            "title": _clean(raw_focus.get("title")) or focus_story["title"],
+            "text": _clean(raw_focus.get("text")) or _clean(focus_story["facts"][0]),
+            "visual_src": focus_story["render_visual_src"],
+        }
+    else:
+        focus_story = items[-1]
+        brief["focus"] = {
+            "title": focus_story["title"],
+            "text": _clean(focus_story["facts"][0]),
+            "visual_src": focus_story["render_visual_src"],
+        }
+
+    display_impacts = []
+    for idx, item in enumerate(brief.get("impacts", [])[:4]):
+        area = _clean(item.get("area"))
+        key, icon, subtitle = _area_key(area)
+        points = _as_points(item.get("points"))
+        if not points:
+            points = _as_points(item.get("text"))
+        story_index = item.get("story_index")
+        if isinstance(story_index, int) and 0 <= story_index < len(items):
+            visual = items[story_index]["render_visual_src"]
+        else:
+            visual = _pick_visual(items, area, idx)
+        display_impacts.append(
+            {
+                "area": area,
+                "key": key,
+                "icon": icon,
+                "subtitle": _clean(item.get("subtitle")) or subtitle,
+                "points": points,
+                "visual_src": visual,
+            }
+        )
+    brief["display_impacts"] = display_impacts
+
+    display_actions = []
+    for idx, item in enumerate(brief.get("actions", [])[:4]):
+        owner = _clean(item.get("owner"))
+        key, _, _ = _area_key(owner)
+        points = _as_points(item.get("points"))
+        if not points:
+            points = _as_points(item.get("text"))
+        story_index = item.get("story_index")
+        if isinstance(story_index, int) and 0 <= story_index < len(items):
+            visual = items[story_index]["render_visual_src"]
+        else:
+            visual = _pick_visual(items, owner, idx)
+        display_actions.append(
+            {
+                "owner": owner,
+                "key": key,
+                "points": points,
+                "visual_src": visual,
+            }
+        )
+    brief["display_actions"] = display_actions
+
+    source_names = []
+    seen = set()
+    for item in items:
+        primary = item.get("sources", [{}])[0]
+        name = _clean(primary.get("name"))
+        if not name:
+            continue
+        label = f"{name} — {item['title']}"
+        if label not in seen:
+            seen.add(label)
+            source_names.append(label)
+    brief["source_names"] = source_names[:6]
+    return brief
 
 
 def render_accounting_brief(brief: dict) -> tuple[Path, Path, Path]:
@@ -441,6 +601,20 @@ def render_accounting_brief(brief: dict) -> tuple[Path, Path, Path]:
                 raise RuntimeError(
                     f"Accounting layout overflow in {html_path.name}: {overflow}"
                 )
+
+            if html_path.name == "accounting_page1.html":
+                content_bottom = page.evaluate(
+                    """() => Math.max(...Array.from(document.querySelectorAll('.story-card'))
+                      .map(el => el.getBoundingClientRect().bottom))"""
+                )
+                if content_bottom < 1450:
+                    browser.close()
+                    raise RuntimeError(
+                        f"Accounting page 1 leaves too much dead space: bottom={content_bottom}"
+                    )
+
+            page_no = html_path.stem.replace("accounting_page", "")
+            print(f"ACCOUNTING_PAGE_{page_no}_GATE=PASS")
 
             high = png_path.with_name(png_path.stem + "_2X.png")
             page.screenshot(path=str(high), full_page=False)
