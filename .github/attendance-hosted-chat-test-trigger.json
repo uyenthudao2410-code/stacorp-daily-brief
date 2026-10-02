@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
-  "requested_at": "2026-10-02T20:45:37+07:00",
-  "purpose": "publish locked attendance V5 master-template images to TEST chat"
+  "schema_version": 6,
+  "requested_at": "2026-10-03T06:50:08+07:00",
+  "purpose": "publish V6 approved-mockup attendance images to TEST chat"
 }
