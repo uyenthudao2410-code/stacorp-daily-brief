@@ -33,5 +33,8 @@ jobs:
       - name: Install Chromium
         run: python -m playwright install --with-deps chromium
 
+      - name: Validate accounting Visual V2
+        run: python -m src.validate_accounting_layout
+
       - name: Render and validate deterministic demo
         run: python -m src.main --demo
