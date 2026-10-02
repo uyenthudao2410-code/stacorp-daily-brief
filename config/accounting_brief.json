@@ -16,9 +16,9 @@
     "target_items_max": 8,
     "highlights_count": 3,
     "impact_items_min": 4,
-    "impact_items_max": 6,
-    "actions_items_min": 1,
-    "actions_items_max": 5,
+    "impact_items_max": 4,
+    "actions_items_min": 4,
+    "actions_items_max": 4,
     "teams_word_target_min": 650,
     "teams_word_target_max": 900
   },
@@ -38,7 +38,7 @@
     "li"
   ],
   "layout": {
-    "version": "STACORP_ACCOUNTING_VISUAL_V2",
+    "version": "STACORP_ACCOUNTING_EDITORIAL_V3",
     "pages": 3,
     "canvas": {
       "width": 1080,
@@ -48,9 +48,9 @@
       "width": 1200,
       "height": 1800
     },
-    "page_1": "Hero + summary + 3 highlights + stories 1-3",
-    "page_2": "Stories 4-6 + up to 2 compact extras",
-    "page_3": "STACORP impacts + actions + flow ribbon"
+    "page_1": "Navy editorial hero + 5 category tiles + summary + 3 highlights + stories 1-3",
+    "page_2": "Category bands + feature rows for stories 4-8 + full-width focus block",
+    "page_3": "2x2 management impacts + 4 action rows + primary sources"
   },
   "visuals": {
     "required_per_story": true,
