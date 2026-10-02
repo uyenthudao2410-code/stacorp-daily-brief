@@ -10,6 +10,7 @@ from PIL import Image
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from playwright.sync_api import sync_playwright
 
+from .accounting_brand import CANONICAL_LOGO, verify_accounting_brand_lock
 from .publish_accounting_brief import _clean, _load_config, _validate_brief
 
 ROOT = Path(__file__).resolve().parents[1]
