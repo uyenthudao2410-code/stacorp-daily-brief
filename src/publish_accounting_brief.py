@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 from datetime import datetime
 from pathlib import Path
@@ -108,11 +109,13 @@ def _validate_brief(brief: dict, cfg: dict) -> None:
             raise RuntimeError(f"Item {index} is missing title.")
 
         visual_src = _clean(item.get("visual_src"))
-        if not visual_src:
+        qa_mode = os.getenv("ACCOUNTING_TARGET_MODE", "").strip().upper() == "QA_GENERAL"
+        if not visual_src and not qa_mode:
             raise RuntimeError(f"Item {index} is missing visual_src.")
-        visual_path = Path(visual_src)
-        if visual_path.is_absolute() or ".." in visual_path.parts:
-            raise RuntimeError(f"Item {index} has unsafe visual_src: {visual_src!r}.")
+        if visual_src:
+            visual_path = Path(visual_src)
+            if visual_path.is_absolute() or ".." in visual_path.parts:
+                raise RuntimeError(f"Item {index} has unsafe visual_src: {visual_src!r}.")
 
         facts = item.get("facts", [])
         if not 2 <= len(facts) <= 3:
