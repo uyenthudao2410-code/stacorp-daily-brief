@@ -32,7 +32,7 @@ VISUALS = OUT / "accounting-visuals"
 CSS_SIZE = (1080, 1620)
 TEAMS_SIZE = (1200, 1800)
 SCALE = 2
-LAYOUT_VERSION = "STACORP_ACCOUNTING_APPROVED_V4"
+LAYOUT_VERSION = "STACORP_ACCOUNTING_OFFICE_V5"
 LOCAL_TZ = ZoneInfo("Asia/Ho_Chi_Minh")
 ALLOWED_REMOTE_VISUAL_HOSTS = {"images.pexels.com"}
 
@@ -426,6 +426,7 @@ def _normalize_editorial_v3(brief: dict) -> dict:
     brief["display_highlights"] = normalized_highlights
 
     remaining = items[3:]
+    brief["page2_item_count"] = len(remaining)
     groups = []
     for key, title, icon, caption in (
         ("legal", "PHÁP LÝ • CHÍNH SÁCH DOANH NGHIỆP", "⚖", "CẬP NHẬT QUY ĐỊNH MỚI • HỖ TRỢ DOANH NGHIỆP"),
