@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import copy
+import hashlib
+import json
 import shutil
 from pathlib import Path
 
@@ -13,6 +15,8 @@ from .publish_accounting_brief import _clean, _load_config, _validate_brief
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates"
 ASSETS = ROOT / "assets"
+BRAND_CONFIG = ROOT / "config" / "brand.json"
+CANONICAL_LOGO = ASSETS / "stacorp-logo.png"
 INCOMING = ROOT / "incoming" / "accounting" / "current"
 OUT = Path("/tmp/stacorp-daily-brief")
 TEAMS = OUT / "teams"
@@ -28,6 +32,70 @@ PAGES = (
     OUT / "STACORP_ACCOUNTING_BRIEF_PAGE_2.png",
     OUT / "STACORP_ACCOUNTING_BRIEF_PAGE_3.png",
 )
+
+ACCOUNTING_TEMPLATES = (
+    TEMPLATES / "accounting_page1.html",
+    TEMPLATES / "accounting_page2.html",
+    TEMPLATES / "accounting_page3.html",
+)
+
+
+def _git_blob_sha(data: bytes) -> str:
+    header = b"blob " + str(len(data)).encode("ascii") + bytes([0])
+    return hashlib.sha1(header + data).hexdigest()
+
+
+def verify_accounting_brand_lock() -> None:
+    if not BRAND_CONFIG.exists():
+        raise RuntimeError("STACORP brand config is missing.")
+    brand = json.loads(BRAND_CONFIG.read_text(encoding="utf-8"))
+
+    if brand.get("canonical_logo_path") != "assets/stacorp-logo.png":
+        raise RuntimeError("Canonical STACORP logo path changed; accounting publish blocked.")
+    if brand.get("render_rules", {}).get("allow_ai_generated_logo") is not False:
+        raise RuntimeError("AI-generated STACORP logo must remain disabled.")
+    if brand.get("render_rules", {}).get("allow_story_image_logo") is not False:
+        raise RuntimeError("STACORP logo must not appear inside story visuals.")
+    if brand.get("render_rules", {}).get("fail_if_missing_or_modified") is not True:
+        raise RuntimeError("STACORP brand lock must fail closed.")
+
+    if not CANONICAL_LOGO.exists():
+        raise RuntimeError("Canonical STACORP logo asset is missing.")
+
+    data = CANONICAL_LOGO.read_bytes()
+    actual_sha256 = hashlib.sha256(data).hexdigest()
+    actual_blob = _git_blob_sha(data)
+    expected_sha256 = str(brand.get("production_asset_sha256", "")).strip()
+    expected_blob = str(brand.get("production_git_blob_sha1", "")).strip()
+
+    if actual_sha256 != expected_sha256:
+        raise RuntimeError(
+            f"STACORP logo SHA256 integrity failed: {actual_sha256} != {expected_sha256}"
+        )
+    if actual_blob != expected_blob:
+        raise RuntimeError(
+            f"STACORP logo git-blob integrity failed: {actual_blob} != {expected_blob}"
+        )
+
+    required_ref = 'src="stacorp-logo.png"'
+    for template in ACCOUNTING_TEMPLATES:
+        if not template.exists():
+            raise RuntimeError(f"Accounting template is missing: {template.name}")
+        source = template.read_text(encoding="utf-8")
+        if source.count(required_ref) != 1:
+            raise RuntimeError(
+                f"{template.name} must reference canonical stacorp-logo.png exactly once."
+            )
+        lowered = source.lower()
+        for token in ("logo.svg", "logo.jpg", "logo.jpeg", "logo.webp", "logo_brand"):
+            if token in lowered:
+                raise RuntimeError(
+                    f"Non-canonical logo reference found in {template.name}: {token}"
+                )
+
+    print(f"ACCOUNTING_LOGO_SHA256={actual_sha256}")
+    print(f"ACCOUNTING_LOGO_GIT_BLOB_SHA1={actual_blob}")
+    print("ACCOUNTING_BRAND_GATE=PASS")
 
 
 def _downsample(src: Path, dst: Path, size: tuple[int, int]) -> None:
@@ -137,6 +205,7 @@ def _prepare_visuals(brief: dict, cfg: dict) -> dict:
 def render_accounting_brief(brief: dict) -> tuple[Path, Path, Path]:
     cfg = _load_config()
     _validate_brief(brief, cfg)
+    verify_accounting_brand_lock()
 
     if cfg.get("layout", {}).get("version") != LAYOUT_VERSION:
         raise RuntimeError(
@@ -147,7 +216,7 @@ def render_accounting_brief(brief: dict) -> tuple[Path, Path, Path]:
     OUT.mkdir(parents=True, exist_ok=True)
     TEAMS.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(TEMPLATES / "accounting-style.css", OUT / "accounting-style.css")
-    shutil.copyfile(ASSETS / "stacorp-logo.png", OUT / "stacorp-logo.png")
+    shutil.copyfile(CANONICAL_LOGO, OUT / "stacorp-logo.png")
 
     brief = _prepare_visuals(brief, cfg)
 
