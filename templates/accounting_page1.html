@@ -1,65 +1,53 @@
 <!doctype html>
 <html><head><meta charset="utf-8"><link rel="stylesheet" href="accounting-style.css"></head>
 <body><div class="page page-one">
-<header class="masthead">
-  <div class="brand">
-    <img class="logo" src="stacorp-logo.png">
-    <div class="brand-rule"></div>
-    <div class="brand-copy">
-      <div class="brand-name">STACORP</div>
-      <div class="brand-motto">KẾT NỐI TRI THỨC • KIẾN TẠO GIÁ TRỊ BỀN VỮNG</div>
-    </div>
+<header class="editorial-header">
+  <img class="header-bg" src="{{ brief.header_visual_src }}" alt="">
+  <div class="header-overlay"></div>
+  <div class="header-top">
+    <div class="logo-plate"><img class="logo" src="stacorp-logo.png"></div>
+    <div class="datebox"><div class="date">{{ brief.display_date }}</div><div class="window">{{ brief.display_window }}</div></div>
   </div>
-  <div class="datebox"><div class="date">{{ brief.display_date }}</div><div class="window">{{ brief.display_window }}</div></div>
-</header>
-
-<section class="title-block">
   <div class="edition-label">BẢN TIN NỘI BỘ</div>
   <h1>ĐIỂM TIN ĐIỀU HÀNH <span>STACORP</span></h1>
   <div class="title-sub">Kế toán <b>•</b> Thuế <b>•</b> Nhân sự <b>•</b> Pháp lý <b>•</b> Điều hành</div>
-</section>
-
-<section class="hero">
-  <img src="{{ brief.hero_visual_src }}" alt="">
-  <div class="hero-shade"></div>
-  <div class="hero-topic-strip">
-    <div><span>▥</span><b>KẾ TOÁN</b><small>Thuế • Tài chính</small></div>
-    <div><span>◉</span><b>NHÂN SỰ</b><small>Thị trường lao động</small></div>
-    <div><span>⚖</span><b>PHÁP LÝ</b><small>Chính sách DN</small></div>
-    <div><span>↗</span><b>ĐIỀU HÀNH</b><small>Đầu tư • Rủi ro</small></div>
+  <div class="hero-stage">
+    <img src="{{ brief.hero_visual_src }}" alt="">
+    <div class="hero-copy">THÔNG TIN KỊP THỜI<br><b>HỖ TRỢ ĐIỀU HÀNH HIỆU QUẢ</b></div>
   </div>
-</section>
+  <div class="category-strip">
+    <div class="cat c-blue"><span class="ico">▦</span><b>KẾ TOÁN</b><small>Chứng từ • Báo cáo</small></div>
+    <div class="cat c-gold"><span class="ico">%</span><b>THUẾ</b><small>Chính sách • Tuân thủ</small></div>
+    <div class="cat c-green"><span class="ico">●●●</span><b>NHÂN SỰ</b><small>Lao động • BHXH</small></div>
+    <div class="cat c-purple"><span class="ico">⚖</span><b>PHÁP LÝ</b><small>Quy định • Rủi ro</small></div>
+    <div class="cat c-blue"><span class="ico">↗</span><b>ĐIỀU HÀNH</b><small>Đầu tư • Dòng tiền</small></div>
+  </div>
+</header>
 
-<div class="summary-banner">
-  <div class="summary-icon">◖</div>
-  <div>{{ brief.summary }}</div>
-</div>
+<section class="summary-banner"><div class="summary-icon">i</div><p>{{ brief.summary }}</p></section>
 
-<div class="section-heading star-heading"><span>★</span><h2>3 ĐIỂM NỔI BẬT</h2><i></i></div>
+<div class="section-bar"><div class="bar-icon gold">★</div><h2>3 ĐIỂM NỔI BẬT</h2><div class="bar-line"></div></div>
 <div class="highlight-grid">
-  {% for h in brief.highlights %}
+  {% for h in brief.display_highlights %}
   <article class="highlight-card">
-    <div class="highlight-image"><img src="{{ brief["items"][loop.index0].render_visual_src }}" alt=""><b>0{{ loop.index }}</b></div>
-    <div class="highlight-copy">{{ h }}</div>
+    <div class="highlight-image"><img src="{{ h.visual_src }}" alt=""><b>0{{ loop.index }}</b></div>
+    <div class="highlight-body"><h3>{{ h.title }}</h3><p>{{ h.summary }}</p></div>
   </article>
   {% endfor %}
 </div>
 
-<div class="section-heading compact"><span>▤</span><h2>ĐIỂM TIN • PHẦN 1</h2><i></i><small>CẬP NHẬT CHỦ ĐỘNG • PHỤC VỤ ĐIỀU HÀNH</small></div>
+<div class="section-bar news-bar"><div class="bar-icon blue">▦</div><h2>ĐIỂM TIN • PHẦN 1</h2><div class="bar-line"></div><small>CẬP NHẬT CHỦ ĐỘNG • PHỤC VỤ ĐIỀU HÀNH</small></div>
 <div class="story-grid">
   {% for item in items %}
-  <article class="story-card">
-    <div class="story-meta">
-      <span class="status">{{ item.label }}</span>
-      <span class="story-no">{{ "%02d"|format(loop.index) }}</span>
-    </div>
+  <article class="story-card {{ item.category_key }}">
+    <div class="story-head"><span>{{ item.short_category }}</span><b>{{ "%02d"|format(loop.index) }}</b></div>
     <div class="story-image"><img src="{{ item.render_visual_src }}" alt=""></div>
     <h3>{{ item.title }}</h3>
     <ul>{% for fact in item.facts[:2] %}<li>{{ fact }}</li>{% endfor %}</ul>
-    <div class="source-line">⌁ Nguồn: {% for s in item.sources %}{{ s.name }}{% if not loop.last %} · {% endif %}{% endfor %}</div>
+    <div class="source-line">Nguồn: {% for s in item.sources %}{{ s.name }}{% if not loop.last %} · {% endif %}{% endfor %}</div>
   </article>
   {% endfor %}
 </div>
 
-<footer class="footer"><div><b>STACORP</b><span>ĐIỂM TIN ĐIỀU HÀNH</span></div><div class="footer-line"></div><div class="page-no">01</div></footer>
+<footer class="footer"><b>STACORP</b><span>Kết nối tri thức • Kiến tạo giá trị bền vững</span><i></i><strong>01</strong></footer>
 </div></body></html>
