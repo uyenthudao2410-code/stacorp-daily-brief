@@ -1,32 +1,29 @@
 <!doctype html>
 <html><head><meta charset="utf-8"><link rel="stylesheet" href="accounting-style.css"></head>
-<body><div class="page page-two">
-<header class="top-header">
-  <div class="brand-block"><img class="logo" src="stacorp-logo.png"></div>
-  <div class="header-title">
-    <h1>ĐIỂM TIN • <span>PHẦN 2</span></h1>
-    <p>Kế toán <b>•</b> Thuế <b>•</b> Nhân sự <b>•</b> Pháp lý <b>•</b> Điều hành</p>
+<body><div class="page page-two count-{{ brief.page2_item_count }}">
+<header class="office-header">
+  <div class="brand"><img class="logo" src="stacorp-logo.png"><div class="brand-line"></div></div>
+  <div class="headline">
+    <span class="internal-tag">BẢN TIN NỘI BỘ</span>
+    <h1>ĐIỂM TIN • <b>PHẦN 2</b></h1>
+    <p>Kế toán <i>•</i> Thuế <i>•</i> Nhân sự <i>•</i> Pháp lý <i>•</i> Điều hành</p>
   </div>
-  <div class="datebox"><div class="date">{{ brief.display_date }}</div><div class="window">{{ brief.display_window }}</div></div>
+  <div class="datebox"><strong>{{ brief.display_date }}</strong><span>{{ brief.display_window }}</span></div>
 </header>
 
-<div class="page2-content">
+<div class="page2-body">
 {% for group in brief.page2_groups %}
-<section class="group-block {{ group.key }}">
-  <div class="group-title">
-    <div class="group-icon">{{ group.icon }}</div>
-    <h2>{{ group.title }}</h2>
-    <i></i>
-    <small>TIN TỨC TRỌNG TÂM HÔM NAY</small>
-  </div>
+<section class="topic-section {{ group.key }}">
+  <div class="topic-title"><div class="topic-icon">{{ group.icon }}</div><h2>{{ group.title }}</h2><i></i><small>{{ group.caption }}</small></div>
   {% for item in group["items"] %}
-  <article class="feature-row">
-    <div class="feature-visual"><img src="{{ item.render_visual_src }}" alt=""></div>
+  <article class="office-feature">
+    <div class="feature-image"><img src="{{ item.render_visual_src }}" alt=""></div>
     <div class="feature-copy">
-      <div class="feature-top"><b>{{ "%02d"|format(item.display_no) }}</b><span>{{ item.label }}</span><em>›</em></div>
+      <div class="feature-number">0{{ loop.index }}</div>
+      <div class="feature-meta">{{ item.label }}</div>
       <h3>{{ item.title }}</h3>
       <ul>{% for fact in item.facts[:2] %}<li>{{ fact }}</li>{% endfor %}</ul>
-      <div class="source-line">⌁ &nbsp;Nguồn: {% for s in item.sources %}{{ s.name }}{% if not loop.last %} · {% endif %}{% endfor %}</div>
+      <div class="source-line">Nguồn: {% for s in item.sources %}{{ s.name }}{% if not loop.last %} · {% endif %}{% endfor %}</div>
     </div>
   </article>
   {% endfor %}
@@ -34,11 +31,11 @@
 {% endfor %}
 </div>
 
-<section class="focus-block">
+<section class="management-focus">
   <img src="{{ brief.focus.visual_src }}" alt="">
-  <div class="focus-overlay"></div>
-  <div class="focus-copy"><span>◆ &nbsp; ĐIỂM NHẤN</span><h2>{{ brief.focus.title }}</h2><p>{{ brief.focus.text }}</p></div>
+  <div class="focus-mask"></div>
+  <div class="focus-copy"><span>★ &nbsp; ĐIỂM NHẤN ĐIỀU HÀNH</span><h2>{{ brief.focus.title }}</h2><p>{{ brief.focus.text }}</p></div>
 </section>
 
-<footer class="footer-wave"><div class="footer-brand">STACORP</div><div class="footer-copy">ĐIỂM TIN ĐIỀU HÀNH</div><div class="footer-rule"></div><div class="page-no">02</div></footer>
+<footer class="office-footer"><div class="footer-logo">STACORP</div><span>Kết nối tri thức</span><i>•</i><span>Kiến tạo giá trị bền vững</span><div class="footer-rule"></div><b>02</b></footer>
 </div></body></html>
