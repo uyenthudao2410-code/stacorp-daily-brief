@@ -41,12 +41,12 @@ html,body{width:1080px;height:1620px;margin:0;overflow:hidden;font-family:"Segoe
 .highlight-copy{height:64px;padding:8px 10px;font-family:Georgia,"Times New Roman",serif;font-size:14px;line-height:1.18;font-weight:800;color:#14335e}
 .section-heading.compact{margin-top:10px}
 .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.story-card{height:350px;border-radius:15px;background:#fff;border:1px solid #dce5ee;padding:10px;box-shadow:0 6px 18px rgba(17,44,85,.045);overflow:hidden}
+.story-card{height:510px;border-radius:15px;background:#fff;border:1px solid #dce5ee;padding:10px;box-shadow:0 6px 18px rgba(17,44,85,.045);overflow:hidden}
 .story-meta{display:flex;align-items:center;height:27px;gap:7px}.status{font-size:9px;font-weight:900;background:#edf4ff;color:#2d5a8f;border-radius:999px;padding:6px 8px}.story-no{margin-left:auto;width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#d39a2d;color:#fff;font-size:10px;font-weight:900}
-.story-image{height:116px;border-radius:10px;overflow:hidden;margin-top:7px}
-.story-card h3{font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.08;margin:9px 0 7px;color:#112f5a}
-.story-card ul{margin:0;padding-left:17px;color:#425c78;font-size:11px;line-height:1.33}.story-card li{margin:3px 0}
-.source-line{font-size:9px;color:#738297;margin-top:7px;border-top:1px solid #e7edf2;padding-top:6px;white-space:normal}
+.story-image{height:176px;border-radius:10px;overflow:hidden;margin-top:7px}
+.story-card h3{font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.12;margin:11px 0 9px;color:#112f5a}
+.story-card ul{margin:0;padding-left:17px;color:#425c78;font-size:13px;line-height:1.38}.story-card li{margin:3px 0}
+.source-line{font-size:10px;color:#738297;margin-top:10px;border-top:1px solid #e7edf2;padding-top:6px;white-space:normal}
 .footer{height:72px;position:absolute;left:0;right:0;bottom:0;background:linear-gradient(100deg,#03244f,#06467f);color:#fff;display:grid;grid-template-columns:1fr 1fr 60px;align-items:center;padding:0 30px 0 48px;border-top:3px solid #d4a23b}
 .footer>div:first-child{display:flex;align-items:center;gap:12px}.footer b{font-family:Georgia,"Times New Roman",serif;font-size:16px}.footer span{font-size:9px;letter-spacing:.13em}.footer-line{height:1px;background:linear-gradient(90deg,transparent,#c9962f,transparent)}.page-no{justify-self:end;font-size:18px}
 .page2-title{height:94px;display:flex;align-items:center;justify-content:space-between}
