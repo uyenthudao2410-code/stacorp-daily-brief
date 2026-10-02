@@ -138,3 +138,40 @@ Schema tối thiểu:
 - `actions`: 1–5 object `{owner, text}`
 
 Publisher sẽ từ chối đăng nếu cấu trúc sai, target bị đổi hoặc email bị bật lại.
+
+
+## Visual V2 — layout production
+
+Layout khóa: `STACORP_ACCOUNTING_VISUAL_V2`.
+
+- 3 trang cố định, mỗi trang 1080×1620; Teams master 1200×1800.
+- Trang 1: masthead + hero visual + tóm tắt + 3 điểm nổi bật có ảnh + 3 story cards có ảnh.
+- Trang 2: tối đa 3 story rows lớn; nếu có tin số 7–8 thì hiển thị thêm compact cards nhưng không bỏ tin.
+- Trang 3: hero impact + 4–6 impact cards có ảnh + danh sách việc cần làm + flow TIN TỨC → TÁC ĐỘNG → HÀNH ĐỘNG.
+- Tông màu cố định navy / white / gold; dùng logo STACORP canonical trong `assets/stacorp-logo.png`.
+- Template/CSS là production asset, không sửa theo ngày.
+
+### Ảnh minh họa bắt buộc
+
+Mỗi phần tử trong `items` phải có thêm:
+
+`visual_src: "visuals/story-N.png"`
+
+Quy tắc:
+
+- 1 ảnh riêng cho mỗi tin; số ảnh bằng số tin thực tế 6–8.
+- PNG/JPEG gốc; long edge >= 1400 px; short edge >= 900 px; >= 180 KB.
+- Photorealistic corporate editorial; sáng, sạch, dễ hiểu, ít chi tiết thừa.
+- Không chữ, số, logo, watermark, nhãn hiệu hoặc signage đọc được trong ảnh.
+- Không dùng preview/thumbnail/WEBP; không upscale ảnh nhỏ.
+- Ảnh phải minh họa đúng chủ đề tin: hóa đơn/thuế, tài chính/dòng tiền, đất đai/BĐS, BHXH/nhân sự, tuyển dụng MEP...
+- Renderer sẽ fail closed nếu thiếu ảnh, sai định dạng hoặc không đủ độ phân giải.
+
+Delivery package:
+
+`incoming/accounting/current/brief.json`
+
+và
+
+`incoming/accounting/current/visuals/story-1.png` ... `story-N.png`.
+
