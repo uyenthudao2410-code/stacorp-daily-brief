@@ -1,46 +1,47 @@
 <!doctype html>
 <html><head><meta charset="utf-8"><link rel="stylesheet" href="accounting-style.css"></head>
 <body><div class="page page-three">
-<header class="top-header">
-  <div class="brand-block"><img class="logo" src="stacorp-logo.png"></div>
-  <div class="header-title">
-    <h1>TÁC ĐỘNG ĐẾN <span>STACORP</span></h1>
-    <p>Chủ động đánh giá <b>•</b> Thích ứng kịp thời <b>•</b> Tận dụng cơ hội <b>•</b> Phát triển bền vững</p>
+<header class="office-header">
+  <div class="brand"><img class="logo" src="stacorp-logo.png"><div class="brand-line"></div></div>
+  <div class="headline">
+    <span class="internal-tag">BẢN TIN NỘI BỘ</span>
+    <h1>TÁC ĐỘNG ĐẾN <b>STACORP</b></h1>
+    <p>Kế toán <i>•</i> Thuế <i>•</i> Nhân sự <i>•</i> Pháp lý <i>•</i> Điều hành</p>
   </div>
-  <div class="datebox"><div class="date">{{ brief.display_date }}</div><div class="window">{{ brief.display_window }}</div></div>
+  <div class="datebox"><strong>{{ brief.display_date }}</strong><span>{{ brief.display_window }}</span></div>
 </header>
+
+<section class="impact-summary"><div class="summary-icon">◖</div><p>Phân tích tác động của các cập nhật mới đến hoạt động STACORP, giúp các bộ phận chủ động triển khai, giảm rủi ro và tận dụng cơ hội.</p></section>
 
 <div class="impact-grid">
   {% for item in brief.display_impacts %}
   <article class="impact-card {{ item.key }}">
-    <div class="impact-head">
-      <div class="impact-icon">{{ item.icon }}</div>
-      <div><h2>{{ item.area }}</h2><p>{{ item.subtitle }}</p></div>
-    </div>
-    <div class="impact-body">
+    <div class="impact-copy">
+      <div class="impact-head"><span>{{ item.icon }}</span><div><h2>{{ item.area }}</h2><p>{{ item.subtitle }}</p></div></div>
       <ul>{% for point in item.points[:3] %}<li>{{ point }}</li>{% endfor %}</ul>
-      <img src="{{ item.visual_src }}" alt="">
     </div>
-  </article>
-  {% endfor %}
-</div>
-
-<div class="action-title"><div class="action-check">✓</div><h2>VIỆC CẦN LÀM HÔM NAY</h2><i></i></div>
-
-<div class="action-list">
-  {% for item in brief.display_actions %}
-  <article class="action-row {{ item.key }}">
-    <div class="action-no">{{ "%02d"|format(loop.index) }}</div>
-    <div class="action-copy"><h3>{{ item.owner }}</h3><ul>{% for p in item.points[:2] %}<li>{{ p }}</li>{% endfor %}</ul></div>
     <img src="{{ item.visual_src }}" alt="">
   </article>
   {% endfor %}
 </div>
 
-<section class="sources-block">
-  <div class="sources-title">▤ &nbsp; NGUỒN THAM KHẢO CHÍNH</div>
+<div class="action-heading"><span>★</span><h2>VIỆC CẦN LÀM HÔM NAY</h2><i></i><small>RÕ TRÁCH NHIỆM • ƯU TIÊN HÀNH ĐỘNG • THEO DÕI KẾT QUẢ</small></div>
+
+<div class="action-list">
+  {% for item in brief.display_actions %}
+  <article class="action-row {{ item.key }}">
+    <div class="action-no">0{{ loop.index }}</div>
+    <div class="action-owner">{{ item.owner }}</div>
+    <div class="action-copy"><ul>{% for p in item.points[:3] %}<li>{{ p }}</li>{% endfor %}</ul></div>
+    <img src="{{ item.visual_src }}" alt="">
+  </article>
+  {% endfor %}
+</div>
+
+<section class="sources-panel">
+  <div class="sources-head"><span>▤</span><h2>NGUỒN THAM KHẢO CHÍNH</h2><i></i><small>CẬP NHẬT CHÍNH THỐNG • ĐÁNG TIN CẬY • PHỤC VỤ TRIỂN KHAI</small></div>
   <div class="sources-grid">{% for s in brief.source_names %}<div>• {{ s }}</div>{% endfor %}</div>
 </section>
 
-<footer class="footer-wave"><div class="footer-brand">STACORP</div><div class="footer-copy">ĐIỂM TIN ĐIỀU HÀNH</div><div class="footer-rule"></div><div class="page-no">03</div></footer>
+<footer class="office-footer"><div class="footer-logo">STACORP</div><span>Kết nối tri thức</span><i>•</i><span>Kiến tạo giá trị bền vững</span><div class="footer-rule"></div><b>03</b></footer>
 </div></body></html>
