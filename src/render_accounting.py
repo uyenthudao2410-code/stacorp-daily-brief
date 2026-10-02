@@ -5,7 +5,12 @@ import hashlib
 import json
 import os
 import shutil
+from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
+from zoneinfo import ZoneInfo
+
+import httpx
 
 from PIL import Image, ImageDraw
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -28,6 +33,8 @@ CSS_SIZE = (1080, 1620)
 TEAMS_SIZE = (1200, 1800)
 SCALE = 2
 LAYOUT_VERSION = "STACORP_ACCOUNTING_VISUAL_V2"
+LOCAL_TZ = ZoneInfo("Asia/Ho_Chi_Minh")
+ALLOWED_REMOTE_VISUAL_HOSTS = {"images.pexels.com"}
 
 PAGES = (
     OUT / "STACORP_ACCOUNTING_BRIEF_PAGE_1.png",
@@ -182,6 +189,48 @@ def _impact_tag(area: str) -> str:
     return "HỖ TRỢ QUYẾT ĐỊNH"
 
 
+def _download_remote_visual(url: str, index: int, cfg: dict) -> Path:
+    parsed = urlparse(url)
+    host = (parsed.hostname or "").lower()
+    if parsed.scheme != "https" or host not in ALLOWED_REMOTE_VISUAL_HOSTS:
+        raise RuntimeError(
+            f"Accounting visual URL {index} must use HTTPS on an approved image host."
+        )
+
+    with httpx.Client(
+        timeout=60,
+        follow_redirects=True,
+        headers={"User-Agent": "STACORP-Accounting-Brief/1.0"},
+    ) as client:
+        response = client.get(url)
+        response.raise_for_status()
+        content_type = response.headers.get("content-type", "").lower()
+        if "image/" not in content_type:
+            raise RuntimeError(
+                f"Accounting visual URL {index} returned non-image content: {content_type}"
+            )
+        data = response.content
+
+    suffix = ".png" if "png" in content_type else ".jpg"
+    target = VISUALS / f"story-{index}-remote{suffix}"
+    target.write_bytes(data)
+    _validate_visual(target, cfg, index)
+    print(f"ACCOUNTING_REMOTE_VISUAL_{index}={host}")
+    return target
+
+
+def _apply_runtime_stamp(brief: dict) -> dict:
+    now = datetime.now(LOCAL_TZ)
+    window_hours = 48 if now.weekday() in {0, 6} else 24
+    brief["display_date"] = now.strftime("%d.%m.%Y")
+    brief["display_window"] = (
+        f"{window_hours} giờ gần nhất • cập nhật {now.strftime('%H:%M')}"
+    )
+    print(f"ACCOUNTING_DISPLAY_DATE={brief['display_date']}")
+    print(f"ACCOUNTING_DISPLAY_TIME={now.strftime('%H:%M')}")
+    return brief
+
+
 def _qa_demo_visual(index: int, item: dict) -> Path:
     VISUALS.mkdir(parents=True, exist_ok=True)
     target = VISUALS / f"story-{index}-qa.jpg"
@@ -284,19 +333,31 @@ def _prepare_visuals(brief: dict, cfg: dict) -> dict:
 
     for index, item in enumerate(prepared["items"], start=1):
         visual_src = _clean(item.get("visual_src"))
-        if not visual_src and qa_mode:
+        visual_url = _clean(item.get("visual_url"))
+
+        if visual_src:
+            source = _resolve_visual(visual_src)
+            _validate_visual(source, cfg, index)
+            suffix = source.suffix.lower()
+            target = VISUALS / f"story-{index}{suffix}"
+            shutil.copyfile(source, target)
+            item["render_visual_src"] = f"accounting-visuals/{target.name}"
+            continue
+
+        if visual_url:
+            target = _download_remote_visual(visual_url, index, cfg)
+            item["render_visual_src"] = f"accounting-visuals/{target.name}"
+            continue
+
+        if qa_mode:
             target = _qa_demo_visual(index, item)
             item["render_visual_src"] = f"accounting-visuals/{target.name}"
             continue
 
-        source = _resolve_visual(visual_src)
-        _validate_visual(source, cfg, index)
-        suffix = source.suffix.lower()
-        target = VISUALS / f"story-{index}{suffix}"
-        shutil.copyfile(source, target)
-        item["render_visual_src"] = f"accounting-visuals/{target.name}"
+        raise RuntimeError(f"Story {index} is missing a usable visual.")
 
     prepared["hero_visual_src"] = prepared["items"][0]["render_visual_src"]
+    prepared = _apply_runtime_stamp(prepared)
 
     for index, impact in enumerate(prepared.get("impacts", [])):
         area = _clean(impact.get("area"))
