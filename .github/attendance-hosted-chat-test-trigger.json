@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
-  "requested_at": "2026-10-02T19:40:00+07:00",
-  "purpose": "publish mobile-first attendance V3 with overview and detail images to TEST chat"
+  "schema_version": 4,
+  "requested_at": "2026-10-02T20:17:20+07:00",
+  "purpose": "publish V4 mockup-fidelity attendance images to TEST chat"
 }
