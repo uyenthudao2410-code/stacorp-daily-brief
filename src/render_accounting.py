@@ -349,12 +349,9 @@ def _prepare_visuals(brief: dict, cfg: dict) -> dict:
             item["render_visual_src"] = f"accounting-visuals/{target.name}"
             continue
 
-        if qa_mode:
-            target = _qa_demo_visual(index, item)
-            item["render_visual_src"] = f"accounting-visuals/{target.name}"
-            continue
-
-        raise RuntimeError(f"Story {index} is missing a usable visual.")
+        raise RuntimeError(
+            f"Story {index} is missing a real visual. Placeholder fallback is disabled."
+        )
 
     prepared["hero_visual_src"] = prepared["items"][0]["render_visual_src"]
     prepared = _apply_runtime_stamp(prepared)
