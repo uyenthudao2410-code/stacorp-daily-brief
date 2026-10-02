@@ -1,6 +1,46 @@
-<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="accounting-style.css"></head><body><div class="page">
-<header class="masthead"><div class="brand"><img class="logo" src="stacorp-logo.png"><div class="brand-rule"></div><div class="brand-copy"><div class="eyebrow">BẢN TIN NỘI BỘ</div><div class="brand-title">ĐIỂM TIN ĐIỀU HÀNH<br>STACORP</div><div class="brand-sub">KẾ TOÁN • NHÂN SỰ • PHÁP LÝ • ĐIỀU HÀNH</div></div></div><div class="datebox"><div class="date">{{ brief.date }}</div><div class="window">{{ brief.window }}</div></div></header>
-<div class="page2-intro"><h1>ĐIỂM TIN • PHẦN 2</h1><div class="counter">{{ items|length }} TIN</div></div>
-<div class="story-list">{% for item in items %}<article class="story large{% if items|length > 3 %} dense{% endif %}"><div class="story-top"><span class="badge">{{ item.label }}</span><span class="category">{{ item.category }}</span><span class="story-index">{{ "%02d"|format(loop.index + offset) }}</span></div><h2>{{ item.title }}</h2><ul class="facts">{% for fact in item.facts %}<li>{{ fact }}</li>{% endfor %}</ul><div class="sources">Nguồn: {% for s in item.sources %}{{ s.name }}{% if not loop.last %} • {% endif %}{% endfor %}</div></article>{% endfor %}</div>
-<footer class="footer"><div class="footer-brand"><b>STACORP</b>Thông tin phục vụ điều hành doanh nghiệp</div><div class="footer-mid">FACTS FIRST • ACTION SEPARATE</div><div class="page-no">02</div></footer>
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="accounting-style.css"></head>
+<body><div class="page page-two {% if extras %}has-extras{% endif %}">
+<header class="masthead slim">
+  <div class="brand">
+    <img class="logo" src="stacorp-logo.png">
+    <div class="brand-rule"></div>
+    <div class="brand-copy"><div class="brand-name">STACORP</div><div class="brand-motto">KẾT NỐI TRI THỨC • KIẾN TẠO GIÁ TRỊ BỀN VỮNG</div></div>
+  </div>
+  <div class="datebox"><div class="date">{{ brief.date }}</div><div class="window">{{ brief.window }}</div></div>
+</header>
+
+<div class="page2-title"><div><h1>ĐIỂM TIN • <span>PHẦN 2</span></h1><p>Cập nhật chính sách • trực quan • dễ quét</p></div><div class="count-badge">▤ &nbsp; {{ items|length + extras|length }} TIN</div></div>
+
+<div class="feature-list">
+  {% for item in items %}
+  <article class="feature-row">
+    <div class="feature-copy">
+      <div class="feature-meta"><b>{{ "%02d"|format(loop.index + offset) }}</b><span>{{ item.label }}</span></div>
+      <h2>{{ item.title }}</h2>
+      <ul>{% for fact in item.facts[:2] %}<li>{{ fact }}</li>{% endfor %}</ul>
+      <div class="source-line">⌁ Nguồn: {% for s in item.sources %}{{ s.name }}{% if not loop.last %} · {% endif %}{% endfor %}</div>
+    </div>
+    <div class="feature-visual"><img src="{{ item.render_visual_src }}" alt=""><div class="visual-chip">{{ item.category }}</div></div>
+  </article>
+  {% endfor %}
+</div>
+
+{% if extras %}
+<div class="extra-grid">
+  {% for item in extras %}
+  <article class="extra-card">
+    <img src="{{ item.render_visual_src }}" alt="">
+    <div class="extra-body">
+      <div class="feature-meta"><b>{{ "%02d"|format(loop.index + offset + items|length) }}</b><span>{{ item.label }}</span></div>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.facts[0] }}</p>
+      <div class="source-line">⌁ {% for s in item.sources %}{{ s.name }}{% if not loop.last %} · {% endif %}{% endfor %}</div>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% endif %}
+
+<footer class="footer"><div><b>STACORP</b><span>ĐIỂM TIN ĐIỀU HÀNH</span></div><div class="footer-line"></div><div class="page-no">02</div></footer>
 </div></body></html>
