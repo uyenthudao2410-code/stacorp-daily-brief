@@ -175,3 +175,17 @@ và
 
 `incoming/accounting/current/visuals/story-1.png` ... `story-N.png`.
 
+
+
+## Brand lock — bắt buộc
+
+Bản tin điều hành dùng đúng cùng canonical logo với bản “Điểm tin cho doanh nghiệp STACORP”.
+
+- Canonical asset duy nhất: `assets/stacorp-logo.png`.
+- Nguồn chuẩn và checksum đọc từ `config/brand.json`.
+- Production SHA256 phải đúng: `4fc97e9245c4513b9334a9659690e886aa4563ad892d3fe49f3d6322ba55046d`.
+- Production Git blob SHA1 phải đúng: `2ffd30fd4c8774bdebb461f157ed6b41c04172be`.
+- Cả 3 template accounting chỉ được tham chiếu `stacorp-logo.png` đúng một lần ở masthead.
+- Cấm AI tạo/vẽ lại logo STACORP; cấm nhúng logo vào story visuals.
+- GitHub Actions chạy brand gate trước render. Thiếu logo, checksum sai, đường dẫn logo bị đổi hoặc template tham chiếu logo khác => FAIL CLOSED, không render và không đăng Teams.
+- Log thành công bắt buộc có `ACCOUNTING_BRAND_GATE=PASS`, `ACCOUNTING_LOGO_SHA256=...` và `ACCOUNTING_LOGO_GIT_BLOB_SHA1=...`.
