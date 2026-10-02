@@ -65,6 +65,9 @@ jobs:
           print("EMAIL_ENABLED=false")
           PY
 
+      - name: Verify canonical STACORP brand lock
+        run: python -m src.accounting_brand
+
       - name: Select QA General target
         if: ${{ hashFiles('incoming/accounting/current/.qa_general') != '' || inputs.sample }}
         run: echo "ACCOUNTING_TARGET_MODE=QA_GENERAL" >> "$GITHUB_ENV"
