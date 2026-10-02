@@ -14,16 +14,10 @@ MAX_HOSTED_CONTENT_BYTES = 4 * 1024 * 1024
 
 REPORTS = (
     {
-        "slot": "CA SÁNG",
-        "date": "Thứ Sáu, 02/10/2026",
-        "filename": "TEST_V6_Morning_2026-10-02.png",
-        "alt": "Báo cáo chấm công ca sáng 02/10/2026",
-    },
-    {
         "slot": "CẢ NGÀY",
-        "date": "Thứ Năm, 01/10/2026",
-        "filename": "TEST_V6_Daily_2026-10-01.png",
-        "alt": "Báo cáo chấm công cả ngày 01/10/2026",
+        "date": "Thứ Sáu, 02/10/2026",
+        "filename": "TEST_V6_Daily_2026-10-02.png",
+        "alt": "Báo cáo chấm công cả ngày 02/10/2026",
     },
 )
 
