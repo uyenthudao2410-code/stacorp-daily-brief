@@ -39,7 +39,7 @@
 <div class="highlight-grid">
   {% for h in brief.highlights %}
   <article class="highlight-card">
-    <div class="highlight-image"><img src="{{ brief.items[loop.index0].render_visual_src }}" alt=""><b>0{{ loop.index }}</b></div>
+    <div class="highlight-image"><img src="{{ brief["items"][loop.index0].render_visual_src }}" alt=""><b>0{{ loop.index }}</b></div>
     <div class="highlight-copy">{{ h }}</div>
   </article>
   {% endfor %}
