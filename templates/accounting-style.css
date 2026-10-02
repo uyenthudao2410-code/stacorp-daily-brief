@@ -32,7 +32,7 @@ html,body{width:1080px;height:1620px;margin:0;overflow:hidden;font-family:"Segoe
 .round-arrow{position:absolute;right:13px;bottom:17px;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff7e4;color:#d79513;font-size:29px;font-weight:700}
 .news-heading{margin-top:14px}
 .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 32px}
-.story-card{height:700px;border-radius:15px;background:#fff;border:1px solid #dbe6f0;padding:12px;box-shadow:0 7px 20px rgba(8,41,90,.06);overflow:hidden}
+.story-card{height:725px;border-radius:15px;background:#fff;border:1px solid #dbe6f0;padding:12px;box-shadow:0 7px 20px rgba(8,41,90,.06);overflow:hidden}
 .story-labels{height:32px;display:flex;align-items:center;gap:5px;white-space:nowrap;overflow:hidden}.story-labels .level{background:#ed334f;color:#fff;font-weight:900;border-radius:999px;padding:7px 13px;font-size:11px}.story-labels .topic{background:#edf3ff;color:#183e76;border-radius:999px;padding:7px 9px;font-size:10px;font-weight:800;overflow:hidden;text-overflow:ellipsis}
 .story-image{height:238px;border-radius:10px;overflow:hidden;margin:9px 0 10px}
 .story-card h3{font-family:Georgia,"Times New Roman",serif;font-size:23px;line-height:1.13;margin:0 0 9px;color:#0b2f62}
