@@ -214,3 +214,18 @@ Layout production hiện tại: `STACORP_ACCOUNTING_APPROVED_V4`.
 - Page 3 là dashboard 2x2 tác động, 4 hàng Việc cần làm hôm nay và Nguồn tham khảo chính.
 - Footer navy/gold dạng wave nhẹ, không chiếm quá 84px.
 - Visual V3 đã bị superseded; không được khôi phục header lớn hoặc hero lớn nếu không có phê duyệt mới.
+
+
+## Accounting Office V5 — form production theo bộ ảnh duyệt
+
+Layout production hiện tại: `STACORP_ACCOUNTING_OFFICE_V5`.
+
+- Ngôn ngữ hình ảnh phải đậm chất kế toán và văn phòng: báo cáo tài chính, hóa đơn, chứng từ, máy tính, hồ sơ, hợp đồng, hồ sơ nhân sự, bàn họp và dashboard quản trị.
+- Page 1: header navy gọn + summary + hero accounting-office + 3 điểm nổi bật + 3 story cards.
+- Page 2: các nhóm Pháp lý / Nhân sự / Kế toán–Tài chính theo feature rows lớn, ảnh hồ sơ-văn phòng chiếm tỷ trọng cao, kết thúc bằng Điểm nhấn điều hành.
+- Page 3: dashboard 2x2 tác động + 4 action rows + nguồn tham khảo chính.
+- Không dùng skyline làm hình nội dung chính; skyline chỉ có thể xuất hiện rất phụ nếu liên quan BĐS/đầu tư.
+- Không dùng icon-art/placeholder thay ảnh thật.
+- Header cả 3 trang giữ gọn, không chiếm diện tích nội dung.
+- Logo luôn lấy từ canonical asset `assets/stacorp-logo.png`, brand gate giữ nguyên.
+- V4 đã bị superseded; không được phục hồi layout V4 nếu không có phê duyệt mới.
