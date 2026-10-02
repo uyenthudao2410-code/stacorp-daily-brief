@@ -3,7 +3,9 @@ from __future__ import annotations
 import base64
 import html
 import os
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import httpx
 
@@ -54,7 +56,10 @@ def publish_images(brief: dict) -> str:
         for index, page in enumerate(pages, start=1)
     ]
 
-    subject = f"ĐIỂM TIN ĐIỀU HÀNH STACORP | {_clean(brief.get('date'))}"
+    now = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh"))
+    subject = f"ĐIỂM TIN ĐIỀU HÀNH STACORP | {now.strftime('%d.%m.%Y')}"
+    print(f"ACCOUNTING_TEAMS_SUBJECT_DATE={now.strftime('%d.%m.%Y')}")
+    print(f"ACCOUNTING_TEAMS_SUBJECT_TIME={now.strftime('%H:%M')}")
     body = (
         f"<h2>{html.escape(subject)}</h2>"
         '<img src="../hostedContents/1/$value" width="900" alt="Trang 1"><br><br>'
