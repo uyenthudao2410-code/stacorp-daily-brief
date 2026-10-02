@@ -105,7 +105,7 @@ def _post_report(token: str, report: dict, image: bytes) -> str:
         "<br><br>"
         "<b>Lưu ý:</b> Số liệu phục vụ đối soát, không mặc nhiên là giá trị công chính thức. "
         "Nếu phát hiện sai lệch hoặc có vướng mắc, vui lòng phản hồi P.HC-NS để kiểm tra và điều chỉnh."
-        "<br><span style="color:#6b7280"><i>Bản kiểm thử nội bộ · TEST hệ thống</i></span>"
+        '<br><span style="color:#6b7280"><i>Bản kiểm thử nội bộ · TEST hệ thống</i></span>'
     )
     payload = {
         "body": {"contentType": "html", "content": body},
