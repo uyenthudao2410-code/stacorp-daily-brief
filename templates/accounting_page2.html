@@ -12,7 +12,7 @@
 {% for group in brief.page2_groups %}
 <section class="group-block {{ group.key }}">
   <div class="group-band"><div class="group-icon">{{ group.icon }}</div><h2>{{ group.title }}</h2><small>{{ group.caption }}</small></div>
-  {% for item in group.items %}
+  {% for item in group["items"] %}
   <article class="feature-row">
     <div class="feature-copy">
       <div class="feature-meta"><b>{{ "%02d"|format(item.display_no) }}</b><span>{{ item.label }}</span></div>
