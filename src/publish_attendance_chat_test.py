@@ -16,13 +16,13 @@ REPORTS = (
     {
         "slot": "CA SÁNG",
         "date": "Thứ Sáu, 02/10/2026",
-        "filename": "TEST_Bao_cao_cham_cong_ca_sang_2026-10-02.png",
+        "filename": "TEST_V2_Bao_cao_cham_cong_ca_sang_2026-10-02.png",
         "alt": "Báo cáo chấm công ca sáng 02/10/2026",
     },
     {
         "slot": "CẢ NGÀY",
         "date": "Thứ Năm, 01/10/2026",
-        "filename": "TEST_Bao_cao_cham_cong_ca_ngay_2026-10-01.png",
+        "filename": "TEST_V2_Bao_cao_cham_cong_ca_ngay_2026-10-01.png",
         "alt": "Báo cáo chấm công cả ngày 01/10/2026",
     },
 )
@@ -97,15 +97,11 @@ def _post_report(token: str, report: dict, image: bytes) -> str:
     date = html.escape(report["date"])
     alt = html.escape(report["alt"], quote=True)
     body = (
-        f"<b>BÁO CÁO CHẤM CÔNG — {slot}</b>"
+        f"<b>[TEST] BÁO CÁO CHẤM CÔNG — {slot}</b>"
         f"<br><b>{date}</b>"
         "<br>Tổng hợp từ hệ thống chấm công để đối soát."
         "<br><br>"
-        f'<img src="../hostedContents/1/$value" width="900" alt="{alt}">'
-        "<br><br>"
-        "<b>Lưu ý:</b> Số liệu phục vụ đối soát, không mặc nhiên là giá trị công chính thức. "
-        "Nếu phát hiện sai lệch hoặc có vướng mắc, vui lòng phản hồi P.HC-NS để kiểm tra và điều chỉnh."
-        '<br><span style="color:#6b7280"><i>Bản kiểm thử nội bộ · TEST hệ thống</i></span>'
+        f'<img src="../hostedContents/1/$value" width="1200" alt="{alt}">'
     )
     payload = {
         "body": {"contentType": "html", "content": body},
