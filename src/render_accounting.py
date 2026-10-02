@@ -3,10 +3,11 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+import os
 import shutil
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageDraw
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from playwright.sync_api import sync_playwright
 
@@ -181,12 +182,114 @@ def _impact_tag(area: str) -> str:
     return "HỖ TRỢ QUYẾT ĐỊNH"
 
 
+def _qa_demo_visual(index: int, item: dict) -> Path:
+    VISUALS.mkdir(parents=True, exist_ok=True)
+    target = VISUALS / f"story-{index}-qa.jpg"
+
+    width, height = 1600, 1000
+    palettes = [
+        ((232, 241, 251), (30, 83, 137), (207, 153, 44)),
+        ((244, 238, 222), (15, 67, 119), (224, 155, 31)),
+        ((230, 242, 238), (34, 100, 83), (205, 155, 55)),
+        ((239, 242, 249), (39, 79, 128), (207, 151, 42)),
+        ((237, 243, 250), (34, 92, 148), (187, 139, 41)),
+        ((232, 241, 246), (22, 77, 125), (218, 162, 53)),
+        ((239, 244, 248), (42, 92, 126), (202, 148, 37)),
+        ((236, 242, 249), (44, 80, 132), (214, 158, 45)),
+    ]
+    bg, primary, gold = palettes[(index - 1) % len(palettes)]
+
+    image = Image.new("RGB", (width, height), bg)
+    draw = ImageDraw.Draw(image)
+
+    for y in range(height):
+        ratio = y / max(1, height - 1)
+        r = int(bg[0] * (1 - ratio) + 248 * ratio)
+        g = int(bg[1] * (1 - ratio) + 250 * ratio)
+        b = int(bg[2] * (1 - ratio) + 252 * ratio)
+        draw.line((0, y, width, y), fill=(r, g, b))
+
+    draw.ellipse((1080, -180, 1700, 440), fill=(*gold,))
+    draw.ellipse((1160, -100, 1660, 400), fill=(244, 224, 174))
+    draw.rounded_rectangle((90, 110, 940, 840), radius=42, fill=(255, 255, 255), outline=(215, 224, 234), width=4)
+
+    kind = index % 6
+    if kind == 1:
+        draw.rounded_rectangle((170, 210, 770, 720), radius=28, fill=(247, 249, 252), outline=primary, width=8)
+        for yy in (310, 410, 510, 610):
+            draw.line((240, yy, 690, yy), fill=(183, 199, 216), width=12)
+        draw.rounded_rectangle((1030, 500, 1430, 800), radius=30, fill=primary)
+        for col in range(4):
+            for row in range(3):
+                x=1080+col*82; y=550+row*74
+                draw.rounded_rectangle((x,y,x+52,y+45),radius=8,fill=(242,246,250))
+    elif kind == 2:
+        draw.rounded_rectangle((180, 570, 760, 760), radius=30, fill=primary)
+        draw.rectangle((250, 450, 480, 610), fill=(255,255,255), outline=primary, width=8)
+        draw.line((480, 520, 620, 520), fill=primary, width=18)
+        draw.arc((600, 420, 820, 650), start=220, end=345, fill=gold, width=24)
+        draw.ellipse((760, 585, 850, 675), fill=gold)
+        draw.rectangle((1020, 490, 1440, 720), fill=(74, 102, 133))
+        draw.rectangle((1110, 400, 1330, 520), fill=(238,244,248))
+        draw.ellipse((1080, 690, 1190, 800), fill=(42,48,56))
+        draw.ellipse((1320, 690, 1430, 800), fill=(42,48,56))
+    elif kind == 3:
+        base_y=770
+        for i,h in enumerate((420,560,650,500,590,450)):
+            x=160+i*125
+            draw.rectangle((x,base_y-h,x+90,base_y),fill=primary)
+            for wy in range(base_y-h+45,base_y-30,70):
+                draw.rectangle((x+22,wy,x+68,wy+30),fill=(218,231,243))
+        draw.rectangle((1010, 520, 1450, 760), fill=(250,250,248), outline=gold, width=8)
+        draw.line((1090, 700, 1370, 580), fill=gold, width=16)
+        draw.line((1090, 600, 1370, 700), fill=primary, width=16)
+    elif kind == 4:
+        for i,x in enumerate((160,420,680)):
+            draw.rectangle((x,470,x+210,770),fill=(246,248,251),outline=primary,width=7)
+            draw.polygon(((x-20,470),(x+105,350),(x+230,470)),fill=gold)
+            draw.rectangle((x+75,620,x+135,770),fill=primary)
+        draw.rounded_rectangle((1050, 420, 1450, 790),radius=28,fill=(255,255,255),outline=(190,204,220),width=5)
+        draw.ellipse((1160, 500, 1340, 680),fill=primary)
+        draw.rectangle((1230, 660, 1270, 760),fill=gold)
+    elif kind == 5:
+        draw.ellipse((220, 220, 520, 520), fill=primary)
+        draw.ellipse((300, 290, 440, 430), fill=(238,244,250))
+        for x in (180,420,660):
+            draw.ellipse((x, 540, x+150, 690), fill=gold)
+            draw.rounded_rectangle((x+20,650,x+130,810),radius=35,fill=primary)
+        draw.polygon(((1120,220),(1390,300),(1360,650),(1255,780),(1150,650)),fill=primary)
+        draw.ellipse((1200,350,1310,460),fill=(244,248,251))
+    else:
+        draw.rectangle((120, 500, 910, 780), fill=(213,225,236))
+        draw.line((180,500,360,260),fill=primary,width=24)
+        draw.line((360,260,610,500),fill=primary,width=24)
+        draw.line((610,500,800,220),fill=primary,width=24)
+        for x in (260,520,780):
+            draw.ellipse((x-55,510,x+55,620),fill=gold)
+            draw.rounded_rectangle((x-70,600,x+70,810),radius=35,fill=primary)
+        draw.ellipse((1110,300,1430,620),fill=(246,248,251),outline=gold,width=16)
+        draw.line((1270,330,1270,590),fill=primary,width=24)
+        draw.line((1140,460,1400,460),fill=primary,width=24)
+
+    image.save(target, "JPEG", quality=94, subsampling=0)
+    print(f"ACCOUNTING_QA_VISUAL_{index}={target.name}")
+    return target
+
+
 def _prepare_visuals(brief: dict, cfg: dict) -> dict:
     prepared = copy.deepcopy(brief)
     VISUALS.mkdir(parents=True, exist_ok=True)
 
+    qa_mode = os.getenv("ACCOUNTING_TARGET_MODE", "").strip().upper() == "QA_GENERAL"
+
     for index, item in enumerate(prepared["items"], start=1):
-        source = _resolve_visual(_clean(item.get("visual_src")))
+        visual_src = _clean(item.get("visual_src"))
+        if not visual_src and qa_mode:
+            target = _qa_demo_visual(index, item)
+            item["render_visual_src"] = f"accounting-visuals/{target.name}"
+            continue
+
+        source = _resolve_visual(visual_src)
         _validate_visual(source, cfg, index)
         suffix = source.suffix.lower()
         target = VISUALS / f"story-{index}{suffix}"
