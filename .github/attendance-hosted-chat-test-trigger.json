@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
-  "requested_at": "2026-10-02T18:41:37+07:00",
-  "purpose": "publish approved attendance images to TEST chat using native Teams hostedContents after Files.Read consent"
+  "schema_version": 2,
+  "requested_at": "2026-10-02T19:04:48+07:00",
+  "purpose": "publish approved attendance V2 landscape images to TEST chat"
 }
