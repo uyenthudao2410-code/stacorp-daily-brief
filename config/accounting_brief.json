@@ -38,7 +38,7 @@
     "li"
   ],
   "layout": {
-    "version": "STACORP_ACCOUNTING_APPROVED_V4",
+    "version": "STACORP_ACCOUNTING_OFFICE_V5",
     "pages": 3,
     "canvas": {
       "width": 1080,
@@ -48,9 +48,9 @@
       "width": 1200,
       "height": 1800
     },
-    "page_1": "Compact navy header + summary + 3 visual highlights + 3 detailed story cards",
-    "page_2": "Compact navy header + legal/people/finance feature rows + focus block",
-    "page_3": "Compact navy header + 2x2 impact dashboard + 4 action rows + primary sources"
+    "page_1": "Accounting-office hero + executive summary + 3 highlights + 3 finance/office story cards",
+    "page_2": "Legal/HR/finance office feature rows + management focus",
+    "page_3": "Management impact dashboard + action tracker + primary sources"
   },
   "visuals": {
     "required_per_story": true,
@@ -64,5 +64,21 @@
     "no_text_in_story_visual": true,
     "no_logo_in_story_visual": true,
     "fail_closed": true
+  },
+  "visual_direction": {
+    "theme": "accounting-office editorial",
+    "preferred_motifs": [
+      "financial reports and calculator",
+      "invoices and tax documents",
+      "contracts and legal files",
+      "HR folders and workforce planning",
+      "office meetings and management dashboards"
+    ],
+    "avoid": [
+      "construction-site technical imagery unless management impact is direct",
+      "generic skyline as main content image",
+      "abstract icon-only placeholders",
+      "AI-generated STACORP logo"
+    ]
   }
 }
