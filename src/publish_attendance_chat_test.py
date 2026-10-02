@@ -16,13 +16,13 @@ REPORTS = (
     {
         "slot": "CA SÁNG",
         "date": "Thứ Sáu, 02/10/2026",
-        "filename": "TEST_V5_Morning_2026-10-02.png",
+        "filename": "TEST_V6_Morning_2026-10-02.png",
         "alt": "Báo cáo chấm công ca sáng 02/10/2026",
     },
     {
         "slot": "CẢ NGÀY",
         "date": "Thứ Năm, 01/10/2026",
-        "filename": "TEST_V5_Daily_2026-10-01.png",
+        "filename": "TEST_V6_Daily_2026-10-01.png",
         "alt": "Báo cáo chấm công cả ngày 01/10/2026",
     },
 )
@@ -111,7 +111,7 @@ def _post_report(token: str, report: dict, image: bytes) -> str:
     if not message_id:
         raise RuntimeError("Teams post succeeded without message id")
     print(
-        f"ATTENDANCE_V5_TEST_POST slot={report['slot']} "
+        f"ATTENDANCE_V6_TEST_POST slot={report['slot']} "
         f"file={report['filename']} bytes={len(image)} message_id={message_id}"
     )
     return message_id
@@ -124,7 +124,7 @@ def main() -> int:
     for report in REPORTS:
         image = _download_onedrive_png(token, report["filename"])
         ids.append(_post_report(token, report, image))
-    print("ATTENDANCE_V5_TEST_MESSAGE_IDS=" + ",".join(ids))
+    print("ATTENDANCE_V6_TEST_MESSAGE_IDS=" + ",".join(ids))
     return 0
 
 if __name__ == "__main__":
