@@ -107,6 +107,13 @@ def _validate_brief(brief: dict, cfg: dict) -> None:
         if not title:
             raise RuntimeError(f"Item {index} is missing title.")
 
+        visual_src = _clean(item.get("visual_src"))
+        if not visual_src:
+            raise RuntimeError(f"Item {index} is missing visual_src.")
+        visual_path = Path(visual_src)
+        if visual_path.is_absolute() or ".." in visual_path.parts:
+            raise RuntimeError(f"Item {index} has unsafe visual_src: {visual_src!r}.")
+
         facts = item.get("facts", [])
         if not 2 <= len(facts) <= 3:
             raise RuntimeError(f"Item {index} must contain 2-3 facts.")
