@@ -200,3 +200,17 @@ Bản tin điều hành dùng đúng cùng canonical logo với bản “Điểm
 - Runtime phải log `ACCOUNTING_PAGE_1_GATE=PASS`, `ACCOUNTING_PAGE_2_GATE=PASS`, `ACCOUNTING_PAGE_3_GATE=PASS` và `ACCOUNTING_LAYOUT_VERSION=STACORP_ACCOUNTING_EDITORIAL_V3`.
 - Page 1 phải có content bottom >= 1450px trước footer để tránh vùng trắng chết.
 - Visual V2 đã bị superseded và không còn là layout production.
+
+
+## Approved V4 — form khóa theo bộ ảnh duyệt cuối
+
+Layout production hiện tại: `STACORP_ACCOUNTING_APPROVED_V4`.
+
+- Header cả 3 trang chỉ cao khoảng 148px.
+- Logo STACORP canonical đặt trực tiếp trên nền navy; không khung trắng, không nền phụ, không vẽ lại bằng AI.
+- Không còn hero/banner hình lớn dưới header ở Page 1.
+- Page 1 ưu tiên diện tích cho summary, 3 điểm nổi bật và 3 story cards.
+- Page 2 ưu tiên feature rows ảnh lớn + nội dung theo nhóm Pháp lý / Nhân sự / Kế toán–Tài chính, kết thúc bằng Điểm nhấn.
+- Page 3 là dashboard 2x2 tác động, 4 hàng Việc cần làm hôm nay và Nguồn tham khảo chính.
+- Footer navy/gold dạng wave nhẹ, không chiếm quá 84px.
+- Visual V3 đã bị superseded; không được khôi phục header lớn hoặc hero lớn nếu không có phê duyệt mới.
