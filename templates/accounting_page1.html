@@ -1,9 +1,65 @@
-<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="accounting-style.css"></head><body><div class="page">
-<header class="masthead"><div class="brand"><img class="logo" src="stacorp-logo.png"><div class="brand-rule"></div><div class="brand-copy"><div class="eyebrow">BẢN TIN NỘI BỘ</div><div class="brand-title">ĐIỂM TIN ĐIỀU HÀNH<br>STACORP</div><div class="brand-sub">KẾ TOÁN • NHÂN SỰ • PHÁP LÝ • ĐIỀU HÀNH</div></div></div><div class="datebox"><div class="date">{{ brief.date }}</div><div class="window">{{ brief.window }}</div></div></header>
-<div class="summary">{{ brief.summary }}</div>
-<div class="section-title">⭐ 3 ĐIỂM NỔI BẬT</div>
-<div class="highlights">{% for h in brief.highlights %}<div class="highlight"><b>0{{ loop.index }}</b><p>{{ h }}</p></div>{% endfor %}</div>
-<div class="section-title">ĐIỂM TIN • PHẦN 1</div>
-<div class="story-list">{% for item in items %}<article class="story"><div class="story-top"><span class="badge">{{ item.label }}</span><span class="category">{{ item.category }}</span><span class="story-index">{{ "%02d"|format(loop.index) }}</span></div><h2>{{ item.title }}</h2><ul class="facts">{% for fact in item.facts %}<li>{{ fact }}</li>{% endfor %}</ul><div class="sources">Nguồn: {% for s in item.sources %}{{ s.name }}{% if not loop.last %} • {% endif %}{% endfor %}</div></article>{% endfor %}</div>
-<footer class="footer"><div class="footer-brand"><b>STACORP</b>Thông tin phục vụ điều hành doanh nghiệp</div><div class="footer-mid">ACCOUNTING • PEOPLE • LEGAL</div><div class="page-no">01</div></footer>
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="accounting-style.css"></head>
+<body><div class="page page-one">
+<header class="masthead">
+  <div class="brand">
+    <img class="logo" src="stacorp-logo.png">
+    <div class="brand-rule"></div>
+    <div class="brand-copy">
+      <div class="brand-name">STACORP</div>
+      <div class="brand-motto">KẾT NỐI TRI THỨC • KIẾN TẠO GIÁ TRỊ BỀN VỮNG</div>
+    </div>
+  </div>
+  <div class="datebox"><div class="date">{{ brief.date }}</div><div class="window">{{ brief.window }}</div></div>
+</header>
+
+<section class="title-block">
+  <div class="edition-label">BẢN TIN NỘI BỘ</div>
+  <h1>ĐIỂM TIN ĐIỀU HÀNH <span>STACORP</span></h1>
+  <div class="title-sub">Kế toán <b>•</b> Thuế <b>•</b> Nhân sự <b>•</b> Pháp lý <b>•</b> Điều hành</div>
+</section>
+
+<section class="hero">
+  <img src="{{ brief.hero_visual_src }}" alt="">
+  <div class="hero-shade"></div>
+  <div class="hero-topic-strip">
+    <div><span>▥</span><b>KẾ TOÁN</b><small>Thuế • Tài chính</small></div>
+    <div><span>◉</span><b>NHÂN SỰ</b><small>Thị trường lao động</small></div>
+    <div><span>⚖</span><b>PHÁP LÝ</b><small>Chính sách DN</small></div>
+    <div><span>↗</span><b>ĐIỀU HÀNH</b><small>Đầu tư • Rủi ro</small></div>
+  </div>
+</section>
+
+<div class="summary-banner">
+  <div class="summary-icon">◖</div>
+  <div>{{ brief.summary }}</div>
+</div>
+
+<div class="section-heading star-heading"><span>★</span><h2>3 ĐIỂM NỔI BẬT</h2><i></i></div>
+<div class="highlight-grid">
+  {% for h in brief.highlights %}
+  <article class="highlight-card">
+    <div class="highlight-image"><img src="{{ brief.items[loop.index0].render_visual_src }}" alt=""><b>0{{ loop.index }}</b></div>
+    <div class="highlight-copy">{{ h }}</div>
+  </article>
+  {% endfor %}
+</div>
+
+<div class="section-heading compact"><span>▤</span><h2>ĐIỂM TIN • PHẦN 1</h2><i></i><small>CẬP NHẬT CHỦ ĐỘNG • PHỤC VỤ ĐIỀU HÀNH</small></div>
+<div class="story-grid">
+  {% for item in items %}
+  <article class="story-card">
+    <div class="story-meta">
+      <span class="status">{{ item.label }}</span>
+      <span class="story-no">{{ "%02d"|format(loop.index) }}</span>
+    </div>
+    <div class="story-image"><img src="{{ item.render_visual_src }}" alt=""></div>
+    <h3>{{ item.title }}</h3>
+    <ul>{% for fact in item.facts[:2] %}<li>{{ fact }}</li>{% endfor %}</ul>
+    <div class="source-line">⌁ Nguồn: {% for s in item.sources %}{{ s.name }}{% if not loop.last %} · {% endif %}{% endfor %}</div>
+  </article>
+  {% endfor %}
+</div>
+
+<footer class="footer"><div><b>STACORP</b><span>ĐIỂM TIN ĐIỀU HÀNH</span></div><div class="footer-line"></div><div class="page-no">01</div></footer>
 </div></body></html>
