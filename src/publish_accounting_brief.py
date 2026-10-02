@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import html
 import json
-import os
 import re
 from datetime import datetime
 from pathlib import Path
@@ -110,8 +109,7 @@ def _validate_brief(brief: dict, cfg: dict) -> None:
 
         visual_src = _clean(item.get("visual_src"))
         visual_url = _clean(item.get("visual_url"))
-        qa_mode = os.getenv("ACCOUNTING_TARGET_MODE", "").strip().upper() == "QA_GENERAL"
-        if not visual_src and not visual_url and not qa_mode:
+        if not visual_src and not visual_url:
             raise RuntimeError(f"Item {index} is missing visual_src/visual_url.")
         if visual_src:
             visual_path = Path(visual_src)
