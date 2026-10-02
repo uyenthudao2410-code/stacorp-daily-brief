@@ -1,61 +1,59 @@
 <!doctype html>
 <html><head><meta charset="utf-8"><link rel="stylesheet" href="accounting-style.css"></head>
 <body><div class="page page-one">
-<header class="top-header">
-  <div class="brand-block"><img class="logo" src="stacorp-logo.png"></div>
-  <div class="header-title">
-    <h1>ĐIỂM TIN ĐIỀU HÀNH <span>STACORP</span></h1>
-    <p>Kế toán <b>•</b> Thuế <b>•</b> Nhân sự <b>•</b> Pháp lý <b>•</b> Điều hành</p>
+<header class="office-header">
+  <div class="brand"><img class="logo" src="stacorp-logo.png"><div class="brand-line"></div></div>
+  <div class="headline">
+    <span class="internal-tag">BẢN TIN NỘI BỘ</span>
+    <h1>ĐIỂM TIN ĐIỀU HÀNH <b>STACORP</b></h1>
+    <p>Kế toán <i>•</i> Thuế <i>•</i> Nhân sự <i>•</i> Pháp lý <i>•</i> Điều hành</p>
   </div>
-  <div class="datebox"><div class="date">{{ brief.display_date }}</div><div class="window">{{ brief.display_window }}</div></div>
+  <div class="datebox"><strong>{{ brief.display_date }}</strong><span>{{ brief.display_window }}</span></div>
 </header>
 
-<section class="summary-banner">
+<section class="summary-strip">
   <div class="summary-icon">◖</div>
-  <div><strong>{{ brief.summary }}</strong></div>
+  <p>{{ brief.summary }}</p>
 </section>
 
-<div class="section-heading">
-  <div class="section-icon gold-star">★</div>
-  <h2>3 ĐIỂM NỔI BẬT</h2>
-  <i></i>
-  <small>TIN TỨC TRỌNG TÂM HÔM NAY</small>
+<section class="office-hero">
+  <img src="{{ brief.hero_visual_src }}" alt="">
+  <div class="hero-shade"></div>
+  <div class="hero-labels">
+    <span>KẾ TOÁN</span><span>THUẾ</span><span>NHÂN SỰ</span><span>PHÁP LÝ</span><span>ĐIỀU HÀNH</span>
+  </div>
+  <div class="hero-message"><small>DỮ LIỆU MINH BẠCH</small><b>VẬN HÀNH HIỆU QUẢ</b><em>Kiến tạo giá trị bền vững</em></div>
+</section>
+
+<div class="section-title highlight-titlebar">
+  <span class="section-symbol">★</span><h2>3 ĐIỂM NỔI BẬT</h2><i></i><small>NHANH CHÓNG • CHÍNH XÁC • THỰC TIỄN</small>
 </div>
 
 <div class="highlight-grid">
   {% for h in brief.display_highlights %}
   <article class="highlight-card">
-    <div class="highlight-image">
-      <img src="{{ h.visual_src }}" alt="">
-      <b>0{{ loop.index }}</b>
-    </div>
-    <div class="highlight-title">{{ h.title }}</div>
-    <div class="round-arrow">›</div>
+    <div class="highlight-top"><b>0{{ loop.index }}</b><h3>{{ h.title }}</h3></div>
+    <p>{{ h.summary }}</p>
+    <img src="{{ h.visual_src }}" alt="">
   </article>
   {% endfor %}
 </div>
 
-<div class="section-heading news-heading">
-  <div class="section-icon doc-icon">▤</div>
-  <h2>ĐIỂM TIN • PHẦN 1</h2>
-  <i></i>
-  <small>CẬP NHẬT CHỦ ĐỘNG • PHỤC VỤ ĐIỀU HÀNH • LAN TỎA TRI THỨC</small>
+<div class="section-title news-titlebar">
+  <span class="section-symbol doc-symbol">▤</span><h2>ĐIỂM TIN • PHẦN 1</h2><i></i><small>CẬP NHẬT CHUYÊN SÂU • PHÂN TÍCH THỰC TIỄN • ỨNG DỤNG NGAY</small>
 </div>
 
 <div class="story-grid">
   {% for item in items %}
-  <article class="story-card">
-    <div class="story-labels">
-      <span class="level">{{ item.label.split('·')[0] }}</span>
-      <span class="topic">{{ item.label }}</span>
-    </div>
-    <div class="story-image"><img src="{{ item.render_visual_src }}" alt=""></div>
+  <article class="story-card {{ item.category_key }}">
+    <div class="story-category">{{ item.short_category }}</div>
+    <img class="story-image" src="{{ item.render_visual_src }}" alt="">
     <h3>{{ item.title }}</h3>
     <ul>{% for fact in item.facts[:2] %}<li>{{ fact }}</li>{% endfor %}</ul>
-    <div class="source-line">⌁ &nbsp;Nguồn: {% for s in item.sources %}{{ s.name }}{% if not loop.last %} · {% endif %}{% endfor %}</div>
+    <div class="source-line">Nguồn: {% for s in item.sources %}{{ s.name }}{% if not loop.last %} · {% endif %}{% endfor %}</div>
   </article>
   {% endfor %}
 </div>
 
-<footer class="footer-wave"><div class="footer-brand">STACORP</div><div class="footer-copy">ĐIỂM TIN ĐIỀU HÀNH</div><div class="footer-rule"></div><div class="page-no">01</div></footer>
+<footer class="office-footer"><div class="footer-logo">STACORP</div><span>Kết nối tri thức</span><i>•</i><span>Kiến tạo giá trị bền vững</span><div class="footer-rule"></div><b>01</b></footer>
 </div></body></html>
