@@ -16,7 +16,7 @@ REPORTS = (
     {
         "slot": "CA SÁNG",
         "date": "Thứ Bảy, 03/10/2026",
-        "filename": "AI_FINAL_Morning_2026-10-03.png",
+        "filename": "ATTENDANCE_Morning_2026-10-03_1434.png",
         "alt": "Báo cáo chấm công ca sáng 03/10/2026",
         "summary_lines": [
             "Tổng nhân sự: 8",
