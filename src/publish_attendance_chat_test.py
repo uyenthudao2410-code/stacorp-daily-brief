@@ -14,11 +14,18 @@ MAX_HOSTED_CONTENT_BYTES = 4 * 1024 * 1024
 
 REPORTS = (
     {
+        "slot": "CA SÁNG",
+        "date": "Thứ Bảy, 03/10/2026",
+        "filename": "TEST_FINAL_Morning_2026-10-03.png",
+        "alt": "Báo cáo chấm công ca sáng 03/10/2026",
+        "note": "HYBRID TEST — dữ liệu lấy trực tiếp từ GitHub, hình thức theo mẫu đã duyệt.",
+    },
+    {
         "slot": "CẢ NGÀY",
         "date": "Thứ Sáu, 02/10/2026",
-        "filename": "TEST_AI_Visual_Daily_2026-10-02.png",
-        "alt": "AI visual test báo cáo chấm công cả ngày 02/10/2026",
-        "note": "AI VISUAL TEST — chỉ kiểm tra hình thức, không dùng để đối soát số liệu.",
+        "filename": "TEST_FINAL_Daily_2026-10-02.png",
+        "alt": "Báo cáo chấm công cả ngày 02/10/2026",
+        "note": "HYBRID TEST — dữ liệu lấy trực tiếp từ GitHub, hình thức theo mẫu đã duyệt.",
     },
 )
 
@@ -107,7 +114,7 @@ def _post_report(token: str, report: dict, image: bytes) -> str:
     if not message_id:
         raise RuntimeError("Teams post succeeded without message id")
     print(
-        f"ATTENDANCE_AI_VISUAL_TEST_POST slot={report['slot']} "
+        f"ATTENDANCE_HYBRID_TEST_POST slot={report['slot']} "
         f"file={report['filename']} bytes={len(image)} message_id={message_id}"
     )
     return message_id
@@ -120,7 +127,7 @@ def main() -> int:
     for report in REPORTS:
         image = _download_onedrive_png(token, report["filename"])
         ids.append(_post_report(token, report, image))
-    print("ATTENDANCE_AI_VISUAL_TEST_MESSAGE_IDS=" + ",".join(ids))
+    print("ATTENDANCE_HYBRID_TEST_MESSAGE_IDS=" + ",".join(ids))
     return 0
 
 if __name__ == "__main__":
