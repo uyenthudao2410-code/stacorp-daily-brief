@@ -18,7 +18,9 @@ REPORTS = (
         "date": "Thứ Bảy, 03/10/2026",
         "filename": "AI_FINAL_Morning_2026-10-03.png",
         "alt": "Báo cáo chấm công ca sáng 03/10/2026",
-        "note": "Số liệu phục vụ đối soát. Nếu phát hiện sai lệch hoặc có vướng mắc, vui lòng phản hồi P.HC-NS để kiểm tra và điều chỉnh.",
+        "intro": "Tổng hợp tình hình chấm công ca sáng theo dữ liệu ghi nhận trên hệ thống tại thời điểm phát hành. Chi tiết KPI, thời gian chấm công và trạng thái từng nhân sự được thể hiện trong hình bên dưới.",
+        "action": "Các trường hợp chưa có bản ghi hoặc có sai lệch vui lòng kiểm tra và phản hồi P.HC-NS để đối soát, điều chỉnh kịp thời.",
+        "note": "Dữ liệu phục vụ đối soát và theo dõi nội bộ; giá trị công chính thức thực hiện theo quy trình xác nhận của P.HC-NS.",
     },
 )
 
@@ -74,13 +76,17 @@ def _post_report(token: str, report: dict, image: bytes) -> str:
     slot = html.escape(report["slot"])
     date = html.escape(report["date"])
     alt = html.escape(report["alt"], quote=True)
+    intro = html.escape(report.get("intro", ""))
+    action = html.escape(report.get("action", ""))
     note = html.escape(report.get("note", ""))
     body = (
         f"<b>BÁO CÁO CHẤM CÔNG — {slot}</b>"
         f"<br><b>{date}</b>"
-        + (f"<br><b>{note}</b>" if note else "")
         + "<br><br>"
+        + (f"<b>Nội dung báo cáo:</b> {intro}<br><br>" if intro else "")
+        + (f"<b>Đề nghị phối hợp:</b> {action}<br><br>" if action else "")
         + f'<img src="../hostedContents/1/$value" width="900" alt="{alt}">'
+        + (f"<br><br><i>{note}</i>" if note else "")
     )
     payload = {
         "body": {"contentType": "html", "content": body},
