@@ -1,5 +1,5 @@
 {
-  "schema_version": 12,
-  "requested_at": "2026-10-03T13:20:35+07:00",
-  "purpose": "publish concise morning attendance report to TEST chat"
+  "schema_version": 13,
+  "requested_at": "2026-10-03T14:40:41+07:00",
+  "purpose": "publish fresh 14:34 morning attendance snapshot to TEST chat"
 }
