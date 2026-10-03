@@ -1,0 +1,225 @@
+{
+  "date": "03.10.2026",
+  "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
+  "subtitle": "Thị trường • Dự án • Chi phí • Con người",
+  "summary_lede": "Nhịp đầu tư mới trải từ KKT, KCN và bán dẫn phía Bắc đến lọc hóa dầu, vật liệu và hạ tầng miền Trung; cùng lúc, giải ngân đầu tư công tăng tốc, tạo thêm dư địa cho xây dựng và chuỗi cung ứng.",
+  "items": [
+    {
+      "region": "MIỀN TRUNG",
+      "category": "KKT • CÔNG NGHIỆP",
+      "impact": "CAO",
+      "headline": "Vũng Áng được phê duyệt mở rộng lên khoảng 72.998 ha, bổ sung không gian công nghiệp và cảng biển",
+      "facts": [
+        "Quyết định 1918/QĐ-TTg ngày 02/10/2026 phê duyệt Khu kinh tế Vũng Áng sau mở rộng có quy mô khoảng 72.998 ha.",
+        "Quy mô mới gồm khoảng 57.998 ha đất liền và 15.000 ha mặt biển, với trọng tâm công nghiệp cơ bản gắn cảng Vũng Áng - Sơn Dương và kết nối đường sắt, đường bộ."
+      ],
+      "note": "STACORP cần lưu ý: quỹ phát triển lớn hơn tại Vũng Áng có thể kéo theo nhu cầu hạ tầng, nhà xưởng, logistics và công trình phụ trợ.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Cung ứng"
+      ],
+      "source": "Báo Điện tử Chính phủ",
+      "source_date": "02.10.2026",
+      "url": "https://baochinhphu.vn/thu-tuong-chinh-phu-phe-duyet-mo-rong-khu-kinh-te-vung-ang-ha-tinh-102261002144107396.htm"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "BÁN DẪN • FDI",
+      "impact": "CAO",
+      "headline": "Samsung Electro-Mechanics công bố đầu tư thêm 1,84 tỷ USD mở rộng sản xuất đế bán dẫn tại Thái Nguyên",
+      "facts": [
+        "Khoản đầu tư dự kiến khoảng 2.510 tỷ won, tương đương 1,84 tỷ USD, để mở rộng cơ sở sản xuất đế bán dẫn tại Thái Nguyên.",
+        "Dự án mở rộng tại KCN Yên Bình dự kiến hoàn thành và đi vào hoạt động trước cuối tháng 4/2028."
+      ],
+      "note": "STACORP cần lưu ý: mở rộng bán dẫn tiếp tục làm dày hệ sinh thái nhà máy công nghệ cao, công nghiệp hỗ trợ và hạ tầng kỹ thuật tại Thái Nguyên.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật"
+      ],
+      "source": "Ban Quản lý các KCN tỉnh Thái Nguyên",
+      "source_date": "02.10.2026",
+      "url": "https://bqlkcn.thainguyen.gov.vn/xuc-tien-dau-tu/samsung-electro-mechanics-se-dau-tu-them-1-84-ty-usd-mo-rong-san-xuat-de-ban-dan-tai-thai-nguyen-297812"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "ĐƯỜNG SẮT • GPMB",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hải Phòng dự kiến thu hồi gần 47,3 ha tại Đông Hải cho tuyến đường sắt Lào Cai – Hà Nội – Hải Phòng",
+      "facts": [
+        "Đoạn tuyến qua phường Đông Hải dài khoảng 9,4 km, gồm tuyến Lạch Huyện 6,4 km và tuyến Đình Vũ 3 km.",
+        "Tổng diện tích dự kiến thu hồi gần 47,3 ha; đợt 1 thu hồi gần 21,5 ha và các bên liên quan đã thống nhất bàn giao mặt bằng."
+      ],
+      "note": "STACORP cần lưu ý: tiến độ mặt bằng đường sắt tại khu cảng có thể mở thêm nhu cầu kết nối logistics và hạ tầng phụ trợ quanh Đình Vũ – Lạch Huyện.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Pháp chế"
+      ],
+      "source": "Báo Hải Phòng",
+      "source_date": "02.10.2026",
+      "url": "https://baohaiphong.vn/thu-hoi-gan-47-3-ha-dat-o-phuong-dong-hai-lam-duong-sat-554778.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "KCN • HẠ TẦNG",
+      "impact": "CAO",
+      "headline": "KCN Hải Hà chuẩn bị mở rộng thêm khoảng 500 ha, vốn hạ tầng dự kiến 250 triệu USD",
+      "facts": [
+        "Texhong lên kế hoạch mở rộng KCN Hải Hà thêm khoảng 500 ha, với vốn đầu tư hạ tầng dự kiến 250 triệu USD.",
+        "KCN Hải Hà hiện đã thu hút 37 dự án thứ cấp; 6 dự án mới và mở rộng tổng vốn khoảng 300 triệu USD đang được đẩy nhanh xây dựng."
+      ],
+      "note": "STACORP cần lưu ý: mở rộng Hải Hà làm tăng nhu cầu xây dựng công nghiệp, logistics, môi trường và hạ tầng năng lượng tại khu vực Đông Bắc.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Cung ứng"
+      ],
+      "source": "Cổng TTĐT Quảng Ninh",
+      "source_date": "02.10.2026",
+      "url": "https://www.quangninh.gov.vn/Trang/ChiTietTinTuc.aspx?nid=169605"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "HẠ TẦNG • GIAO THÔNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hải Phòng tăng tốc 5 dự án giao thông trọng điểm, nhiều hạng mục đặt mốc thông xe đầu năm 2027",
+      "facts": [
+        "Cả 5 dự án trọng điểm phía đông thành phố đã bước vào giai đoạn thi công cường độ cao sau khi được đưa vào diện giám sát đặc biệt về tiến độ.",
+        "Ba hầm chui và đoạn Vành đai 2 Tân Vũ – Hưng Đạo – Bùi Viện được yêu cầu thông hầm, thông xe trước 31/01/2027 và hoàn thành trước 30/04/2027."
+      ],
+      "note": "STACORP cần lưu ý: nhịp thi công tăng kéo theo nhu cầu nhân lực, vật liệu, thiết bị và tổ chức công trường trong các tháng cuối năm.",
+      "departments": [
+        "Dự án",
+        "Cung ứng",
+        "Kỹ thuật",
+        "HSE"
+      ],
+      "source": "Báo Hải Phòng",
+      "source_date": "03.10.2026",
+      "url": "https://baohaiphong.vn/tang-toc-thi-cong-5-du-an-giao-thong-trong-diem-554764.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "LỌC HÓA DẦU • EPC",
+      "impact": "TRUNG BÌNH",
+      "headline": "Dự án nâng cấp Nhà máy lọc dầu Dung Quất vào giai đoạn EPC, san lấp mặt bằng đạt khoảng 80%",
+      "facts": [
+        "Dự án đã bước vào giai đoạn thiết kế, mua sắm thiết bị và thi công xây dựng; san lấp mặt bằng đạt khoảng 80%, tương đương hơn 2,33 triệu m³.",
+        "Mặt bằng dự kiến hoàn thành, bàn giao trong tháng 11/2026; BSR đã tăng vốn điều lệ lên hơn 50 nghìn tỷ đồng."
+      ],
+      "note": "STACORP cần lưu ý: giai đoạn EPC tạo nhu cầu lớn về xây lắp, cơ điện, vật tư, logistics và dịch vụ công trường tại Dung Quất.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Cung ứng"
+      ],
+      "source": "Cổng TTĐT tỉnh Quảng Ngãi",
+      "source_date": "02.10.2026",
+      "url": "https://quangngai.gov.vn/tin-tuc/pho-chu-tich-ubnd-tinh-do-tam-hien-kiem-tra-tinh-hinh-thuc-hien-cac-noi-dung-theo-ket-luan-08-cua-ban-thuong-vu-tinh-uy.html?menuId=60d13ce6e25e9e31f77db2e8"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "VẬT LIỆU • CHI PHÍ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Quảng Ngãi nâng công suất mỏ đá An Hội, nguồn cung cho 21 công trình hạ tầng được cải thiện",
+      "facts": [
+        "Mỏ An Hội có quy mô 29,9 ha và trữ lượng hơn 8,1 triệu m³, là mỏ đá lớn nhất đang được tỉnh Quảng Ngãi cấp phép khai thác.",
+        "Mỏ đang cung cấp 158.881 m³ đá cho 21 công trình, dự án; năng lực thành phẩm có thể đạt hơn 4.000 m³/ngày khi vận hành hết công suất."
+      ],
+      "note": "STACORP cần lưu ý: nguồn đá được bổ sung giúp giảm áp lực chờ vật liệu và cải thiện khả năng tổ chức tiến độ cho các dự án phía đông Quảng Ngãi.",
+      "departments": [
+        "Cung ứng",
+        "Dự án",
+        "Đấu thầu",
+        "Tài chính"
+      ],
+      "source": "Báo Xây dựng",
+      "source_date": "02.10.2026",
+      "url": "https://baoxaydung.vn/quang-ngai-giai-bai-toan-thieu-da-xay-dung-nhieu-cong-trinh-tang-toc-thi-cong-192261002194429476.htm"
+    },
+    {
+      "region": "TOÀN QUỐC",
+      "category": "ĐẦU TƯ CÔNG • DÒNG TIỀN",
+      "impact": "TRUNG BÌNH",
+      "headline": "Giải ngân đầu tư công 9 tháng đạt 642.961,6 tỷ đồng, tốc độ tháng 9 tăng rõ so với tháng 8",
+      "facts": [
+        "Lũy kế đến hết 30/09/2026, giải ngân vốn kế hoạch năm đạt 642.961,6 tỷ đồng, bằng 62,9% kế hoạch Thủ tướng Chính phủ giao.",
+        "Tốc độ giải ngân trong tháng 9 bằng 1,58 lần tháng 8; nếu loại phần tiết kiệm 5% vốn địa phương cho đường sắt, tỷ lệ giải ngân đạt 64,8%."
+      ],
+      "note": "STACORP cần lưu ý: dòng vốn giải ngân nhanh hơn có thể hỗ trợ nhịp thi công, thanh toán và nhu cầu cung ứng ở các dự án công Bắc – Trung.",
+      "departments": [
+        "Tài chính",
+        "Kinh doanh",
+        "Dự án",
+        "Cung ứng"
+      ],
+      "source": "Báo Điện tử Chính phủ",
+      "source_date": "03.10.2026",
+      "url": "https://baochinhphu.vn/giai-ngan-von-dau-tu-cong-9-thang-nam-2026-mot-so-bo-nganh-dia-phuong-con-cham-102261003011740764.htm"
+    }
+  ],
+  "news_themes": [
+    {
+      "label": "KKT • KCN",
+      "title": "Không gian công nghiệp tiếp tục mở rộng ở cả Bắc và Trung",
+      "detail": "Vũng Áng, Hải Hà và Thái Nguyên cùng xuất hiện với quỹ đất, vốn đầu tư và dự án công nghệ mới, cho thấy các cực công nghiệp tiếp tục tăng quy mô và chiều sâu."
+    },
+    {
+      "label": "GIAO THÔNG • LOGISTICS",
+      "title": "Đường sắt và các trục đô thị – cảng bước vào nhịp triển khai cao hơn",
+      "detail": "Mặt bằng tuyến đường sắt tại Hải Phòng và 5 dự án giao thông trọng điểm đang cùng tăng tốc, củng cố kết nối giữa khu công nghiệp, đô thị và hệ thống cảng."
+    },
+    {
+      "label": "CÔNG NGHIỆP • NĂNG LƯỢNG",
+      "title": "Dung Quất chuyển mạnh sang giai đoạn EPC",
+      "detail": "Tiến độ san lấp của dự án lọc dầu cùng hoạt động chuẩn bị Trung tâm Lọc hóa dầu và Năng lượng cho thấy Dung Quất đang bước sâu hơn vào chu kỳ xây dựng công nghiệp lớn."
+    },
+    {
+      "label": "VẬT LIỆU • DÒNG VỐN",
+      "title": "Nguồn đá và giải ngân đầu tư công cùng cải thiện",
+      "detail": "Quảng Ngãi bổ sung nguồn cung đá cho loạt công trình trong khi giải ngân đầu tư công tăng tốc, tạo nền thuận lợi hơn cho thi công và chuỗi cung ứng xây dựng."
+    }
+  ],
+  "regional_pulse": [
+    {
+      "region": "MIỀN BẮC",
+      "title": "Công nghệ cao, KCN và hạ tầng kết nối cùng tăng nhịp",
+      "detail": "Thái Nguyên, Quảng Ninh và Hải Phòng nổi bật với mở rộng bán dẫn, KCN, đường sắt và giao thông đô thị; nhu cầu xây dựng công nghiệp và logistics tiếp tục dày lên."
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "title": "Vũng Áng – Dung Quất mở thêm không gian công nghiệp",
+      "detail": "Miền Trung ghi nhận cả mở rộng KKT, tiến độ EPC lọc dầu và cải thiện nguồn vật liệu, tạo bức tranh đầu tư thiên về công nghiệp nặng, cảng biển và hạ tầng nền."
+    }
+  ],
+  "news_numbers": [
+    {
+      "value": "72.998 ha",
+      "label": "quy mô KKT Vũng Áng sau mở rộng",
+      "context": "Gồm khoảng 57.998 ha đất liền và 15.000 ha mặt biển."
+    },
+    {
+      "value": "1,84 tỷ USD",
+      "label": "vốn mở rộng Samsung Electro-Mechanics",
+      "context": "Khoản đầu tư mới cho sản xuất đế bán dẫn tại Thái Nguyên."
+    },
+    {
+      "value": "500 ha",
+      "label": "diện tích dự kiến mở rộng KCN Hải Hà",
+      "context": "Vốn đầu tư hạ tầng dự kiến khoảng 250 triệu USD."
+    },
+    {
+      "value": "642.961,6 tỷ",
+      "label": "giải ngân đầu tư công 9 tháng",
+      "context": "Lũy kế đến hết ngày 30/09/2026 theo Bộ Tài chính."
+    }
+  ],
+  "action_today": ""
+}
