@@ -1,5 +1,5 @@
 {
-  "schema_version": 8,
-  "requested_at": "2026-10-03T10:29:58+07:00",
-  "purpose": "publish AI-rendered attendance visual test for 02/10/2026 to TEST chat"
+  "schema_version": 9,
+  "requested_at": "2026-10-03T11:26:11+07:00",
+  "purpose": "publish exact-data hybrid attendance visuals for current morning and prior full day to TEST chat"
 }
