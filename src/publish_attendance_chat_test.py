@@ -16,8 +16,9 @@ REPORTS = (
     {
         "slot": "CẢ NGÀY",
         "date": "Thứ Sáu, 02/10/2026",
-        "filename": "TEST_V6_Daily_2026-10-02.png",
-        "alt": "Báo cáo chấm công cả ngày 02/10/2026",
+        "filename": "TEST_AI_Visual_Daily_2026-10-02.png",
+        "alt": "AI visual test báo cáo chấm công cả ngày 02/10/2026",
+        "note": "AI VISUAL TEST — chỉ kiểm tra hình thức, không dùng để đối soát số liệu.",
     },
 )
 
@@ -73,12 +74,13 @@ def _post_report(token: str, report: dict, image: bytes) -> str:
     slot = html.escape(report["slot"])
     date = html.escape(report["date"])
     alt = html.escape(report["alt"], quote=True)
+    note = html.escape(report.get("note", ""))
     body = (
         f"<b>[TEST] BÁO CÁO CHẤM CÔNG — {slot}</b>"
         f"<br><b>{date}</b>"
-        "<br>Tổng hợp từ hệ thống chấm công để đối soát."
-        "<br><br>"
-        f'<img src="../hostedContents/1/$value" width="900" alt="{alt}">'
+        + (f"<br><b>{note}</b>" if note else "")
+        + "<br><br>"
+        + f'<img src="../hostedContents/1/$value" width="900" alt="{alt}">'
     )
     payload = {
         "body": {"contentType": "html", "content": body},
@@ -105,7 +107,7 @@ def _post_report(token: str, report: dict, image: bytes) -> str:
     if not message_id:
         raise RuntimeError("Teams post succeeded without message id")
     print(
-        f"ATTENDANCE_V6_TEST_POST slot={report['slot']} "
+        f"ATTENDANCE_AI_VISUAL_TEST_POST slot={report['slot']} "
         f"file={report['filename']} bytes={len(image)} message_id={message_id}"
     )
     return message_id
@@ -118,7 +120,7 @@ def main() -> int:
     for report in REPORTS:
         image = _download_onedrive_png(token, report["filename"])
         ids.append(_post_report(token, report, image))
-    print("ATTENDANCE_V6_TEST_MESSAGE_IDS=" + ",".join(ids))
+    print("ATTENDANCE_AI_VISUAL_TEST_MESSAGE_IDS=" + ",".join(ids))
     return 0
 
 if __name__ == "__main__":
