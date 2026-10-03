@@ -16,16 +16,9 @@ REPORTS = (
     {
         "slot": "CA SÁNG",
         "date": "Thứ Bảy, 03/10/2026",
-        "filename": "TEST_FINAL_Morning_2026-10-03.png",
+        "filename": "AI_FINAL_Morning_2026-10-03.png",
         "alt": "Báo cáo chấm công ca sáng 03/10/2026",
-        "note": "HYBRID TEST — dữ liệu lấy trực tiếp từ GitHub, hình thức theo mẫu đã duyệt.",
-    },
-    {
-        "slot": "CẢ NGÀY",
-        "date": "Thứ Sáu, 02/10/2026",
-        "filename": "TEST_FINAL_Daily_2026-10-02.png",
-        "alt": "Báo cáo chấm công cả ngày 02/10/2026",
-        "note": "HYBRID TEST — dữ liệu lấy trực tiếp từ GitHub, hình thức theo mẫu đã duyệt.",
+        "note": "Số liệu phục vụ đối soát. Nếu phát hiện sai lệch hoặc có vướng mắc, vui lòng phản hồi P.HC-NS để kiểm tra và điều chỉnh.",
     },
 )
 
@@ -83,7 +76,7 @@ def _post_report(token: str, report: dict, image: bytes) -> str:
     alt = html.escape(report["alt"], quote=True)
     note = html.escape(report.get("note", ""))
     body = (
-        f"<b>[TEST] BÁO CÁO CHẤM CÔNG — {slot}</b>"
+        f"<b>BÁO CÁO CHẤM CÔNG — {slot}</b>"
         f"<br><b>{date}</b>"
         + (f"<br><b>{note}</b>" if note else "")
         + "<br><br>"
@@ -114,7 +107,7 @@ def _post_report(token: str, report: dict, image: bytes) -> str:
     if not message_id:
         raise RuntimeError("Teams post succeeded without message id")
     print(
-        f"ATTENDANCE_HYBRID_TEST_POST slot={report['slot']} "
+        f"ATTENDANCE_MORNING_REPORT_POST slot={report['slot']} "
         f"file={report['filename']} bytes={len(image)} message_id={message_id}"
     )
     return message_id
@@ -127,7 +120,7 @@ def main() -> int:
     for report in REPORTS:
         image = _download_onedrive_png(token, report["filename"])
         ids.append(_post_report(token, report, image))
-    print("ATTENDANCE_HYBRID_TEST_MESSAGE_IDS=" + ",".join(ids))
+    print("ATTENDANCE_MORNING_REPORT_MESSAGE_IDS=" + ",".join(ids))
     return 0
 
 if __name__ == "__main__":
