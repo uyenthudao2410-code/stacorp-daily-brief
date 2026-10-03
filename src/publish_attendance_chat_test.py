@@ -16,14 +16,15 @@ REPORTS = (
     {
         "slot": "CA SÁNG",
         "date": "Thứ Bảy, 03/10/2026",
-        "filename": "ATTENDANCE_Morning_2026-10-03_1434.png",
+        "filename": "ATTENDANCE_Morning_2026-10-03_1704_MOCKUP.png",
         "alt": "Báo cáo chấm công ca sáng 03/10/2026",
         "summary_lines": [
+            "Cập nhật dữ liệu: 17:04",
             "Tổng nhân sự: 8",
-            "Đã chấm công/đang làm việc: 6",
-            "Chưa chấm công: 2",
+            "Đã ghi nhận ca sáng: 6",
+            "Chưa có bản ghi ca sáng: 2",
         ],
-        "action": "Chi tiết giờ vào/ra, thời lượng và trạng thái từng nhân sự xem tại báo cáo bên dưới. Nếu có sai lệch, vui lòng phản hồi P.HC-NS để đối soát.",
+        "action": "Chi tiết giờ vào/ra và thời lượng được thể hiện trong hình. Nếu có sai lệch, vui lòng phản hồi P.HC-NS để đối soát.",
     },
 )
 
