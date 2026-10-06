@@ -1,79 +1,140 @@
 {
-  "date": "05.10.2026",
+  "date": "06.10.2026",
   "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
   "subtitle": "Thị trường • Dự án • Chi phí • Con người",
-  "summary_lede": "Ngày 05/10, dòng tín dụng và hạ tầng công nghiệp tiếp tục mở rộng ở phía Bắc, trong khi miền Trung tăng tốc dự án năng lượng, triển khai quy hoạch cửa khẩu và ứng phó một đợt mưa lớn diện rộng.",
+  "summary_lede": "Ngày 06/10, hạ tầng liên vùng và công nghiệp tiếp tục mở thêm khối lượng thi công ở phía Bắc và miền Trung; nguồn vật liệu có tín hiệu cải thiện, trong khi giá xi măng và mưa lớn tạo sức ép ngắn hạn.",
   "items": [
     {
-      "region": "TOÀN QUỐC",
-      "category": "TÀI CHÍNH • DÒNG VỐN",
+      "region": "MIỀN BẮC",
+      "category": "HẠ TẦNG • GIAO THÔNG",
       "impact": "CAO",
-      "headline": "Dư nợ tín dụng toàn hệ thống đạt khoảng 20,75 triệu tỷ đồng, tăng 11,59% sau 9 tháng",
+      "headline": "Đường sắt Hà Nội–Quảng Ninh bước sang giai đoạn đúc dầm; gần 40 mũi thi công đang triển khai",
       "facts": [
-        "Đến 30/9/2026, dư nợ toàn hệ thống đạt khoảng 20,75 triệu tỷ đồng, tăng 11,59% so với cuối năm 2025 và tăng 16,69% so với cùng kỳ.",
-        "Đã có 19 ngân hàng tham gia chương trình tín dụng hướng tới động lực tăng trưởng và DNNVV với quy mô khoảng 409.000 tỷ đồng; 10 ngân hàng đã giải ngân khoảng 18,6 nghìn tỷ đồng."
+        "Tuyến dài khoảng 120,4 km, tổng vốn hơn 147.000 tỷ đồng và dự kiến cần khoảng 3.200 phiến dầm điển hình.",
+        "Phiến dầm đầu tiên đã được đúc; 6 trong 8 bãi đúc phía Bắc đang hoàn thiện để chuyển sang sản xuất và lao lắp trên diện rộng."
       ],
-      "note": "STACORP cần lưu ý: dư địa tín dụng rộng hơn hỗ trợ nhu cầu vốn cho dự án công nghiệp, hạ tầng và kế hoạch tăng trưởng cuối năm.",
+      "note": "STACORP cần lưu ý: giai đoạn kết cấu phần trên mở thêm nhu cầu bê tông, kết cấu, cơ điện, logistics và các gói thầu phụ trợ dọc hành lang dự án.",
       "departments": [
-        "Tài chính",
         "Kinh doanh",
         "Đấu thầu",
-        "Dự án"
+        "Dự án",
+        "Cung ứng",
+        "Kỹ thuật"
       ],
-      "source": "Ngân hàng Nhà nước Việt Nam",
+      "source": "VnExpress",
       "source_date": "03.10.2026",
-      "url": "https://dangcongsan.vn/nganhangnhanuoc/tin-tuc-hoat-dong/tin-dung-ngan-hang-tiep-tuc-ho-tro-tang-truong-kinh-te3.html"
+      "url": "https://vnexpress.net/hai-tuyen-duong-sat-toc-do-cao-do-vinspeed-dau-tu-bat-dau-duc-dam-5128059.html"
     },
     {
-      "region": "MIỀN BẮC",
-      "category": "FDI • KHU CÔNG NGHIỆP",
-      "impact": "CAO",
-      "headline": "KCN An Phát 5 tại Hải Phòng bước vào giai đoạn sẵn sàng bàn giao đất cho nhà đầu tư",
+      "region": "MIỀN TRUNG",
+      "category": "KHU CÔNG NGHIỆP • NĂNG LƯỢNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hà Tĩnh chấp thuận dự án đường dây và trạm 110kV cho KCN Bắc Thạch Hà",
       "facts": [
-        "An Phát 5 có tổng diện tích 150 ha; đất công nghiệp chiếm 69% tổng diện tích theo quy hoạch.",
-        "Hạ tầng được triển khai từ tháng 4/2025, dự kiến hoàn thành trong tháng 12/2026 và vận hành đồng bộ từ năm 2027."
+        "Tổng công ty Điện lực miền Bắc được chấp thuận làm nhà đầu tư dự án với tổng vốn dự kiến khoảng 114,6 tỷ đồng.",
+        "Dự án có mục tiêu hoàn thiện hạ tầng truyền tải, phân phối điện cho KCN Bắc Thạch Hà và dự kiến đưa vào sử dụng trong quý IV/2027."
       ],
-      "note": "STACORP cần lưu ý: quỹ đất sẵn sàng và hạ tầng hoàn thiện mở thêm cơ hội nhà xưởng, MEP và dịch vụ hỗ trợ sản xuất tại hành lang công nghiệp Hải Phòng.",
+      "note": "STACORP cần lưu ý: đầu tư điện 110kV là tín hiệu hạ tầng nền cho mở rộng phụ tải sản xuất và thu hút dự án mới tại khu công nghiệp.",
       "departments": [
         "Kinh doanh",
         "Đấu thầu",
         "Dự án",
         "Kỹ thuật"
       ],
-      "source": "Vietnam Investment Review",
-      "source_date": "02.10.2026",
-      "url": "https://vir.com.vn/an-phat-5-industrial-park-positions-for-new-wave-of-investment-in-northern-vietnam-162009.html"
+      "source": "Cổng TTĐT tỉnh Hà Tĩnh",
+      "source_date": "05.10.2026",
+      "url": "https://hatinh.gov.vn/vi/bai-viet/ha-tinh-chap-thuan-dau-tu-du-an-duong-day-va-tram-bien-ap-110kv-tai-khu-cong-nghiep-bac-thach-ha"
     },
     {
       "region": "MIỀN TRUNG",
-      "category": "NĂNG LƯỢNG • DỰ ÁN",
+      "category": "CHI PHÍ • VẬT LIỆU",
       "impact": "CAO",
-      "headline": "Nhiệt điện Quảng Trạch I đạt 99,62% tiến độ, hai tổ máy đã hòa lưới",
+      "headline": "Xi măng Sông Lam áp mức tăng 70.000–100.000 đồng/tấn từ ngày 05/10",
       "facts": [
-        "Nhà máy Nhiệt điện Quảng Trạch I gồm 2 tổ máy với tổng công suất 1.403 MW và đã đạt 99,62% tiến độ.",
-        "Tổ máy 1 hòa lưới ngày 12/4 và tổ máy 2 ngày 28/9; kế hoạch phát điện thương mại lần lượt là 23/11 và 31/12/2026."
+        "Xi măng bao tăng 70.000 đồng/tấn và xi măng rời tăng 100.000 đồng/tấn, các mức điều chỉnh đã bao gồm VAT.",
+        "Mức giá mới được áp dụng từ 06h00 ngày 05/10/2026 và duy trì cho đến khi có thông báo thay thế."
       ],
-      "note": "STACORP cần lưu ý: dự án bước vào giai đoạn hoàn thiện và chạy thử, kéo theo nhu cầu dịch vụ kỹ thuật, vật tư và hạ tầng phụ trợ quanh trung tâm điện lực.",
+      "note": "STACORP cần lưu ý: biến động giá xi măng cần được phản ánh sớm vào dự toán, chào giá và kế hoạch mua vật tư cho các gói đang triển khai.",
       "departments": [
-        "Dự án",
-        "Kỹ thuật",
         "Cung ứng",
+        "Đấu thầu",
+        "Tài chính",
+        "Dự án"
+      ],
+      "source": "Cổng thông tin Xi măng Việt Nam",
+      "source_date": "03.10.2026",
+      "url": "https://muaban.ximang.vn/thi-truong-xi-mang-ghi-nhan-lan-song-tang-gia-cua-song-lam"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "VẬT LIỆU • CÔNG TRƯỜNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Bắc Ninh bổ sung nguồn đất san lấp cho hai dự án giao thông và đê điều hơn 2.250 tỷ đồng",
+      "facts": [
+        "Nguồn đất từ mỏ tại xã Đồng Kỳ và xã Bố Hạ được bổ sung cho dự án nâng cấp ĐT.293 có tổng mức đầu tư 1.799 tỷ đồng.",
+        "Nguồn vật liệu cũng phục vụ dự án xử lý khẩn cấp đê tả Cầu đoạn K0–K10 tại xã Hợp Thịnh, tổng mức đầu tư 453,178 tỷ đồng."
+      ],
+      "note": "STACORP cần lưu ý: cơ chế bổ sung nguồn san lấp giúp giảm một điểm nghẽn vật liệu cho các công trường hạ tầng lớn tại Bắc Ninh.",
+      "departments": [
+        "Cung ứng",
+        "Dự án",
+        "Đấu thầu",
+        "Logistics"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "05.10.2026",
+      "url": "https://baodauthau.vn/bac-ninh-mo-luong-xanh-dua-vat-lieu-vao-cong-truong-post208944.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "CÔNG NGHIỆP • DỰ ÁN",
+      "impact": "TRUNG BÌNH",
+      "headline": "Quảng Ngãi tiếp nhận hồ sơ đề xuất Nhà máy vật liệu trang trí La Hà tại Cụm công nghiệp La Hà mở rộng",
+      "facts": [
+        "Sở Tài chính Quảng Ngãi ban hành Thông báo 520/TB-STC về tiếp nhận hồ sơ đề nghị chấp thuận chủ trương đầu tư đồng thời chấp thuận nhà đầu tư.",
+        "Dự án tại các lô B1, B2 của Cụm công nghiệp La Hà mở rộng, định hướng sản xuất đá ốp lát, sản phẩm gia công từ đá và gốm trang trí cho thị trường trong nước và xuất khẩu."
+      ],
+      "note": "STACORP cần lưu ý: dự án mới tạo tín hiệu nhu cầu nhà xưởng, hạ tầng kỹ thuật và các hạng mục phụ trợ trong cụm công nghiệp.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật"
+      ],
+      "source": "Cổng TTĐT tỉnh Quảng Ngãi",
+      "source_date": "05.10.2026",
+      "url": "https://quangngai.gov.vn/cong-dan/thong-bao/thong-bao-tiep-nhan-ho-so-doi-voi-du-an-nha-may-vat-lieu-trang-tri-la-ha.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "VẬT LIỆU • CHUỖI CUNG ỨNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Lào Cai cho nhiều mỏ cát, sỏi hoạt động trở lại sau rà soát hồ sơ và điều kiện khai thác",
+      "facts": [
+        "Một số đơn vị được phép khai thác trở lại sau khi hoàn thiện thủ tục; Hợp Nhất được tiếp tục khai thác tại 4 khu vực và tập kết tại 3 bãi.",
+        "Cơ quan quản lý yêu cầu khai thác đúng phạm vi, công suất và thời hạn; không khai thác ban đêm, trong thời gian mưa lũ và không sử dụng tàu cuốc."
+      ],
+      "note": "STACORP cần lưu ý: nguồn cát sỏi được khôi phục có thể hỗ trợ nguồn cung xây dựng tại khu vực, nhưng điều kiện khai thác vẫn được kiểm soát chặt.",
+      "departments": [
+        "Cung ứng",
+        "Dự án",
+        "Logistics",
         "HSE"
       ],
-      "source": "Báo Xây dựng",
-      "source_date": "04.10.2026",
-      "url": "https://baoxaydung.vn/kiem-soat-chat-tien-do-duong-gang-som-van-hanh-nha-may-nhiet-dien-quang-trach-i-19226100417264838.htm"
+      "source": "Bộ Xây dựng / Báo Xây dựng",
+      "source_date": "05.10.2026",
+      "url": "https://dangcongsan.org.vn/boxaydung/tin-tuc-hoat-dong/lao-cai-nhieu-mo-cat-soi-duoc-phep-khai-thac-tro-lai-sau-ra-soat.html"
     },
     {
       "region": "MIỀN TRUNG",
       "category": "HSE • THỜI TIẾT",
-      "impact": "THEO DÕI",
-      "headline": "Mưa lớn từ Hà Tĩnh đến Quảng Trị ngày 05/10, cục bộ có nơi trên 160 mm",
+      "impact": "CAO",
+      "headline": "Mưa lớn miền Trung tăng cường ngày 06–08/10, có nơi trên 400–600 mm trong cả đợt",
       "facts": [
-        "Ngày và đêm 05/10, khu vực từ Hà Tĩnh đến Quảng Trị được dự báo mưa 30–70 mm, cục bộ có nơi trên 160 mm.",
-        "Ngày và đêm 06/10, từ Quảng Trị đến Đà Nẵng và phía Đông Quảng Ngãi dự báo 40–80 mm, cục bộ trên 180 mm; có nguy cơ mưa cường độ trên 100 mm trong 3 giờ."
+        "Ngày và đêm 06/10, từ Nam Hà Tĩnh đến Đà Nẵng và phía Đông Quảng Ngãi dự báo mưa 50–100 mm, cục bộ trên 200 mm; có nguy cơ mưa trên 100 mm trong 3 giờ.",
+        "Tổng mưa từ 06/10 đến hết đêm 08/10 phổ biến 100–250 mm, có nơi trên 400 mm; riêng Nam Quảng Trị đến Huế phổ biến 300–400 mm, có nơi trên 600 mm."
       ],
-      "note": "STACORP cần lưu ý: mưa lớn có thể ảnh hưởng tiến độ công trường, vận chuyển vật tư và điều kiện an toàn tại các khu vực miền Trung.",
+      "note": "STACORP cần lưu ý: nguy cơ ngập công trường, lũ quét và sạt lở tăng rõ; kế hoạch thi công và vận chuyển tại miền Trung cần bám sát cảnh báo thời tiết mới nhất.",
       "departments": [
         "HSE",
         "Dự án",
@@ -81,142 +142,84 @@
         "Logistics"
       ],
       "source": "Trung tâm Dự báo Khí tượng Thủy văn Quốc gia",
+      "source_date": "06.10.2026",
+      "url": "https://kttv.gov.vn/kttv/vi-VN/1/tin-du-bao-mua-lon-o-khu-vuc-tu-ha-tinh-den-tp-da-nang-va-phia-dong-tinh-quang-ngai-post55221.html"
+    },
+    {
+      "region": "TOÀN QUỐC",
+      "category": "THỊ TRƯỜNG • TĂNG TRƯỞNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "17/34 địa phương tăng trưởng hai chữ số trong quý III; công nghiệp–xây dựng là động lực chính",
+      "facts": [
+        "Trong quý III/2026, 17/34 tỉnh, thành đạt mức tăng trưởng GRDP từ 10% trở lên, so với 9 địa phương trong nửa đầu năm.",
+        "Khu vực công nghiệp–xây dựng tăng trên 10% tại 30/34 địa phương trong quý III, phản ánh nhịp sản xuất và đầu tư hạ tầng tiếp tục cao."
+      ],
+      "note": "STACORP cần lưu ý: tăng trưởng lan rộng ở các địa bàn công nghiệp lớn tiếp tục hỗ trợ triển vọng nhu cầu xây dựng và dịch vụ dự án trong quý IV.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Tài chính"
+      ],
+      "source": "Báo Đấu thầu",
       "source_date": "05.10.2026",
-      "url": "https://www.nchmf.gov.vn/kttv/vi-VN/1/tin-du-bao-mua-lon-o-khu-vuc-tu-ha-tinh-den-tp-da-nang-va-phia-dong-tinh-quang-ngai-post54290.html"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "HẠ TẦNG • GIAO THÔNG",
-      "impact": "TRUNG BÌNH",
-      "headline": "Bảy dự án cầu lớn qua sông Hồng đồng loạt tăng tốc thi công tại Hà Nội",
-      "facts": [
-        "Các dự án Tứ Liên, Ngọc Hồi, Trần Hưng Đạo, Thượng Cát, Vân Phúc, Hồng Hà và Mễ Sở đang được triển khai đồng thời với nhiều mũi thi công.",
-        "Riêng cầu Tứ Liên đạt giá trị thi công khoảng 2.046 tỷ đồng trên tổng giá trị hợp đồng 9.418 tỷ đồng, tương ứng 21,72%."
-      ],
-      "note": "STACORP cần lưu ý: khối lượng thi công lớn tạo nhu cầu kéo dài cho vật liệu, kết cấu, cơ điện và các gói thầu phụ trợ tại Hà Nội.",
-      "departments": [
-        "Kinh doanh",
-        "Đấu thầu",
-        "Dự án",
-        "Cung ứng"
-      ],
-      "source": "Báo Xây dựng",
-      "source_date": "04.10.2026",
-      "url": "https://baoxaydung.vn/loat-cay-cau-lon-cung-tang-toc-ha-noi-mo-rong-khong-gian-phat-trien-192261004131753687.htm"
-    },
-    {
-      "region": "MIỀN TRUNG",
-      "category": "QUY HOẠCH • HẠ TẦNG",
-      "impact": "TRUNG BÌNH",
-      "headline": "Hà Tĩnh triển khai quy hoạch Khu kinh tế cửa khẩu quốc tế Cầu Treo đến năm 2045",
-      "facts": [
-        "UBND tỉnh Hà Tĩnh đã ban hành kế hoạch thực hiện Quy hoạch chung xây dựng Khu kinh tế cửa khẩu quốc tế Cầu Treo đến năm 2045.",
-        "Kế hoạch xác định lộ trình điều chỉnh quy hoạch phân khu, hoàn thiện hạ tầng kỹ thuật, huy động nguồn lực và ưu tiên một số dự án trọng điểm."
-      ],
-      "note": "STACORP cần lưu ý: quá trình cụ thể hóa quy hoạch có thể tạo thêm nhu cầu hạ tầng kỹ thuật, logistics và xây dựng tại hành lang cửa khẩu phía Tây Hà Tĩnh.",
-      "departments": [
-        "Kinh doanh",
-        "Đấu thầu",
-        "Dự án",
-        "Logistics"
-      ],
-      "source": "Cổng TTĐT tỉnh Hà Tĩnh",
-      "source_date": "03.10.2026",
-      "url": "https://hatinh.gov.vn/vi/bai-viet/trien-khai-quy-hoach-khu-kinh-te-cua-khau-quoc-te-cau-treo-den-nam-2045"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "CÔNG NGHIỆP • NĂNG SUẤT",
-      "impact": "TRUNG BÌNH",
-      "headline": "Khuyến công phía Bắc đẩy nhanh hỗ trợ máy móc và đổi mới công nghệ trong quý IV",
-      "facts": [
-        "Kế hoạch kinh phí khuyến công năm 2026 của 15 tỉnh, thành phố phía Bắc là 110.762 triệu đồng, tăng 6,96% so với năm 2025.",
-        "Trong 9 tháng, các chương trình đã hỗ trợ 57 cơ sở công nghiệp nông thôn ứng dụng máy móc, thiết bị tiên tiến với kinh phí 10.539 triệu đồng."
-      ],
-      "note": "STACORP cần lưu ý: xu hướng đầu tư máy móc và nâng cấp năng lực sản xuất tiếp tục tạo nhu cầu cải tạo nhà xưởng và hạ tầng kỹ thuật.",
-      "departments": [
-        "Kinh doanh",
-        "Kỹ thuật",
-        "Dự án"
-      ],
-      "source": "Bộ Công Thương",
-      "source_date": "02.10.2026",
-      "url": "https://moit.gov.vn/tin-tuc/khuyen-cong-phia-bac-tang-toc-hoan-thanh-ke-hoach-nam-2026.html"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "CON NGƯỜI • LAO ĐỘNG",
-      "impact": "TRUNG BÌNH",
-      "headline": "Hà Nội giải quyết việc làm cho khoảng 161.000 lao động trong 9 tháng",
-      "facts": [
-        "Trong 9 tháng năm 2026, Hà Nội giải quyết việc làm cho khoảng 161.000 lao động, đạt 94,1% kế hoạch năm.",
-        "Riêng tháng 9, khoảng 21.900 lao động được giải quyết việc làm, tăng 15,3% so với cùng kỳ."
-      ],
-      "note": "STACORP cần lưu ý: thị trường lao động duy trì mức hấp thụ cao, phản ánh nhu cầu nhân lực vẫn tích cực trong giai đoạn cuối năm.",
-      "departments": [
-        "Nhân sự",
-        "Dự án",
-        "Kinh doanh"
-      ],
-      "source": "Báo Điện tử Chính phủ – Thăng Long",
-      "source_date": "04.10.2026",
-      "url": "https://thanglong.baochinhphu.vn/ha-noi-giai-quyet-viec-lam-cho-161000-lao-dong-trong-9-thang-103261004075911654.htm"
+      "url": "https://baodauthau.vn/ban-tin-thoi-su-sang-510-post208928.html"
     }
   ],
   "news_themes": [
     {
-      "label": "VỐN • CÔNG NGHIỆP",
-      "title": "Tín dụng và quỹ đất công nghiệp cùng mở thêm dư địa",
-      "detail": "Dư nợ tín dụng tăng hai chữ số trong khi An Phát 5 tiến gần hoàn thiện hạ tầng, tạo nền vốn và mặt bằng cho hoạt động đầu tư sản xuất cuối năm."
+      "label": "HẠ TẦNG • ĐẦU TƯ",
+      "title": "Các dự án liên vùng và KCN tiếp tục tạo khối lượng mới",
+      "detail": "Đường sắt Hà Nội–Quảng Ninh chuyển sang đúc dầm, trong khi Hà Tĩnh bổ sung hạ tầng điện 110kV cho KCN Bắc Thạch Hà và Quảng Ngãi đón thêm đề xuất nhà máy."
     },
     {
-      "label": "HẠ TẦNG • GIAO THÔNG",
-      "title": "Các đại công trường phía Bắc duy trì nhịp thi công",
-      "detail": "Bảy cầu lớn qua sông Hồng đang triển khai đồng thời, còn chương trình khuyến công tiếp tục đưa máy móc mới vào các cơ sở sản xuất trong vùng."
+      "label": "VẬT LIỆU • CHI PHÍ",
+      "title": "Nguồn cung có tín hiệu cải thiện nhưng mặt bằng giá vẫn biến động",
+      "detail": "Bắc Ninh và Lào Cai tháo thêm nút thắt nguồn vật liệu, còn Xi măng Sông Lam áp mức giá mới từ 05/10, tạo áp lực trực tiếp lên dự toán và mua hàng."
     },
     {
-      "label": "NĂNG LƯỢNG • QUY HOẠCH",
-      "title": "Miền Trung xuất hiện thêm các mốc triển khai quan trọng",
-      "detail": "Quảng Trạch I đã đạt trên 99% tiến độ, còn Hà Tĩnh bắt đầu cụ thể hóa quy hoạch Cầu Treo với trọng tâm hạ tầng và dự án ưu tiên."
+      "label": "CÔNG TRƯỜNG • HSE",
+      "title": "Miền Trung bước vào một nhịp mưa lớn kéo dài",
+      "detail": "Dự báo mới nâng tổng lượng mưa 06–08/10 lên mức rất cao tại nhiều khu vực, làm gia tăng nguy cơ ngập, lũ quét, sạt lở và gián đoạn vận chuyển."
     },
     {
-      "label": "CON NGƯỜI • HSE",
-      "title": "Lao động tích cực, thời tiết là biến số ngắn hạn",
-      "detail": "Hà Nội duy trì khả năng tạo việc làm cao, trong khi mưa lớn ở Trung Bộ có thể ảnh hưởng ngắn hạn tới công trường, vận chuyển và tổ chức thi công."
+      "label": "THỊ TRƯỜNG • TĂNG TRƯỞNG",
+      "title": "Công nghiệp–xây dựng tiếp tục dẫn nhịp ở nhiều địa phương",
+      "detail": "Một nửa số địa phương tăng trưởng hai chữ số trong quý III, với công nghiệp–xây dựng tăng trên 10% ở 30/34 tỉnh, thành."
     }
   ],
   "regional_pulse": [
     {
       "region": "MIỀN BẮC",
-      "title": "Tín dụng, KCN và hạ tầng cùng tăng nhịp",
-      "detail": "Hải Phòng bổ sung quỹ đất công nghiệp sẵn sàng, Hà Nội tăng tốc các cầu lớn và thị trường lao động tiếp tục hấp thụ nhân lực."
+      "title": "Hạ tầng lớn tăng tốc, nguồn vật liệu được mở thêm",
+      "detail": "Đường sắt Hà Nội–Quảng Ninh chuyển sang giai đoạn dầm; Bắc Ninh và Lào Cai đồng thời có các động thái bổ sung nguồn vật liệu cho xây dựng."
     },
     {
       "region": "MIỀN TRUNG",
-      "title": "Năng lượng và quy hoạch tiến lên, mưa lớn gây sức ép ngắn hạn",
-      "detail": "Quảng Trạch I tiến sát vận hành và Cầu Treo bước vào triển khai quy hoạch, trong lúc một đợt mưa lớn bao phủ nhiều tỉnh Trung Bộ."
+      "title": "Cơ hội công nghiệp đi cùng sức ép chi phí và thời tiết",
+      "detail": "Hà Tĩnh và Quảng Ngãi xuất hiện thêm dự án hạ tầng, nhà máy; giá xi măng điều chỉnh và mưa lớn là hai biến số cần theo dõi sát."
     }
   ],
   "news_numbers": [
     {
-      "value": "20,75 triệu tỷ",
-      "label": "dư nợ tín dụng toàn hệ thống",
-      "context": "Tính đến 30/9/2026, tăng 11,59% so với cuối năm 2025."
+      "value": "147.000+ tỷ",
+      "label": "tổng vốn tuyến Hà Nội–Quảng Ninh",
+      "context": "Tuyến dài khoảng 120,4 km và cần khoảng 3.200 phiến dầm điển hình."
     },
     {
-      "value": "150 ha",
-      "label": "quy mô KCN An Phát 5",
-      "context": "Đất công nghiệp chiếm 69% tổng diện tích."
+      "value": "114,6 tỷ",
+      "label": "vốn dự kiến trạm và đường dây 110kV",
+      "context": "Hạ tầng cấp điện cho KCN Bắc Thạch Hà, Hà Tĩnh."
     },
     {
-      "value": "99,62%",
-      "label": "tiến độ Quảng Trạch I",
-      "context": "Hai tổ máy tổng công suất 1.403 MW đã hòa lưới."
+      "value": "+70–100 nghìn",
+      "label": "đồng/tấn xi măng Sông Lam",
+      "context": "Mức tăng áp dụng từ 06h00 ngày 05/10/2026, tùy xi măng bao hoặc rời."
     },
     {
-      "value": "161.000",
-      "label": "lao động được giải quyết việc làm",
-      "context": "Hà Nội đạt 94,1% kế hoạch năm sau 9 tháng."
+      "value": "17/34",
+      "label": "địa phương tăng trưởng hai chữ số quý III",
+      "context": "Công nghiệp–xây dựng tăng trên 10% tại 30/34 địa phương."
     }
   ],
   "action_today": ""
