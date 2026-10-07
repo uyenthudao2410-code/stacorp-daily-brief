@@ -1,19 +1,101 @@
 {
-  "date": "06.10.2026",
+  "date": "07.10.2026",
   "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
   "subtitle": "Thị trường • Dự án • Chi phí • Con người",
-  "summary_lede": "Ngày 06/10, hạ tầng liên vùng và công nghiệp tiếp tục mở thêm khối lượng thi công ở phía Bắc và miền Trung; nguồn vật liệu có tín hiệu cải thiện, trong khi giá xi măng và mưa lớn tạo sức ép ngắn hạn.",
+  "summary_lede": "Ngày 07/10, hạ tầng công nghiệp và giao thông ở Bắc–Trung tiếp tục tăng tốc: Thái Nguyên, Hải Phòng mở mặt bằng KCN; Quảng Ngãi đề xuất cao tốc mới, trong khi Quảng Trị và Nghệ An siết tiến độ thi công.",
   "items": [
     {
       "region": "MIỀN BẮC",
+      "category": "KHU CÔNG NGHIỆP • MẶT BẰNG",
+      "impact": "CAO",
+      "headline": "KCN Yên Bình 2 đã bàn giao 166,77 ha mặt bằng; tái định cư vẫn là nút thắt chính",
+      "facts": [
+        "Dự án KCN Yên Bình 2 có quy mô 299,07 ha, tổng mức đầu tư 3.650 tỷ đồng; đến ngày 06/10 đã kiểm đếm 289,29 ha và bàn giao 166,77 ha.",
+        "Tổng số 825 hộ phải di dời, hiện mới hoàn thành di dời 186 hộ; 8 dự án khu tái định cư phục vụ giải phóng mặt bằng KCN chưa hoàn thiện hạ tầng."
+      ],
+      "note": "STACORP cần lưu ý: tiến độ mặt bằng và tái định cư là biến số trực tiếp đối với nhịp triển khai hạ tầng, nhà xưởng và các gói phụ trợ tại Yên Bình 2.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Pháp lý",
+        "Kỹ thuật"
+      ],
+      "source": "Cổng TTĐT tỉnh Thái Nguyên",
+      "source_date": "06.10.2026",
+      "url": "https://thainguyen.gov.vn/thoi-su/chu-tich-ubnd-tinh-kiem-tra-tien-do-mot-so-du-an-cong-trinh-tren-dia-ban-298458"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "HẠ TẦNG • GIAO THÔNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Cao tốc CT.07 Hà Nội–Thái Nguyên–Chợ Mới triển khai 7 mũi thi công, ưu tiên giải phóng mặt bằng",
+      "facts": [
+        "Dự án dài 99,03 km, tổng mức đầu tư hơn 21.228 tỷ đồng; đoạn Hà Nội–Thái Nguyên mở rộng lên 6 làn xe, đoạn Thái Nguyên–Chợ Mới hoàn chỉnh 4 làn xe.",
+        "Chủ đầu tư đã chuẩn bị 7 mũi thi công và đặt mục tiêu cơ bản hoàn thành di dời điện, nước, cáp quang trong tháng 10/2026."
+      ],
+      "note": "STACORP cần lưu ý: mặt bằng và di dời hạ tầng kỹ thuật đang chuyển sang giai đoạn quyết định, mở thêm nhu cầu thi công và cung ứng theo từng đoạn tuyến.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Cổng TTĐT tỉnh Thái Nguyên",
+      "source_date": "05.10.2026",
+      "url": "https://thainguyen.gov.vn/thong-tin-du-an/tap-trung-thi-cong-tuyen-cao-toc-ct-07-ha-noi-thai-nguyen-cho-moi-298358"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "KHU CÔNG NGHIỆP • ĐẦU TƯ",
+      "impact": "TRUNG BÌNH",
+      "headline": "KCN Nomura–Hải Phòng giai đoạn 2 tiếp tục chi trả bồi thường để đẩy nhanh bàn giao mặt bằng",
+      "facts": [
+        "Đợt 27 đã phê duyệt bồi thường, hỗ trợ cho 20 hộ có đất nông nghiệp bị thu hồi, với tổng số tiền gần 11 tỷ đồng.",
+        "Dự án giai đoạn 2 có diện tích 197,16 ha, tổng vốn đầu tư 2.782,72 tỷ đồng và đang tiếp tục hoàn thiện mặt bằng sạch cho triển khai hạ tầng."
+      ],
+      "note": "STACORP cần lưu ý: tiến độ bồi thường cho thấy dự án tiếp tục chuyển quỹ đất sang trạng thái sẵn sàng triển khai, phù hợp theo dõi cơ hội hạ tầng KCN và nhà xưởng.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Pháp lý"
+      ],
+      "source": "Cổng TTĐT thành phố Hải Phòng",
+      "source_date": "05.10.2026",
+      "url": "https://haiphong.gov.vn/tin-dia-phuong/phuong-hong-an-chi-tra-tien-boi-thuong-thuc-hien-du-an-dau-tu-xay-dung-va-kinh-doanh-ket-cau-ha--977795"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "MÔI TRƯỜNG • HẠ TẦNG",
+      "impact": "THEO DÕI",
+      "headline": "Lạng Sơn mời thầu nhà máy xử lý rác công nghệ cao gần 156 tỷ đồng tại Hữu Lũng",
+      "facts": [
+        "Dự án có tổng vốn đầu tư 155,9 tỷ đồng, công suất xử lý tổng cộng 300 tấn rác/ngày.đêm và thời hạn hoạt động 50 năm.",
+        "Sở Xây dựng tỉnh Lạng Sơn đang phát hành hồ sơ mời thầu, dự kiến mở thầu ngày 17/11/2026 tại dự án đặt ở xã Tuấn Sơn."
+      ],
+      "note": "STACORP cần lưu ý: dự án mở thêm thị trường cho hạ tầng kỹ thuật, kết cấu, cơ điện và các hạng mục phụ trợ môi trường ở khu vực phía Bắc.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Kỹ thuật",
+        "Dự án"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "06.10.2026",
+      "url": "https://baodauthau.vn/lang-son-phat-hanh-ho-so-moi-thau-du-an-nha-may-xu-ly-rac-gan-156-ty-dong-post209058.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
       "category": "HẠ TẦNG • GIAO THÔNG",
       "impact": "CAO",
-      "headline": "Đường sắt Hà Nội–Quảng Ninh bước sang giai đoạn đúc dầm; gần 40 mũi thi công đang triển khai",
+      "headline": "Quảng Ngãi đề xuất cao tốc đi Kon Tum hơn 51.500 tỷ đồng, mục tiêu khởi công năm 2027",
       "facts": [
-        "Tuyến dài khoảng 120,4 km, tổng vốn hơn 147.000 tỷ đồng và dự kiến cần khoảng 3.200 phiến dầm điển hình.",
-        "Phiến dầm đầu tiên đã được đúc; 6 trong 8 bãi đúc phía Bắc đang hoàn thiện để chuyển sang sản xuất và lao lắp trên diện rộng."
+        "Tuyến được đề xuất dài hơn 136 km, quy mô 4 làn xe hoàn chỉnh, vận tốc thiết kế 80–100 km/h và tổng mức đầu tư sơ bộ hơn 51.500 tỷ đồng.",
+        "UBND tỉnh Quảng Ngãi đã trình báo cáo nghiên cứu tiền khả thi; kế hoạch đề xuất khởi công năm 2027 và hoàn thành, đưa vào khai thác năm 2030."
       ],
-      "note": "STACORP cần lưu ý: giai đoạn kết cấu phần trên mở thêm nhu cầu bê tông, kết cấu, cơ điện, logistics và các gói thầu phụ trợ dọc hành lang dự án.",
+      "note": "STACORP cần lưu ý: nếu được phê duyệt, dự án sẽ tạo một hành lang thi công lớn với nhu cầu nền đường, cầu hầm, vật liệu, MEP phụ trợ và logistics kéo dài nhiều năm.",
       "departments": [
         "Kinh doanh",
         "Đấu thầu",
@@ -21,20 +103,61 @@
         "Cung ứng",
         "Kỹ thuật"
       ],
-      "source": "VnExpress",
-      "source_date": "03.10.2026",
-      "url": "https://vnexpress.net/hai-tuyen-duong-sat-toc-do-cao-do-vinspeed-dau-tu-bat-dau-duc-dam-5128059.html"
+      "source": "Báo Xây dựng",
+      "source_date": "06.10.2026",
+      "url": "https://baoxaydung.vn/de-xuat-hon-51500-ty-dong-dau-tu-cao-toc-quang-ngai-kon-tum-192261006110422077.htm"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "KHU KINH TẾ • GIAO THÔNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Nghệ An đôn đốc 4 dự án giao thông tại KKT Đông Nam; tuyến số 2 KCN Nam Cấm mới bàn giao 70% mặt bằng",
+      "facts": [
+        "Ngày 06/10, lãnh đạo tỉnh kiểm tra hiện trường và đôn đốc tiến độ 4 dự án hạ tầng giao thông do Ban Quản lý Khu kinh tế Đông Nam quản lý.",
+        "Tuyến số 2 thuộc hệ thống giao thông Khu A – KCN Nam Cấm có tổng mức đầu tư điều chỉnh 182,675 tỷ đồng; mới bàn giao 830 m tuyến nội bộ, tương đương khoảng 70%."
+      ],
+      "note": "STACORP cần lưu ý: các dự án trong KKT Đông Nam đang tăng áp lực tiến độ và giải ngân, tạo nhu cầu rõ hơn cho thi công, vật liệu và các gói phụ trợ khi mặt bằng được tháo gỡ.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Cung ứng"
+      ],
+      "source": "Báo Nghệ An",
+      "source_date": "06.10.2026",
+      "url": "https://baonghean.vn/pho-chu-tich-thuong-truc-ubnd-tinh-bui-thanh-an-kiem-tra-thuc-dia-cac-du-an-giao-thong-tai-khu-kinh-te-dong-nam-10352954.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "ĐẦU TƯ CÔNG • GIAO THÔNG",
+      "impact": "CAO",
+      "headline": "Quảng Trị yêu cầu lập lại đường găng tiến độ tuyến ven biển; 45,3/48 km mặt bằng đã bàn giao",
+      "facts": [
+        "Dự án Đường ven biển kết nối hành lang kinh tế Đông Tây giai đoạn 1 có tổng mức đầu tư hơn 2.731 tỷ đồng, chiều dài khoảng 48 km và đã bàn giao 45,3 km mặt bằng, đạt 94%.",
+        "Giải ngân kế hoạch năm 2026 đạt 188,2/520,1 tỷ đồng, tương đương 36,2%; tỉnh yêu cầu rà soát lại đường găng và tiến độ từng nhà thầu."
+      ],
+      "note": "STACORP cần lưu ý: mặt bằng gần hoàn tất nhưng tỷ lệ giải ngân còn thấp, cho thấy áp lực huy động nhân lực, máy móc và vật liệu có thể tăng mạnh trong các tháng cuối năm.",
+      "departments": [
+        "Đấu thầu",
+        "Dự án",
+        "Cung ứng",
+        "Tài chính",
+        "Kỹ thuật"
+      ],
+      "source": "Cổng TTĐT tỉnh Quảng Trị",
+      "source_date": "06.10.2026",
+      "url": "https://www.quangtri.gov.vn/tin-tuc/quyet-liet-thao-go-vuong-mac-day-nhanh-tien-do-du-an-duong-ven-bien-ket-noi-hanh-lang-kinh-te-dong-tay"
     },
     {
       "region": "MIỀN TRUNG",
       "category": "KHU CÔNG NGHIỆP • NĂNG LƯỢNG",
       "impact": "TRUNG BÌNH",
-      "headline": "Hà Tĩnh chấp thuận dự án đường dây và trạm 110kV cho KCN Bắc Thạch Hà",
+      "headline": "Hà Tĩnh đầu tư 92 tỷ đồng hoàn thiện hạ tầng điện 110kV cho KCN Gia Lách mở rộng",
       "facts": [
-        "Tổng công ty Điện lực miền Bắc được chấp thuận làm nhà đầu tư dự án với tổng vốn dự kiến khoảng 114,6 tỷ đồng.",
-        "Dự án có mục tiêu hoàn thiện hạ tầng truyền tải, phân phối điện cho KCN Bắc Thạch Hà và dự kiến đưa vào sử dụng trong quý IV/2027."
+        "UBND tỉnh chấp thuận Tổng công ty Điện lực miền Bắc đầu tư Đường dây và Trạm biến áp 110kV KCN Gia Lách với tổng vốn dự kiến 92 tỷ đồng.",
+        "Dự án nhằm đáp ứng phụ tải sản xuất tại KCN Gia Lách mở rộng và đặt mục tiêu hoàn thành, đưa vào sử dụng trong quý IV/2027."
       ],
-      "note": "STACORP cần lưu ý: đầu tư điện 110kV là tín hiệu hạ tầng nền cho mở rộng phụ tải sản xuất và thu hút dự án mới tại khu công nghiệp.",
+      "note": "STACORP cần lưu ý: đầu tư cấp điện 110kV là tín hiệu hạ tầng nền cho giai đoạn lấp đầy KCN, kéo theo nhu cầu nhà xưởng, cơ điện và hạ tầng kỹ thuật.",
       "departments": [
         "Kinh doanh",
         "Đấu thầu",
@@ -43,183 +166,63 @@
       ],
       "source": "Cổng TTĐT tỉnh Hà Tĩnh",
       "source_date": "05.10.2026",
-      "url": "https://hatinh.gov.vn/vi/bai-viet/ha-tinh-chap-thuan-dau-tu-du-an-duong-day-va-tram-bien-ap-110kv-tai-khu-cong-nghiep-bac-thach-ha"
-    },
-    {
-      "region": "MIỀN TRUNG",
-      "category": "CHI PHÍ • VẬT LIỆU",
-      "impact": "CAO",
-      "headline": "Xi măng Sông Lam áp mức tăng 70.000–100.000 đồng/tấn từ ngày 05/10",
-      "facts": [
-        "Xi măng bao tăng 70.000 đồng/tấn và xi măng rời tăng 100.000 đồng/tấn, các mức điều chỉnh đã bao gồm VAT.",
-        "Mức giá mới được áp dụng từ 06h00 ngày 05/10/2026 và duy trì cho đến khi có thông báo thay thế."
-      ],
-      "note": "STACORP cần lưu ý: biến động giá xi măng cần được phản ánh sớm vào dự toán, chào giá và kế hoạch mua vật tư cho các gói đang triển khai.",
-      "departments": [
-        "Cung ứng",
-        "Đấu thầu",
-        "Tài chính",
-        "Dự án"
-      ],
-      "source": "Cổng thông tin Xi măng Việt Nam",
-      "source_date": "03.10.2026",
-      "url": "https://muaban.ximang.vn/thi-truong-xi-mang-ghi-nhan-lan-song-tang-gia-cua-song-lam"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "VẬT LIỆU • CÔNG TRƯỜNG",
-      "impact": "TRUNG BÌNH",
-      "headline": "Bắc Ninh bổ sung nguồn đất san lấp cho hai dự án giao thông và đê điều hơn 2.250 tỷ đồng",
-      "facts": [
-        "Nguồn đất từ mỏ tại xã Đồng Kỳ và xã Bố Hạ được bổ sung cho dự án nâng cấp ĐT.293 có tổng mức đầu tư 1.799 tỷ đồng.",
-        "Nguồn vật liệu cũng phục vụ dự án xử lý khẩn cấp đê tả Cầu đoạn K0–K10 tại xã Hợp Thịnh, tổng mức đầu tư 453,178 tỷ đồng."
-      ],
-      "note": "STACORP cần lưu ý: cơ chế bổ sung nguồn san lấp giúp giảm một điểm nghẽn vật liệu cho các công trường hạ tầng lớn tại Bắc Ninh.",
-      "departments": [
-        "Cung ứng",
-        "Dự án",
-        "Đấu thầu",
-        "Logistics"
-      ],
-      "source": "Báo Đấu thầu",
-      "source_date": "05.10.2026",
-      "url": "https://baodauthau.vn/bac-ninh-mo-luong-xanh-dua-vat-lieu-vao-cong-truong-post208944.html"
-    },
-    {
-      "region": "MIỀN TRUNG",
-      "category": "CÔNG NGHIỆP • DỰ ÁN",
-      "impact": "TRUNG BÌNH",
-      "headline": "Quảng Ngãi tiếp nhận hồ sơ đề xuất Nhà máy vật liệu trang trí La Hà tại Cụm công nghiệp La Hà mở rộng",
-      "facts": [
-        "Sở Tài chính Quảng Ngãi ban hành Thông báo 520/TB-STC về tiếp nhận hồ sơ đề nghị chấp thuận chủ trương đầu tư đồng thời chấp thuận nhà đầu tư.",
-        "Dự án tại các lô B1, B2 của Cụm công nghiệp La Hà mở rộng, định hướng sản xuất đá ốp lát, sản phẩm gia công từ đá và gốm trang trí cho thị trường trong nước và xuất khẩu."
-      ],
-      "note": "STACORP cần lưu ý: dự án mới tạo tín hiệu nhu cầu nhà xưởng, hạ tầng kỹ thuật và các hạng mục phụ trợ trong cụm công nghiệp.",
-      "departments": [
-        "Kinh doanh",
-        "Đấu thầu",
-        "Dự án",
-        "Kỹ thuật"
-      ],
-      "source": "Cổng TTĐT tỉnh Quảng Ngãi",
-      "source_date": "05.10.2026",
-      "url": "https://quangngai.gov.vn/cong-dan/thong-bao/thong-bao-tiep-nhan-ho-so-doi-voi-du-an-nha-may-vat-lieu-trang-tri-la-ha.html"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "VẬT LIỆU • CHUỖI CUNG ỨNG",
-      "impact": "TRUNG BÌNH",
-      "headline": "Lào Cai cho nhiều mỏ cát, sỏi hoạt động trở lại sau rà soát hồ sơ và điều kiện khai thác",
-      "facts": [
-        "Một số đơn vị được phép khai thác trở lại sau khi hoàn thiện thủ tục; Hợp Nhất được tiếp tục khai thác tại 4 khu vực và tập kết tại 3 bãi.",
-        "Cơ quan quản lý yêu cầu khai thác đúng phạm vi, công suất và thời hạn; không khai thác ban đêm, trong thời gian mưa lũ và không sử dụng tàu cuốc."
-      ],
-      "note": "STACORP cần lưu ý: nguồn cát sỏi được khôi phục có thể hỗ trợ nguồn cung xây dựng tại khu vực, nhưng điều kiện khai thác vẫn được kiểm soát chặt.",
-      "departments": [
-        "Cung ứng",
-        "Dự án",
-        "Logistics",
-        "HSE"
-      ],
-      "source": "Bộ Xây dựng / Báo Xây dựng",
-      "source_date": "05.10.2026",
-      "url": "https://dangcongsan.org.vn/boxaydung/tin-tuc-hoat-dong/lao-cai-nhieu-mo-cat-soi-duoc-phep-khai-thac-tro-lai-sau-ra-soat.html"
-    },
-    {
-      "region": "MIỀN TRUNG",
-      "category": "HSE • THỜI TIẾT",
-      "impact": "CAO",
-      "headline": "Mưa lớn miền Trung tăng cường ngày 06–08/10, có nơi trên 400–600 mm trong cả đợt",
-      "facts": [
-        "Ngày và đêm 06/10, từ Nam Hà Tĩnh đến Đà Nẵng và phía Đông Quảng Ngãi dự báo mưa 50–100 mm, cục bộ trên 200 mm; có nguy cơ mưa trên 100 mm trong 3 giờ.",
-        "Tổng mưa từ 06/10 đến hết đêm 08/10 phổ biến 100–250 mm, có nơi trên 400 mm; riêng Nam Quảng Trị đến Huế phổ biến 300–400 mm, có nơi trên 600 mm."
-      ],
-      "note": "STACORP cần lưu ý: nguy cơ ngập công trường, lũ quét và sạt lở tăng rõ; kế hoạch thi công và vận chuyển tại miền Trung cần bám sát cảnh báo thời tiết mới nhất.",
-      "departments": [
-        "HSE",
-        "Dự án",
-        "Cung ứng",
-        "Logistics"
-      ],
-      "source": "Trung tâm Dự báo Khí tượng Thủy văn Quốc gia",
-      "source_date": "06.10.2026",
-      "url": "https://kttv.gov.vn/kttv/vi-VN/1/tin-du-bao-mua-lon-o-khu-vuc-tu-ha-tinh-den-tp-da-nang-va-phia-dong-tinh-quang-ngai-post55221.html"
-    },
-    {
-      "region": "TOÀN QUỐC",
-      "category": "THỊ TRƯỜNG • TĂNG TRƯỞNG",
-      "impact": "TRUNG BÌNH",
-      "headline": "17/34 địa phương tăng trưởng hai chữ số trong quý III; công nghiệp–xây dựng là động lực chính",
-      "facts": [
-        "Trong quý III/2026, 17/34 tỉnh, thành đạt mức tăng trưởng GRDP từ 10% trở lên, so với 9 địa phương trong nửa đầu năm.",
-        "Khu vực công nghiệp–xây dựng tăng trên 10% tại 30/34 địa phương trong quý III, phản ánh nhịp sản xuất và đầu tư hạ tầng tiếp tục cao."
-      ],
-      "note": "STACORP cần lưu ý: tăng trưởng lan rộng ở các địa bàn công nghiệp lớn tiếp tục hỗ trợ triển vọng nhu cầu xây dựng và dịch vụ dự án trong quý IV.",
-      "departments": [
-        "Kinh doanh",
-        "Đấu thầu",
-        "Dự án",
-        "Tài chính"
-      ],
-      "source": "Báo Đấu thầu",
-      "source_date": "05.10.2026",
-      "url": "https://baodauthau.vn/ban-tin-thoi-su-sang-510-post208928.html"
+      "url": "https://hatinh.gov.vn/vi/bai-viet/dau-tu-92-ty-dong-hoan-thien-ha-tang-dien-khu-cong-nghiep-gia-lach-mo-rong-020644098"
     }
   ],
   "news_themes": [
     {
-      "label": "HẠ TẦNG • ĐẦU TƯ",
-      "title": "Các dự án liên vùng và KCN tiếp tục tạo khối lượng mới",
-      "detail": "Đường sắt Hà Nội–Quảng Ninh chuyển sang đúc dầm, trong khi Hà Tĩnh bổ sung hạ tầng điện 110kV cho KCN Bắc Thạch Hà và Quảng Ngãi đón thêm đề xuất nhà máy."
+      "label": "KCN • MẶT BẰNG",
+      "title": "Quỹ đất công nghiệp tiếp tục được tháo gỡ ở phía Bắc",
+      "detail": "Yên Bình 2 và Nomura–Hải Phòng đều đang chuyển thêm diện tích sang trạng thái bàn giao, nhưng tái định cư và giải phóng mặt bằng vẫn quyết định nhịp triển khai thực tế."
     },
     {
-      "label": "VẬT LIỆU • CHI PHÍ",
-      "title": "Nguồn cung có tín hiệu cải thiện nhưng mặt bằng giá vẫn biến động",
-      "detail": "Bắc Ninh và Lào Cai tháo thêm nút thắt nguồn vật liệu, còn Xi măng Sông Lam áp mức giá mới từ 05/10, tạo áp lực trực tiếp lên dự toán và mua hàng."
+      "label": "GIAO THÔNG • LIÊN VÙNG",
+      "title": "Các hành lang lớn bước vào nhịp chuẩn bị và thi công mới",
+      "detail": "CT.07 đã triển khai nhiều mũi thi công, Quảng Ngãi đề xuất cao tốc hơn 51.500 tỷ đồng và Quảng Trị siết lại đường găng tuyến ven biển."
     },
     {
-      "label": "CÔNG TRƯỜNG • HSE",
-      "title": "Miền Trung bước vào một nhịp mưa lớn kéo dài",
-      "detail": "Dự báo mới nâng tổng lượng mưa 06–08/10 lên mức rất cao tại nhiều khu vực, làm gia tăng nguy cơ ngập, lũ quét, sạt lở và gián đoạn vận chuyển."
+      "label": "KKT • CÔNG NGHIỆP",
+      "title": "Hạ tầng trong KKT/KCN tiếp tục hút vốn và khối lượng xây dựng",
+      "detail": "Nghệ An thúc 4 dự án giao thông KKT Đông Nam, Hà Tĩnh bổ sung điện 110kV cho Gia Lách và Lạng Sơn mở thầu hạ tầng xử lý chất thải."
     },
     {
-      "label": "THỊ TRƯỜNG • TĂNG TRƯỞNG",
-      "title": "Công nghiệp–xây dựng tiếp tục dẫn nhịp ở nhiều địa phương",
-      "detail": "Một nửa số địa phương tăng trưởng hai chữ số trong quý III, với công nghiệp–xây dựng tăng trên 10% ở 30/34 tỉnh, thành."
+      "label": "TIẾN ĐỘ • GIẢI NGÂN",
+      "title": "Mặt bằng và khả năng huy động đang là biến số quan trọng cuối năm",
+      "detail": "Nhiều dự án đã có khối lượng mặt bằng đáng kể nhưng tiến độ giải ngân, tái định cư và thi công vẫn cần tăng tốc để bám kế hoạch 2026."
     }
   ],
   "regional_pulse": [
     {
       "region": "MIỀN BẮC",
-      "title": "Hạ tầng lớn tăng tốc, nguồn vật liệu được mở thêm",
-      "detail": "Đường sắt Hà Nội–Quảng Ninh chuyển sang giai đoạn dầm; Bắc Ninh và Lào Cai đồng thời có các động thái bổ sung nguồn vật liệu cho xây dựng."
+      "title": "KCN và cao tốc cùng tăng nhịp triển khai",
+      "detail": "Thái Nguyên và Hải Phòng đẩy tiếp mặt bằng công nghiệp, CT.07 mở nhiều mũi thi công, trong khi Lạng Sơn bổ sung một dự án môi trường mới."
     },
     {
       "region": "MIỀN TRUNG",
-      "title": "Cơ hội công nghiệp đi cùng sức ép chi phí và thời tiết",
-      "detail": "Hà Tĩnh và Quảng Ngãi xuất hiện thêm dự án hạ tầng, nhà máy; giá xi măng điều chỉnh và mưa lớn là hai biến số cần theo dõi sát."
+      "title": "Hạ tầng giao thông và KKT tạo thêm khối lượng lớn",
+      "detail": "Quảng Ngãi xuất hiện đề xuất cao tốc quy mô lớn; Quảng Trị, Nghệ An tăng áp lực tiến độ và Hà Tĩnh tiếp tục hoàn thiện hạ tầng điện KCN."
     }
   ],
   "news_numbers": [
     {
-      "value": "147.000+ tỷ",
-      "label": "tổng vốn tuyến Hà Nội–Quảng Ninh",
-      "context": "Tuyến dài khoảng 120,4 km và cần khoảng 3.200 phiến dầm điển hình."
+      "value": "51.500+ tỷ",
+      "label": "đề xuất vốn cao tốc Quảng Ngãi–Kon Tum",
+      "context": "Tuyến dài hơn 136 km, quy mô 4 làn xe hoàn chỉnh."
     },
     {
-      "value": "114,6 tỷ",
-      "label": "vốn dự kiến trạm và đường dây 110kV",
-      "context": "Hạ tầng cấp điện cho KCN Bắc Thạch Hà, Hà Tĩnh."
+      "value": "166,77 ha",
+      "label": "mặt bằng đã bàn giao tại KCN Yên Bình 2",
+      "context": "Dự án có quy mô 299,07 ha, tổng mức đầu tư 3.650 tỷ đồng."
     },
     {
-      "value": "+70–100 nghìn",
-      "label": "đồng/tấn xi măng Sông Lam",
-      "context": "Mức tăng áp dụng từ 06h00 ngày 05/10/2026, tùy xi măng bao hoặc rời."
+      "value": "94%",
+      "label": "mặt bằng tuyến ven biển Quảng Trị đã bàn giao",
+      "context": "Tương ứng 45,3/48 km của dự án giai đoạn 1."
     },
     {
-      "value": "17/34",
-      "label": "địa phương tăng trưởng hai chữ số quý III",
-      "context": "Công nghiệp–xây dựng tăng trên 10% tại 30/34 địa phương."
+      "value": "300 tấn/ngày",
+      "label": "công suất nhà máy xử lý rác Hữu Lũng",
+      "context": "Dự án tại Lạng Sơn có tổng vốn đầu tư 155,9 tỷ đồng."
     }
   ],
   "action_today": ""
