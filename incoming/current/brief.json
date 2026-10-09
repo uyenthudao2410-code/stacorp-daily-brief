@@ -1,0 +1,226 @@
+{
+  "date": "09.10.2026",
+  "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
+  "subtitle": "Thị trường • Dự án • Chi phí • Con người",
+  "summary_lede": "Ngày 09/10, hạ tầng cao tốc và khu công nghiệp miền Bắc ghi nhận các mốc vốn, mặt bằng mới; miền Trung có thêm dự án nhà ở, năng lượng mái nhà và sản xuất, trong khi giá nhiên liệu điều chỉnh trái chiều.",
+  "items": [
+    {
+      "region": "MIỀN BẮC",
+      "category": "GIAO THÔNG • ĐẦU TƯ CÔNG",
+      "impact": "CAO",
+      "headline": "Ninh Bình nâng vốn đoạn cao tốc Ninh Bình–Hải Phòng lên 9.113 tỷ đồng",
+      "facts": [
+        "Quyết định 3671/QĐ-UBND ngày 07/10 điều chỉnh tổng mức đầu tư đoạn cao tốc qua Ninh Bình lên 9.113,19 tỷ đồng, từ mức 6.865 tỷ đồng trước đó.",
+        "Diện tích đất dự án tăng từ 273,57 lên 303,62 ha; bổ sung ba nhánh kết nối và các hạng mục cầu vượt, dự kiến thi công phần bổ sung đến năm 2028."
+      ],
+      "note": "STACORP cần lưu ý: phần vốn và hạng mục mới mở thêm khối lượng hạ tầng, cầu đường, điện và thoát nước đi kèm tuyến cao tốc.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Báo Xây dựng",
+      "source_date": "08.10.2026",
+      "url": "https://baoxaydung.vn/nang-von-dau-tu-cao-toc-ninh-binh-hai-phong-len-hon-9000-ty-dong-192261008085608915.htm"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "KHU CÔNG NGHIỆP • MẶT BẰNG",
+      "impact": "CAO",
+      "headline": "KCN Trấn Yên 254,6 ha ở Lào Cai đẩy giải phóng mặt bằng hai khu",
+      "facts": [
+        "Giai đoạn I của KCN Trấn Yên có quy mô 254,6 ha, tổng vốn đầu tư trên 2.184 tỷ đồng; Viglacera là chủ đầu tư.",
+        "Khu phía Tây đã giải phóng hơn 108,4/109 ha, tương đương 99,4% theo mốc 18/05; khu phía Đông 145,6 ha đang tiếp tục hoàn thiện các phương án bồi thường."
+      ],
+      "note": "STACORP cần lưu ý: quỹ đất công nghiệp quy mô lớn tạo nhu cầu hạ tầng, nhà xưởng và MEP khi tiến độ bàn giao được khơi thông.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Cung ứng"
+      ],
+      "source": "Báo Xây dựng",
+      "source_date": "08.10.2026",
+      "url": "https://baoxaydung.vn/toan-canh-khu-cong-nghiep-tran-yen-rong-tren-250-hec-ta-o-lao-cai-19226100816422021.htm"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "CỤM CÔNG NGHIỆP • ĐẦU TƯ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Thái Nguyên tháo gỡ mặt bằng hai cụm công nghiệp Hà Châu gần 95 ha",
+      "facts": [
+        "Hai cụm công nghiệp Hà Châu 1 và Hà Châu 2 tại xã Điềm Thụy có tổng diện tích gần 95 ha, vốn đầu tư hơn 1.350 tỷ đồng.",
+        "Dự án khởi công ngày 28/04/2026; địa phương đang xử lý vướng mắc bồi thường, tái định cư và hồ sơ đất để tiếp tục triển khai."
+      ],
+      "note": "STACORP cần lưu ý: tiến độ giải phóng mặt bằng là tín hiệu cần theo dõi cho cơ hội hạ tầng kỹ thuật và MEP công nghiệp.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Pháp lý"
+      ],
+      "source": "Cổng TTĐT tỉnh Thái Nguyên",
+      "source_date": "08.10.2026",
+      "url": "https://thainguyen.gov.vn/tin-kinh-te/thao-go-vuong-mac-day-nhanh-tien-do-du-an-cum-cong-nghiep-ha-chau-1-va-ha-chau-2-299066"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "DỰ ÁN • PHÁP LÝ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Quảng Trị tiếp tục xử lý 133 dự án ngoài ngân sách chậm tiến độ",
+      "facts": [
+        "Trong danh sách 151 dự án ngoài ngân sách chậm tiến độ, tỉnh đã hoàn thành xử lý 18 dự án trong quý III/2026; còn 133 dự án theo dõi, trong đó 8 dự án được gia hạn.",
+        "Tỉnh đồng thời tháo gỡ vướng mắc cho 38 dự án tồn đọng đã qua thanh tra, kiểm tra; trọng tâm là đất đai, giá đất, giải phóng mặt bằng và thủ tục đầu tư."
+      ],
+      "note": "STACORP cần lưu ý: khả năng tháo gỡ pháp lý và tái khởi động dự án ảnh hưởng trực tiếp tới nguồn việc, thanh toán và dòng tiền.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Pháp lý",
+        "Tài chính"
+      ],
+      "source": "Cổng TTĐT tỉnh Quảng Trị",
+      "source_date": "08.10.2026",
+      "url": "https://www.quangtri.gov.vn/tin-tuc/tap-trung-xu-ly-cac-du-an-dau-tu-cham-tien-do"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "NĂNG LƯỢNG • NHÀ XƯỞNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hà Tĩnh cấp đăng ký điện mặt trời mái nhà cho hai doanh nghiệp Viết Hải",
+      "facts": [
+        "Hai doanh nghiệp sản xuất cấu kiện Viết Hải được cấp giấy chứng nhận đăng ký điện mặt trời mái nhà tự sản xuất, tự tiêu thụ.",
+        "Tổng công suất tấm quang điện được đăng ký là 2.351 kWp, trên hơn 30.000 m² mái nhà xưởng, có đấu nối với hệ thống điện quốc gia."
+      ],
+      "note": "STACORP cần lưu ý: điện mặt trời mái nhà tiếp tục mở nhu cầu thiết kế, lắp đặt, đấu nối và bảo trì điện cho cơ sở công nghiệp.",
+      "departments": [
+        "Kinh doanh",
+        "Kỹ thuật",
+        "Dự án",
+        "Cung ứng"
+      ],
+      "source": "Trang xúc tiến đầu tư tỉnh Hà Tĩnh",
+      "source_date": "08.10.2026",
+      "url": "https://xuctiendautu.hatinh.gov.vn/vi/bai-viet/cap-giay-chung-nhan-dang-ky-phat-trien-nguon-dien-mat-troi-mai-nha-tu-san-xuat-tu-tieu-thu-cho-02-doanh-nghiep-tai-ha-tinh"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "NHÀ MÁY • NÔNG NGHIỆP CÔNG NGHỆ CAO",
+      "impact": "TRUNG BÌNH",
+      "headline": "Dự án bò sữa công nghệ cao Kon Tum 2.540 tỷ đồng chuẩn bị vận hành giai đoạn đầu",
+      "facts": [
+        "Dự án chăn nuôi bò sữa và chế biến sữa công nghệ cao tại xã Mô Rai, tỉnh Quảng Ngãi, do doanh nghiệp thuộc Tập đoàn TH đầu tư, với vốn hơn 2.540 tỷ đồng.",
+        "Chủ đầu tư dự kiến đưa 200 con bò đợt đầu vào chăn nuôi ngày 20/10/2026; tổng nhu cầu nhân sự khi triển khai được dự kiến khoảng 580 lao động."
+      ],
+      "note": "STACORP cần lưu ý: dự án quy mô lớn tạo nhu cầu hạ tầng trang trại, điện nước, hệ thống phụ trợ và vận hành công nghiệp.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Cổng TTĐT tỉnh Quảng Ngãi",
+      "source_date": "08.10.2026",
+      "url": "https://quangngai.gov.vn/tin-tuc/dong-hanh-ho-tro-dua-du-an-chan-nuoi-bo-sua-va-che-bien-sua-cong-nghe-cao-kon-tum-vao-hoat-dong-theo-ke-hoach.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "BẤT ĐỘNG SẢN • XÂY DỰNG",
+      "impact": "CAO",
+      "headline": "Đà Nẵng chấp thuận Khu phức hợp Hoàng Văn Thái Plaza hơn 1.348 tỷ đồng",
+      "facts": [
+        "Dự án của Công ty CP Vitours Land tại số 23 Hoàng Văn Thái, phường Hòa Khánh, có tổng vốn đầu tư hơn 1.348 tỷ đồng.",
+        "Quy mô 28 tầng nổi, 2 tầng hầm và 119.596 m² sàn xây dựng; dự kiến khởi công quý I/2027, khai thác từ quý IV/2028."
+      ],
+      "note": "STACORP cần lưu ý: tổ hợp quy mô lớn có tiềm năng cho thi công xây dựng, MEP, phòng cháy chữa cháy và các hạng mục hoàn thiện.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật"
+      ],
+      "source": "Báo Đà Nẵng",
+      "source_date": "08.10.2026",
+      "url": "https://baodanang.vn/chap-thuan-chu-truong-dau-tu-du-an-khu-phuc-hop-hoang-van-thai-plaza-3354458.html"
+    },
+    {
+      "region": "TOÀN QUỐC",
+      "category": "NHIÊN LIỆU • CHI PHÍ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Giá xăng tăng hơn 1.000 đồng/lít, dầu diesel giảm 589 đồng từ 15h ngày 08/10",
+      "facts": [
+        "Giá trần xăng E10 RON95-III lên 28.254 đồng/lít, tăng 1.065 đồng; xăng E5 RON92 lên 27.703 đồng/lít, tăng 1.134 đồng.",
+        "Giá dầu diesel 0,05S giảm 589 đồng/lít còn tối đa 29.128 đồng/lít theo kỳ điều hành của Bộ Công Thương ngày 08/10/2026."
+      ],
+      "note": "STACORP cần lưu ý: chi phí vận chuyển, máy thi công và vật tư có thể biến động khác nhau theo loại nhiên liệu sử dụng.",
+      "departments": [
+        "Cung ứng",
+        "Dự án",
+        "Tài chính",
+        "Kế toán"
+      ],
+      "source": "Bộ Công Thương",
+      "source_date": "08.10.2026",
+      "url": "https://moit.gov.vn/tin-tuc/thong-tin-dieu-hanh-gia-xang-dau-ngay-8-10-2026.html"
+    }
+  ],
+  "news_themes": [
+    {
+      "label": "HẠ TẦNG • GIAO THÔNG",
+      "title": "Tuyến cao tốc lớn tăng vốn và mở thêm hạng mục",
+      "detail": "Cao tốc Ninh Bình–Hải Phòng điều chỉnh lên 9.113 tỷ đồng, bổ sung các nhánh kết nối và công trình cầu vượt."
+    },
+    {
+      "label": "CÔNG NGHIỆP • QUỸ ĐẤT",
+      "title": "Lào Cai và Thái Nguyên đẩy mạnh chuẩn bị mặt bằng KCN",
+      "detail": "KCN Trấn Yên 254,6 ha và cặp cụm công nghiệp Hà Châu gần 95 ha đều tập trung tháo gỡ vấn đề mặt bằng."
+    },
+    {
+      "label": "NĂNG LƯỢNG • NHÀ MÁY",
+      "title": "Miền Trung ghi nhận dự án công nghiệp và năng lượng mới",
+      "detail": "Hà Tĩnh có hai đăng ký điện mặt trời mái nhà; dự án bò sữa hơn 2.540 tỷ đồng tại Quảng Ngãi chuẩn bị vận hành giai đoạn đầu."
+    },
+    {
+      "label": "DÒNG VỐN • CHI PHÍ",
+      "title": "Bất động sản mới mở rộng đầu tư, nhiên liệu biến động hai chiều",
+      "detail": "Đà Nẵng chấp thuận tổ hợp 1.348 tỷ đồng; kỳ điều hành ngày 8/10 tăng giá xăng nhưng hạ giá dầu diesel."
+    }
+  ],
+  "regional_pulse": [
+    {
+      "region": "MIỀN BẮC",
+      "title": "Dự án đường bộ và khu công nghiệp đẩy tiến độ chuẩn bị",
+      "detail": "Ninh Bình bổ sung vốn cho cao tốc; Trấn Yên và Hà Châu tiếp tục xử lý mặt bằng để thúc đẩy hạ tầng công nghiệp."
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "title": "Từ tháo gỡ dự án đến đầu tư nhà máy và tổ hợp đô thị",
+      "detail": "Quảng Trị xử lý dự án chậm; Hà Tĩnh phát triển điện mặt trời mái nhà, Quảng Ngãi chuẩn bị vận hành dự án bò sữa và Đà Nẵng phê duyệt tổ hợp mới."
+    }
+  ],
+  "news_numbers": [
+    {
+      "value": "9.113,19 tỷ",
+      "label": "vốn cao tốc Ninh Bình–Hải Phòng đoạn qua tỉnh",
+      "context": "Tăng từ mức 6.865 tỷ đồng trước điều chỉnh."
+    },
+    {
+      "value": "254,6 ha",
+      "label": "diện tích giai đoạn I KCN Trấn Yên",
+      "context": "Tổng vốn đầu tư trên 2.184 tỷ đồng."
+    },
+    {
+      "value": "2.351 kWp",
+      "label": "công suất điện mặt trời mái nhà ở Hà Tĩnh",
+      "context": "Hai doanh nghiệp Viết Hải, trên hơn 30.000 m² mái."
+    },
+    {
+      "value": "1.348 tỷ",
+      "label": "vốn Khu phức hợp Hoàng Văn Thái Plaza",
+      "context": "28 tầng nổi và 2 tầng hầm tại Đà Nẵng."
+    }
+  ],
+  "action_today": ""
+}
