@@ -1,59 +1,100 @@
 {
-  "date": "12.10.2026",
+  "date": "13.10.2026",
   "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
   "subtitle": "Thị trường • Dự án • Chi phí • Con người",
-  "summary_lede": "Ngày 12/10, miền Bắc có chuyển động từ cảng Giang Biên, lưới điện 220kV và công nghiệp hỗ trợ. Miền Trung ghi nhận tiến độ dự án cấp nước, kè chống sạt lở cùng yêu cầu siết chất lượng thi công và các chỉ số sản xuất tích cực.",
+  "summary_lede": "Ngày 13/10, miền Bắc ghi nhận đề xuất cao tốc mới, tiến độ khu công nghiệp và kết quả lựa chọn thầu xây dựng. Miền Trung có dự án FDI sản xuất, các gói hạ tầng kỹ thuật mới và bước chuẩn bị thi công cầu Trà Khúc.",
   "items": [
     {
-      "region": "MIỀN BẮC",
-      "category": "LOGISTICS • CẢNG",
+      "region": "MIỀN TRUNG",
+      "category": "FDI • NHÀ MÁY",
       "impact": "CAO",
-      "headline": "Hà Nội khởi công cảng Giang Biên hơn 2.551 tỷ đồng",
+      "headline": "VSIP Hà Tĩnh đón dự án nhà máy TC APPAREL vốn 2.373 tỷ đồng",
       "facts": [
-        "Ngày 09/10, Cảng thủy nội địa Giang Biên khởi công với vốn khoảng 2.551,8 tỷ đồng, diện tích hơn 35 ha.",
-        "Cảng có bến dài khoảng 600 m, thiết kế lưu chuyển 2 triệu tấn hàng hóa/năm trên tuyến Quảng Ninh – Hải Phòng – Hà Nội."
+        "Ngày 09/10, Hà Tĩnh cấp chứng nhận đầu tư dự án TC APPAREL (VIETNAM) của World Gate (H.K) LIMITED, vốn 2.373,12 tỷ đồng (90 triệu USD).",
+        "Dự án tại KCN Bắc Thạch Hà sử dụng khoảng 238.434 m²; giai đoạn 1 dự kiến hoàn thành hạ tầng kỹ thuật và các nhà xưởng đầu tiên trước tháng 01/2029."
       ],
-      "note": "Hạ tầng bến bãi và kết nối vận tải bổ sung nhu cầu xây lắp, hệ thống kỹ thuật và logistics vùng.",
+      "note": "Dự án sản xuất mới tạo nhu cầu xây dựng nhà xưởng, kho bãi và hạ tầng cơ điện khu công nghiệp.",
       "departments": [
         "Kinh doanh",
         "Đấu thầu",
         "Dự án",
-        "Cung ứng"
-      ],
-      "source": "Báo Đấu thầu",
-      "source_date": "11.10.2026",
-      "url": "https://baodauthau.vn/ban-tin-thoi-su-sang-1110-post209630.html"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "ĐIỆN • HẠ TẦNG",
-      "impact": "CAO",
-      "headline": "Quảng Ninh lựa chọn thầu lưới 220kV Móng Cái và Hải Hà",
-      "facts": [
-        "Trạm biến áp 220kV Móng Cái quy mô 2x250MVA, tổng vốn khoảng 482 tỷ đồng, đang chọn nhà thầu xây lắp và thiết bị.",
-        "Đường dây 220kV Hải Hà – Móng Cái dài 23,6 km, vốn khoảng 497 tỷ đồng, cũng đang lựa chọn nhà thầu."
-      ],
-      "note": "Các dự án lưới điện mở ra nhu cầu thi công, vật tư và thiết bị hệ thống điện công nghiệp.",
-      "departments": [
-        "Kinh doanh",
-        "Đấu thầu",
         "Kỹ thuật",
         "Cung ứng"
       ],
-      "source": "Cổng TTĐT Quảng Ninh",
-      "source_date": "10.10.2026",
-      "url": "https://dangcongsan.vn/quangninh/tin-tuc-hoat-dong/tang-toc-cac-du-an-nang-luong-trong-diem-quoc-gia.html"
+      "source": "Trang xúc tiến đầu tư tỉnh Hà Tĩnh",
+      "source_date": "12.10.2026",
+      "url": "https://xuctiendautu.hatinh.gov.vn/vi/bai-viet/khu-cong-nghiep-vsip-ha-tinh-thu-hut-them-du-an-dau-tu"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "HẠ TẦNG • PPP",
+      "impact": "CAO",
+      "headline": "Liên danh đề xuất nghiên cứu cao tốc Thái Nguyên–Lạng Sơn 29.000 tỷ đồng",
+      "facts": [
+        "Liên danh Tự Lập – STC Golden Land đề xuất Bộ Xây dựng cho nghiên cứu đầu tư tuyến cao tốc Thái Nguyên–Lạng Sơn theo phương thức PPP.",
+        "Phương án sơ bộ dài khoảng 120 km, quy mô 4 làn xe, vốn dự kiến 29.000 tỷ đồng; đây mới là đề xuất nghiên cứu, chưa phải quyết định đầu tư."
+      ],
+      "note": "Nếu được chấp thuận, tuyến đường có thể bổ sung cơ hội xây lắp, vật liệu và logistics liên vùng.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Chiến lược",
+        "Dự án"
+      ],
+      "source": "Báo Xây dựng",
+      "source_date": "12.10.2026",
+      "url": "https://baoxaydung.vn/lo-dien-lien-danh-de-xuat-dau-tu-cao-toc-29000-ty-dong-qua-thai-nguyen-lang-son-192261012151401192.htm"
     },
     {
       "region": "MIỀN TRUNG",
-      "category": "CHỐNG SẠT LỞ • CÔNG TRƯỜNG",
+      "category": "ĐẤU THẦU • HẠ TẦNG",
       "impact": "TRUNG BÌNH",
-      "headline": "Mưa lớn khiến công trình kè sông Vĩnh Định 36,9 tỷ đồng chững lại",
+      "headline": "Gia Lai: liên danh trúng gói hạ tầng phía Nam suối Cả gần 200 tỷ đồng",
       "facts": [
-        "Dự án kè khẩn cấp bờ sông Vĩnh Định qua ba xã của Quảng Trị có vốn 36,9 tỷ đồng và kế hoạch thực hiện trong năm 2026.",
-        "Ghi nhận ngày 09–10/10 cho thấy công trường sau hơn một tháng triển khai đã chững lại do mưa lớn kéo dài."
+        "Ban Quản lý phường Quy Nhơn Đông công bố liên danh 4 thành viên trúng gói xây dựng và lắp đặt thiết bị Dự án hạ tầng kỹ thuật phía Nam suối Cả, xã Nhơn Lý.",
+        "Giá trúng thầu 199,785 tỷ đồng so với dự toán 200,273 tỷ đồng; gói đấu thầu rộng rãi qua mạng có một nhà thầu nộp hồ sơ."
       ],
-      "note": "Thời tiết tiếp tục là biến số quan trọng trong tổ chức thi công công trình phòng chống thiên tai.",
+      "note": "Gói thầu phản ánh thị trường xây lắp hạ tầng đô thị và nhu cầu phối hợp thiết bị kỹ thuật.",
+      "departments": [
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "12.10.2026",
+      "url": "https://baodauthau.vn/goi-thau-ha-tang-ky-thuat-200273-ty-dong-tai-ban-quan-ly-phuong-quy-nhon-dong-ve-tay-lien-danh-4-thanh-vien-post209647.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "KCN • TIẾN ĐỘ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hải Phòng: hạ tầng KCN Kim Thành 164,98 ha đã hoàn thành khoảng 70%",
+      "facts": [
+        "Trong chuyến kiểm tra ngày 12/10, Hải Phòng ghi nhận KCN Kim Thành do COMA 18 đầu tư có diện tích 164,98 ha và đã hoàn thành khoảng 70% hạ tầng.",
+        "Địa phương yêu cầu rà soát đường găng, hướng đến hoàn thành hạ tầng vào cuối quý I hoặc đầu quý II/2027."
+      ],
+      "note": "Tiến độ hạ tầng KCN liên quan nhu cầu hoàn thiện hệ thống kỹ thuật và đón doanh nghiệp thứ cấp.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Báo Hải Phòng",
+      "source_date": "12.10.2026",
+      "url": "https://baohaiphong.vn/bi-thu-thanh-uy-le-ngoc-chau-yeu-cau-quyet-liet-thao-go-vuong-mac-day-nhanh-tien-do-cac-du-an-555610.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "CÔNG TRƯỜNG • GIAO THÔNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Quảng Ngãi chuẩn bị đóng cầu Trà Khúc cũ để thi công cầu mới",
+      "facts": [
+        "Ngày 12/10, chủ đầu tư cùng các đơn vị kiểm tra hiện trường, xây dựng phương án phân luồng trước khi đóng cầu Trà Khúc hiện hữu; ngày đóng cầu chưa được công bố.",
+        "Cầu Trà Khúc 1 mới khởi công ngày 08/10, dự kiến thi công 18 tháng; công tác chuẩn bị gồm di dời cáp ngầm, trạm điện 24kV và tuyến cấp nước."
+      ],
+      "note": "Thi công cầu trong khu đô thị cần phối hợp giao thông, di dời hệ thống kỹ thuật và an toàn.",
       "departments": [
         "Dự án",
         "Kỹ thuật",
@@ -61,161 +102,123 @@
         "Cung ứng"
       ],
       "source": "Báo Xây dựng",
-      "source_date": "11.10.2026",
-      "url": "https://baoxaydung.vn/quang-tri-du-an-khac-phuc-khan-cap-sat-lo-bo-song-vinh-dinh-dang-trien-khai-the-nao-192261010213520703.htm"
-    },
-    {
-      "region": "MIỀN TRUNG",
-      "category": "CẤP NƯỚC • CƠ ĐIỆN",
-      "impact": "TRUNG BÌNH",
-      "headline": "Hà Tĩnh hoàn tất phương án mặt bằng Nhà máy nước Cổ Đạm 58 tỷ đồng",
-      "facts": [
-        "Ngày 11/10, xã Cổ Đạm thông báo đã hoàn thành phương án giải phóng mặt bằng cho dự án Nhà máy nước hơn 58 tỷ đồng; công trình chưa khởi công.",
-        "Nhà máy có công suất thiết kế 3.500 m³/ngày đêm, dự phòng tăng lên 5.000 m³/ngày đêm cùng mạng truyền dẫn nước."
-      ],
-      "note": "Đầu tư cấp nước có các hạng mục xây dựng, đường ống và lắp đặt hệ thống cơ điện.",
-      "departments": [
-        "Kinh doanh",
-        "Dự án",
-        "Kỹ thuật",
-        "Cung ứng"
-      ],
-      "source": "Người Đưa Tin",
-      "source_date": "11.10.2026",
-      "url": "https://www.nguoiduatin.vn/ha-tinh-day-nhanh-cong-trinh-mo-rong-mang-luoi-cap-nuoc-sach-giai-con-khat-cho-nguoi-dan-204261011173108686.htm"
+      "source_date": "12.10.2026",
+      "url": "https://baoxaydung.vn/quang-ngai-dieu-tiet-giao-thong-nhu-the-nao-khi-dong-cau-tra-khuc-192261012194919798.htm"
     },
     {
       "region": "MIỀN BẮC",
-      "category": "CÔNG NGHIỆP • FDI",
+      "category": "ĐẤU THẦU • GIÁO DỤC",
       "impact": "TRUNG BÌNH",
-      "headline": "Bắc Ninh phê duyệt đề án công nghiệp hỗ trợ, mục tiêu 700 doanh nghiệp",
+      "headline": "Bắc Ninh: liên danh trúng gói xây Trường THCS Dĩnh Kế giá 81,9 tỷ",
       "facts": [
-        "Quyết định 1229/QĐ-UBND ngày 08/10 phê duyệt đề án công nghiệp hỗ trợ 2026–2030, ưu tiên điện tử, bán dẫn, cơ khí chính xác và tự động hóa.",
-        "Đến 2030, Bắc Ninh đặt mục tiêu từ 700 doanh nghiệp công nghiệp hỗ trợ và 60% doanh nghiệp nội địa áp dụng tiêu chuẩn quản lý, chất lượng phù hợp chuỗi cung ứng toàn cầu."
+        "Ban Quản lý dự án xây dựng Bắc Giang công bố liên danh Nam – Invest và Xây dựng Thăng Long trúng gói xây lắp, thiết bị Trường THCS Dĩnh Kế (cơ sở 2).",
+        "Giá trúng thầu 81,9 tỷ đồng, giảm 5,877 tỷ đồng so với giá gói thầu 87,777 tỷ; có một nhà thầu dự đấu thầu rộng rãi qua mạng."
       ],
-      "note": "Định hướng sản xuất công nghệ cao góp phần định hình nhu cầu nhà xưởng và hạ tầng KCN.",
-      "departments": [
-        "Kinh doanh",
-        "Chiến lược",
-        "Dự án"
-      ],
-      "source": "Cục Công nghiệp – Bộ Công Thương",
-      "source_date": "11.10.2026",
-      "url": "https://via.gov.vn/tin-tuc/t24928/bac-ninh-phe-duyet-de-an-phat-trien-cong-nghiep-ho-tro-den-nam-2035-uu-tien-dien-tu-ban-dan"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "ĐẤU THẦU • ĐÔ THỊ",
-      "impact": "TRUNG BÌNH",
-      "headline": "Hà Nội công bố nhà thầu hạ tầng Liên Hà 1 giá 46,210 tỷ đồng",
-      "facts": [
-        "Liên danh ba đơn vị trúng gói hạ tầng kỹ thuật Liên Hà 1 tại xã Thư Lâm, Hà Nội với giá 46,210 tỷ đồng, so với giá gói 46,685 tỷ đồng.",
-        "Gói tổ chức đấu thầu rộng rãi qua mạng và ghi nhận một nhà thầu nộp hồ sơ, không gồm phần di chuyển đường dây 110kV."
-      ],
-      "note": "Gói thầu cho thấy nhu cầu xây lắp hạ tầng đô thị và thực tế cạnh tranh đấu thầu.",
+      "note": "Thông tin lựa chọn thầu cung cấp tham chiếu giá và mức cạnh tranh trong công trình dân dụng.",
       "departments": [
         "Đấu thầu",
         "Dự án",
-        "Cung ứng"
+        "Kỹ thuật"
       ],
       "source": "Báo Đấu thầu",
-      "source_date": "10.10.2026",
-      "url": "https://baodauthau.vn/lien-danh-3-thanh-vien-trung-goi-thau-ha-tang-ky-thuat-46684-ty-dong-tai-xa-thu-lam-ha-noi-post209632.html"
+      "source_date": "12.10.2026",
+      "url": "https://baodauthau.vn/bac-giang-lien-danh-nam-invest-xay-dung-thang-long-trung-goi-thau-xay-truong-thcs-87777-ty-dong-post209651.html"
     },
     {
       "region": "MIỀN TRUNG",
-      "category": "KINH TẾ • CÔNG NGHIỆP",
+      "category": "THỦY LỢI • ĐẤU THẦU",
       "impact": "TRUNG BÌNH",
-      "headline": "Quảng Trị ghi nhận GRDP tăng 8,42% và sản xuất công nghiệp tăng 14,3%",
+      "headline": "Huế công bố nhà thầu gia cố sông Đông Ba, giá trúng 30,944 tỷ",
       "facts": [
-        "Theo UBND tỉnh, GRDP 9 tháng 2026 của Quảng Trị ước tăng 8,42%; riêng quý III, khu vực công nghiệp – xây dựng tăng 18,01%.",
-        "Chỉ số sản xuất công nghiệp 9 tháng tăng 14,3%; riêng sản xuất và phân phối điện tăng 28% so với cùng kỳ."
+        "Công ty CP Xây dựng Thủy lợi Thừa Thiên Huế trúng gói số 10 thi công Dự án Nạo vét, gia cố hệ thống sông Đông Ba.",
+        "Giá trúng thầu 30,944 tỷ đồng so với giá gói thầu 32,752 tỷ đồng; gói đấu thầu rộng rãi qua mạng có một nhà thầu nộp hồ sơ."
       ],
-      "note": "Các chỉ số cho thấy nhu cầu thị trường công nghiệp và hạ tầng vùng tiếp tục duy trì đà phát triển.",
+      "note": "Công trình thủy lợi đô thị gắn với nhu cầu thi công bờ kè, nạo vét và biện pháp bảo vệ dòng chảy.",
       "departments": [
-        "Kinh doanh",
-        "Dự án",
-        "Tài chính"
-      ],
-      "source": "VnEconomy",
-      "source_date": "11.10.2026",
-      "url": "https://vneconomy.vn/quang-tri-tang-truong-grdp-842-sau-9-thang.htm"
-    },
-    {
-      "region": "MIỀN TRUNG",
-      "category": "CHẤT LƯỢNG • AN TOÀN",
-      "impact": "THEO DÕI",
-      "headline": "Đà Nẵng yêu cầu chấn chỉnh thi công vỉa hè kéo dài trước mùa mưa",
-      "facts": [
-        "Sở Xây dựng Đà Nẵng yêu cầu kiểm tra tiến độ, cao độ, kết cấu, thoát nước, an toàn và vệ sinh tại các dự án vỉa hè đang thi công.",
-        "Các công trình chậm hoàn trả mặt bằng hoặc chất lượng không bảo đảm phải được khắc phục, hoàn thiện theo từng đoạn để giảm ảnh hưởng sinh hoạt và giao thông."
-      ],
-      "note": "Việc chấn chỉnh nhấn mạnh vai trò tổ chức công trường, chất lượng và an toàn trong hạ tầng đô thị.",
-      "departments": [
+        "Đấu thầu",
         "Dự án",
         "Kỹ thuật",
-        "An toàn",
+        "An toàn"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "12.10.2026",
+      "url": "https://baodauthau.vn/cong-ty-cp-xay-dung-thuy-loi-thua-thien-hue-trung-goi-thau-gia-co-song-dong-ba-32752-ty-dong-post209650.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "ĐẦU TƯ CÔNG • TIẾN ĐỘ",
+      "impact": "THEO DÕI",
+      "headline": "Ninh Bình gia hạn dự án đường nối cầu sông Bôi đến 30/6/2027",
+      "facts": [
+        "Ngày 12/10, UBND tỉnh Ninh Bình ban hành Quyết định 3735/QĐ-UBND, gia hạn dự án đường kết nối ĐT.479 với cầu sông Bôi (giai đoạn 1) đến 30/6/2027.",
+        "Dự án tại xã Gia Lâm và Gia Tường có vốn 54,679 tỷ đồng từ ngân sách tỉnh; chủ đầu tư được yêu cầu hoàn thiện thủ tục và quản lý hợp đồng thi công."
+      ],
+      "note": "Điều chỉnh tiến độ đầu tư công cho thấy vai trò thủ tục, mặt bằng và quản lý hợp đồng xây lắp.",
+      "departments": [
+        "Dự án",
+        "Đấu thầu",
+        "Tài chính",
         "Pháp lý"
       ],
-      "source": "Báo Đà Nẵng",
-      "source_date": "11.10.2026",
-      "url": "https://baodanang.vn/noi-kho-via-he-thi-cong-keo-dai-3354772.html"
+      "source": "Báo Xây dựng",
+      "source_date": "12.10.2026",
+      "url": "https://baoxaydung.vn/ninh-binh-gia-han-du-an-duong-noi-cau-vuot-song-boi-von-gan-55-ty-dong-192261012185406552.htm"
     }
   ],
   "news_themes": [
     {
-      "label": "LOGISTICS • NĂNG LƯỢNG",
-      "title": "Hạ tầng cảng và lưới điện có mốc triển khai",
-      "detail": "Cảng Giang Biên khởi công, các dự án lưới 220kV Quảng Ninh đang chọn thầu xây lắp và thiết bị."
+      "label": "FDI • KHU CÔNG NGHIỆP",
+      "title": "Sản xuất mới và hoàn thiện hạ tầng",
+      "detail": "VSIP Hà Tĩnh có thêm dự án nhà máy 90 triệu USD; KCN Kim Thành tại Hải Phòng hoàn thành khoảng 70% hạ tầng."
     },
     {
-      "label": "CÔNG NGHIỆP • THỊ TRƯỜNG",
-      "title": "Định hướng sản xuất và tăng trưởng vùng",
-      "detail": "Bắc Ninh ưu tiên chuỗi công nghiệp hỗ trợ; Quảng Trị tăng trưởng công nghiệp, xây dựng trong 9 tháng."
+      "label": "CAO TỐC • GIAO THÔNG",
+      "title": "Đề xuất tuyến mới, điều chỉnh tiến độ",
+      "detail": "Tuyến Thái Nguyên–Lạng Sơn ở bước đề xuất nghiên cứu PPP; Ninh Bình gia hạn dự án đường nối cầu sông Bôi."
     },
     {
-      "label": "MÔI TRƯỜNG • CẤP NƯỚC",
-      "title": "Hạ tầng dân sinh đối diện thách thức triển khai",
-      "detail": "Hà Tĩnh hoàn thành phương án mặt bằng nhà máy nước Cổ Đạm; công trường kè Vĩnh Định tại Quảng Trị chịu tác động của mưa."
+      "label": "ĐẤU THẦU • XÂY LẮP",
+      "title": "Nhiều gói xây dựng có kết quả mới",
+      "detail": "Gia Lai, Bắc Ninh và Huế công bố kết quả lựa chọn nhà thầu hạ tầng, trường học và gia cố sông."
     },
     {
-      "label": "ĐẤU THẦU • AN TOÀN",
-      "title": "Xây lắp kỹ thuật gắn với chất lượng thi công",
-      "detail": "Hà Nội có kết quả thầu hạ tầng Liên Hà 1; Đà Nẵng chấn chỉnh thi công vỉa hè kéo dài."
+      "label": "CÔNG TRƯỜNG • HẠ TẦNG",
+      "title": "Chuẩn bị thi công gắn với an toàn đô thị",
+      "detail": "Quảng Ngãi lên phương án phân luồng và di dời hạ tầng điện, nước phục vụ xây cầu Trà Khúc 1."
     }
   ],
   "regional_pulse": [
     {
       "region": "MIỀN BẮC",
-      "title": "Cảng mới, lưới điện và chuỗi sản xuất",
-      "detail": "Cảng Giang Biên khởi công, trạm và đường dây 220kV Quảng Ninh chọn thầu; Bắc Ninh mở định hướng công nghiệp hỗ trợ."
+      "title": "Kết nối đường bộ và hạ tầng công nghiệp",
+      "detail": "Đề xuất cao tốc 29.000 tỷ đồng, tiến độ KCN Kim Thành, kết quả thầu trường Dĩnh Kế và điều chỉnh thời hạn dự án ở Ninh Bình."
     },
     {
       "region": "MIỀN TRUNG",
-      "title": "Đầu tư dân sinh và công trường mùa mưa",
-      "detail": "Hà Tĩnh tiến thêm thủ tục cấp nước, Quảng Trị ghi nhận sức bật công nghiệp nhưng mưa ảnh hưởng thi công kè; Đà Nẵng kiểm tra chất lượng."
+      "title": "FDI, gói hạ tầng và thi công cầu mới",
+      "detail": "Hà Tĩnh cấp phép nhà máy 90 triệu USD, Gia Lai và Huế chọn nhà thầu; Quảng Ngãi chuẩn bị mặt bằng và điều tiết giao thông cầu Trà Khúc."
     }
   ],
   "news_numbers": [
     {
-      "value": "2.551,8 tỷ",
-      "label": "vốn đầu tư cảng Giang Biên",
-      "context": "Thiết kế công suất 2 triệu tấn hàng hóa/năm."
+      "value": "90 triệu USD",
+      "label": "vốn đăng ký dự án TC APPAREL",
+      "context": "Triển khai tại KCN Bắc Thạch Hà, Hà Tĩnh."
     },
     {
-      "value": "497 tỷ",
-      "label": "vốn tuyến điện 220kV Hải Hà – Móng Cái",
-      "context": "Dài 23,6 km, đang lựa chọn thầu."
+      "value": "29.000 tỷ",
+      "label": "vốn sơ bộ cao tốc Thái Nguyên–Lạng Sơn",
+      "context": "Đang ở bước đề xuất nghiên cứu PPP, dài khoảng 120 km."
     },
     {
-      "value": "36,9 tỷ",
-      "label": "vốn dự án kè sông Vĩnh Định",
-      "context": "Tiến độ chịu ảnh hưởng mưa lớn."
+      "value": "70%",
+      "label": "hạ tầng KCN Kim Thành đã hoàn thành",
+      "context": "Diện tích dự án 164,98 ha tại Hải Phòng."
     },
     {
-      "value": "8,42%",
-      "label": "tăng trưởng GRDP Quảng Trị",
-      "context": "Sản xuất công nghiệp tăng 14,3% trong 9 tháng."
+      "value": "199,785 tỷ",
+      "label": "giá trúng gói hạ tầng phía Nam suối Cả",
+      "context": "Công trình tại phường Quy Nhơn Đông, Gia Lai."
     }
   ],
   "action_today": ""
