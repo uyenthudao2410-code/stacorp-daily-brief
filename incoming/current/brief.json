@@ -1,60 +1,159 @@
 {
-  "date": "14.10.2026",
+  "date": "15.10.2026",
   "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
   "subtitle": "Thị trường • Dự án • Chi phí • Con người",
-  "summary_lede": "Ngày 14/10, miền Trung xuất hiện bước tiến mới tại các dự án thương mại tự do, đô thị và nghỉ dưỡng quy mô lớn. Miền Bắc ghi nhận kế hoạch chống ngập, kết quả lựa chọn nhà thầu và cảnh báo chậm tiến độ tuyến kết nối sân bay Gia Bình.",
+  "summary_lede": "Ngày 15/10, dự án truyền tải điện tại Quảng Trị cần tháo gỡ mặt bằng, trong khi Quảng Ngãi mời đầu tư xử lý chất thải. Miền Bắc ghi nhận cơ hội PPP giao thông, đô thị Hải Phòng và cập nhật công trường, quy hoạch logistics.",
   "items": [
     {
       "region": "MIỀN TRUNG",
-      "category": "ĐẦU TƯ • ĐÔ THỊ",
+      "category": "NĂNG LƯỢNG • MEP",
       "impact": "CAO",
-      "headline": "Quảng Trị rà soát 12 dự án Sun Group, vốn dự kiến khoảng 200.000 tỷ đồng",
+      "headline": "Quảng Trị tháo vướng mặt bằng các dự án truyền tải 500 kV Lao Bảo – Quảng Trị 2",
       "facts": [
-        "Ngày 13/10, UBND Quảng Trị rà soát 12 dự án Sun Group đang nghiên cứu, triển khai; tổng mức đầu tư mới ở mức dự kiến khoảng 200.000 tỷ đồng.",
-        "Dự án du lịch núi U Bò - hồ Thác Chuối dự kiến vốn hơn 16.234 tỷ đồng, đặt mục tiêu khởi công 30/10, còn phải hoàn thiện quy hoạch chi tiết và môi trường."
+        "Chiều 14/10, tỉnh họp tháo chồng lấn đất tại các móng cột 220 kV, 500 kV với một số dự án điện gió; trạm 500 kV Lao Bảo quy mô 2×900 MVA.",
+        "Tuyến 500 kV Lao Bảo – trạm cắt Quảng Trị 2 dài khoảng 36 km, dự kiến khởi công quý I/2027 và đóng điện quý IV/2027; tiến độ còn phụ thuộc thủ tục và mặt bằng."
       ],
-      "note": "Danh mục dự án lớn mở ra dư địa công trình đô thị và hạ tầng, song nhiều dự án vẫn trong giai đoạn chuẩn bị pháp lý.",
+      "note": "Chuỗi đầu tư lưới điện mở thêm nhu cầu hạ tầng, thiết bị điện và phối hợp thi công; rủi ro mặt bằng cần theo dõi.",
       "departments": [
         "Kinh doanh",
-        "Đấu thầu",
-        "Dự án",
-        "Pháp lý"
-      ],
-      "source": "Báo Xây dựng",
-      "source_date": "13.10.2026",
-      "url": "https://batdongsan.baoxaydung.vn/sun-group-nghien-cuu-trien-khai-12-du-an-gan-200000-ty-dong-tai-quang-tri-19226101315124146.htm"
-    },
-    {
-      "region": "MIỀN TRUNG",
-      "category": "THƯƠNG MẠI TỰ DO • HẠ TẦNG",
-      "impact": "CAO",
-      "headline": "Đà Nẵng chấp thuận hạ tầng vị trí số 6 Khu thương mại tự do, vốn 3.354,8 tỷ đồng",
-      "facts": [
-        "Quyết định 4684/QĐ-UBND ngày 13/10 chấp thuận dự án và nhà đầu tư FTZ KITA Trung Nam tại xã Bà Nà, quy mô khoảng 154 ha.",
-        "Dự án có tổng vốn 3.354,8 tỷ đồng; kế hoạch triển khai 2026–2030, dự kiến khởi công hạ tầng phần diện tích đủ điều kiện năm 2027."
-      ],
-      "note": "Dự án tạo nguồn việc tiềm năng cho san nền, giao thông, hạ tầng kỹ thuật và công trình dịch vụ.",
-      "departments": [
-        "Kinh doanh",
-        "Đấu thầu",
         "Dự án",
         "Kỹ thuật",
         "Cung ứng"
       ],
-      "source": "Báo Đà Nẵng",
-      "source_date": "13.10.2026",
-      "url": "https://baodanang.vn/da-nang-chap-thuan-du-an-tai-vi-tri-so-6-khu-thuong-mai-tu-do-von-dau-tu-hon-3-354-ty-dong-3355058.html"
+      "source": "Cổng thông tin điện tử tỉnh Quảng Trị",
+      "source_date": "14.10.2026",
+      "url": "https://www.quangtri.gov.vn/en/tin-tuc/tap-trung-thao-go-vuong-mac-day-nhanh-tien-do-cac-du-an-truyen-tai-dien-500-kv"
     },
     {
       "region": "MIỀN BẮC",
-      "category": "CÔNG TRƯỜNG • TIẾN ĐỘ",
+      "category": "GIAO THÔNG • PPP",
       "impact": "CAO",
-      "headline": "Đường kết nối sân bay Gia Bình mới đạt 3,8% giá trị hợp đồng, ba gói xây lắp chậm",
+      "headline": "Hải Phòng khảo sát nhà đầu tư dự án đường Đông Tây BT hơn 15.117 tỷ đồng",
       "facts": [
-        "Theo Sở Xây dựng Hà Nội, đến đầu tháng 10, sản lượng lũy kế tuyến kết nối sân bay Gia Bình đạt 709,31 tỷ đồng, tương đương 3,8% giá trị hợp đồng.",
-        "Ba gói XL-01, XL-02, XL-03 đều chậm so với kế hoạch điều chỉnh; dự án PPP/BT dài khoảng 14,07 km qua Hà Nội và Bắc Ninh."
+        "Ban QLDA giao thông Hải Phòng khảo sát sự quan tâm của nhà đầu tư, bên cho vay đối với đoạn Km3+188–Km23+589 của tuyến kết nối Đông Tây theo PPP/BT.",
+        "Vốn sơ bộ 15.117,6 tỷ đồng, tuyến mới dài khoảng 20,4 km; hạn nộp hồ sơ quan tâm 9h ngày 22/10/2026, chưa phải bước lựa chọn nhà đầu tư."
       ],
-      "note": "Tiến độ tuyến kết nối cho thấy sức ép giải phóng mặt bằng, huy động nhân sự và phối hợp nhiều gói xây lắp.",
+      "note": "Đầu tư giao thông lớn có thể tạo nguồn việc hạ tầng và cơ điện đường bộ, nhưng dự án mới ở bước khảo sát thị trường.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Tài chính"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "14.10.2026",
+      "url": "https://baodauthau.vn/hai-phong-khao-sat-su-quan-tam-du-an-bt-xay-duong-ket-noi-dong-tay-hon-15-nghin-ty-dong-post209747.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "MÔI TRƯỜNG • ĐẤU THẦU",
+      "impact": "CAO",
+      "headline": "Quảng Ngãi phát hành hồ sơ mời thầu dự án xử lý rác Nghĩa Kỳ 705 tỷ đồng",
+      "facts": [
+        "Sở Nông nghiệp và Môi trường Quảng Ngãi phát hành hồ sơ mời thầu ngày 13/10, lựa chọn nhà đầu tư Khu liên hợp xử lý chất thải rắn Nghĩa Kỳ bằng đấu thầu rộng rãi trong nước.",
+        "Dự án dự kiến 705 tỷ đồng trên 68,12 ha, công suất tối đa 1.500 tấn/ngày theo hai giai đoạn; đóng thầu 9h ngày 27/11/2026."
+      ],
+      "note": "Khu liên hợp mở cơ hội hạ tầng công nghiệp môi trường, hệ thống điện và xử lý nước thải khi dự án đủ điều kiện triển khai.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Kỹ thuật",
+        "Dự án"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "14.10.2026",
+      "url": "https://baodauthau.vn/quang-ngai-dau-thau-rong-rai-chon-nha-dau-tu-du-an-xu-ly-chat-thai-ran-nghia-ky-post209746.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "ĐẦU TƯ CÔNG • DÒNG TIỀN",
+      "impact": "TRUNG BÌNH",
+      "headline": "Đà Nẵng đã giải ngân hơn 13.265 tỷ, tăng tốc kế hoạch vốn đầu tư công 2026",
+      "facts": [
+        "Đến hết tháng 9, Đà Nẵng giải ngân hơn 13.265 tỷ đồng, tương đương 71,84% kế hoạch vốn 18.465 tỷ đồng do HĐND thành phố giao.",
+        "Thành phố đặt mốc giải ngân 88% cuối tháng 10, 93% cuối tháng 11 và 98% cuối tháng 12; ưu tiên tháo gỡ thủ tục, mặt bằng và vật liệu."
+      ],
+      "note": "Áp lực tiến độ giải ngân cuối năm có thể thúc đẩy nghiệm thu, thanh toán và tăng khối lượng thi công các công trình trọng điểm.",
+      "departments": [
+        "Dự án",
+        "Kế toán",
+        "Tài chính",
+        "Cung ứng"
+      ],
+      "source": "VnEconomy",
+      "source_date": "14.10.2026",
+      "url": "https://vneconomy.vn/da-nang-dat-muc-tieu-giai-ngan-100-von-dau-tu-cong-nam-2026.htm"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "NHÀ MÁY • CƠ KHÍ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hà Tĩnh chấp thuận nhà máy cơ khí Đại Dương gần 96 tỷ tại KCN Gia Lách",
+      "facts": [
+        "Ban Quản lý Khu kinh tế Hà Tĩnh chấp thuận dự án sản xuất và lắp ráp cơ khí Đại Dương tại xã Nghi Xuân, tổng vốn đăng ký 95,923 tỷ đồng.",
+        "Dự án thiết kế sản lượng 25.000 tấn/năm, gồm xà gồ và kết cấu thép; dự kiến xây nhà xưởng, hạ tầng, lắp thiết bị trong 18 tháng từ khi bàn giao đất."
+      ],
+      "note": "Dự án công nghiệp mới tạo nhu cầu nhà xưởng, hệ thống phụ trợ và hạ tầng khu công nghiệp; thời điểm xây dựng phụ thuộc bàn giao đất.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Tạp chí Doanh nghiệp & Hội nhập",
+      "source_date": "14.10.2026",
+      "url": "https://doanhnghiephoinhap.vn/ha-tinh-nha-may-co-khi-gan-96-ty-dong-duoc-chap-thuan-dau-tu-tai-kcn-gia-lach-151627.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "ĐÔ THỊ • CHỌN NHÀ ĐẦU TƯ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hải Phòng dự kiến đấu thầu Khu đô thị mới An Quang 2.491 tỷ trong quý IV",
+      "facts": [
+        "Sở Tài chính Hải Phòng cập nhật kế hoạch tổ chức lựa chọn nhà đầu tư Khu đô thị mới An Quang trong quý IV/2026, tổng vốn khoảng 2.490,99 tỷ đồng.",
+        "Dự án dùng khoảng 313.588 m² đất, dự kiến xây hạ tầng kỹ thuật, nhà ở thương mại và nhà ở xã hội; hiện chưa có kết quả chọn nhà đầu tư."
+      ],
+      "note": "Nguồn việc tiềm năng gồm san nền, cấp thoát nước, điện và công trình dân dụng, tùy tiến độ chọn nhà đầu tư.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "14.10.2026",
+      "url": "https://baodauthau.vn/tp-hai-phong-sap-dau-thau-lua-chon-nha-dau-tu-khu-do-thi-moi-tai-xa-an-quang-gan-2491-ty-dong-post209916.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "QUY HOẠCH • LOGISTICS",
+      "impact": "TRUNG BÌNH",
+      "headline": "Lạng Sơn công bố quy hoạch Khu kinh tế cửa khẩu Đồng Đăng 39.400 ha đến 2045",
+      "facts": [
+        "Ngày 14/10, UBND Lạng Sơn công bố điều chỉnh quy hoạch chung Khu kinh tế cửa khẩu Đồng Đăng – Lạng Sơn, được Thủ tướng phê duyệt tại Quyết định 1855 ngày 25/9.",
+        "Quy mô quy hoạch khoảng 39.400 ha, chia ba phân vùng cửa khẩu–đô thị, trung tâm đô thị và công nghiệp–dịch vụ; định hướng trung tâm hậu cần logistics."
+      ],
+      "note": "Quy hoạch tạo cơ sở định hướng dự án kho bãi, hạ tầng logistics và đô thị biên giới, chưa đồng nghĩa với các gói thầu được phê duyệt.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Chiến lược"
+      ],
+      "source": "Báo Xây dựng",
+      "source_date": "14.10.2026",
+      "url": "https://baoxaydung.vn/cong-bo-dieu-chinh-quy-hoach-chung-khu-kinh-te-cua-khau-dong-dang-lang-son-den-nam-2045-192261014162154789.htm"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "CÔNG TRƯỜNG • HẠ TẦNG",
+      "impact": "THEO DÕI",
+      "headline": "Lào Cai: ba gói TL175 gần 1.387 tỷ, một số đoạn sạt lở cần khắc phục",
+      "facts": [
+        "Tuyến TL175 nối Nghĩa Lộ với cao tốc Nội Bài–Lào Cai dài khoảng 53 km; ba gói XL09, XL10, XL11 có tổng giá trị 1.386,891 tỷ đồng.",
+        "XL09 đã bàn giao từ tháng 7/2025, XL10 hoàn thành hạng mục xây dựng chính nhưng hiện còn 8 vị trí sạt lở do mưa bão năm 2026 cần xử lý."
+      ],
+      "note": "Diễn biến công trường miền núi cho thấy rủi ro thời tiết, an toàn giao thông và chi phí khắc phục phát sinh sau thi công.",
       "departments": [
         "Dự án",
         "Kỹ thuật",
@@ -62,164 +161,64 @@
         "Cung ứng"
       ],
       "source": "Báo Xây dựng",
-      "source_date": "13.10.2026",
-      "url": "https://baoxaydung.vn/du-an-duong-ket-noi-san-bay-gia-binh-i-ach-nhieu-goi-thau-chua-dat-ke-hoach-192261013141606424.htm"
-    },
-    {
-      "region": "MIỀN TRUNG",
-      "category": "ĐÔ THỊ • KHỞI CÔNG",
-      "impact": "TRUNG BÌNH",
-      "headline": "Quảng Ngãi hoàn tất bước chuẩn bị khởi công khu đô thị số 1 Măng Đen hơn 6.700 tỷ",
-      "facts": [
-        "Ngày 13/10, Sở Xây dựng Quảng Ngãi xác nhận đã thống nhất địa điểm tổ chức lễ khởi công; nhà đầu tư tiếp tục hoàn chỉnh hồ sơ để dự kiến khởi công tháng 10.",
-        "Dự án do Công ty TNHH Tập đoàn Sun World thực hiện, diện tích khoảng 264,4 ha, vốn hơn 6.700 tỷ đồng; đã giao hoặc cho thuê đất đợt 1 hơn 200 ha."
-      ],
-      "note": "Nguồn việc đô thị mới gắn với hạ tầng kỹ thuật, công trình tiện ích và chuẩn bị tổ chức thi công.",
-      "departments": [
-        "Kinh doanh",
-        "Dự án",
-        "Kỹ thuật",
-        "Cung ứng"
-      ],
-      "source": "Báo Xây dựng",
-      "source_date": "13.10.2026",
-      "url": "https://batdongsan.baoxaydung.vn/quang-ngai-khu-do-thi-hon-6700-ty-dong-o-mang-den-san-sang-khoi-cong-19226101316091168.htm"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "ĐẤU THẦU • THỦY LỢI",
-      "impact": "TRUNG BÌNH",
-      "headline": "Thái Nguyên công bố liên danh sáu thành viên trúng gói nâng cấp kênh Hồ Núi Cốc 568,363 tỷ",
-      "facts": [
-        "Chủ đầu tư công bố liên danh sáu thành viên trúng gói xây dựng bờ kênh kết hợp đường giao thông Hồ Núi Cốc, giá 568,363 tỷ đồng.",
-        "Hợp đồng đơn giá điều chỉnh trong 18 tháng; nhà thầu dự kiến khởi công tháng 10/2026 và phải duy trì hạ tầng thủy lợi phục vụ sản xuất khi thi công."
-      ],
-      "note": "Gói xây lắp kết hợp giao thông và thủy lợi cho thấy nhu cầu phối hợp mặt bằng, vật liệu và biện pháp thi công.",
-      "departments": [
-        "Đấu thầu",
-        "Dự án",
-        "Kỹ thuật",
-        "Cung ứng"
-      ],
-      "source": "Báo Đấu thầu",
-      "source_date": "13.10.2026",
-      "url": "https://baodauthau.vn/lien-danh-6-thanh-vien-trung-goi-thau-568-ty-dong-tai-thai-nguyen-post209766.html"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "ĐÊ BIỂN • ĐẤU THẦU",
-      "impact": "TRUNG BÌNH",
-      "headline": "Ninh Bình chọn liên danh thi công đê Hải Thịnh III và cống mới, giá 214,165 tỷ đồng",
-      "facts": [
-        "Liên danh Xây dựng Giao Thủy - Nadico - Xây lắp 898 trúng gói thi công, lắp đặt thiết bị và bảo đảm an toàn giao thông tại tuyến đê Hải Thịnh III.",
-        "Giá trúng 214,165 tỷ đồng, tiết kiệm gần 0,2%; hợp đồng đơn giá điều chỉnh, thời gian thực hiện 18 tháng, nguồn vốn ngân sách trung ương và tỉnh."
-      ],
-      "note": "Hạng mục đê biển và cống thủy lợi liên quan thi công mùa mưa, cung ứng vật tư và kiểm soát tiến độ.",
-      "departments": [
-        "Đấu thầu",
-        "Dự án",
-        "Kỹ thuật",
-        "An toàn"
-      ],
-      "source": "Báo Đấu thầu",
-      "source_date": "13.10.2026",
-      "url": "https://baodauthau.vn/lien-danh-3-thanh-vien-trung-goi-thau-214-ty-dong-tai-ninh-binh-post209763.html"
-    },
-    {
-      "region": "MIỀN TRUNG",
-      "category": "GIAO THÔNG • ĐẤU THẦU",
-      "impact": "TRUNG BÌNH",
-      "headline": "Hà Tĩnh công bố liên danh trúng gói đường biên giới Rào Tre–Cà Xen 93,88 tỷ đồng",
-      "facts": [
-        "Liên danh Xây dựng Thăng Long và Xây lắp, Thương mại Tuấn Phong trúng gói 18 của dự án đường từ bản Rào Tre đến bản Cà Xen, giá 93,88 tỷ đồng.",
-        "Dự án thành phần tại Hà Tĩnh có tổng mức đầu tư 115 tỷ đồng; gói thầu sử dụng ngân sách, hợp đồng đơn giá điều chỉnh và thời hạn 450 ngày."
-      ],
-      "note": "Gói giao thông vùng đồi núi đặt ra yêu cầu chuẩn bị tuyến thi công, vật liệu, tổ chức vận chuyển và tiến độ.",
-      "departments": [
-        "Đấu thầu",
-        "Dự án",
-        "Kỹ thuật",
-        "Cung ứng"
-      ],
-      "source": "Báo Đấu thầu",
-      "source_date": "13.10.2026",
-      "url": "https://baodauthau.vn/lien-danh-thang-long-tuan-phong-trung-goi-thau-hon-93-ty-dong-tai-ha-tinh-post209760.html"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "THOÁT NƯỚC • ĐẦU TƯ CÔNG",
-      "impact": "THEO DÕI",
-      "headline": "Hà Nội lập kế hoạch 166 công trình thủy lợi khoảng 57.365 tỷ đồng giai đoạn 2026–2030",
-      "facts": [
-        "Sở Nông nghiệp và Môi trường Hà Nội đang xây dựng kế hoạch đầu tư 166 công trình thủy lợi, vốn dự kiến 57.365 tỷ đồng giai đoạn 2026–2030 để trình phê duyệt.",
-        "Đồng thời thành phố đẩy nhanh 15 công trình sửa chữa thoát nước cục bộ dự kiến hoàn thành trong năm 2026; kế hoạch 166 công trình chưa được phê duyệt."
-      ],
-      "note": "Thị trường thoát nước đô thị có thêm tín hiệu dự án dài hạn, cần phân biệt kế hoạch đề xuất với dự án đã phê duyệt.",
-      "departments": [
-        "Kinh doanh",
-        "Đấu thầu",
-        "Dự án",
-        "Chiến lược"
-      ],
-      "source": "Báo Đấu thầu",
-      "source_date": "13.10.2026",
-      "url": "https://baodauthau.vn/kich-hoat-loat-du-an-chong-ngap-cho-thu-do-post209754.html"
+      "source_date": "14.10.2026",
+      "url": "https://baoxaydung.vn/toan-canh-tuyen-duong-hon-1300-ty-dong-o-lao-cai-mo-loi-giao-thuong-vung-cao-192261014092201052.htm"
     }
   ],
   "news_themes": [
     {
-      "label": "ĐÔ THỊ • DỊCH VỤ",
-      "title": "Đầu tư lớn tại miền Trung",
-      "detail": "Quảng Trị rà soát danh mục dự án Sun Group quy mô dự kiến lớn; Đà Nẵng chấp thuận hạ tầng khu thương mại tự do; Măng Đen chuẩn bị khởi công đô thị mới."
+      "label": "NĂNG LƯỢNG • MEP",
+      "title": "Lưới truyền tải trước bài toán mặt bằng",
+      "detail": "Quảng Trị thúc đẩy chuỗi trạm và đường dây 500 kV, 220 kV tại Lao Bảo và Quảng Trị 2, song vướng chồng lấn đất với dự án điện gió."
     },
     {
-      "label": "ĐẤU THẦU • XÂY LẮP",
-      "title": "Kết quả các gói hạ tầng mới",
-      "detail": "Thái Nguyên, Ninh Bình và Hà Tĩnh công bố liên danh trúng gói xây dựng kênh, đê biển và đường giao thông."
+      "label": "HẠ TẦNG • PPP",
+      "title": "Dự án lớn bước vào cửa ngõ đấu thầu",
+      "detail": "Hải Phòng khảo sát nhà đầu tư tuyến BT Đông Tây; An Quang dự kiến lựa chọn nhà đầu tư trong quý IV; Quảng Ngãi mời thầu khu xử lý chất thải."
     },
     {
-      "label": "TIẾN ĐỘ • CÔNG TRƯỜNG",
-      "title": "Tuyến kết nối sân bay còn chậm",
-      "detail": "Dự án kết nối sân bay Gia Bình với Hà Nội mới đạt 3,8% giá trị hợp đồng và cả ba gói xây lắp chính đều chậm kế hoạch điều chỉnh."
+      "label": "ĐẦU TƯ • SẢN XUẤT",
+      "title": "Nhà máy mới và nhịp giải ngân cuối năm",
+      "detail": "Gia Lách đón dự án cơ khí mới; Đà Nẵng đẩy nhanh giải ngân vốn đầu tư công và tháo gỡ mặt bằng, vật liệu."
     },
     {
-      "label": "THỦY LỢI • CHỐNG NGẬP",
-      "title": "Hà Nội lập kế hoạch dự án thoát nước",
-      "detail": "Sở chuyên ngành đang soạn kế hoạch 166 công trình thủy lợi 2026–2030, đồng thời đẩy nhanh 15 công trình sửa chữa thoát nước năm 2026."
+      "label": "LOGISTICS • CÔNG TRƯỜNG",
+      "title": "Không gian vùng và an toàn thi công",
+      "detail": "Lạng Sơn công bố quy hoạch cửa khẩu dài hạn, trong khi Lào Cai tiếp tục xử lý sạt lở trên tuyến TL175."
     }
   ],
   "regional_pulse": [
     {
       "region": "MIỀN BẮC",
-      "title": "Tăng nhu cầu hạ tầng, chú ý tiến độ",
-      "detail": "Thái Nguyên và Ninh Bình công bố gói xây lắp mới; Hà Nội lập kế hoạch chống ngập trong khi tuyến sân bay Gia Bình chậm thi công."
+      "title": "Giao thông, đô thị và logistics",
+      "detail": "Hải Phòng có hai cơ hội đầu tư quy mô lớn đang chuẩn bị thủ tục; Lạng Sơn công bố quy hoạch cửa khẩu, Lào Cai khắc phục sạt lở TL175."
     },
     {
       "region": "MIỀN TRUNG",
-      "title": "Đô thị, thương mại tự do và đường biên giới",
-      "detail": "Quảng Trị rà soát danh mục đầu tư lớn, Đà Nẵng chấp thuận hạ tầng FTZ, Măng Đen chuẩn bị khởi công và Hà Tĩnh có kết quả thầu đường."
+      "title": "Điện lưới, môi trường và công nghiệp",
+      "detail": "Quảng Trị gỡ mặt bằng truyền tải điện, Quảng Ngãi mở thầu khu xử lý rác, Hà Tĩnh thêm nhà máy cơ khí và Đà Nẵng thúc giải ngân."
     }
   ],
   "news_numbers": [
     {
-      "value": "200.000 tỷ",
-      "label": "quy mô dự kiến 12 dự án Sun Group",
-      "context": "Quảng Trị rà soát danh mục đang nghiên cứu và triển khai, chưa phải toàn bộ vốn đã chốt."
+      "value": "15.117,6 tỷ",
+      "label": "vốn sơ bộ tuyến Đông Tây Hải Phòng",
+      "context": "Dự án PPP/BT đang khảo sát sự quan tâm; hạn phản hồi 22/10/2026."
     },
     {
-      "value": "3.354,8 tỷ",
-      "label": "vốn dự án FTZ vị trí số 6",
-      "context": "Đà Nẵng chấp thuận nhà đầu tư tại xã Bà Nà, quy mô khoảng 154 ha."
+      "value": "705 tỷ",
+      "label": "đầu tư dự kiến khu xử lý rác Nghĩa Kỳ",
+      "context": "Quảng Ngãi phát hành hồ sơ mời thầu dự án trên diện tích 68,12 ha."
     },
     {
-      "value": "3,8%",
-      "label": "sản lượng tuyến kết nối Gia Bình",
-      "context": "Lũy kế đầu tháng 10/2026, dưới kế hoạch điều chỉnh 8,7%."
+      "value": "18.465 tỷ",
+      "label": "kế hoạch đầu tư công Đà Nẵng",
+      "context": "Mức kế hoạch HĐND giao năm 2026; đã giải ngân hơn 13.265 tỷ hết tháng 9."
     },
     {
-      "value": "568,363 tỷ",
-      "label": "giá trúng gói kênh Hồ Núi Cốc",
-      "context": "Thái Nguyên công bố liên danh thi công, hợp đồng 18 tháng."
+      "value": "39.400 ha",
+      "label": "quy hoạch KKT cửa khẩu Đồng Đăng",
+      "context": "Lạng Sơn công bố điều chỉnh quy hoạch chung đến năm 2045."
     }
   ],
   "action_today": ""
