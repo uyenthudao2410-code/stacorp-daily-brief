@@ -1,225 +1,224 @@
 {
-  "date": "16.10.2026",
+  "date": "17.10.2026",
   "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
   "subtitle": "Thị trường • Dự án • Chi phí • Con người",
-  "summary_lede": "Ngày 16/10, loạt dự án nhà máy và đô thị tại Hà Tĩnh mở thêm dư địa đầu tư, Hải Phòng công bố danh mục 166 dự án ưu tiên. Đấu thầu hạ tầng phía Bắc tiếp diễn, trong khi công trường sân bay Quảng Trị bước vào kiểm tra kỹ thuật.",
+  "summary_lede": "Ngày 17/10, Hà Nội mở gói xây dựng và cơ điện lớn; Hải Phòng hoàn tất mặt bằng cụm công nghiệp và chuẩn bị đường nối cao tốc. Miền Trung thúc đẩy tái định cư đường sắt, chấn chỉnh tiến độ công trường và ghi nhận nhu cầu lao động lớn.",
   "items": [
     {
-      "region": "MIỀN TRUNG",
-      "category": "CÔNG NGHIỆP • MEP",
+      "region": "MIỀN BẮC",
+      "category": "HẠ TẦNG • MEP",
       "impact": "CAO",
-      "headline": "Hà Tĩnh cấp phép nhà máy hóa chất và kho chứa 2.800 tỷ tại KCN Phú Vinh",
+      "headline": "Hà Nội mời gói xây dựng và MEP Lạc Long Quân 262 tỷ đồng",
       "facts": [
-        "Ngày 14/10, Ban Quản lý Khu kinh tế Hà Tĩnh cấp chứng nhận đầu tư nhà máy hóa chất và kho chứa tại KCN Phú Vinh, vốn 2.800 tỷ đồng, dùng 96.523 m² đất.",
-        "Quy mô dự kiến 380.000 tấn hóa chất/năm và 71.000 m³ kho bồn; giai đoạn 1 hoàn thành trong 28 tháng, toàn dự án trong 48 tháng kể từ ngày cấp phép."
+        "Ban Quản lý Hồ Tây mời thầu xây dựng và lắp thiết bị, giá 262,085 tỷ đồng; dự kiến đóng thầu 02/11/2026.",
+        "Trên 8.420 m² có quảng trường, ba tầng hầm, trạm điện 630 kVA, PCCC, thông gió; gói thầu 700 ngày."
       ],
-      "note": "Nhu cầu tiềm năng về kết cấu công nghiệp, điện, đường ống và hệ thống an toàn hóa chất; thủ tục môi trường và quản lý rủi ro là điều kiện quan trọng.",
+      "note": "Gói cơ điện lớn đang mời thầu.",
       "departments": [
         "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "16.10.2026",
+      "url": "https://baodauthau.vn/ha-noi-moi-thau-goi-xay-dung-lap-dat-thiet-bi-khu-vuc-vuon-hoa-lac-long-quan-post210158.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "CÔNG NGHIỆP • MẶT BẰNG",
+      "impact": "CAO",
+      "headline": "Hải Phòng hoàn thành mặt bằng CCN Thăng Long 532 tỷ đồng",
+      "facts": [
+        "Xã Nam An Phụ giải phóng mặt bằng sớm hai tháng, chi trả hơn 269 tỷ đồng cho 593 hộ.",
+        "CCN nghiên cứu hơn 61,8 ha, vốn trên 532 tỷ; đã bàn giao gần 440.000 m² đất đợt đầu."
+      ],
+      "note": "Tạo điều kiện triển khai hạ tầng công nghiệp.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Báo Hải Phòng",
+      "source_date": "16.10.2026",
+      "url": "https://baohaiphong.vn/nam-an-phu-giai-phong-xong-mat-bang-cum-cong-nghiep-thang-long-555957.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "ĐƯỜNG SẮT • HẠ TẦNG",
+      "impact": "CAO",
+      "headline": "Đà Nẵng duyệt tái định cư Hòa Tiến hơn 380 tỷ đồng",
+      "facts": [
+        "UBND Đà Nẵng phê duyệt khu tái định cư phục vụ đường sắt tốc độ cao Bắc – Nam, vốn trên 380 tỷ; thực hiện 2026–2029.",
+        "Khoảng 245.088 m² đất sẽ đầu tư san nền, giao thông, thoát nước, trạm xử lý nước thải, cấp điện và chiếu sáng."
+      ],
+      "note": "Là hạ tầng phục vụ giải phóng mặt bằng.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật",
+        "Đấu thầu"
+      ],
+      "source": "Báo Đà Nẵng",
+      "source_date": "16.10.2026",
+      "url": "https://baodanang.vn/hon-380-ty-dong-xay-dung-khu-tai-dinh-cu-phuc-vu-du-an-duong-sat-toc-do-cao-bac-nam-3355391.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "GIAO THÔNG • KHỞI CÔNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hải Phòng chuẩn bị đường Võ Nguyên Giáp nối cao tốc",
+      "facts": [
+        "Tuyến từ Liên Hồng tới cao tốc Hà Nội – Hải Phòng dài 3,3 km, dự kiến khởi công trong tháng 10/2026.",
+        "Gói xây lắp số 07 đã chọn nhà thầu, giá trúng hơn 425 tỷ đồng; gồm thoát nước, chiếu sáng và nút giao."
+      ],
+      "note": "Đang chuẩn bị huy động thi công.",
+      "departments": [
         "Dự án",
         "Kỹ thuật",
         "Cung ứng",
-        "An toàn"
+        "Kinh doanh"
       ],
-      "source": "Cổng thông tin điện tử tỉnh Hà Tĩnh",
-      "source_date": "15.10.2026",
-      "url": "https://hatinh.gov.vn/vi/bai-viet/khu-cong-nghiep-phu-vinh-tiep-tuc-thu-hut-du-an-dau-tu-voi-tong-von-2800-ty-dong"
+      "source": "Báo Hải Phòng",
+      "source_date": "16.10.2026",
+      "url": "https://baohaiphong.vn/khoi-cong-duong-vo-nguyen-giap-noi-cao-toc-ha-noi-hai-phong-trong-thang-10-555950.html"
     },
     {
       "region": "MIỀN TRUNG",
-      "category": "ĐÔ THỊ • MỜI THẦU",
-      "impact": "CAO",
-      "headline": "Hà Tĩnh mời thầu khu đô thị du lịch Thiên Cầm hơn 17.211 tỷ đồng",
-      "facts": [
-        "Sở Xây dựng Hà Tĩnh đang phát hành hồ sơ mời thầu dự án Khu đô thị du lịch sinh thái Thiên Cầm, vốn 17.211,661 tỷ đồng trên 180,12 ha; dự kiến đóng thầu ngày 27/11/2026.",
-        "Danh mục sản phẩm gồm 2.372 nhà ở thương mại, 975 căn nhà ở xã hội, 141 lô tái định cư, khách sạn, công trình công cộng và hạ tầng kỹ thuật."
-      ],
-      "note": "Quy mô lớn mở triển vọng việc xây dựng và MEP qua nhiều phân kỳ; đây là bước chọn nhà đầu tư, chưa phải gói xây lắp đã triển khai.",
-      "departments": [
-        "Kinh doanh",
-        "Đấu thầu",
-        "Dự án",
-        "Tài chính"
-      ],
-      "source": "Báo Đấu thầu",
-      "source_date": "15.10.2026",
-      "url": "https://baodauthau.vn/ha-tinh-moi-thau-du-an-khu-do-thi-du-lich-sinh-thai-thien-cam-gan-17212-ty-dong-post210077.html"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "THỊ TRƯỜNG • ĐẦU TƯ",
-      "impact": "CAO",
-      "headline": "Hải Phòng công bố 166 dự án ưu tiên mời gọi đầu tư giai đoạn 2026–2030",
-      "facts": [
-        "UBND Hải Phòng công bố danh mục 166 dự án ưu tiên thu hút đầu tư, trải rộng khu công nghiệp, cụm công nghiệp, nhà ở, logistics, nước sạch và xử lý môi trường.",
-        "Danh mục gồm 37 dự án hạ tầng khu công nghiệp với hơn 8.000 ha và 51 dự án nhà ở khoảng 2.200 ha; đây là định hướng mời gọi, chưa đồng nghĩa đã chọn nhà đầu tư."
-      ],
-      "note": "Tạo nguồn theo dõi cơ hội hạ tầng, nhà xưởng, cấp thoát nước và MEP trong trung hạn; cần xác định tiến độ pháp lý riêng của từng dự án.",
-      "departments": [
-        "Kinh doanh",
-        "Đấu thầu",
-        "Dự án",
-        "Chiến lược"
-      ],
-      "source": "Cổng thông tin điện tử Hải Phòng",
-      "source_date": "15.10.2026",
-      "url": "https://khucthuadu.haiphong.gov.vn/trang-chu/hai-phong-cong-bo-166-du-an-uu-tien-thu-hut-dau-tu-giai-doan-2026-2030-984272"
-    },
-    {
-      "region": "MIỀN TRUNG",
-      "category": "MÔI TRƯỜNG • NĂNG LƯỢNG",
-      "impact": "TRUNG BÌNH",
-      "headline": "Đà Nẵng chấp thuận dự án điện rác Nam Quảng Nam 2.184 tỷ đồng",
-      "facts": [
-        "Đà Nẵng chấp thuận chủ trương và nhà đầu tư dự án nhà máy xử lý rác, phát điện tại xã Núi Thành, tổng vốn 2.184 tỷ đồng trên khoảng 17,1 ha.",
-        "Công suất thiết kế 1.215 tấn rác/ngày và phát điện 15 MW; dự kiến hoàn tất thủ tục trong quý II/2027, thi công và lắp thiết bị từ quý III/2027 đến quý IV/2029."
-      ],
-      "note": "Nhà máy điện rác tạo nhu cầu dây chuyền cơ điện, xử lý môi trường và hạ tầng phụ trợ; triển khai xây dựng còn phụ thuộc các thủ tục.",
-      "departments": [
-        "Kinh doanh",
-        "Dự án",
-        "Kỹ thuật",
-        "Môi trường"
-      ],
-      "source": "Báo Đấu thầu",
-      "source_date": "15.10.2026",
-      "url": "https://baodauthau.vn/da-nang-chap-thuan-nha-dau-tu-du-an-dien-rac-2184-ty-dong-tai-xa-nui-thanh-post210079.html"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "GIAO THÔNG • ĐẤU THẦU",
-      "impact": "TRUNG BÌNH",
-      "headline": "Ninh Bình mời thầu giai đoạn 2 đường trục Hải Hậu, giá gói 145,662 tỷ",
-      "facts": [
-        "Dự án đường trục trung tâm Hải Hậu do Ban QLDA đầu tư xây dựng số 2 tỉnh Ninh Bình triển khai, dài khoảng 4,219 km, tổng mức đầu tư 741,853 tỷ đồng.",
-        "Gói thi công xây dựng giai đoạn 2 có giá 145,662 tỷ đồng đang phát hành hồ sơ mời thầu; thời điểm mở thầu dự kiến ngày 27/10/2026."
-      ],
-      "note": "Cơ hội hạ tầng giao thông đang ở bước mời thầu cụ thể; việc triển khai phụ thuộc kết quả lựa chọn nhà thầu và điều kiện công trường.",
-      "departments": [
-        "Kinh doanh",
-        "Đấu thầu",
-        "Dự án",
-        "Cung ứng"
-      ],
-      "source": "Báo Đấu thầu",
-      "source_date": "15.10.2026",
-      "url": "https://baodauthau.vn/ninh-binh-741-ty-dong-xay-dung-duong-truc-trung-tam-hai-hau-post210087.html"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "THỦY LỢI • ĐẤU THẦU",
-      "impact": "TRUNG BÌNH",
-      "headline": "Hà Nội mời gói sửa chữa hồ Suối Hai 131,875 tỷ đồng",
-      "facts": [
-        "Ngày 14/10, Ban QLDA đầu tư xây dựng hạ tầng kỹ thuật và nông nghiệp Hà Nội phát hành hồ sơ mời thầu gói xây dựng số 12 sửa chữa hồ Suối Hai, giá dự toán 131,875 tỷ đồng.",
-        "Gói thầu dự kiến đóng lúc 9h ngày 02/11/2026, thời gian thực hiện 720 ngày; công việc gồm chống thấm đập chính, củng cố đập phụ, tràn và kênh xả lũ."
-      ],
-      "note": "Khối lượng thi công thủy lợi có yêu cầu cao về kiểm soát chất lượng, an toàn và tổ chức công trường; cơ hội gói thầu đang công khai.",
-      "departments": [
-        "Đấu thầu",
-        "Dự án",
-        "Kỹ thuật",
-        "An toàn"
-      ],
-      "source": "Báo Đấu thầu",
-      "source_date": "15.10.2026",
-      "url": "https://baodauthau.vn/ha-noi-moi-thau-goi-xay-dung-ho-chua-nuoc-suoi-hai-hon-131-ty-dong-post210012.html"
-    },
-    {
-      "region": "MIỀN BẮC",
-      "category": "CÔNG TRƯỜNG • TIẾN ĐỘ",
+      "category": "CÔNG TRƯỜNG • AN TOÀN",
       "impact": "THEO DÕI",
-      "headline": "Bắc Ninh điều chỉnh dự án ĐT.285B, vốn tăng lên hơn 651 tỷ đồng",
+      "headline": "Thoát nước ngầm Trưng Nữ Vương mới đạt 32%, Đà Nẵng yêu cầu tăng tốc",
       "facts": [
-        "Ngày 12/10, Bắc Ninh tiếp tục phê duyệt điều chỉnh dự án ĐT.285B và nút giao QL.3 mới, tổng mức đầu tư hơn 651,18 tỷ đồng so với khoảng 528 tỷ lúc ban đầu.",
-        "Dự án kéo dài do vướng giải phóng mặt bằng và điều chỉnh báo cáo khả thi; phạm vi bổ sung 150 m kết nối ĐT.295 với KCN Yên Phong II-C và hạng mục thoát nước."
+        "Khối lượng dự án mới đạt 32%, dù thời hạn gia hạn thi công đã hết 27/9/2026.",
+        "Thành phố yêu cầu tăng nhân lực, gia cố rào chắn và xử lý sụt lún; báo cáo trước 20/10."
       ],
-      "note": "Diễn biến cho thấy rủi ro chi phí và tiến độ khi mặt bằng chưa thông suốt; đây là cập nhật dự án đang triển khai, không phải mời thầu mới.",
-      "departments": [
-        "Dự án",
-        "Kỹ thuật",
-        "Tài chính",
-        "Cung ứng"
-      ],
-      "source": "Báo Đấu thầu",
-      "source_date": "15.10.2026",
-      "url": "https://baodauthau.vn/du-an-dt285b-bac-ninh-vi-dau-cham-tien-do-post210076.html"
-    },
-    {
-      "region": "MIỀN TRUNG",
-      "category": "CÔNG TRƯỜNG • HÀNG KHÔNG",
-      "impact": "THEO DÕI",
-      "headline": "Sân bay Quảng Trị bay kiểm tra tĩnh không, hướng tới khai thác tháng 3/2027",
-      "facts": [
-        "Ngày 15/10, dự án Cảng hàng không Quảng Trị tổ chức 3 chuyến bay kỹ thuật ở cao độ 300–600 m nhằm kiểm tra tĩnh không và chướng ngại vật khu vực đường cất hạ cánh.",
-        "Theo đại diện dự án, khối lượng xây dựng tổng thể đạt trên 80%, đường cất hạ cánh và đường lăn khoảng 98%; dự kiến hoàn thiện lắp đặt thiết bị quản lý bay trong tháng 1/2027."
-      ],
-      "note": "Công trường chuyển dần từ xây dựng hạ tầng sang kiểm tra kỹ thuật và lắp thiết bị; mục tiêu khai thác 3/2027 còn phụ thuộc nghiệm thu, cấp phép.",
+      "note": "Cảnh báo rủi ro tiến độ và an toàn công trường.",
       "departments": [
         "Dự án",
         "Kỹ thuật",
         "An toàn",
         "Cung ứng"
       ],
+      "source": "Báo Đà Nẵng",
+      "source_date": "16.10.2026",
+      "url": "https://baodanang.vn/yeu-cau-day-nhanh-tien-do-thi-cong-tuyen-thoat-nuoc-ngam-duong-trung-nu-vuong-3355331.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "ĐƯỜNG SẮT • TÁI ĐỊNH CƯ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Quảng Trị duyệt tái định cư Nam Gianh 35 tỷ đồng",
+      "facts": [
+        "Dự án phục vụ mặt bằng đường sắt tốc độ cao Bắc – Nam, diện tích khoảng 2,09 ha, vốn 35 tỷ đồng.",
+        "Kế hoạch 2026–2027 gồm san nền, hơn 448 m đường, cấp thoát nước, điện và chiếu sáng."
+      ],
+      "note": "Chưa phải gói xây dựng tuyến đường sắt chính.",
+      "departments": [
+        "Dự án",
+        "Kỹ thuật",
+        "Kinh doanh",
+        "Cung ứng"
+      ],
       "source": "Báo Xây dựng",
-      "source_date": "15.10.2026",
-      "url": "https://baoxaydung.vn/san-bay-quang-tri-bay-kiem-tra-chuong-ngai-vat-huong-toi-khai-thac-thang-3-2027-192261015125746653.htm"
+      "source_date": "16.10.2026",
+      "url": "https://baoxaydung.vn/quang-tri-phe-duyet-du-an-tai-dinh-cu-35-ty-dong-phuc-vu-gpmb-du-an-duong-sat-toc-do-cao-192261016115112532.htm"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "ĐẤU THẦU • HẠ TẦNG",
+      "impact": "THEO DÕI",
+      "headline": "Hà Nội công bố nhà thầu hạ tầng Chi Đông gần 84,6 tỷ đồng",
+      "facts": [
+        "Ban QLDA xã Quang Minh công bố kết quả gói thi công hạ tầng, lắp thiết bị khu dân cư dịch vụ Chi Đông.",
+        "Liên danh ba thành viên trúng 84,568 tỷ đồng, giảm 0,51% so với 85 tỷ; chỉ một nhà thầu dự."
+      ],
+      "note": "Đã hoàn thành chọn thầu, không còn là cơ hội mời thầu.",
+      "departments": [
+        "Đấu thầu",
+        "Kinh doanh",
+        "Dự án",
+        "Tài chính"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "16.10.2026",
+      "url": "https://baodauthau.vn/goi-thau-ha-tang-ky-thuat-khu-dan-cu-dich-vu-chi-dong-tri-gia-85-ty-dong-ve-tay-lien-danh-3-thanh-vien-post210110.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "NHÂN LỰC • THỊ TRƯỜNG",
+      "impact": "THEO DÕI",
+      "headline": "Hà Tĩnh ghi nhận nhu cầu tuyển hơn 19.000 lao động",
+      "facts": [
+        "Trung tâm DVVL Hà Tĩnh ghi nhận 160 doanh nghiệp đăng ký tuyển 19.286 lao động tháng 10/2026.",
+        "Nhóm xây dựng, kiến trúc và giao thông cần 13.905 chỉ tiêu, lương tham khảo 8–65 triệu đồng/tháng."
+      ],
+      "note": "Nhu cầu đăng tuyển không đồng nghĩa số đã tuyển.",
+      "departments": [
+        "Nhân sự",
+        "Dự án",
+        "Kinh doanh",
+        "Tài chính"
+      ],
+      "source": "Cổng thông tin xã Đan Hải",
+      "source_date": "16.10.2026",
+      "url": "https://danhai.hatinh.gov.vn/vi/bai-viet/ha-tinh-nhu-cau-tuyen-dung-hon-19000-lao-dong-trong-thang-102026"
     }
   ],
   "news_themes": [
     {
-      "label": "NHÀ MÁY • CƠ ĐIỆN",
-      "title": "Hai dự án công nghiệp nhiều hạng mục kỹ thuật",
-      "detail": "Phú Vinh cấp phép tổ hợp hóa chất, Đà Nẵng chấp thuận nhà máy điện rác; cơ hội xây lắp công nghiệp đi cùng yêu cầu an toàn và môi trường."
+      "label": "MEP • ĐẤU THẦU",
+      "title": "Hạ tầng có nhiều hạng mục cơ điện",
+      "detail": "Gói Lạc Long Quân 262 tỷ đồng đang mời thầu; Chi Đông đã chọn nhà thầu hạ tầng."
     },
     {
-      "label": "ĐÔ THỊ • KÊU GỌI ĐẦU TƯ",
-      "title": "Mở rộng danh mục dự án tại miền Bắc và miền Trung",
-      "detail": "Hải Phòng đưa ra 166 dự án ưu tiên; Thiên Cầm đang mời thầu khu đô thị du lịch quy mô lớn, cần phân biệt bước chuẩn bị với xây dựng thực tế."
+      "label": "CÔNG NGHIỆP • GIAO THÔNG",
+      "title": "Hải Phòng chuyển sang triển khai",
+      "detail": "CCN Thăng Long đã hoàn tất mặt bằng; đường Võ Nguyên Giáp chuẩn bị khởi công."
     },
     {
-      "label": "GIAO THÔNG • THỦY LỢI",
-      "title": "Hạ tầng công khai gói thầu và lộ trình thi công",
-      "detail": "Ninh Bình mời thầu đường trục Hải Hậu, Hà Nội mời gói sửa chữa hồ Suối Hai; các mốc đóng thầu rơi vào cuối tháng 10 và đầu tháng 11."
+      "label": "ĐƯỜNG SẮT • TÁI ĐỊNH CƯ",
+      "title": "Bổ sung hạ tầng chuẩn bị mặt bằng",
+      "detail": "Đà Nẵng duyệt khu Hòa Tiến hơn 380 tỷ; Quảng Trị duyệt dự án Nam Gianh 35 tỷ."
     },
     {
-      "label": "CÔNG TRƯỜNG • QUẢN TRỊ",
-      "title": "Áp lực mặt bằng và chuyển giao kỹ thuật",
-      "detail": "ĐT.285B Bắc Ninh tiếp tục điều chỉnh vốn, tiến độ; sân bay Quảng Trị thử bay kỹ thuật, chuẩn bị giai đoạn lắp đặt thiết bị và nghiệm thu."
+      "label": "CÔNG TRƯỜNG • NHÂN LỰC",
+      "title": "Kiểm soát tiến độ và nguồn người",
+      "detail": "Thoát nước Trưng Nữ Vương mới đạt 32%; nhu cầu tuyển tại Hà Tĩnh vượt 19.000 vị trí."
     }
   ],
   "regional_pulse": [
     {
       "region": "MIỀN BẮC",
-      "title": "Đấu thầu hạ tầng và danh mục phát triển mới",
-      "detail": "Hải Phòng công bố 166 dự án ưu tiên; Ninh Bình và Hà Nội mời gói xây lắp; Bắc Ninh điều chỉnh tiến độ ĐT.285B."
+      "title": "Hạ tầng, công nghiệp và giao thông",
+      "detail": "Hà Nội ghi nhận mời thầu và trúng thầu; Hải Phòng hoàn tất mặt bằng CCN, chuẩn bị đường nối cao tốc."
     },
     {
       "region": "MIỀN TRUNG",
-      "title": "Công nghiệp, đô thị và bước tiến công trường",
-      "detail": "Hà Tĩnh có dự án hóa chất và đô thị Thiên Cầm; Đà Nẵng chấp thuận điện rác; Quảng Trị thử bay tại cảng hàng không."
+      "title": "Tái định cư, công trường và lao động",
+      "detail": "Đà Nẵng, Quảng Trị duyệt hạ tầng đường sắt; công trường thoát nước chậm; Hà Tĩnh có nhu cầu tuyển lớn."
     }
   ],
   "news_numbers": [
     {
-      "value": "17.211,7 tỷ",
-      "label": "vốn dự kiến khu đô thị Thiên Cầm",
-      "context": "Hà Tĩnh đang mời thầu chọn nhà đầu tư, dự kiến đóng 27/11/2026."
+      "value": "262,085 tỷ",
+      "label": "gói hạ tầng và MEP Lạc Long Quân",
+      "context": "Hà Nội dự kiến đóng thầu 02/11/2026."
     },
     {
-      "value": "2.800 tỷ",
-      "label": "vốn nhà máy hóa chất Phú Vinh",
-      "context": "Cấp chứng nhận đầu tư tại Hà Tĩnh ngày 14/10/2026."
+      "value": "532 tỷ+",
+      "label": "vốn CCN Thăng Long",
+      "context": "Hải Phòng hoàn tất mặt bằng."
     },
     {
-      "value": "166 dự án",
-      "label": "danh mục ưu tiên mời gọi của Hải Phòng",
-      "context": "Giai đoạn 2026–2030, gồm hạ tầng, nhà ở, logistics và công nghiệp."
+      "value": "380 tỷ+",
+      "label": "khu tái định cư Hòa Tiến",
+      "context": "Đà Nẵng triển khai 2026–2029."
     },
     {
-      "value": "145,662 tỷ",
-      "label": "gói xây lắp giai đoạn 2 đường Hải Hậu",
-      "context": "Ninh Bình dự kiến mở thầu ngày 27/10/2026."
+      "value": "19.286",
+      "label": "nhu cầu lao động tháng 10",
+      "context": "160 doanh nghiệp đăng ký tại Hà Tĩnh và lân cận."
     }
   ],
   "action_today": ""
