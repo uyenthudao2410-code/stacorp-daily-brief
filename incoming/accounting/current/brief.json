@@ -1,0 +1,215 @@
+{
+  "date": "31.10.2026",
+  "window": "24 giờ, từ 08:10 ngày 30/10 đến 08:10 ngày 31/10/2026 (Asia/Ho_Chi_Minh)",
+  "summary": "Trong 24 giờ qua, hướng dẫn giảm thuế thu nhập theo Nghị định 398 và cơ chế chuyển tiếp hợp đồng lao động điện tử là hai thay đổi pháp lý nổi bật; cùng lúc Quốc hội thảo luận dự thảo về kinh doanh bất động sản và dân chủ cơ sở, thị trường vốn và nhà ở xã hội ghi nhận thông tin mới.",
+  "highlights": [
+    {
+      "title": "Hướng dẫn giảm 30% thuế thu nhập cho doanh thu không quá 10 tỷ",
+      "summary": "Chính phủ công bố Nghị định 398/2026/NĐ-CP, làm rõ đối tượng, cách tạm nộp, kê khai và điều chỉnh khi vượt ngưỡng doanh thu trong kỳ 2026–2027.",
+      "story_index": 0
+    },
+    {
+      "title": "Gia hạn chuyển tiếp hợp đồng lao động điện tử đến cuối 2026",
+      "summary": "Nghị quyết 44/2026/NQ-CP có hiệu lực ngày 30/10, xử lý giai đoạn chờ kết nối hệ thống eContract; điều kiện giao kết từ 01/01/2027 được làm rõ.",
+      "story_index": 4
+    },
+    {
+      "title": "Quốc hội tiếp tục rà soát điều kiện giao dịch bất động sản",
+      "summary": "Phiên họp ngày 30/10 tập trung công khai pháp lý dự án, đặt cọc, bảo lãnh và chuyển nhượng; đây vẫn là dự thảo, chưa áp dụng thay luật hiện hành.",
+      "story_index": 2
+    }
+  ],
+  "items": [
+    {
+      "category": "KẾ TOÁN · THUẾ · TÀI CHÍNH",
+      "label": "NGHỊ ĐỊNH MỚI · THUẾ THU NHẬP · 30/10",
+      "title": "Chính phủ hướng dẫn giảm 30% thuế thu nhập giai đoạn 2026–2027",
+      "facts": [
+        "Thông tin công bố ngày 30/10 về Nghị định 398/2026/NĐ-CP hướng dẫn Nghị quyết 43/2026/QH16: mức giảm 30% thuế thu nhập phải nộp áp dụng cho doanh nghiệp và cá nhân kinh doanh đủ điều kiện có doanh thu năm không quá 10 tỷ đồng trong năm 2026 và 2027.",
+        "Doanh nghiệp dự kiến đáp ứng ngưỡng doanh thu có thể tự xác định khoản giảm khi tạm nộp thuế TNDN theo quý; nếu doanh thu thực tế vượt 10 tỷ đồng phải kê khai và nộp lại phần thuế thiếu theo quy định."
+      ],
+      "sources": [
+        {
+          "name": "Báo Điện tử Chính phủ · 30/10",
+          "url": "https://baochinhphu.vn/huong-dan-chi-tiet-giam-30-so-thue-tncn-thue-tndn-phai-nop-tu-kinh-doanh-co-doanh-thu-khong-qua-10-ti-dong-102261030184541723.htm"
+        },
+        {
+          "name": "Báo Công Thương · 30/10",
+          "url": "https://congthuong.vn/huong-dan-chi-tiet-giam-30-so-thue-thu-nhap-ca-nhan-thue-thu-nhap-doanh-nghiep-phai-nop-tu-kinh-doanh-co-doanh-thu-khong-qua-10-ti-dong-479250.html"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/7821708/pexels-photo-7821708.jpeg"
+    },
+    {
+      "category": "KẾ TOÁN · THUẾ · TÀI CHÍNH",
+      "label": "CẬP NHẬT THỊ TRƯỜNG · VỐN NGÂN HÀNG · 31/10",
+      "title": "Ngân hàng Nhà nước bơm ròng hơn 28.000 tỷ đồng trong tuần",
+      "facts": [
+        "Bản tổng hợp công bố 07:33 ngày 31/10 của Thời báo Tài chính Việt Nam ghi nhận NHNN bơm ròng 28.161,7 tỷ đồng qua nghiệp vụ thị trường mở trong tuần 26–30/10, đảo chiều so với tuần trước.",
+        "Lãi suất liên ngân hàng qua đêm có thời điểm tăng gần 5%/năm; đây là tín hiệu thanh khoản giữa các ngân hàng, không phải mức lãi suất cho vay được ấn định cho doanh nghiệp."
+      ],
+      "sources": [
+        {
+          "name": "Thời báo Tài chính Việt Nam · 31/10",
+          "url": "https://thoibaotaichinhvietnam.vn/thi-truong-tien-te-tuan-26-30-10-dao-chieu-bom-rong-hon-28-000-ty-dong-usd-bien-dong-trai-chieu-sau-tuan-hop-lai-suat-206193.html"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/8297030/pexels-photo-8297030.jpeg"
+    },
+    {
+      "category": "PHÁP LÝ · CHÍNH SÁCH DOANH NGHIỆP",
+      "label": "DỰ THẢO · KINH DOANH BẤT ĐỘNG SẢN · 30/10",
+      "title": "Quốc hội thảo luận điều kiện giao dịch và bảo lãnh bất động sản",
+      "facts": [
+        "Sáng 30/10, Quốc hội khóa XVI thảo luận dự thảo Luật Kinh doanh bất động sản (sửa đổi), trong đó có điều kiện kinh doanh, công khai thông tin pháp lý dự án và chuyển nhượng bất động sản.",
+        "Các ý kiến tiếp tục xem xét giao dịch nhà hình thành trong tương lai, đặt cọc, bảo lãnh, thanh toán và hợp đồng; văn bản vẫn trong giai đoạn thảo luận, chưa phải luật mới có hiệu lực."
+      ],
+      "sources": [
+        {
+          "name": "Báo Nhân Dân · thông cáo 30/10",
+          "url": "https://nhandan.vn/thong-cao-bao-chi-so-13-ky-hop-thu-2-quoc-hoi-khoa-xvi-post999227.html"
+        },
+        {
+          "name": "TTXVN · phiên thảo luận 30/10",
+          "url": "https://chinhsachcuocsong.vnanet.vn/ky-hop-thu-2-quoc-hoi-khoa-xvi-ngan-chan-dua-bat-dong-san-vao-giao-dich-khi-chua-hoan-thien-ho-so-phap-ly/100252.html"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/8297220/pexels-photo-8297220.jpeg"
+    },
+    {
+      "category": "PHÁP LÝ · CHÍNH SÁCH DOANH NGHIỆP",
+      "label": "KẾ HOẠCH · NHÀ Ở XÃ HỘI · 30/10",
+      "title": "Phú Thọ thúc đẩy kế hoạch khởi công gần 6.000 căn nhà ở xã hội",
+      "facts": [
+        "Thông tin ngày 30/10 cho biết Phú Thọ đang tháo gỡ vướng mắc mặt bằng, quy hoạch và thủ tục để phấn đấu khởi công thêm gần 6.000 căn nhà ở xã hội trong quý IV/2026.",
+        "Theo Nghị quyết 303/NQ-CP ngày 30/9, chỉ tiêu giai đoạn 2026–2030 của tỉnh gồm 33.000 căn nhà ở xã hội và 7.000 căn cho thuê; kế hoạch khởi công chưa đồng nghĩa có gói thầu MEP đang mời."
+      ],
+      "sources": [
+        {
+          "name": "Báo Xây dựng · 30/10",
+          "url": "https://batdongsan.baoxaydung.vn/phu-tho-tang-toc-khoi-cong-gan-6000-can-nha-o-xa-hoi-trong-quy-iv-19226102921070666.htm"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/27151829/pexels-photo-27151829.jpeg"
+    },
+    {
+      "category": "NHÂN SỰ · THỊ TRƯỜNG LAO ĐỘNG",
+      "label": "NGHỊ QUYẾT MỚI · HỢP ĐỒNG LAO ĐỘNG · 30/10",
+      "title": "Chính phủ tháo gỡ kết nối nền tảng hợp đồng lao động điện tử",
+      "facts": [
+        "Nghị quyết 44/2026/NQ-CP ngày 30/10 cho phép nhà cung cấp eContract thuộc trường hợp chuyển tiếp chưa kết nối nền tảng quốc gia tiếp tục cung cấp dịch vụ đến hết 31/12/2026.",
+        "Hợp đồng ký trong thời gian chờ kết nối theo nghị quyết có giá trị như hợp đồng giấy; từ 01/01/2027 việc giao kết phải đáp ứng Điều 6 Nghị định 337/2025/NĐ-CP. Nghị quyết có hiệu lực từ 30/10."
+      ],
+      "sources": [
+        {
+          "name": "Báo Điện tử Chính phủ · 30/10",
+          "url": "https://baochinhphu.vn/thao-go-kho-khan-trong-trien-khai-hop-dong-lao-dong-dien-tu-102261030190548552.htm"
+        },
+        {
+          "name": "Báo Công Thương · 30/10",
+          "url": "https://congthuong.vn/thao-go-vuong-mac-duy-tri-giao-ket-hop-dong-lao-dong-dien-tu-479247.html"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/7652046/pexels-photo-7652046.jpeg"
+    },
+    {
+      "category": "NHÂN SỰ · THỊ TRƯỜNG LAO ĐỘNG",
+      "label": "DỰ THẢO · QUAN HỆ LAO ĐỘNG · 30/10",
+      "title": "Quốc hội góp ý sửa luật dân chủ cơ sở và đối thoại nơi làm việc",
+      "facts": [
+        "Ngày 30/10, Quốc hội thảo luận dự thảo Luật Thực hiện dân chủ ở cơ sở (sửa đổi), trong đó rà soát việc công khai thông tin, giám sát và tổ chức đối thoại tại nơi làm việc.",
+        "Một số ý kiến đề nghị không quy định cứng hội nghị đối thoại hằng năm tại doanh nghiệp nhà nước nhằm tránh trùng lặp; đây là ý kiến đối với dự thảo, chưa thay đổi nghĩa vụ pháp lý hiện hành của doanh nghiệp."
+      ],
+      "sources": [
+        {
+          "name": "Báo Nhân Dân · 30/10",
+          "url": "https://nhandan.vn/thong-cao-bao-chi-so-13-ky-hop-thu-2-quoc-hoi-khoa-xvi-post999227.html"
+        },
+        {
+          "name": "Báo Đại biểu Nhân dân · 30/10",
+          "url": "https://daibieunhandan.vn/khong-nen-quy-dinh-cung-viec-to-chuc-hoi-nghi-doi-thoai-hang-nam-10441205.html"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/7681077/pexels-photo-7681077.jpeg"
+    }
+  ],
+  "impacts": [
+    {
+      "area": "KẾ TOÁN – TÀI CHÍNH",
+      "subtitle": "Ngưỡng doanh thu thuế và kiểm soát chi phí vốn",
+      "points": [
+        "Nghị định 398 chỉ hỗ trợ doanh nghiệp đáp ứng điều kiện doanh thu từng năm; cần xác minh số liệu STACORP trước khi dự báo ưu đãi TNDN.",
+        "Biến động thanh khoản liên ngân hàng không đồng nghĩa lãi suất khoản vay hiện hữu đã thay đổi; ngân sách vốn phải dựa trên báo giá tín dụng thực tế."
+      ],
+      "story_index": 0
+    },
+    {
+      "area": "PHÁP LÝ",
+      "subtitle": "Giao dịch tài sản và hồ sơ dự án",
+      "points": [
+        "Dự thảo Luật Kinh doanh bất động sản chưa áp dụng; các hợp đồng chuyển nhượng, cho thuê và bảo lãnh tiếp tục căn cứ văn bản đang có hiệu lực.",
+        "Kế hoạch nhà ở xã hội tại Phú Thọ cần đối soát tình trạng pháp lý dự án, chủ đầu tư và cơ chế lựa chọn nhà thầu trước khi lập phương án hợp tác."
+      ],
+      "story_index": 2
+    },
+    {
+      "area": "NHÂN SỰ",
+      "subtitle": "Hợp đồng điện tử và quy trình đối thoại",
+      "points": [
+        "Các hợp đồng lao động điện tử giao kết qua nhà cung cấp thuộc diện chuyển tiếp có căn cứ pháp lý đến hết 2026; cần lưu chứng từ xác thực và tình trạng kết nối.",
+        "Các đề xuất thay đổi cơ chế đối thoại tại doanh nghiệp còn trong quá trình thảo luận; nghĩa vụ hiện hành không tự động thay đổi."
+      ],
+      "story_index": 4
+    },
+    {
+      "area": "BAN ĐIỀU HÀNH",
+      "subtitle": "Cơ hội thi công và quyết định dòng tiền",
+      "points": [
+        "Quy mô nhà ở xã hội được công bố là tín hiệu khảo sát thị trường, chưa phải doanh thu hoặc cơ hội MEP được xác nhận.",
+        "Kế hoạch thuế 2026–2027 và hợp đồng nhân sự điện tử cần phối hợp Kế toán–HCNS–Pháp lý để tránh đánh giá sai quyền lợi hoặc thời hạn."
+      ],
+      "story_index": 3
+    }
+  ],
+  "actions": [
+    {
+      "owner": "KẾ TOÁN – TÀI CHÍNH",
+      "points": [
+        "Kiểm tra doanh thu dự kiến và lũy kế năm 2026 đối chiếu điều kiện 10 tỷ đồng trước khi tính ưu đãi TNDN; lập phương án khai điều chỉnh nếu cần.",
+        "Cập nhật báo giá lãi vay, hạn mức và bảo lãnh ngân hàng đang sử dụng, không suy ra từ lãi suất liên ngân hàng."
+      ],
+      "story_index": 0
+    },
+    {
+      "owner": "PHÁP LÝ",
+      "points": [
+        "Theo dõi bản dự thảo Luật Kinh doanh bất động sản và rà soát điều khoản giao dịch, bảo lãnh dự án theo luật hiện hành.",
+        "Yêu cầu hồ sơ pháp lý/chủ đầu tư và lịch đấu thầu có xác nhận trước khi đưa dự án nhà ở xã hội vào danh sách cơ hội."
+      ],
+      "story_index": 2
+    },
+    {
+      "owner": "NHÂN SỰ",
+      "points": [
+        "Kiểm tra nhà cung cấp eContract, hồ sơ hợp đồng đã ký và kế hoạch đáp ứng điều kiện nền tảng từ 01/01/2027.",
+        "Duy trì các thủ tục đối thoại và công khai thông tin theo quy định đang có hiệu lực; theo dõi dự thảo sửa đổi."
+      ],
+      "story_index": 4
+    },
+    {
+      "owner": "BAN ĐIỀU HÀNH",
+      "points": [
+        "Ưu tiên kiểm tra điều kiện thuế, hồ sơ nhân sự điện tử và cơ hội dự án có lịch lựa chọn nhà thầu rõ ràng.",
+        "Chỉ đưa dự kiến tiết kiệm thuế hoặc doanh thu MEP vào kế hoạch dòng tiền sau khi đủ dữ liệu kiểm chứng."
+      ],
+      "story_index": 3
+    }
+  ],
+  "focus": {
+    "title": "Hai điểm cần xác minh trước khi quyết định tài chính và nhân sự",
+    "text": "Kế toán cần xác thực ngưỡng doanh thu theo Nghị định 398 trước khi sử dụng mức giảm TNDN để dự toán thuế 2026–2027. HCNS và Pháp lý cần rà soát đơn vị cung cấp hợp đồng lao động điện tử trước thời hạn chuyển tiếp 31/12/2026. Dự thảo về kinh doanh bất động sản và dân chủ cơ sở chỉ dùng để lập kế hoạch theo dõi, chưa thay đổi quy trình áp dụng hiện hành.",
+    "story_index": 0
+  },
+  "hero_story_index": 0,
+  "header_story_index": 0
+}
