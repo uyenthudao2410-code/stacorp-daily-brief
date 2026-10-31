@@ -1,0 +1,226 @@
+{
+  "date": "31.10.2026",
+  "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
+  "subtitle": "Thị trường • Dự án • Chi phí • Con người",
+  "summary_lede": "Bản tin 31/10 ghi nhận khởi công cảng Yên Bình và quần thể du lịch U Bò – Thác Chuối; các gói xây lắp, thiết bị điện và công trình công cộng có diễn biến mới tại Hà Nội, Hải Phòng, Đà Nẵng và Quảng Ngãi.",
+  "items": [
+    {
+      "region": "MIỀN BẮC",
+      "category": "LOGISTICS • HẠ TẦNG",
+      "impact": "CAO",
+      "headline": "Thái Nguyên khởi công cảng Yên Bình 435 tỷ đồng",
+      "facts": [
+        "Ngày 29/10, cảng bốc xếp hàng hóa Yên Bình khởi công tại phường Trung Thành, do Công ty CP Đầu tư Xây dựng và Khai thác khoáng sản Thăng Long đầu tư.",
+        "Dự án có vốn 435 tỷ đồng, diện tích 24,92 ha và 7 cầu cảng, công suất thiết kế 3,8–4,5 triệu tấn/năm; phấn đấu đưa vào khai thác năm 2027."
+      ],
+      "note": "Khởi công cảng là tín hiệu triển khai hạ tầng, chưa phải thông báo mở thầu các hạng mục phụ trợ.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Cung ứng"
+      ],
+      "source": "Cổng thông tin điện tử tỉnh Thái Nguyên",
+      "source_date": "29.10.2026",
+      "url": "https://thainguyen.gov.vn/thoi-su/thai-nguyen-khoi-cong-cac-du-an-cong-trinh-quy-mo-lon-nhan-ky-niem-195-nam-thanh-lap-tinh-303351"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "ĐẤU THẦU • CÔNG TRÌNH",
+      "impact": "CAO",
+      "headline": "Hà Nội: liên danh trúng gói xây Học viện Chính trị 1.497 tỷ",
+      "facts": [
+        "Học viện Chính trị quốc gia Hồ Chí Minh công bố liên danh 4 doanh nghiệp trúng gói thi công cơ sở mới tại phường Đông Ngạc, Hà Nội.",
+        "Giá trúng thầu 1.497,286 tỷ đồng so với giá gói thầu 1.499,776 tỷ đồng; hợp đồng đơn giá cố định, thời gian thực hiện 990 ngày."
+      ],
+      "note": "Gói thầu chính đã có đơn vị trúng thầu; nhu cầu phân thầu chuyên ngành cần xác minh trực tiếp.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "30.10.2026",
+      "url": "https://baodauthau.vn/lien-danh-4-thanh-vien-trung-goi-thau-1497-ty-dong-tai-hoc-vien-chinh-tri-quoc-gia-ho-chi-minh-post211414.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "THIẾT BỊ ĐIỆN • ĐẤU THẦU",
+      "impact": "TRUNG BÌNH",
+      "headline": "VietinBank hủy gói UPS 29 tỷ tại trung tâm dữ liệu Hòa Lạc",
+      "facts": [
+        "VietinBank hủy gói mua sắm hệ thống UPS cho Trung tâm dữ liệu Hòa Lạc có giá 29,002 tỷ đồng; cả hai hồ sơ đều không đạt đánh giá kỹ thuật.",
+        "Hai nhà thầu không nêu cụ thể ký mã hiệu và nhãn hiệu cho hạng mục hệ thống tiếp địa trong bảng đề xuất hàng hóa theo yêu cầu hồ sơ mời thầu."
+      ],
+      "note": "Hủy thầu không đồng nghĩa đã có lịch mời thầu lại; điểm đáng lưu ý là tính đầy đủ của đề xuất thiết bị MEP.",
+      "departments": [
+        "Đấu thầu",
+        "Kỹ thuật",
+        "Cung ứng",
+        "Kinh doanh"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "30.10.2026",
+      "url": "https://baodauthau.vn/vietinbank-huy-goi-thau-29-ty-dong-mua-sam-ups-cho-trung-tam-du-lieu-hoa-lac-post211375.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "ĐÔ THỊ • QUỸ ĐẤT",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hải Phòng bổ sung 25 khu đất đấu thầu đầu tư dự án",
+      "facts": [
+        "Hải Phòng bổ sung 25 khu đất tổng diện tích khoảng 259,859 ha vào danh mục đấu thầu lựa chọn nhà đầu tư cho các giai đoạn 2025–2026 và 2026–2030.",
+        "Danh mục có 13 khu đất phát triển khu dân cư, nhà ở và 12 khu đất thương mại, dịch vụ; một khu 30 ha ở Việt Khê dự kiến làm nhà máy xử lý chất thải rắn."
+      ],
+      "note": "Đưa khu đất vào danh mục là bước chuẩn bị đầu tư, không xác nhận mọi dự án đã phát hành hồ sơ mời thầu.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kế toán"
+      ],
+      "source": "Cổng thông tin Hải Phòng (dẫn Báo Hải Phòng)",
+      "source_date": "30.10.2026",
+      "url": "https://thuonghieu.haiphong.gov.vn/index.php/san-pham/hai-phong-bo-sung-quy-dat-don-dong-von-moi-214.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "DU LỊCH • HẠ TẦNG",
+      "impact": "CAO",
+      "headline": "Sun Group khởi công quần thể U Bò – Thác Chuối 16.234 tỷ",
+      "facts": [
+        "Ngày 30/10, Sun Group khởi công quần thể du lịch sinh thái núi U Bò – hồ Thác Chuối tại Quảng Trị, tổng vốn đầu tư 16.234 tỷ đồng.",
+        "Dự án có diện tích khoảng 167,48 ha, bố trí hai phân khu kết nối bằng 5 tuyến cáp treo; giai đoạn đầu dự kiến vận hành từ quý II/2028."
+      ],
+      "note": "Quy mô vốn là tổng mức đầu tư nhiều giai đoạn; chưa thể suy ra các gói xây lắp, MEP sắp đấu thầu.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Tập đoàn Sun Group",
+      "source_date": "30.10.2026",
+      "url": "https://sungroup.com.vn/tin-tuc/sun-group-khoi-cong-to-hop-du-lich-cao-cap-16234-ty-tai-quang-tri-kien-tao-bieu-tuong-moi-cho-mien-trung-15782"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "TÁI ĐỊNH CƯ • MEP",
+      "impact": "TRUNG BÌNH",
+      "headline": "Đà Nẵng duyệt khu tái định cư Bàn Thạch khoảng 172 tỷ",
+      "facts": [
+        "Ngày 29/10, UBND Đà Nẵng phê duyệt dự án khu tái định cư phục vụ đường sắt tốc độ cao tại phường Bàn Thạch, tổng vốn khoảng 172 tỷ đồng.",
+        "Dự án sử dụng khoảng 10,3 ha đất, triển khai 2026–2029, gồm san nền, đường, cấp điện, chiếu sáng, thoát nước và trạm xử lý nước thải."
+      ],
+      "note": "Phê duyệt dự án chưa phải công bố gói thầu thi công hay kết quả lựa chọn nhà thầu.",
+      "departments": [
+        "Dự án",
+        "Kỹ thuật",
+        "Đấu thầu",
+        "Kinh doanh"
+      ],
+      "source": "Báo Đà Nẵng (dẫn Quyết định 4985 của UBND TP)",
+      "source_date": "30.10.2026",
+      "url": "https://baodanang.vn/phe-duyet-du-an-khu-tai-dinh-cu-phuc-vu-duong-sat-toc-do-cao-tai-ban-thach-3356897.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "GIÁO DỤC • XÂY LẮP",
+      "impact": "TRUNG BÌNH",
+      "headline": "Quảng Ngãi chọn liên danh 10 đơn vị nâng cấp trường học",
+      "facts": [
+        "Ban QLDA dân dụng và công nghiệp Quảng Ngãi công bố kết quả gói số 10 nâng cấp trường tiểu học, gồm xây dựng và lắp đặt thiết bị.",
+        "Liên danh 10 doanh nghiệp trúng thầu 142,672 tỷ đồng so với dự toán 142,946 tỷ đồng; thời gian thực hiện 14 tháng, hợp đồng đơn giá cố định."
+      ],
+      "note": "Đã có kết quả lựa chọn nhà thầu; chủ đầu tư và liên danh vẫn đang thực hiện thủ tục ký hợp đồng.",
+      "departments": [
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "30.10.2026",
+      "url": "https://baodauthau.vn/quang-ngai-lien-danh-10-thanh-vien-trung-goi-thau-nang-cap-truong-hoc-142-ty-dong-post211411.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "CÔNG NGHIỆP • ĐẦU TƯ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Dung Quất chọn nhà thầu bảo hiểm EPC và tư vấn luật",
+      "facts": [
+        "Dự án nâng cấp Nhà máy lọc dầu Dung Quất công bố kết quả gói bảo hiểm xây dựng, lắp đặt EPC với giá trúng 154,248 tỷ đồng.",
+        "Gói tư vấn luật có giá trúng 28,379 tỷ đồng; tổng vốn điều chỉnh của dự án là 36.397 tỷ đồng, hướng tới nâng công suất lên 171.000 thùng dầu/ngày."
+      ],
+      "note": "Đây là hai hợp đồng bảo hiểm và tư vấn, không phải kết quả chọn nhà thầu mới cho phần thi công EPC.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Đấu thầu",
+        "Kế toán"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "30.10.2026",
+      "url": "https://baodauthau.vn/chon-duoc-nha-thau-thuc-hien-2-goi-thau-thuoc-du-an-nang-cap-mo-rong-nha-may-loc-dau-dung-quat-post211321.html"
+    }
+  ],
+  "news_themes": [
+    {
+      "label": "KHỞI CÔNG • HẠ TẦNG",
+      "title": "Cảng mới và du lịch quy mô lớn",
+      "detail": "Cảng Yên Bình khởi công ở Thái Nguyên; tổ hợp U Bò – Thác Chuối tại Quảng Trị bước vào triển khai, tạo nguồn dự án nhiều năm."
+    },
+    {
+      "label": "ĐẤU THẦU • THIẾT BỊ",
+      "title": "Kết quả thầu và yêu cầu kỹ thuật",
+      "detail": "Hà Nội có liên danh trúng gói xây lắp 1.497 tỷ; VietinBank hủy gói UPS 29 tỷ vì hồ sơ kỹ thuật chưa đạt, Quảng Ngãi chọn nhà thầu trường học."
+    },
+    {
+      "label": "ĐÔ THỊ • ĐẦU TƯ CÔNG",
+      "title": "Quỹ đất và tái định cư tiếp tục mở rộng",
+      "detail": "Hải Phòng bổ sung 25 khu đất vào danh mục đầu tư; Đà Nẵng duyệt khu tái định cư Bàn Thạch với hạ tầng điện và xử lý nước thải."
+    },
+    {
+      "label": "CÔNG NGHIỆP • QUẢN TRỊ",
+      "title": "Dung Quất tiến thêm thủ tục triển khai",
+      "detail": "Hai gói bảo hiểm xây dựng, lắp đặt EPC và tư vấn luật được lựa chọn, trong lộ trình nâng cấp nhà máy lọc dầu quy mô lớn."
+    }
+  ],
+  "regional_pulse": [
+    {
+      "region": "MIỀN BẮC",
+      "title": "Cảng, công trình lớn và thiết bị điện",
+      "detail": "Yên Bình khởi công; Hà Nội công bố kết quả xây cơ sở Học viện; gói UPS Hòa Lạc bị hủy, Hải Phòng bổ sung quỹ đất đầu tư."
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "title": "Dự án du lịch, trường học và hạ tầng MEP",
+      "detail": "Quảng Trị khởi công dự án du lịch; Đà Nẵng duyệt khu tái định cư; Quảng Ngãi có kết quả trường học và hai gói tại Dung Quất."
+    }
+  ],
+  "news_numbers": [
+    {
+      "value": "435 tỷ",
+      "label": "Cảng Yên Bình",
+      "context": "Tổng vốn dự án mới khởi công tại Thái Nguyên ngày 29/10."
+    },
+    {
+      "value": "1.497 tỷ",
+      "label": "Gói xây lắp Học viện",
+      "context": "Giá trị trúng thầu cơ sở mới tại phường Đông Ngạc, Hà Nội."
+    },
+    {
+      "value": "16.234 tỷ",
+      "label": "Quần thể U Bò – Thác Chuối",
+      "context": "Tổng vốn đầu tư nhiều giai đoạn của dự án tại Quảng Trị."
+    },
+    {
+      "value": "172 tỷ",
+      "label": "Tái định cư Bàn Thạch",
+      "context": "Vốn dự án hạ tầng kỹ thuật được Đà Nẵng phê duyệt."
+    }
+  ],
+  "action_today": ""
+}
