@@ -1,0 +1,212 @@
+{
+  "date": "07.11.2026",
+  "window": "24 giờ gần nhất: 08:10 ngày 06/11 đến 08:10 ngày 07/11/2026 (Asia/Ho_Chi_Minh)",
+  "summary": "Quốc hội thảo luận sửa luật thuế và đấu thầu, vẫn ở giai đoạn dự thảo; thông tin mới về chất lượng báo cáo tài chính, tiến độ nhà ở cho thuê, các dự án nhà ở xã hội và phối hợp xử lý nợ BHXH đòi hỏi doanh nghiệp theo dõi theo đúng mốc pháp lý, dòng tiền và năng lực nhân sự.",
+  "highlights": [
+    {
+      "title": "Quốc hội thảo luận sửa ba luật thuế",
+      "summary": "Ngày 06/11, các đại biểu cho ý kiến về dự thảo sửa Luật Thuế TNDN, Thuế sử dụng đất phi nông nghiệp và Thuế TNCN; mức 0,2% đối với đất bỏ hoang vẫn là phương án được thảo luận.",
+      "story_index": 0
+    },
+    {
+      "title": "Dự thảo Luật Đấu thầu nhấn mạnh chất lượng",
+      "summary": "Phiên họp 06/11 thảo luận các cơ chế phân cấp, kiểm soát thông thầu và đánh giá tiêu chí kỹ thuật kết hợp giá; chưa thay đổi quy trình pháp lý đang áp dụng.",
+      "story_index": 3
+    },
+    {
+      "title": "Nhà ở cho thuê hoàn thành 53% kế hoạch",
+      "summary": "Bộ Xây dựng báo cáo đã hoàn thành 9.028/17.176 căn trong năm 2026, đồng thời dự kiến đạt 16.944 căn vào cuối năm; dự kiến không phải kết quả hoàn thành.",
+      "story_index": 2
+    }
+  ],
+  "items": [
+    {
+      "category": "KẾ TOÁN · THUẾ · TÀI CHÍNH",
+      "label": "DỰ THẢO THUẾ · THẢO LUẬN 06/11",
+      "title": "Quốc hội góp ý sửa ba luật về thu nhập và sử dụng đất",
+      "facts": [
+        "Sáng 06/11/2026, Quốc hội thảo luận dự án luật sửa đổi các quy định của Luật Thuế thu nhập doanh nghiệp, Luật Thuế sử dụng đất phi nông nghiệp và Luật Thuế thu nhập cá nhân.",
+        "Nội dung được góp ý gồm điều kiện ưu đãi thuế đối với cơ sở giáo dục, y tế và phương án thuế suất 0,2% cho đất bỏ hoang hoặc chậm đưa vào sử dụng; đây là đề xuất, chưa phải mức thuế có hiệu lực."
+      ],
+      "sources": [
+        {
+          "name": "Báo Điện tử Chính phủ, 06/11",
+          "url": "https://baochinhphu.vn/chinh-sach-thue-can-bao-dam-uu-dai-thuc-chat-den-dung-doi-tuong-102261106103408086.htm"
+        },
+        {
+          "name": "Thông cáo Quốc hội số 19, 06/11",
+          "url": "https://nhandan.vn/thong-cao-bao-chi-so-19-ky-hop-thu-hai-quoc-hoi-khoa-xvi-post1000779.html"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/7821708/pexels-photo-7821708.jpeg"
+    },
+    {
+      "category": "KẾ TOÁN · THUẾ · TÀI CHÍNH",
+      "label": "BÁO CÁO TÀI CHÍNH · PHÂN TÍCH 06/11",
+      "title": "Chất lượng báo cáo tài chính được nhấn mạnh trong lộ trình IFRS",
+      "facts": [
+        "Thông tin ngày 06/11 dẫn ý kiến lãnh đạo Ủy ban Chứng khoán Nhà nước về hiện tượng chênh lệch báo cáo trước và sau kiểm toán, ghi nhận doanh thu chi phí chưa đúng kỳ và thuyết minh thiếu dữ kiện.",
+        "Chuyên gia AASC nhận định chuẩn bị IFRS phải gắn với dữ liệu liên phòng ban, năng lực kế toán và trách nhiệm điều hành; bài phân tích không công bố nghĩa vụ áp dụng IFRS mới cho mọi doanh nghiệp."
+      ],
+      "sources": [
+        {
+          "name": "Thời báo Tài chính Việt Nam, 06/11",
+          "url": "https://thoibaotaichinhvietnam.vn/chuan-muc-bao-cao-tai-chinh-nang-minh-bach-hut-von-dai-han-206389-206389.html"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/7681077/pexels-photo-7681077.jpeg"
+    },
+    {
+      "category": "KẾ TOÁN · THUẾ · TÀI CHÍNH",
+      "label": "THỊ TRƯỜNG CHO THUÊ · BÁO CÁO 06/11",
+      "title": "Nhà ở cho thuê đạt hơn chín nghìn căn trong năm",
+      "facts": [
+        "Bộ Xây dựng công bố đã hoàn thành 9.028/17.176 căn nhà ở cho thuê, tương ứng 53% kế hoạch năm 2026; dự báo đến cuối năm có thể hoàn thành 16.944 căn, bằng khoảng 99% chỉ tiêu.",
+        "Dự thảo Luật Nhà ở sửa đổi đang được nghiên cứu để bổ sung chương về phát triển nhà ở cho thuê, trong đó đề cập đầu tư từ vốn nhà nước và vốn tư nhân; chưa phải luật đã thông qua."
+      ],
+      "sources": [
+        {
+          "name": "Báo Điện tử Chính phủ, 06/11",
+          "url": "https://baochinhphu.vn/hoan-thanh-gan-17000-can-nha-o-cho-thue-trong-nam-2026-102261106190929377.htm"
+        },
+        {
+          "name": "Báo Xây dựng, 06/11",
+          "url": "https://batdongsan.baoxaydung.vn/10-thang-dau-nam-2026-ca-nuoc-hoan-thanh-53-ke-hoach-phat-trien-nha-o-cho-thue-19226110616443315.htm"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/27151829/pexels-photo-27151829.jpeg"
+    },
+    {
+      "category": "PHÁP LÝ · CHÍNH SÁCH DOANH NGHIỆP",
+      "label": "DỰ THẢO LUẬT ĐẤU THẦU · 06/11",
+      "title": "Dự thảo Luật Đấu thầu xem xét kết hợp tiêu chí kỹ thuật và giá",
+      "facts": [
+        "Sáng 06/11, Quốc hội thảo luận dự án Luật Đấu thầu sửa đổi với định hướng phân cấp lựa chọn nhà thầu, đơn giản hóa thủ tục và tăng cường kiểm soát thông thầu, gian lận.",
+        "Bộ Tài chính nêu phương án đánh giá tiêu chí kỹ thuật hoặc kết hợp kỹ thuật với giá để hạn chế bỏ giá thấp mà không bảo đảm chất lượng, tiến độ; nội dung vẫn đang trong dự thảo."
+      ],
+      "sources": [
+        {
+          "name": "Báo Điện tử Chính phủ, 06/11",
+          "url": "https://baochinhphu.vn/phan-cap-phan-quyen-trong-dau-thau-phai-di-doi-voi-kiem-soat-quyen-luc-trach-nhiem-102261106130912045.htm"
+        },
+        {
+          "name": "Thời báo Tài chính Việt Nam, 06/11",
+          "url": "https://thoibaotaichinhvietnam.vn/de-cao-chat-luong-khac-phuc-tinh-trang-bo-gia-rat-thap-nhung-khong-chu-trong-chat-luong-va-tien-do-206524.html"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/8297220/pexels-photo-8297220.jpeg"
+    },
+    {
+      "category": "NHÂN SỰ · THỊ TRƯỜNG LAO ĐỘNG",
+      "label": "BHXH · PHỐI HỢP KIỂM TRA ĐỊA PHƯƠNG",
+      "title": "Thanh Hóa tăng phối hợp xử lý nợ bảo hiểm tại doanh nghiệp",
+      "facts": [
+        "Báo cáo của BHXH tỉnh Thanh Hóa được đăng ngày 06/11 ghi nhận số tiền chậm đóng BHXH, BHYT, BHTN đến hết tháng 09/2026 vượt 1.411 tỷ đồng, tương đương 8,14% số phải thu.",
+        "Thông tin về hội nghị phối hợp BHXH và Viện Kiểm sát ngày 05/11 nêu cơ chế trao đổi dữ liệu, phát hiện và xử lý hành vi trốn đóng; đây là hoạt động kiểm tra tại Thanh Hóa, không phải quy định mới áp dụng toàn quốc."
+      ],
+      "sources": [
+        {
+          "name": "Tạp chí Kinh tế Tài chính – An sinh, 06/11",
+          "url": "https://ansinh.tapchikinhtetaichinh.vn/thanh-hoa-phoi-hop-phat-hien-xu-ly-hanh-vi-vi-pham-phap-luat-bao-hiem-xa-hoi-bao-hiem-y-te-171755.html"
+        },
+        {
+          "name": "Báo Công lý, 06/11",
+          "url": "https://congly.vn/hon-1-411-ty-dong-no-bao-hiem-tai-thanh-hoa-546435.html"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/7652046/pexels-photo-7652046.jpeg"
+    },
+    {
+      "category": "PHÁP LÝ · CHÍNH SÁCH DOANH NGHIỆP",
+      "label": "DỰ ÁN NHÀ Ở XÃ HỘI · HẢI PHÒNG 06/11",
+      "title": "Hải Phòng thúc tiến độ bốn dự án nhà ở xã hội trọng điểm",
+      "facts": [
+        "Ngày 06/11, lãnh đạo TP Hải Phòng kiểm tra bốn dự án nhà ở xã hội tại Ngô Quyền, An Biên, Hồng Bàng và An Dương, tổng quy mô khoảng 11.407 căn hộ.",
+        "Dự án Tổng kho 3 Lạc Viên có bốn tòa cơ bản hoàn thiện, hai tòa thi công phần thân; dự án Cầu Rào 2 đang triển khai móng và tầng một, các dự án khác đang xử lý mặt bằng hoặc chuẩn bị khởi công."
+      ],
+      "sources": [
+        {
+          "name": "Báo Xây dựng, 06/11",
+          "url": "https://batdongsan.baoxaydung.vn/hai-phong-thuc-tien-do-4-du-an-nha-o-xa-hoi-voi-hon-11400-can-ho-192261106162801176.htm"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/8297030/pexels-photo-8297030.jpeg"
+    }
+  ],
+  "impacts": [
+    {
+      "area": "KẾ TOÁN – TÀI CHÍNH",
+      "subtitle": "Chuẩn hóa số liệu và theo dõi dự thảo thuế",
+      "points": [
+        "Báo cáo tài chính và bộ hồ sơ công nợ công trình cần đối soát thời điểm ghi nhận doanh thu, chi phí, nghiệm thu và các thuyết minh trọng yếu.",
+        "Thông tin thuế suất đất và ưu đãi TNDN ngày 06/11 mới ở giai đoạn thảo luận; chưa điều chỉnh nghĩa vụ hay dự toán thuế theo đề xuất."
+      ],
+      "story_index": 1
+    },
+    {
+      "area": "PHÁP LÝ",
+      "subtitle": "Đấu thầu và kiểm soát hồ sơ nhà thầu",
+      "points": [
+        "Định hướng sửa Luật Đấu thầu có liên quan hồ sơ năng lực, tiêu chí kỹ thuật, giá chào và trách nhiệm của nhà thầu xây dựng/MEP.",
+        "Quy trình lựa chọn nhà thầu hiện hành tiếp tục áp dụng đến khi có văn bản mới được thông qua và có hiệu lực."
+      ],
+      "story_index": 3
+    },
+    {
+      "area": "NHÂN SỰ",
+      "subtitle": "Rà soát đối tượng và tiến độ đóng BHXH",
+      "points": [
+        "Hoạt động xử lý nợ BHXH tại Thanh Hóa cho thấy yêu cầu chứng minh số lao động tham gia, bảng lương đóng và chứng từ thanh toán bảo hiểm.",
+        "Khối lượng dự án nhà ở xã hội tại Hải Phòng đặt ra bài toán dự báo nguồn nhân lực nhưng không đồng nghĩa STACORP đã nhận thầu."
+      ],
+      "story_index": 4
+    },
+    {
+      "area": "BAN ĐIỀU HÀNH",
+      "subtitle": "Cơ hội MEP và tài sản nhà ở cho thuê",
+      "points": [
+        "Số liệu nhà ở cho thuê công bố 06/11 là tín hiệu thị trường cho hoạt động đầu tư BĐS cho thuê; phân biệt kết quả hoàn thành với dự báo cuối năm.",
+        "Bốn dự án tại Hải Phòng cần kiểm tra tình trạng nhà thầu và phạm vi MEP thực tế trước khi đưa vào pipeline cơ hội."
+      ],
+      "story_index": 5
+    }
+  ],
+  "actions": [
+    {
+      "owner": "KẾ TOÁN – TÀI CHÍNH",
+      "points": [
+        "Đối soát hồ sơ nghiệm thu, công nợ, chứng từ doanh thu chi phí theo kỳ và các thuyết minh phục vụ báo cáo tài chính.",
+        "Ghi chú các phương án sửa thuế ngày 06/11 vào danh mục theo dõi, chưa dùng làm cơ sở kê khai."
+      ],
+      "story_index": 1
+    },
+    {
+      "owner": "PHÁP LÝ",
+      "points": [
+        "Theo dõi bản dự thảo Luật Đấu thầu được cập nhật sau phiên 06/11; tổng hợp điều khoản liên quan tiêu chí kỹ thuật, chỉ định thầu và minh bạch đấu thầu.",
+        "Giữ nguyên quy trình đấu thầu đang có hiệu lực cho đến khi luật và văn bản thi hành mới được ban hành."
+      ],
+      "story_index": 3
+    },
+    {
+      "owner": "NHÂN SỰ",
+      "points": [
+        "Đối chiếu danh sách lao động, hợp đồng, lương đóng BHXH và biên lai đóng tháng 10–11 với bộ phận kế toán."
+      ],
+      "story_index": 4
+    },
+    {
+      "owner": "BAN ĐIỀU HÀNH",
+      "points": [
+        "Giao bộ phận phát triển kinh doanh rà soát bốn dự án nhà ở xã hội Hải Phòng: chủ đầu tư, tiến độ, nhà thầu và phần việc MEP chưa giao.",
+        "Phân tích mô hình tài chính BĐS cho thuê trên số liệu thực tế, không coi dự báo hoàn thành cuối năm là nguồn cung đã đưa vào vận hành."
+      ],
+      "story_index": 5
+    }
+  ],
+  "focus": {
+    "title": "Ưu tiên kiểm soát hồ sơ, không áp dụng dự thảo như quy định hiện hành",
+    "text": "Hai phiên thảo luận ngày 06/11 liên quan trực tiếp dự thảo thuế và đấu thầu; trong khi doanh nghiệp cần chốt chứng từ báo cáo tài chính và nghĩa vụ BHXH đúng kỳ, Ban điều hành chỉ ghi nhận cơ hội dự án khi đã xác minh tình trạng gói thầu và nguồn vốn.",
+    "story_index": 3
+  }
+}
