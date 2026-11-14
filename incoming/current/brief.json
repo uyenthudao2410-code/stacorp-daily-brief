@@ -1,0 +1,225 @@
+{
+  "date": "14.11.2026",
+  "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
+  "subtitle": "Thị trường • Dự án • Chi phí • Con người",
+  "summary_lede": "Ngày 14/11, miền Bắc ghi nhận gói cao tốc Ninh Bình – Hải Phòng mở thầu, kết quả xây lắp điện Hòa Lạc, dự án nhà ở Bắc Ninh và gói trường học Hải Phòng. Miền Trung có kè sông Hà Tĩnh, cầu Bến Thủy 3 và hai dự án logistics, cảng Đà Nẵng.",
+  "items": [
+    {
+      "region": "MIỀN BẮC",
+      "category": "GIAO THÔNG • MỜI THẦU",
+      "impact": "CAO",
+      "headline": "Ninh Bình mở gói thiết kế – xây lắp cao tốc 1.103,837 tỷ",
+      "facts": [
+        "Ban QLDA đầu tư xây dựng số 1 tỉnh Ninh Bình phát hành hồ sơ mời thầu gói số 45 thiết kế và thi công đoạn cao tốc Ninh Bình – Hải Phòng, giá gói 1.103,837 tỷ đồng.",
+        "Gói thực hiện 20 tháng, dự kiến mở thầu lúc 9 giờ ngày 28/11/2026; dự án dài 25,3 km, thiết kế 4 làn xe, tốc độ 120 km/giờ, tổng vốn trên 9.113 tỷ đồng."
+      ],
+      "note": "Đang mời thầu, chưa có giá trúng thầu hoặc nhà thầu thi công được xác nhận.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "13.11.2026",
+      "url": "https://baodauthau.vn/moi-thau-goi-xay-lap-1103-ty-dong-thuoc-cao-toc-ninh-binh-hai-phong-post212695.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "LƯỚI ĐIỆN • KẾT QUẢ THẦU",
+      "impact": "CAO",
+      "headline": "Việt Á trúng gói đường dây 220kV Hòa Lạc 284,814 tỷ",
+      "facts": [
+        "EVNHANOI công bố Công ty CP Tập đoàn đầu tư thương mại công nghiệp Việt Á trúng gói số 10 cung cấp cột thép, dây dẫn, phụ kiện và xây lắp đường dây 220kV, 110kV Hòa Lạc.",
+        "Giá trúng 284,814 tỷ đồng so với giá gói 297,864 tỷ đồng, giảm 4,38%; hợp đồng đơn giá cố định, thời gian thực hiện 300 ngày; có 4 nhà thầu tham dự."
+      ],
+      "note": "Đã có kết quả lựa chọn nhà thầu; không đồng nghĩa công trình đã thi công xong.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Báo Đấu thầu (dẫn EVNHANOI)",
+      "source_date": "13.11.2026",
+      "url": "https://baodauthau.vn/goi-thau-gan-300-ty-dong-xay-lap-duong-day-dien-tai-ha-noi-vuot-3-doi-thu-viet-a-duoc-chon-post212677.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "BẤT ĐỘNG SẢN • ĐẤU GIÁ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Bắc Ninh duyệt đấu giá khu nhà ở Tân Chi vốn 888,122 tỷ",
+      "facts": [
+        "UBND tỉnh Bắc Ninh phê duyệt phương án đấu giá đất dự án khu nhà ở tại xã Tân Chi; diện tích khoảng 40.173 m², dự kiến 198 căn liền kề và đất giao thông, hạ tầng kỹ thuật.",
+        "Vốn đầu tư dự kiến 888,122 tỷ đồng, gồm xây dựng 601,534 tỷ đồng; giá khởi điểm đất tạm tính 286,588 tỷ đồng, tổ chức đấu giá dự kiến quý IV/2026 đến quý I/2027."
+      ],
+      "note": "Mới phê duyệt phương án đấu giá; chưa có nhà đầu tư trúng và khu đất chưa có hạ tầng kỹ thuật.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật",
+        "Đấu thầu"
+      ],
+      "source": "Báo Đấu thầu (dẫn UBND Bắc Ninh)",
+      "source_date": "13.11.2026",
+      "url": "https://baodauthau.vn/bac-ninh-duyet-phuong-an-dau-gia-dat-xay-khu-nha-o-gan-888-ty-dong-post212666.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "GIÁO DỤC • KẾT QUẢ THẦU",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hải Phòng: liên danh trúng xây lớp học Cẩm Chế 20,985 tỷ",
+      "facts": [
+        "Ban QLDA xã Hà Bắc, Hải Phòng phê duyệt liên danh An Sang – Nam Thái Bình – Hồng Phúc thi công nhà học 3 tầng, 12 phòng Trường Mầm non Cẩm Chế.",
+        "Giá trúng thầu 20,985 tỷ đồng trên giá gói 21,045 tỷ đồng; gói được đấu thầu qua mạng với một nhà thầu duy nhất nộp hồ sơ."
+      ],
+      "note": "Công bố kết quả lựa chọn nhà thầu xây dựng, chưa xác nhận thời điểm khởi công.",
+      "departments": [
+        "Đấu thầu",
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "13.11.2026",
+      "url": "https://baodauthau.vn/hai-phong-lien-danh-3-thanh-vien-trung-goi-thau-xay-dung-nha-lop-hoc-truong-mam-non-cam-che-21045-ty-dong-post212644.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "THỦY LỢI • KẾT QUẢ THẦU",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hà Tĩnh công bố hai gói kè sông trúng thầu gần 210 tỷ",
+      "facts": [
+        "Ban QLDA giao thông và phát triển đô thị Hà Tĩnh công bố kết quả thi công kè chống sạt lở Ngàn Sâu, Ngàn Phố; hai liên danh đều có Mạnh Linh và Hoàng Lai.",
+        "Giá trúng lần lượt 106,295 tỷ đồng tại kè Ngàn Sâu và 103,634 tỷ tại Ngàn Phố, tổng 209,929 tỷ đồng; mỗi gói 300 ngày, hợp đồng đơn giá điều chỉnh."
+      ],
+      "note": "Hai kết quả đã công bố, mỗi gói chỉ một nhà thầu dự thầu; chưa phải số liệu giải ngân hay nghiệm thu.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "13.11.2026",
+      "url": "https://baodauthau.vn/2-goi-thau-gan-210-ty-dong-xay-ke-chong-sat-lo-tai-ha-tinh-manh-linh-va-hoang-lai-trung-lon-post212662.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "GIAO THÔNG • CHỦ TRƯƠNG",
+      "impact": "CAO",
+      "headline": "Nghệ An thống nhất nút giao cầu Bến Thủy 3, vốn dự kiến 2.510 tỷ",
+      "facts": [
+        "Ngày 13/11, UBND Nghệ An thống nhất cầu Bến Thủy 3 giao khác mức với QL46C và nối đường Nguyễn Sỹ Sách kéo dài bằng nút giao bằng, trước bước hoàn thiện hồ sơ đầu tư.",
+        "Cầu dự kiến dài 1.300 m, rộng 23,5 m, 4 làn ô tô và 2 làn hỗn hợp; dự án kết nối Nghệ An – Hà Tĩnh có tổng vốn dự kiến khoảng 2.510 tỷ đồng."
+      ],
+      "note": "Phương án kết nối vừa thống nhất, chưa đồng nghĩa phê duyệt thiết kế thi công hoặc khởi công.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật"
+      ],
+      "source": "Báo Nghệ An (dẫn UBND tỉnh)",
+      "source_date": "13.11.2026",
+      "url": "https://baonghean.vn/nghe-an-thong-nhat-phuong-an-ket-noi-cau-ben-thuy-3-voi-quoc-lo-46c-va-duong-nguyen-sy-sach-keo-dai-10355761.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "LOGISTICS • QUY HOẠCH",
+      "impact": "TRUNG BÌNH",
+      "headline": "Đà Nẵng rà soát chợ đầu mối và logistics Hòa Phước",
+      "facts": [
+        "Ngày 13/11, lãnh đạo Đà Nẵng kiểm tra thực địa dự án Chợ đầu mối Hòa Phước và Trung tâm logistics phục vụ chợ đầu mối, ngành bán buôn tại phường Hòa Xuân.",
+        "Thành phố yêu cầu rà soát phương án định giá đất, đấu giá nhà đầu tư, giải phóng mặt bằng và cao độ san nền chống ngập, đồng bộ với mạng lưới logistics và khu thương mại tự do."
+      ],
+      "note": "Dự án còn ở bước rà soát thủ tục và điều kiện triển khai; chưa công bố trúng thầu xây lắp.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật",
+        "Đấu thầu"
+      ],
+      "source": "Báo Đà Nẵng",
+      "source_date": "13.11.2026",
+      "url": "https://baodanang.vn/lanh-dao-thanh-pho-da-nang-kiem-tra-du-an-cho-dau-moi-trung-tam-logistics-hoa-phuoc-3358346.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "CẢNG BIỂN • TIẾN ĐỘ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Đà Nẵng lập tổ công tác thúc tiến độ cảng container Liên Chiểu",
+      "facts": [
+        "UBND Đà Nẵng ban hành Quyết định 5171/QĐ-UBND lập tổ công tác đôn đốc dự án đầu tư xây dựng tổng thể Bến cảng container Liên Chiểu; Phó Chủ tịch Lê Quang Nam làm tổ trưởng.",
+        "Tổ công tác theo dõi thực hiện hợp đồng, rà soát tiến độ và xử lý vướng mắc liên ngành; phần hạ tầng dùng chung tại Bến cảng Liên Chiểu đã hoàn thành theo Báo Đà Nẵng."
+      ],
+      "note": "Đây là quyết định tổ chức theo dõi dự án, không phải thông báo hoàn thành toàn bộ bến container.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Báo Đà Nẵng (dẫn Quyết định 5171/QĐ-UBND)",
+      "source_date": "13.11.2026",
+      "url": "https://baodanang.vn/da-nang-lap-to-cong-tac-theo-doi-don-doc-tien-do-du-an-ben-cang-container-lien-chieu-3358326.html"
+    }
+  ],
+  "news_themes": [
+    {
+      "label": "GIAO THÔNG • ĐẤU THẦU",
+      "title": "Cao tốc mở gói lớn, cầu Bến Thủy định hình",
+      "detail": "Ninh Bình mời gói 1.103,837 tỷ; Nghệ An thống nhất kết nối cầu Bến Thủy 3, tổng vốn dự kiến khoảng 2.510 tỷ."
+    },
+    {
+      "label": "ĐIỆN • XÂY LẮP",
+      "title": "Đường dây Hòa Lạc có nhà thầu",
+      "detail": "Việt Á được chọn với giá 284,814 tỷ cho thiết bị và xây lắp lưới 220kV/110kV, thực hiện 300 ngày."
+    },
+    {
+      "label": "ĐÔ THỊ • GIÁO DỤC",
+      "title": "Dòng việc nhà ở và trường học miền Bắc",
+      "detail": "Bắc Ninh duyệt phương án đấu giá khu nhà ở hơn 888 tỷ; Hải Phòng công bố liên danh xây lớp mầm non."
+    },
+    {
+      "label": "HẠ TẦNG • LOGISTICS",
+      "title": "Kè sông và nút logistics miền Trung",
+      "detail": "Hà Tĩnh có hai hợp đồng kè gần 210 tỷ; Đà Nẵng rà soát Hòa Phước và lập tổ công tác cảng Liên Chiểu."
+    }
+  ],
+  "regional_pulse": [
+    {
+      "region": "MIỀN BẮC",
+      "title": "Năng lượng, cao tốc, hạ tầng dân sinh",
+      "detail": "Mở gói cao tốc Ninh Bình – Hải Phòng, công bố nhà thầu điện Hòa Lạc; Bắc Ninh chuẩn bị đấu giá khu nhà ở và Hải Phòng có kết quả thầu trường học."
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "title": "Hạ tầng kết nối và bảo vệ công trình",
+      "detail": "Nghệ An thống nhất phương án cầu Bến Thủy 3; Hà Tĩnh chọn thầu kè sông; Đà Nẵng thúc quy hoạch logistics Hòa Phước và dự án cảng Liên Chiểu."
+    }
+  ],
+  "news_numbers": [
+    {
+      "value": "1.103,837 tỷ",
+      "label": "Gói cao tốc Ninh Bình",
+      "context": "Giá gói thiết kế – thi công số 45, dự kiến mở thầu 28/11."
+    },
+    {
+      "value": "284,814 tỷ",
+      "label": "Gói điện Hòa Lạc",
+      "context": "Giá trúng thầu Việt Á cho đường dây 220kV, 110kV."
+    },
+    {
+      "value": "2.510 tỷ",
+      "label": "Dự án cầu Bến Thủy 3",
+      "context": "Tổng mức đầu tư dự kiến, chưa phải giá trị hợp đồng."
+    },
+    {
+      "value": "209,929 tỷ",
+      "label": "Hai gói kè Hà Tĩnh",
+      "context": "Tổng giá trúng thầu kè Ngàn Sâu và Ngàn Phố."
+    }
+  ],
+  "action_today": ""
+}
