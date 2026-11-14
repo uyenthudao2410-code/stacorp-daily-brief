@@ -1,0 +1,221 @@
+{
+  "date": "14.11.2026",
+  "window": "24 giờ gần nhất, từ 08:10 ngày 13/11 đến 08:10 ngày 14/11/2026 (Asia/Ho_Chi_Minh)",
+  "summary": "Bộ Tài chính làm rõ dự phòng công nợ và căn cứ lập giá gói thầu; Vietcombank cập nhật kết quả chương trình giảm lãi vay; hướng dẫn thanh toán dự án BT được giải thích. Hà Nội ghi nhận thiếu nhân lực xây dựng và Chính phủ thúc đẩy việc làm thanh niên.",
+  "highlights": [
+    {
+      "title": "Dự phòng nợ phải thu căn cứ tuổi nợ tại kỳ báo cáo",
+      "summary": "Giải đáp của Bộ Tài chính ngày 13/11 nhấn mạnh thời điểm lập báo cáo tài chính năm, tuổi nợ và hồ sơ chứng minh; mức trích 30% hoặc 50% tùy thời gian quá hạn, không mặc nhiên áp dụng cho mọi khoản phải thu.",
+      "story_index": 0
+    },
+    {
+      "title": "Vietcombank cập nhật kết quả chương trình giảm lãi vay có điều kiện",
+      "summary": "Thông tin công bố 13/11: gần 25.000 khách hàng hưởng ưu đãi; mức giảm phổ biến 1,5–2 điểm phần trăm/năm, tối đa 3 điểm với khoản vay đủ điều kiện; chương trình đã bắt đầu từ 19/10.",
+      "story_index": 1
+    },
+    {
+      "title": "Hà Nội ghi nhận thiếu khoảng 8.000 lao động ở các dự án",
+      "summary": "Thông tin ngày 13/11 nêu nhu cầu phối hợp doanh nghiệp và cơ sở giáo dục nghề nghiệp; số liệu thị trường không phải chỉ tiêu tuyển dụng riêng của STACORP.",
+      "story_index": 4
+    }
+  ],
+  "items": [
+    {
+      "category": "KẾ TOÁN · THUẾ · TÀI CHÍNH",
+      "label": "GIẢI ĐÁP BỘ TÀI CHÍNH · 13/11",
+      "title": "Bộ Tài chính hướng dẫn thời điểm trích lập dự phòng nợ phải thu",
+      "facts": [
+        "Theo hướng dẫn công bố ngày 13/11, việc trích lập dự phòng khoản phải thu khó đòi được xem xét tại thời điểm lập báo cáo tài chính năm trên cơ sở hồ sơ và tuổi nợ.",
+        "Theo Thông tư 48/2019/TT-BTC, khoản quá hạn từ 6 đến dưới 12 tháng có tỷ lệ trích 30%; từ 1 đến dưới 2 năm là 50% khi đáp ứng các điều kiện hồ sơ.",
+        "Khoản chưa trích ở kỳ trước không đương nhiên được ghi nhận hoặc tính vào chi phí được trừ nếu thiếu bằng chứng về nghĩa vụ và thời gian quá hạn."
+      ],
+      "sources": [
+        {
+          "name": "Bộ Tài chính – trả lời chính sách ngày 13/11",
+          "url": "https://portal.mof.gov.vn/hoidapcstc/home/cthoidap/167696"
+        },
+        {
+          "name": "Cổng Văn bản Chính phủ – căn cứ Thông tư 48",
+          "url": "https://vanban.chinhphu.vn/?classid=2&docid=218751&pageid=27160"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/7681077/pexels-photo-7681077.jpeg"
+    },
+    {
+      "category": "KẾ TOÁN · THUẾ · TÀI CHÍNH",
+      "label": "TÍN DỤNG DOANH NGHIỆP · 13/11",
+      "title": "Vietcombank công bố kết quả giảm lãi vay cho gần 25.000 khách hàng",
+      "facts": [
+        "Thông tin cập nhật ngày 13/11 ghi nhận gần 25.000 khách hàng được hưởng chương trình giảm lãi suất, với dư nợ giải ngân ưu đãi khoảng 150.000 tỷ đồng.",
+        "Mức giảm được công bố phổ biến 1,5–2 điểm phần trăm/năm; tối đa 3 điểm phần trăm/năm đối với một số khoản vay ngắn hạn đủ điều kiện.",
+        "Chương trình triển khai từ 19/10 đến 31/12/2026; mức áp dụng cho từng doanh nghiệp phụ thuộc sản phẩm, thời hạn và thẩm định tín dụng."
+      ],
+      "sources": [
+        {
+          "name": "Báo Điện tử Chính phủ – cập nhật 13/11",
+          "url": "https://cms.baochinhphu.vn/vietcombank-giam-lai-vay-den-3-nam-gan-25000-khach-hang-duoc-huong-loi-102261113182529995.htm"
+        },
+        {
+          "name": "Vietcombank – thông báo chương trình 19/10",
+          "url": "https://vietcombank.com.vn/vi-VN/Trang-thong-tin-dien-tu/Articles/2026/10/19/20261019_VCB-giam-lai-suat-cho-vay"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/7821708/pexels-photo-7821708.jpeg"
+    },
+    {
+      "category": "PHÁP LÝ · CHÍNH SÁCH DOANH NGHIỆP",
+      "label": "HƯỚNG DẪN ĐẤU THẦU · 13/11",
+      "title": "Bộ Tài chính giải đáp căn cứ xác định giá gói thầu theo quy định",
+      "facts": [
+        "Giải đáp đăng ngày 13/11 dẫn khoản 2 Điều 18 Nghị định 214/2025, đã được sửa đổi, bổ sung theo Nghị định 349/2026, về các căn cứ xây dựng giá gói thầu.",
+        "Chủ đầu tư có thể lựa chọn căn cứ phù hợp như dự toán được duyệt, kết quả mua sắm tương tự, báo giá hoặc giá niêm yết; phải bảo đảm tính phù hợp của hồ sơ giá.",
+        "Đây là hướng dẫn áp dụng quy định đã ban hành, không phải một nghĩa vụ đấu thầu mới có hiệu lực ngày 13/11."
+      ],
+      "sources": [
+        {
+          "name": "Báo Điện tử Chính phủ – giải đáp 13/11",
+          "url": "https://baochinhphu.vn/can-cu-lap-gia-goi-thau-102261112110711418.htm"
+        },
+        {
+          "name": "Cổng Văn bản Chính phủ – Nghị định 349/2026",
+          "url": "https://vanban.chinhphu.vn/?docid=219431&pageid=27160"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/8297220/pexels-photo-8297220.jpeg"
+    },
+    {
+      "category": "PHÁP LÝ · CHÍNH SÁCH DOANH NGHIỆP",
+      "label": "GIẢI ĐÁP HỢP ĐỒNG BT · 13/11",
+      "title": "Cơ quan tài chính làm rõ hạng mục vận hành độc lập trong dự án BT",
+      "facts": [
+        "Giải đáp ngày 13/11 phân biệt hạng mục công trình có thể đưa vào vận hành độc lập với các phần chưa hoàn thành của dự án BT.",
+        "Việc thanh toán bằng nguồn lực nhà nước cần căn cứ điều kiện hoàn thành, nghiệm thu và kiểm toán theo cơ chế dành riêng cho hợp đồng BT.",
+        "Nội dung giải đáp không tự thay đổi điều kiện thanh toán của hợp đồng MEP thông thường; việc áp dụng phải xét loại hợp đồng và thỏa thuận cụ thể."
+      ],
+      "sources": [
+        {
+          "name": "Cổng Chính sách Chính phủ – giải đáp 13/11",
+          "url": "https://chinhsachonline.chinhphu.vn/hieu-the-nao-ve-hang-muc-cong-trinh-van-hanh-doc-lap-trong-du-an-bt-93606.htm"
+        },
+        {
+          "name": "Cổng Văn bản Chính phủ – văn bản hợp nhất liên quan BT",
+          "url": "https://vanban.chinhphu.vn/?docid=219935&orggroupid=4&pageid=27160"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/27151829/pexels-photo-27151829.jpeg"
+    },
+    {
+      "category": "NHÂN SỰ · THỊ TRƯỜNG LAO ĐỘNG",
+      "label": "THỊ TRƯỜNG LAO ĐỘNG · 13/11",
+      "title": "Hà Nội công bố thiếu khoảng 8.000 lao động tại các dự án xây dựng",
+      "facts": [
+        "Thông tin công bố ngày 13/11 ghi nhận tình trạng thiếu khoảng 8.000 lao động ở các đơn vị thi công và dự án trên địa bàn Hà Nội.",
+        "Thành phố nhấn mạnh việc điều phối đào tạo nghề theo nhu cầu sử dụng lao động, kết nối doanh nghiệp với cơ sở giáo dục nghề nghiệp.",
+        "Số liệu phản ánh nhu cầu thị trường ở thời điểm được nêu, không đồng nghĩa các vị trí đều thuộc nhóm cơ điện hoặc đang tuyển tại một doanh nghiệp cụ thể."
+      ],
+      "sources": [
+        {
+          "name": "Báo Điện tử Chính phủ Hà Nội – thông tin 13/11",
+          "url": "https://thanglong.baochinhphu.vn/ha-noi-dieu-phoi-dao-tao-nghe-theo-nhu-cau-su-dung-lao-dong-103261113123203948.htm"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/7652046/pexels-photo-7652046.jpeg"
+    },
+    {
+      "category": "NHÂN SỰ · THỊ TRƯỜNG LAO ĐỘNG",
+      "label": "CHỈ ĐẠO VIỆC LÀM · 13/11",
+      "title": "Văn phòng Chính phủ thông tin chỉ đạo phát triển việc làm cho thanh niên",
+      "facts": [
+        "Văn bản chỉ đạo được thông tin ngày 13/11 yêu cầu phối hợp phát triển thị trường lao động, tăng kết nối cung cầu và cơ hội việc làm cho thanh niên.",
+        "Nội dung chú trọng chất lượng đào tạo nghề, thực hành tại doanh nghiệp và tăng khả năng tiếp cận thông tin tuyển dụng.",
+        "Đây là chỉ đạo tới cơ quan quản lý và đơn vị liên quan, không tự tạo nghĩa vụ tuyển dụng bắt buộc mới đối với STACORP."
+      ],
+      "sources": [
+        {
+          "name": "Báo Điện tử Chính phủ – chỉ đạo 13/11",
+          "url": "https://baochinhphu.vn/phat-trien-thi-truong-lao-dong-tao-viec-lam-cho-thanh-nien-102261113164937268.htm"
+        }
+      ],
+      "visual_url": "https://images.pexels.com/photos/8297030/pexels-photo-8297030.jpeg"
+    }
+  ],
+  "impacts": [
+    {
+      "area": "KẾ TOÁN – TÀI CHÍNH",
+      "subtitle": "Dự phòng công nợ và chi phí vốn",
+      "points": [
+        "Hồ sơ công nợ xây dựng cần phân loại theo ngày đến hạn, đối chiếu xác nhận và bằng chứng thu hồi trước khi xét trích lập dự phòng tại kỳ báo cáo.",
+        "Ưu đãi lãi vay được công bố cho nhóm khách hàng đủ điều kiện, không đồng nghĩa STACORP chắc chắn được giảm lãi hoặc được cơ cấu khoản vay hiện hữu.",
+        "Khi lập kế hoạch dòng tiền, tách khoản phải thu đã nghiệm thu, khoản tranh chấp và phần chưa đủ điều kiện ghi nhận."
+      ],
+      "story_index": 0
+    },
+    {
+      "area": "PHÁP LÝ",
+      "subtitle": "Giá gói thầu và điều kiện thanh toán",
+      "points": [
+        "Hồ sơ chào thầu hoặc lập giá dự toán cần có căn cứ báo giá, dự toán và quyết định phê duyệt phù hợp quy định đang áp dụng.",
+        "Quy định thanh toán dự án BT có phạm vi riêng; không được dùng trực tiếp làm căn cứ yêu cầu thanh toán cho mọi hợp đồng thi công MEP."
+      ],
+      "story_index": 2
+    },
+    {
+      "area": "NHÂN SỰ",
+      "subtitle": "Nguồn cung lao động và đào tạo nghề",
+      "points": [
+        "Thiếu lao động tại các dự án Hà Nội là dấu hiệu cạnh tranh tuyển dụng, nhất là các vị trí kỹ thuật phù hợp với xây dựng và MEP.",
+        "Hoạt động phối hợp trường nghề và đào tạo tại doanh nghiệp có thể bổ sung nguồn nhân sự trẻ, nhưng cần kiểm chứng ngành nghề và năng lực từng cơ sở."
+      ],
+      "story_index": 4
+    },
+    {
+      "area": "BAN ĐIỀU HÀNH",
+      "subtitle": "Giữ biên lợi nhuận và năng lực thực hiện",
+      "points": [
+        "Kế hoạch thu tiền theo hợp đồng cần kết hợp xác suất thu hồi công nợ, điều kiện nghiệm thu và nhu cầu vốn lưu động.",
+        "Giá dự toán, nguồn tín dụng và nguồn cung lao động có liên hệ trực tiếp tới năng lực nhận gói MEP mới trong quý cuối năm.",
+        "Các thông tin thị trường mới chưa thay thế được xác nhận của ngân hàng, chủ đầu tư và đơn vị đào tạo."
+      ],
+      "story_index": 1
+    }
+  ],
+  "actions": [
+    {
+      "owner": "KẾ TOÁN – TÀI CHÍNH",
+      "points": [
+        "Lập bảng tuổi nợ, tập hợp biên bản đối chiếu, hợp đồng, thư yêu cầu thanh toán và đánh dấu từng khoản đủ điều kiện xem xét dự phòng.",
+        "Làm việc với ngân hàng về điều kiện ưu đãi thực tế, so sánh lãi suất hiệu dụng và phí trước khi điều chỉnh dự báo tài chính."
+      ],
+      "story_index": 0
+    },
+    {
+      "owner": "PHÁP LÝ",
+      "points": [
+        "Kiểm tra căn cứ xây dựng giá gói thầu trong hồ sơ đang chuẩn bị và hiệu lực văn bản viện dẫn.",
+        "Phân loại hợp đồng BT, xây lắp, MEP theo đúng cơ chế nghiệm thu, kiểm toán và điều kiện thanh toán riêng."
+      ],
+      "story_index": 2
+    },
+    {
+      "owner": "HC–NS",
+      "points": [
+        "Tổng hợp các vị trí thiếu nhân sự công trường và tiêu chí kỹ năng, xác định nhóm có thể đào tạo bổ sung.",
+        "Tiếp cận bộ phận đào tạo các cơ sở nghề phù hợp để khảo sát chương trình, kỳ tốt nghiệp và khả năng kết nối tuyển dụng."
+      ],
+      "story_index": 4
+    },
+    {
+      "owner": "BAN ĐIỀU HÀNH",
+      "points": [
+        "Rà soát công nợ chậm thu và tiến độ thanh toán 30–60 ngày, phân công đầu mối pháp lý–kế toán xử lý hồ sơ.",
+        "Cân đối nguồn vốn dự phòng và nhân sự triển khai trước khi cam kết tiến độ hoặc giá của gói thầu mới."
+      ],
+      "story_index": 1
+    }
+  ],
+  "focus": {
+    "title": "Dòng tiền hợp đồng, chất lượng hồ sơ và khả năng huy động nhân lực",
+    "text": "Ba nhóm thông tin ngày 13/11 cần được xử lý theo dữ kiện riêng: hướng dẫn dự phòng không thay thế chứng từ xác nhận tuổi nợ; chương trình giảm lãi vay không tự động dành cho mọi doanh nghiệp; giải đáp về BT không thay đổi hợp đồng thi công thông thường. Với STACORP, trọng tâm là thu hồi khoản phải thu, kiểm tra cơ sở pháp lý khi lập giá và xây dựng nguồn tuyển dụng kỹ thuật qua cơ sở nghề. Không suy diễn đề xuất hay chỉ đạo thành nghĩa vụ mới nếu chưa có văn bản áp dụng.",
+    "story_index": 0
+  }
+}
