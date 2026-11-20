@@ -1,0 +1,228 @@
+{
+  "date": "20.11.2026",
+  "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
+  "subtitle": "Thị trường • Dự án • Chi phí • Con người",
+  "summary_lede": "Miền Bắc ghi nhận các kết quả lựa chọn nhà thầu giao thông, hạ tầng dân cư và thiết bị điện tại Quảng Ninh, Hải Phòng, Bắc Ninh. Miền Trung nổi bật kế hoạch nhà ở xã hội, nâng cấp đường, thầu xây lắp và nguồn vốn đầu tư công.",
+  "items": [
+    {
+      "region": "MIỀN BẮC",
+      "category": "GIAO THÔNG • KẾT QUẢ ĐẤU THẦU",
+      "impact": "CAO",
+      "headline": "Quảng Ninh chọn liên danh 5 đơn vị thi công QL18 hơn 835 tỷ",
+      "facts": [
+        "Ban QLDA đầu tư xây dựng Khu vực II công bố liên danh 5 thành viên trúng Gói thầu 04 thi công cải tạo, mở rộng và chỉnh trang Quốc lộ 18 qua các khu đông dân cư, đô thị.",
+        "Giá trúng thầu 835,313 tỷ đồng, tiết kiệm khoảng 0,3%; thời gian thực hiện 400 ngày, hợp đồng theo đơn giá điều chỉnh; chỉ một liên danh nộp hồ sơ."
+      ],
+      "note": "Đây là kết quả lựa chọn nhà thầu, không phải gói đang mời thầu.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "19.11.2026",
+      "url": "https://baodauthau.vn/lien-danh-5-thanh-vien-trung-goi-thau-835-ty-dong-tai-quang-ninh-post213284.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "HẠ TẦNG KHU DÂN CƯ • ĐẤU THẦU",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hải Phòng chọn nhà thầu hạ tầng đấu giá đất Kiến Hải 76 tỷ",
+      "facts": [
+        "Ban QLDA đầu tư xây dựng xã Kiến Hải công bố kết quả Gói thầu 06 thi công hạ tầng phục vụ đấu giá quyền sử dụng các thửa đất nhỏ hẹp làm nhà ở tại thôn Đoan Xá.",
+        "Liên danh Sơn Đông – Thiên Duyên trúng thầu 76,022 tỷ đồng so với dự toán 76,057 tỷ đồng; gói thầu qua mạng chỉ có một nhà thầu tham dự."
+      ],
+      "note": "Chênh lệch giá không phản ánh toàn bộ hiệu quả tài chính của dự án.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "19.11.2026",
+      "url": "https://baodauthau.vn/xa-kien-hai-lien-danh-son-dong-thien-duyen-trung-goi-thau-xay-dung-ha-tang-khu-dau-gia-dat-76057-ty-dong-post213249.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "HỆ THỐNG ĐIỆN • THIẾT BỊ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Uông Bí 2 chọn gói cung cấp, lắp đặt máy biến áp 110kV",
+      "facts": [
+        "Tổng công ty Thiết bị điện Đông Anh được lựa chọn thực hiện Gói 03 cung cấp máy biến áp 110kV, vật tư và lắp đặt cho dự án nâng công suất MBA T1 tại trạm Uông Bí 2, Quảng Ninh.",
+        "Giá trúng thầu 27,983 tỷ đồng so với dự toán 28,018 tỷ đồng; có hai nhà thầu tham gia, liên danh An Dương – MEE xếp hạng thứ hai."
+      ],
+      "note": "Kết quả thầu thuộc dự án điện lực; không đồng nghĩa đã nghiệm thu lắp đặt.",
+      "departments": [
+        "Kỹ thuật",
+        "Cung ứng",
+        "Dự án",
+        "Kinh doanh"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "19.11.2026",
+      "url": "https://baodauthau.vn/quang-ninh-tong-cong-ty-thiet-bi-dien-dong-anh-trung-goi-thau-cung-cap-lap-dat-may-bien-ap-110kv-tba-uong-bi-2-tri-gia-28018-ty-dong-post213247.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "TIẾN ĐỘ • GIẢI PHÓNG MẶT BẰNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Bắc Ninh tiếp tục thi công đường Hàn Thuyên sau nhiều điều chỉnh",
+      "facts": [
+        "Trung tâm Cung ứng dịch vụ sự nghiệp công phường Vũ Ninh ký hợp đồng Gói 21 đường Hàn Thuyên với liên danh ASICO – Xây dựng 647; giá trúng 18,512 tỷ đồng, tiến độ hợp đồng 150 ngày.",
+        "Nhà thầu đã triển khai phần việc còn lại; hiện khoảng 50% mặt bằng sạch được bàn giao, chủ đầu tư phấn đấu hoàn thành công trình trước Tết Nguyên đán 2027."
+      ],
+      "note": "Mốc hoàn thành là mục tiêu, phụ thuộc tiến độ bàn giao mặt bằng thực tế.",
+      "departments": [
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng",
+        "Tài chính"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "19.11.2026",
+      "url": "https://baodauthau.vn/bac-ninh-lien-danh-asico-647-duoc-chon-thi-cong-tiep-duong-han-thuyen-post213278.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "NHÀ Ở XÃ HỘI • MEP",
+      "impact": "CAO",
+      "headline": "Đà Nẵng dự kiến khởi công 5 dự án nhà ở xã hội, 3.164 căn",
+      "facts": [
+        "UBND TP Đà Nẵng cho biết trong quý IV/2026 dự kiến khởi công năm dự án nhà ở xã hội với khoảng 3.164 căn; đồng thời đặt kế hoạch hoàn thành ba dự án khác, khoảng 2.370 căn.",
+        "Đến cuối tháng 10/2026, thành phố đã chấp thuận chủ trương đầu tư và giao chủ đầu tư 10 dự án quy mô khoảng 9.916 căn, trong đó bảy dự án đã khởi công với 3.643 căn."
+      ],
+      "note": "Số lượng khởi công và hoàn thành là kế hoạch, không phải kết quả đã đạt.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng",
+        "Tài chính"
+      ],
+      "source": "Báo Đà Nẵng (dẫn UBND thành phố)",
+      "source_date": "19.11.2026",
+      "url": "https://baodanang.vn/da-nang-du-kien-khoi-cong-5-du-an-nha-o-xa-hoi-trong-quy-iv-2026-3358929.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "ĐẦU TƯ CÔNG • HẠ TẦNG GIAO THÔNG",
+      "impact": "CAO",
+      "headline": "Đà Nẵng duyệt chủ trương mở rộng QL14H khoảng 650 tỷ",
+      "facts": [
+        "UBND thành phố phê duyệt chủ trương nâng cấp Quốc lộ 14H từ Km60+700 đến Km73+540, chiều dài tuyến chính 13,15km, các tuyến kết nối khoảng 1,16km; gồm ba cầu mới.",
+        "Tổng mức đầu tư khoảng 650 tỷ đồng, trong đó giải phóng mặt bằng hơn 89,5 tỷ và xây dựng hơn 560 tỷ; dự kiến chuẩn bị đầu tư 2026–2027, triển khai 2027–2029."
+      ],
+      "note": "Dự án ở bước phê duyệt chủ trương, chưa đồng nghĩa đã tổ chức đấu thầu xây lắp.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Báo Đà Nẵng (dẫn Quyết định 4096/QĐ-UBND)",
+      "source_date": "19.11.2026",
+      "url": "https://baodanang.vn/mo-rong-quoc-lo-14h-voi-tong-muc-dau-tu-650-ty-dong-3358883.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "ĐẤU THẦU • NĂNG LỰC THI CÔNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Đà Nẵng hủy gói tòa nhà đổi mới sáng tạo 274,784 tỷ vì vắng thầu",
+      "facts": [
+        "Ngày 17/11, chủ đầu tư hủy Gói thi công Dự án Không gian đổi mới sáng tạo tại An Hải, trị giá 274,784 tỷ đồng, gồm khối nhà 15 tầng nổi và hai tầng hầm; hai mốc đóng thầu đều không có hồ sơ.",
+        "Báo Đấu thầu cũng ghi nhận hai gói hạ tầng KCN Tam Thăng mở rộng lần lượt 60,882 tỷ và 9,697 tỷ đồng không thu hút nhà thầu sau gia hạn."
+      ],
+      "note": "Chưa có lịch mời thầu lại được xác nhận; nguyên nhân chi phí nhân công là phản ánh từ một số nhà thầu.",
+      "departments": [
+        "Đấu thầu",
+        "Kinh doanh",
+        "Tài chính",
+        "Kỹ thuật",
+        "Cung ứng"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "19.11.2026",
+      "url": "https://baodauthau.vn/da-nang-nhieu-goi-thau-xay-lap-vang-nha-thau-post213257.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "ĐẦU TƯ CÔNG • KẾ HOẠCH TRUNG HẠN",
+      "impact": "TRUNG BÌNH",
+      "headline": "Quảng Trị cho ý kiến kế hoạch đầu tư công 2026–2030",
+      "facts": [
+        "Tại kỳ họp ngày 19/11, HĐND tỉnh thống nhất thông qua nghị quyết cho ý kiến về dự kiến kế hoạch đầu tư công trung hạn vốn ngân sách trung ương giai đoạn 2026–2030.",
+        "Danh mục dự kiến gồm 18 dự án vốn trong nước, đối ứng một dự án ODA và ba dự án ODA chuyển tiếp; nguồn lực nêu 8.054 tỷ đồng cho dự án trọng điểm, liên vùng và hơn 6.519 tỷ đồng theo thông báo của Trung ương."
+      ],
+      "note": "Đây là dự kiến kế hoạch vốn trung hạn, chưa đồng nghĩa các gói thầu đã phát hành.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Tài chính",
+        "Đấu thầu"
+      ],
+      "source": "Báo và Phát thanh, Truyền hình Quảng Trị (dẫn kỳ họp HĐND)",
+      "source_date": "19.11.2026",
+      "url": "https://baoquangtri.vn/thoi-su/202611/hdnd-tinh-thong-qua-nghi-quyet-du-kien-ke-hoach-dau-tu-cong-trung-han-nguon-von-ngan-sach-trung-uong-giai-doan-2026-2030-7875300/"
+    }
+  ],
+  "news_themes": [
+    {
+      "label": "THỊ TRƯỜNG • KHÁCH HÀNG",
+      "title": "Nhà ở xã hội mở thêm dư địa kỹ thuật công trình",
+      "detail": "Đà Nẵng dự kiến năm dự án với 3.164 căn khởi công quý IV; cần phân biệt quy mô dự kiến với hợp đồng xây lắp đã trao."
+    },
+    {
+      "label": "ĐẤU THẦU • HẠ TẦNG",
+      "title": "Gói giao thông lớn đã chọn đơn vị thi công",
+      "detail": "Quốc lộ 18 tại Quảng Ninh trao gói hơn 835 tỷ; Hải Phòng và Bắc Ninh công bố kết quả các gói hạ tầng địa phương."
+    },
+    {
+      "label": "MEP • THIẾT BỊ",
+      "title": "Nhu cầu điện và hạ tầng kỹ thuật tiếp tục hiện diện",
+      "detail": "Gói MBA 110kV Uông Bí 2 đã có kết quả; QL14H Đà Nẵng được duyệt chủ trương, dự kiến có cầu, cống và thoát nước."
+    },
+    {
+      "label": "VỐN • NĂNG LỰC THẦU",
+      "title": "Kế hoạch vốn tăng, nhưng điều kiện thực hiện quyết định tiến độ",
+      "detail": "Quảng Trị cho ý kiến kế hoạch đầu tư trung hạn; tại Đà Nẵng, nhiều gói không có nhà thầu dù đã gia hạn."
+    }
+  ],
+  "regional_pulse": [
+    {
+      "region": "MIỀN BẮC",
+      "title": "Kết quả thầu mới trải từ đường, hạ tầng dân cư đến điện lực",
+      "detail": "Quảng Ninh có gói QL18 hơn 835 tỷ và MBA 110kV; Hải Phòng trao gói hạ tầng Kiến Hải; Bắc Ninh thi công tiếp đường Hàn Thuyên."
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "title": "Cơ hội dự án mới song hành áp lực tổ chức thực hiện",
+      "detail": "Đà Nẵng chuẩn bị nhà ở xã hội và QL14H nhưng một số gói thầu vắng hồ sơ; Quảng Trị cho ý kiến kế hoạch vốn 2026–2030."
+    }
+  ],
+  "news_numbers": [
+    {
+      "value": "835,313 tỷ",
+      "label": "Gói thầu QL18",
+      "context": "Giá trúng gói thi công cải tạo tuyến Quốc lộ 18 tại Quảng Ninh."
+    },
+    {
+      "value": "3.164 căn",
+      "label": "NOXH Đà Nẵng",
+      "context": "Quy mô dự kiến khởi công trong quý IV/2026 tại năm dự án."
+    },
+    {
+      "value": "650 tỷ",
+      "label": "Mở rộng QL14H",
+      "context": "Tổng mức đầu tư ước tính của dự án vừa duyệt chủ trương."
+    },
+    {
+      "value": "274,784 tỷ",
+      "label": "Gói thầu vắng hồ sơ",
+      "context": "Giá gói xây lắp Không gian đổi mới sáng tạo Đà Nẵng bị hủy."
+    }
+  ],
+  "action_today": ""
+}
