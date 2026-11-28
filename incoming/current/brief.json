@@ -1,0 +1,221 @@
+{
+  "date": "28.11.2026",
+  "title": "ĐIỂM TIN CHO DOANH NGHIỆP STACORP",
+  "subtitle": "Thị trường • Dự án • Chi phí • Con người",
+  "summary_lede": "Miền Bắc có thêm cơ hội đô thị, giao thông và chuyển biến mặt bằng. Miền Trung ghi nhận dự án y tế, năng lượng, nhà ở và thủy lợi; giá diesel giảm giúp giảm áp lực chi phí vận chuyển.",
+  "items": [
+    {
+      "region": "MIỀN BẮC",
+      "category": "ĐÔ THỊ • MỜI ĐẦU TƯ",
+      "impact": "CAO",
+      "headline": "Hưng Yên mời đầu tư khu đô thị Liên Phương",
+      "facts": [
+        "Sở Xây dựng phát hành hồ sơ đấu thầu quốc tế dự án có vốn 15.171 tỷ đồng, quy mô khoảng 97,78 ha.",
+        "Dự kiến phát triển nhà ở, thương mại, giáo dục và hạ tầng kỹ thuật; bố trí cả quỹ đất nhà ở xã hội."
+      ],
+      "note": "Đang chọn nhà đầu tư, chưa phải mời thầu xây lắp.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Kỹ thuật",
+        "Dự án"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "27.11.2026",
+      "url": "https://baodauthau.vn/hung-yen-dau-thau-quoc-te-chon-nha-dau-tu-khu-do-thi-15171-ty-dong-post213907.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "GIAO THÔNG • MỜI THẦU",
+      "impact": "CAO",
+      "headline": "Hà Nội mời thầu nút giao Vành đai 3 tại Đông Anh",
+      "facts": [
+        "Gói số 42 xây lắp nút giao với đường Võ Nguyên Giáp có giá 976,191 tỷ đồng.",
+        "Hồ sơ nêu thời gian thực hiện 270 ngày, hợp đồng theo đơn giá điều chỉnh; dự kiến mở thầu ngày 12/12."
+      ],
+      "note": "Gói đang mời thầu; cần đối chiếu hồ sơ chính thức khi tham gia.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Kỹ thuật",
+        "Dự án"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "27.11.2026",
+      "url": "https://baodauthau.vn/ha-noi-moi-thau-goi-xay-lap-976-ty-dong-thuoc-vanh-dai-3-qua-dong-anh-post213903.html"
+    },
+    {
+      "region": "MIỀN BẮC",
+      "category": "HẠ TẦNG • MẶT BẰNG",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hải Phòng chi trả bồi thường hạ tầng tái định cư",
+      "facts": [
+        "Ngày 27/11, phường Hồng An tổ chức đợt chi trả đầu tiên cho dự án hạ tầng các khu tái định cư.",
+        "Phương án được duyệt liên quan 168 hộ, cá nhân có đất nông nghiệp, tổng số tiền gần 46 tỷ đồng."
+      ],
+      "note": "Chi trả bồi thường là bước chuẩn bị mặt bằng, chưa đồng nghĩa bàn giao toàn bộ.",
+      "departments": [
+        "Dự án",
+        "Kinh doanh",
+        "Tài chính"
+      ],
+      "source": "Cổng TTĐT phường Hồng An",
+      "source_date": "27.11.2026",
+      "url": "https://hongan.haiphong.gov.vn/trang-chu-66859/phuong-hong-an-chi-tra-tien-boi-thuong-ho-tro-thuc-hien-du-an-dau-tu-xay-dung-co-so-ha-tang-cac--1023458"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "Y TẾ • XÂY LẮP",
+      "impact": "CAO",
+      "headline": "Đà Nẵng triển khai chọn nhà thầu bệnh viện ung bướu",
+      "facts": [
+        "Dự án xây mới khối nội trú 400 giường và cải tạo bệnh viện có tổng mức đầu tư gần 989 tỷ đồng.",
+        "Chi phí xây dựng dự kiến 409,285 tỷ đồng, thiết bị 476,639 tỷ đồng; triển khai giai đoạn 2026–2029."
+      ],
+      "note": "Nhu cầu xây lắp và thiết bị lớn; chưa phải kết quả trao thầu.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Kỹ thuật",
+        "Dự án",
+        "Cung ứng"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "27.11.2026",
+      "url": "https://baodauthau.vn/da-nang-lua-chon-nha-thau-thuc-hien-nang-cap-benh-vien-ung-buou-gan-989-ty-dong-post213888.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "NĂNG LƯỢNG • ĐẦU TƯ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Huế mời đầu tư nhà máy điện mặt trời Điền Môn",
+      "facts": [
+        "Sở Tài chính tiếp nhận đăng ký dự án vốn 500 tỷ đồng, sử dụng khoảng 28,6 ha tại phường Phong Phú.",
+        "Hạn đăng ký trước 15 giờ ngày 23/12/2026; sản lượng dự kiến khoảng 44 triệu kWh/năm."
+      ],
+      "note": "Đây là bước tìm nhà đầu tư, chưa phát hành gói EPC.",
+      "departments": [
+        "Kinh doanh",
+        "Kỹ thuật",
+        "Đấu thầu"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "27.11.2026",
+      "url": "https://baodauthau.vn/tp-hue-goi-dau-tu-vao-nha-may-dien-mat-troi-dien-mon-500-ty-dong-post213811.html"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "NHÀ Ở • ĐẦU TƯ",
+      "impact": "TRUNG BÌNH",
+      "headline": "Quảng Trị tìm nhà đầu tư nhà ở xã hội Đồng Hới",
+      "facts": [
+        "Tỉnh công khai Quyết định 5198/QĐ-UBND ngày 25/11 về dự án khu nhà ở xã hội tại phường Đồng Hới.",
+        "Sở Xây dựng tiếp nhận hồ sơ đăng ký của nhà đầu tư quan tâm đến hết ngày 27/12/2026."
+      ],
+      "note": "Mốc công bố thông tin dự án, chưa xác định chủ đầu tư.",
+      "departments": [
+        "Kinh doanh",
+        "Đấu thầu",
+        "Dự án"
+      ],
+      "source": "Cổng TTĐT Quảng Trị",
+      "source_date": "27.11.2026",
+      "url": "https://www.quangtri.gov.vn/tin-tuc/cong-khai-thong-tin-du-an-nha-o-xa-hoi-tai-phuong-dong-hoi-de-lua-chon-nha-dau-tu-thuc-hien-du-an-dau-tu-xay-dung-nha-o-xa-hoi-tren-dia-ban-tinh"
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "category": "THỦY LỢI • KẾT QUẢ THẦU",
+      "impact": "TRUNG BÌNH",
+      "headline": "Hà Tĩnh chọn liên danh nâng cấp đê Khang Ninh",
+      "facts": [
+        "Gói 11.XL đoạn cầu Ninh Thọ – cầu Hải Ninh được trao ngày 26/11 cho liên danh HD, Hồng Ngọc và Phát triển công nghiệp – Xây lắp và Thương mại Hà Tĩnh.",
+        "Giá trúng thầu 99,827 tỷ đồng, thời gian 300 ngày theo hợp đồng đơn giá điều chỉnh."
+      ],
+      "note": "Đã có kết quả chọn nhà thầu; cơ hội cung ứng phụ thuộc nhu cầu thực tế.",
+      "departments": [
+        "Kinh doanh",
+        "Dự án",
+        "Cung ứng"
+      ],
+      "source": "Báo Đấu thầu",
+      "source_date": "27.11.2026",
+      "url": "https://baodauthau.vn/ha-tinh-lien-danh-3-thanh-vien-trung-goi-thau-99-ty-dong-nang-cap-de-khang-ninh-post213913.html"
+    },
+    {
+      "region": "TOÀN QUỐC",
+      "category": "CHI PHÍ • NHIÊN LIỆU",
+      "impact": "TRUNG BÌNH",
+      "headline": "Dầu diesel giảm 1.382 đồng/lít từ ngày 26/11",
+      "facts": [
+        "Giá bán tối đa dầu diesel 0,05S còn 24.965 đồng/lít từ 15 giờ ngày 26/11.",
+        "Xăng E5RON92 giảm 185 đồng/lít, E10RON95-III giảm 44 đồng/lít trong kỳ điều hành."
+      ],
+      "note": "Giá nhiên liệu giảm hỗ trợ chi phí vận chuyển và vận hành máy thi công.",
+      "departments": [
+        "Cung ứng",
+        "Tài chính",
+        "Dự án"
+      ],
+      "source": "Bộ Công Thương",
+      "source_date": "26.11.2026",
+      "url": "https://moit.gov.vn/tin-tuc/thong-tin-ve-viec-dieu-hanh-gia-xang-dau-ngay-26-11-2026.html"
+    }
+  ],
+  "news_themes": [
+    {
+      "label": "ĐÔ THỊ • NHÀ Ở",
+      "title": "Mở rộng nguồn dự án dân dụng",
+      "detail": "Liên Phương và nhà ở xã hội Đồng Hới đang ở giai đoạn lựa chọn nhà đầu tư."
+    },
+    {
+      "label": "GIAO THÔNG • HẠ TẦNG",
+      "title": "Gói thầu và mặt bằng có diễn biến mới",
+      "detail": "Đông Anh mời thầu nút giao; Hải Phòng triển khai chi trả bồi thường tái định cư."
+    },
+    {
+      "label": "Y TẾ • NĂNG LƯỢNG",
+      "title": "Nhu cầu đầu tư kỹ thuật miền Trung",
+      "detail": "Đà Nẵng triển khai dự án bệnh viện; Huế mời đăng ký đầu tư điện mặt trời."
+    },
+    {
+      "label": "CHI PHÍ • THỦY LỢI",
+      "title": "Nhiên liệu giảm, đê điều có nhà thầu",
+      "detail": "Giá diesel giảm trong kỳ 26/11; Hà Tĩnh công bố kết quả gói nâng cấp đê Khang Ninh."
+    }
+  ],
+  "regional_pulse": [
+    {
+      "region": "MIỀN BẮC",
+      "title": "Đô thị và giao thông dẫn nhịp",
+      "detail": "Hưng Yên tìm nhà đầu tư, Hà Nội mời thầu và Hải Phòng chi trả bồi thường."
+    },
+    {
+      "region": "MIỀN TRUNG",
+      "title": "Đa dạng dự án dân dụng và năng lượng",
+      "detail": "Bệnh viện, điện mặt trời, nhà ở xã hội và đê điều ghi nhận các mốc mới."
+    }
+  ],
+  "news_numbers": [
+    {
+      "value": "15.171 tỷ",
+      "label": "Khu đô thị Liên Phương",
+      "context": "Tổng vốn dự án tại Hưng Yên."
+    },
+    {
+      "value": "976,191 tỷ",
+      "label": "Nút giao Vành đai 3",
+      "context": "Giá gói xây lắp số 42."
+    },
+    {
+      "value": "400 giường",
+      "label": "Bệnh viện Ung bướu",
+      "context": "Quy mô khối nội trú mới tại Đà Nẵng."
+    },
+    {
+      "value": "−1.382 đ/lít",
+      "label": "Giá dầu diesel",
+      "context": "Mức giảm từ 15 giờ ngày 26/11."
+    }
+  ],
+  "action_today": ""
+}
